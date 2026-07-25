@@ -11,7 +11,27 @@ user's own hand_ (their inputs, their annotations, their estimates), and
 everything else neutral. Nothing decorative. If an element doesn't help read a
 number, it goes.
 
-## Palette (the ONLY hex values allowed; everything else references tokens)
+## v2 revision (owner review)
+
+The v1 editorial direction (Instrument Serif + warm paper/brass) was reviewed
+by the owner and rejected as reading like print ("newspaper"). v2 keeps every
+structural rule (tokens-only hex, density, dark default, mono numerals, accent
+discipline, the RangeBand signature) and re-skins: **Space Grotesk** display,
+cool **slate** neutrals, **blue** accent. An app shell (sidebar + topbar) is
+part of the design system so the product reads as a terminal from day one.
+
+## Palette v2 (the ONLY hex values allowed; everything else references tokens)
+
+Dark (default): bg `#0b0e12`, surface `#12161d` (+`#19202a` inset), ink
+`#e8ecf1`, ink-muted `#929eac`, line `#232c38`, accent (blue) `#5b9dff`.
+Light: bg `#f6f7f9`, surface `#ffffff`, ink `#18202b`, ink-muted `#5f6b78`,
+line `#dfe4ea`, accent `#2e6fe8`. Semantic: pos `#4cc38a`/`#178a53`, neg
+`#f0776d`/`#c43d32`, warn `#e0a24a`/`#8f5a10`.
+
+Type roles v2: display **Space Grotesk**, body **Inter**, numeric
+**JetBrains Mono** (unchanged — numbers stay the protagonist).
+
+## Palette v1 (superseded — kept for the record)
 
 Dark (default) — cool graphite, not pure black; borrowed from ledger paper
 inverted:

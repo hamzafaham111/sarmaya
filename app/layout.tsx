@@ -1,18 +1,16 @@
 import type { Metadata } from "next";
-import { Inter, Instrument_Serif, JetBrains_Mono } from "next/font/google";
+import { Inter, JetBrains_Mono, Space_Grotesk } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 
 import "./globals.css";
 
-// Three type roles (DESIGN.md): display serif for names/titles,
+// Three type roles (DESIGN.md v2): Space Grotesk display,
 // Inter body, JetBrains Mono for every number.
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
 
-const instrumentSerif = Instrument_Serif({
-  variable: "--font-instrument-serif",
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space-grotesk",
   subsets: ["latin"],
-  weight: "400",
-  style: ["normal", "italic"],
 });
 
 const jetbrainsMono = JetBrains_Mono({
@@ -35,7 +33,7 @@ export default function RootLayout({
     // suppressHydrationWarning: next-themes mutates <html> class pre-paint.
     <html lang="en" suppressHydrationWarning className="h-full">
       <body
-        className={`${inter.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable} flex min-h-full flex-col font-sans antialiased`}
+        className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} flex min-h-full flex-col font-sans antialiased`}
       >
         <ThemeProvider
           attribute="class"

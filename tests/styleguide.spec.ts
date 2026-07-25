@@ -22,7 +22,10 @@ test("styleguide renders dark-first with all base components", async ({
   await expect(page.getByText("1,23,45,678.00 · 99.10")).toBeVisible();
 
   // Light mode via the toggle.
-  await page.getByRole("button", { name: /toggle color theme/i }).click();
+  await page
+    .getByRole("button", { name: /toggle color theme/i })
+    .first()
+    .click();
   await expect(page.locator("html")).not.toHaveClass(/dark/);
 });
 
@@ -30,6 +33,6 @@ test("home page renders and links to the styleguide", async ({ page }) => {
   await page.goto("/");
   await expect(page.getByRole("heading", { name: "Sarmaya" })).toBeVisible();
   await expect(
-    page.getByRole("link", { name: /design system styleguide/i }),
+    page.getByRole("link", { name: "Styleguide" }).first(),
   ).toBeVisible();
 });

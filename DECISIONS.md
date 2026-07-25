@@ -15,3 +15,5 @@ One line per decision: date, decision, why.
 - 2026-07-25 — CI is node-only until Phase 2 introduces `/jobs` (python), which adds the 3.11 pytest job.
 - 2026-07-25 — Vitest owns `*.test.ts`, Playwright owns `tests/*.spec.ts`.
 - 2026-07-25 — Reusing the existing Supabase project (same URL/keys); user confirmed the leftover Thesis-era tables will be DROPPED at Phase 1 start so Sarmaya's new schema applies to a clean public schema.
+- 2026-07-25 — Continuous execution of ALL phases per user instruction (overrides stop-after-each-phase); criteria needing user accounts demonstrated as they arrive.
+- 2026-07-25 — Design v2 after owner review: serif/editorial direction rejected ("newspaper"); pivot to Space Grotesk display + cool slate darks + blue accent + app shell. Density, tokens-only-hex, dark-default, mono numerals unchanged.

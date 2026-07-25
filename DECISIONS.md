@@ -14,3 +14,4 @@ One line per decision: date, decision, why.
 - 2026-07-25 — Playwright runs against a production build on port 3210, `reuseExistingServer: false` — avoids dev-lock conflicts and stale servers.
 - 2026-07-25 — CI is node-only until Phase 2 introduces `/jobs` (python), which adds the 3.11 pytest job.
 - 2026-07-25 — Vitest owns `*.test.ts`, Playwright owns `tests/*.spec.ts`.
+- 2026-07-25 — Reusing the existing Supabase project (same URL/keys); user confirmed the leftover Thesis-era tables will be DROPPED at Phase 1 start so Sarmaya's new schema applies to a clean public schema.

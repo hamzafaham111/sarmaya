@@ -2,7 +2,6 @@ import { DataTable } from "@/components/base/data-table";
 import { DeltaValue } from "@/components/base/delta-value";
 import { RangeBand } from "@/components/base/range-band";
 import { StatValue } from "@/components/base/stat-value";
-import { AppShell } from "@/components/shell/app-shell";
 import { formatMoney } from "@/lib/format";
 
 // Overview with PREVIEW data — real screens land with Phases 1–3 (auth,
@@ -10,7 +9,7 @@ import { formatMoney } from "@/lib/format";
 // labeled as such; it exists so the shell reads as an application.
 export default function HomePage() {
   return (
-    <AppShell active="/">
+    <>
       <main className="mx-auto w-full max-w-4xl px-6 py-6">
         <div className="mb-6 flex items-baseline justify-between">
           <h1 className="font-display text-2xl font-medium text-ink">
@@ -105,6 +104,6 @@ export default function HomePage() {
           </div>
         </section>
       </main>
-    </AppShell>
+    </>
   );
 }

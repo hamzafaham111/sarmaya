@@ -45,7 +45,7 @@ export default function StyleguidePage() {
   const inr = (n: number) => formatMoney(n, "INR", "compact");
 
   return (
-    <AppShell active="/styleguide">
+    <AppShell>
       <main className="mx-auto w-full max-w-3xl px-6 pb-24">
         <header className="py-8">
           <h1 className="font-display text-3xl font-medium text-ink">

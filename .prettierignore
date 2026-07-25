@@ -1,0 +1,14 @@
+# User-authored spec files — never reformat.
+CLAUDE.md
+PLAN.md
+
+.next/
+out/
+build/
+coverage/
+test-results/
+playwright-report/
+node_modules/
+package-lock.json
+next-env.d.ts
+components/ui/

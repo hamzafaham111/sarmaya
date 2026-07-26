@@ -1,5 +1,6 @@
 import { sql } from "drizzle-orm";
 import {
+  boolean,
   check,
   date,
   index,
@@ -43,6 +44,9 @@ export const instruments = pgTable(
     name: text("name"),
     currency: text("currency").notNull(),
     status: text("status").notNull().default("active"),
+    // Hand-created instrument: no provider covers it, so the batch jobs skip
+    // it entirely and every figure comes from the user typing it in.
+    isManual: boolean("is_manual").notNull().default(false),
     // Batch discipline: 3 consecutive failed days => 'fetch_failing'.
     consecutiveFailures: integer("consecutive_failures").notNull().default(0),
     createdAt: timestamp("created_at", { withTimezone: true })
@@ -127,6 +131,67 @@ export const statements = pgTable(
       for: "select",
       to: authenticatedRole,
       using: sql`true`,
+    }),
+  ],
+);
+
+// The user's own statement figures, overlaid on `statements` at read time.
+// Deliberately a SEPARATE user-owned table: the fetched table stays the
+// provider's record of truth (a job can never clobber your typing, and your
+// typing is never shown to another user). Field-level merge — a null here
+// falls back to the fetched figure.
+export const manualStatements = pgTable(
+  "manual_statements",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    userId: uuid("user_id")
+      .notNull()
+      .references(() => authUsers.id, { onDelete: "cascade" }),
+    instrumentId: uuid("instrument_id")
+      .notNull()
+      .references(() => instruments.id, { onDelete: "cascade" }),
+    fiscalYear: integer("fiscal_year").notNull(),
+    statement: text("statement").notNull(),
+    data: jsonb("data").notNull().$type<Record<string, number | null>>(),
+    updatedAt: timestamp("updated_at", { withTimezone: true })
+      .notNull()
+      .defaultNow(),
+  },
+  (t) => [
+    uniqueIndex("manual_statements_user_instrument_year_kind_uq").on(
+      t.userId,
+      t.instrumentId,
+      t.fiscalYear,
+      t.statement,
+    ),
+    check(
+      "manual_statements_kind_ck",
+      sql`${t.statement} in ('income', 'balance', 'cashflow')`,
+    ),
+    check(
+      "manual_statements_year_ck",
+      sql`${t.fiscalYear} between 1900 and 2200`,
+    ),
+    pgPolicy("manual_statements_select_own", {
+      for: "select",
+      to: authenticatedRole,
+      using: sql`${t.userId} = ${authUid}`,
+    }),
+    pgPolicy("manual_statements_insert_own", {
+      for: "insert",
+      to: authenticatedRole,
+      withCheck: sql`${t.userId} = ${authUid}`,
+    }),
+    pgPolicy("manual_statements_update_own", {
+      for: "update",
+      to: authenticatedRole,
+      using: sql`${t.userId} = ${authUid}`,
+      withCheck: sql`${t.userId} = ${authUid}`,
+    }),
+    pgPolicy("manual_statements_delete_own", {
+      for: "delete",
+      to: authenticatedRole,
+      using: sql`${t.userId} = ${authUid}`,
     }),
   ],
 );

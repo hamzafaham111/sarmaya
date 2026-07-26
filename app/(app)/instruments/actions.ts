@@ -6,6 +6,7 @@ import { z } from "zod";
 import { resolveInstrument } from "@/lib/catalog";
 import {
   addUserInstrument,
+  findInstrument,
   getOrCreateInstrument,
   insertSnapshotIfAbsent,
   removeUserInstrument,
@@ -78,6 +79,55 @@ export async function addInstrument(formData: FormData) {
       );
     }
   }
+
+  redirect(`/i/${instrument.id}`);
+}
+
+// A company no provider covers: unlisted, or a market we have no adapter
+// for. Everything about it is hand-kept, so the batch jobs skip it entirely
+// (is_manual) and the page offers price + statement entry instead.
+const manualInstrumentSchema = z.object({
+  name: z.string().trim().min(1).max(120),
+  symbol: z
+    .string()
+    .trim()
+    .min(1)
+    .max(20)
+    .toUpperCase()
+    // Keep symbols catalog-shaped so they can never collide with a future
+    // provider symbol by accident.
+    .regex(/^[A-Z0-9][A-Z0-9._-]*$/, "symbol"),
+  market: z.enum(["IN", "PK", "US"]),
+  currency: z.enum(["INR", "PKR", "USD"]),
+});
+
+export async function addManualInstrument(formData: FormData) {
+  const userId = await requireUserId();
+
+  const parsed = manualInstrumentSchema.safeParse({
+    name: formData.get("name"),
+    symbol: formData.get("symbol"),
+    market: formData.get("market"),
+    currency: formData.get("currency"),
+  });
+  if (!parsed.success) redirect("/instruments?error=invalidManual");
+
+  // Never shadow a real instrument: if the symbol already exists, the user
+  // wants the tracked one, not a hand-kept duplicate.
+  const clash = await findInstrument(parsed.data.symbol, parsed.data.market);
+  if (clash && !clash.isManual) redirect("/instruments?error=exists");
+
+  const instrument =
+    clash ??
+    (await getOrCreateInstrument({
+      kind: "stock",
+      symbol: parsed.data.symbol,
+      market: parsed.data.market,
+      currency: parsed.data.currency,
+      name: parsed.data.name,
+      isManual: true,
+    }));
+  await addUserInstrument(userId, instrument.id);
 
   redirect(`/i/${instrument.id}`);
 }

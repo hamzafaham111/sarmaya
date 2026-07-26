@@ -16,8 +16,14 @@ export interface YearRatios {
   netMargin: number | null;
   roe: number | null;
   roic: number | null;
+  roa: number | null;
   debtToEquity: number | null;
+  netDebtToEquity: number | null;
   fcfMargin: number | null;
+  cashConversion: number | null;
+  assetTurnover: number | null;
+  payoutRatio: number | null;
+  bookValuePerShare: number | null;
 }
 
 function div(
@@ -51,16 +57,30 @@ export function computeYearRatios(year: StatementYearData): YearRatios {
   const grossProfit = get(year.income, "gross_profit");
   const operatingIncome = get(year.income, "operating_income");
   const netIncome = get(year.income, "net_income");
+  const totalAssets = get(year.balance, "total_assets");
   const totalEquity = get(year.balance, "total_equity");
   const totalDebt = get(year.balance, "total_debt");
   const cash = get(year.balance, "cash");
+  const shares = get(year.balance, "shares_outstanding");
   const fcf = get(year.cashflow, "fcf");
+  const dividendsPaid = get(year.cashflow, "dividends_paid");
 
   // ROIC proxy: pre-tax operating income over invested capital
   // (equity + debt − cash). Documented as a proxy — no tax-rate data.
   const investedCapital =
     totalEquity !== null && totalDebt !== null
       ? totalEquity + totalDebt - (cash ?? 0)
+      : null;
+
+  // Net debt is a real negative when cash exceeds debt (net cash) — the
+  // ratio keeps that sign rather than clamping to zero.
+  const netDebt = totalDebt !== null && cash !== null ? totalDebt - cash : null;
+
+  // Sources report dividends paid as a cash OUTflow (negative); the payout
+  // ratio is conventionally positive. Undefined against a loss year.
+  const payoutRatio =
+    netIncome !== null && netIncome > 0 && dividendsPaid !== null
+      ? Math.abs(dividendsPaid) / netIncome
       : null;
 
   return {
@@ -70,8 +90,14 @@ export function computeYearRatios(year: StatementYearData): YearRatios {
     netMargin: div(netIncome, revenue),
     roe: div(netIncome, totalEquity),
     roic: div(operatingIncome, investedCapital),
+    roa: div(netIncome, totalAssets),
     debtToEquity: div(totalDebt, totalEquity),
+    netDebtToEquity: div(netDebt, totalEquity),
     fcfMargin: div(fcf, revenue),
+    cashConversion: div(fcf, netIncome),
+    assetTurnover: div(revenue, totalAssets),
+    payoutRatio,
+    bookValuePerShare: div(totalEquity, shares),
   };
 }
 

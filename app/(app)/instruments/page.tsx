@@ -5,17 +5,22 @@ import { DeltaValue } from "@/components/base/delta-value";
 import { EmptyState } from "@/components/base/empty-state";
 import { Sparkline } from "@/components/base/sparkline";
 import { StaleBadge } from "@/components/base/stale-badge";
+import { ManualAdd } from "@/components/instruments/manual-add";
 import { SearchAdd } from "@/components/instruments/search-add";
 import { listUserInstruments } from "@/lib/db/queries/instruments";
 import { getDayChange, getPriceSeries } from "@/lib/db/queries/study";
 import { formatMoney, type Currency } from "@/lib/format";
 import { createClient } from "@/lib/supabase/server";
 
-import { addInstrument } from "./actions";
+import { addInstrument, addManualInstrument } from "./actions";
 
 const ERRORS: Record<string, string> = {
   invalid: "That didn't look like a valid instrument.",
   unknown: "Not in the supported universe (NSE 500, indices, US tickers).",
+  invalidManual:
+    "Check the fields — a name, and a symbol of letters, digits, dots or dashes.",
+  exists:
+    "That symbol is already covered by a data source — search for it above instead.",
 };
 
 function isStale(fetchedAt: Date | null): boolean {
@@ -52,6 +57,7 @@ export default async function InstrumentsPage({
       </h1>
 
       <SearchAdd action={addInstrument} />
+      <ManualAdd action={addManualInstrument} />
       {error ? (
         <p className="mt-2 text-sm text-neg" role="alert">
           {ERRORS[error] ?? "Something went wrong."}
@@ -88,6 +94,11 @@ export default async function InstrumentsPage({
                     <span className="rounded-sm bg-surface-2 px-1.5 py-0.5 text-[10px] text-ink-muted">
                       {instrument.kind} · {instrument.market}
                     </span>
+                    {instrument.isManual ? (
+                      <span className="rounded-sm bg-brand-soft px-1.5 py-0.5 text-[10px] text-brand">
+                        hand-kept
+                      </span>
+                    ) : null}
                   </span>
                   <span className="flex shrink-0 items-center gap-3">
                     <Sparkline values={series} width={72} height={20} />

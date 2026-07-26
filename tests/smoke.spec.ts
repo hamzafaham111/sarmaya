@@ -105,6 +105,19 @@ test("magic-link auth reaches the authed shell", async ({ page }) => {
     await expect(page.getByText(/data since \d{4}/)).toBeVisible();
     await expect(page.getByRole("heading", { name: "Ratios" })).toBeVisible();
 
+    // Key figures: the snapshot vocabulary the daily job already stores.
+    const keyFigures = page
+      .locator("section")
+      .filter({ has: page.getByRole("heading", { name: "Key figures" }) });
+    await expect(keyFigures.getByText("Market cap")).toBeVisible();
+    await expect(keyFigures.getByText("P / E", { exact: true })).toBeVisible();
+    await expect(keyFigures.getByText("Earnings yield")).toBeVisible();
+    await expect(keyFigures.getByText("FCF yield")).toBeVisible();
+    expect(await keyFigures.innerText()).not.toContain("NaN");
+    // The added ratio rows compute from the same statements.
+    await expect(page.getByText("Cash conversion (FCF / net income)")).toBeVisible(); // prettier-ignore
+    await expect(page.getByText("Net debt / equity")).toBeVisible();
+
     // No NaN anywhere in the rendered page (automated criterion).
     expect(await page.locator("main").innerText()).not.toContain("NaN");
 
@@ -142,6 +155,11 @@ test("magic-link auth reaches the authed shell", async ({ page }) => {
       .getByPlaceholder(/Note on Revenue/)
       .fill("smoke-test annotation on revenue");
     await page.getByRole("button", { name: "Save", exact: true }).click();
+    // Wait for the write to land before reloading — reloading mid-transition
+    // cancels the server action and the note is silently lost.
+    await expect(
+      page.getByTitle("smoke-test annotation on revenue"),
+    ).toBeVisible({ timeout: 15_000 });
     await page.reload();
     await expect(
       page.getByTitle("smoke-test annotation on revenue"),
@@ -200,6 +218,11 @@ test("magic-link auth reaches the authed shell", async ({ page }) => {
       timeout: 15_000,
     });
 
+    // The rejection re-renders the form on the server; refilling before that
+    // lands types into a form that is about to be replaced.
+    await expect(page.locator('textarea[name="reasoning"]')).toHaveValue("", {
+      timeout: 15_000,
+    });
     await page.locator('input[name="price"]').fill("1278");
     await page.locator('input[name="quantity"]').fill("10");
     await page
@@ -218,6 +241,101 @@ test("magic-link auth reaches the authed shell", async ({ page }) => {
       page.getByRole("link", { name: "RELIANCE.NS", exact: true }),
     ).toBeVisible();
     expect(await page.locator("main").innerText()).not.toContain("NaN");
+  } finally {
+    if (created?.user) await admin.auth.admin.deleteUser(created.user.id);
+  }
+});
+
+// A company no provider covers: created by hand, priced by hand, statements
+// typed in — and the computed layers (ratios, valuation) treat those typed
+// figures as first-class.
+test("hand-kept instrument: create, price, type statements, see ratios", async ({
+  page,
+}) => {
+  test.skip(
+    !SUPABASE_URL || !SERVICE_KEY,
+    "needs NEXT_PUBLIC_SUPABASE_URL + SUPABASE_SERVICE_ROLE_KEY",
+  );
+
+  const admin = createClient(SUPABASE_URL!, SERVICE_KEY!, {
+    auth: { persistSession: false },
+  });
+  const email = `manual-${Date.now()}@example.com`;
+  const { data: created } = await admin.auth.admin.createUser({
+    email,
+    email_confirm: true,
+  });
+
+  try {
+    const { data: link } = await admin.auth.admin.generateLink({
+      type: "magiclink",
+      email,
+    });
+    await page.goto(
+      `/auth/confirm?token_hash=${link?.properties?.hashed_token}&type=magiclink&next=/instruments`,
+    );
+    await expect(page).toHaveURL(/\/instruments$/);
+
+    // Create it by hand.
+    const symbol = `ACME${Date.now().toString().slice(-6)}`;
+    await page.getByText(/Add a company by hand/).click();
+    // Scoped: the search widget also carries a hidden `symbol` input.
+    const manualForm = page.locator("details form");
+    await manualForm.locator('input[name="name"]').fill("Acme Textiles Ltd.");
+    await manualForm.locator('input[name="symbol"]').fill(symbol);
+    await manualForm.locator('select[name="market"]').selectOption("IN");
+    await manualForm.locator('select[name="currency"]').selectOption("INR");
+    await manualForm
+      .getByRole("button", { name: "Create hand-kept instrument" })
+      .click();
+
+    await expect(page).toHaveURL(/\/i\/[0-9a-f-]{36}$/, { timeout: 30_000 });
+    const instrumentUrl = page.url();
+    await expect(
+      page.getByRole("heading", { name: "Acme Textiles Ltd." }),
+    ).toBeVisible();
+    await expect(page.getByText("hand-kept").first()).toBeVisible();
+    // No provider => the honest empty states, not a grid of dashes.
+    await expect(
+      page.getByText(/this instrument is yours to fill in/),
+    ).toBeVisible();
+    await expect(page.getByText(/this one is hand-kept/)).toBeVisible();
+
+    // Price it by hand; the header picks it up.
+    await page.locator('input[name="manualPrice"]').fill("250");
+    await page.getByRole("button", { name: "Save price" }).click();
+    await expect(page.getByRole("button", { name: "Price saved" })).toBeVisible(
+      { timeout: 15_000 },
+    );
+    await expect(page.getByText("₹250").first()).toBeVisible({
+      timeout: 15_000,
+    });
+
+    // Type an income statement year: revenue 10Cr, net income 1.2Cr.
+    await page.getByRole("button", { name: "+ Add figures by hand" }).click();
+    await expect(
+      page.getByRole("heading", { name: "Your own figures" }),
+    ).toBeVisible();
+    await page.getByRole("spinbutton", { name: "Fiscal year" }).fill("2024");
+    await page.getByRole("textbox", { name: "Revenue" }).fill("100000000");
+    await page.getByRole("textbox", { name: "Net income" }).fill("12000000");
+    await page.getByRole("button", { name: "Save figures" }).click();
+
+    // The typed year is now a real year: table, ratios, all computed.
+    await expect(page.getByText("FY2024").first()).toBeVisible({
+      timeout: 15_000,
+    });
+    await expect(page.getByRole("heading", { name: "Ratios" })).toBeVisible();
+    // net margin = 12,000,000 / 100,000,000 = 12.0%
+    await expect(page.getByText("12.0%").first()).toBeVisible();
+    expect(await page.locator("main").innerText()).not.toContain("NaN");
+
+    // It survives a reload, and the cell is marked as the user's own.
+    await page.goto(instrumentUrl);
+    await expect(page.getByText("FY2024").first()).toBeVisible({
+      timeout: 15_000,
+    });
+    await expect(page.getByTitle(/Your figure/).first()).toBeVisible();
   } finally {
     if (created?.user) await admin.auth.admin.deleteUser(created.user.id);
   }

@@ -43,6 +43,90 @@ describe("computeYearRatios — hand-computed reference", () => {
 
   it("leverage", () => {
     expect(r.debtToEquity).toBeCloseTo(0.5, 10);
+    // net debt = 300 - 100 = 200, over equity 600
+    expect(r.netDebtToEquity).toBeCloseTo(1 / 3, 10);
+  });
+
+  it("returns on assets and asset efficiency", () => {
+    expect(r.roa).toBeCloseTo(120 / 1500, 10);
+    expect(r.assetTurnover).toBeCloseTo(1000 / 1500, 10);
+  });
+
+  it("cash conversion: FCF against reported profit", () => {
+    expect(r.cashConversion).toBeCloseTo(150 / 120, 10);
+  });
+
+  it("payout ratio flips the reported outflow sign", () => {
+    // dividends_paid is reported as -20; payout is 20/120.
+    expect(r.payoutRatio).toBeCloseTo(20 / 120, 10);
+  });
+
+  it("book value per share", () => {
+    expect(r.bookValuePerShare).toBeCloseTo(60, 10);
+  });
+});
+
+describe("computeYearRatios — the added rows, edge cases", () => {
+  it("net cash (cash > debt) stays negative, it is not clamped", () => {
+    const r = computeYearRatios({
+      fiscalYear: 2025,
+      balance: { total_equity: 600, total_debt: 100, cash: 400 } as never,
+    });
+    // net debt = 100 - 400 = -300
+    expect(r.netDebtToEquity).toBeCloseTo(-0.5, 10);
+  });
+
+  it("net debt needs both debt AND cash — no silent zero for cash", () => {
+    const r = computeYearRatios({
+      fiscalYear: 2025,
+      balance: { total_equity: 600, total_debt: 300 } as never,
+    });
+    expect(r.netDebtToEquity).toBeNull();
+  });
+
+  it("payout ratio is not applicable in a loss year", () => {
+    const r = computeYearRatios({
+      fiscalYear: 2025,
+      income: { net_income: -50 } as never,
+      cashflow: { dividends_paid: -20 } as never,
+    });
+    expect(r.payoutRatio).toBeNull();
+  });
+
+  it("payout ratio accepts a positive dividends figure too", () => {
+    const r = computeYearRatios({
+      fiscalYear: 2025,
+      income: { net_income: 100 } as never,
+      cashflow: { dividends_paid: 25 } as never,
+    });
+    expect(r.payoutRatio).toBeCloseTo(0.25, 10);
+  });
+
+  it("cash conversion against a loss is negative, not null", () => {
+    const r = computeYearRatios({
+      fiscalYear: 2025,
+      income: { net_income: -100 } as never,
+      cashflow: { fcf: 50 } as never,
+    });
+    expect(r.cashConversion).toBeCloseTo(-0.5, 10);
+  });
+
+  it("zero shares outstanding => null BVPS, never Infinity", () => {
+    const r = computeYearRatios({
+      fiscalYear: 2025,
+      balance: { total_equity: 600, shares_outstanding: 0 } as never,
+    });
+    expect(r.bookValuePerShare).toBeNull();
+  });
+
+  it("all added rows are null when the year is empty", () => {
+    const r = computeYearRatios({ fiscalYear: 2024 });
+    expect(r.roa).toBeNull();
+    expect(r.netDebtToEquity).toBeNull();
+    expect(r.cashConversion).toBeNull();
+    expect(r.assetTurnover).toBeNull();
+    expect(r.payoutRatio).toBeNull();
+    expect(r.bookValuePerShare).toBeNull();
   });
 });
 

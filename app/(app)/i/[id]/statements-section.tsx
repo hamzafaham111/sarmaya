@@ -4,9 +4,14 @@ import { Fragment, useMemo, useState, useTransition } from "react";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import type { StatementYearData } from "@/lib/analysis/ratios";
+import type {
+  ManualStatementRow,
+  MergedStatementYear,
+} from "@/lib/analysis/statements";
 import { formatMoney, formatPercent, type Currency, DASH } from "@/lib/format";
 
 import { createAnnotation, removeAnnotation } from "./actions";
+import { ManualStatementForm } from "./manual-statement-form";
 
 // Statements as years-across-columns tables. Every cell is annotatable:
 // click → note form; annotated cells carry a brand marker (the user's own
@@ -47,20 +52,30 @@ interface AnnotationLite {
 export function StatementsSection({
   instrumentId,
   years,
+  fetchedYears,
+  manualRows,
   currency,
   annotations,
   statementsUnsupported = false,
+  handKept = false,
 }: {
   instrumentId: string;
-  years: StatementYearData[];
+  /** Provider data with the user's own figures already overlaid. */
+  years: MergedStatementYear[];
+  /** Pre-merge provider data — placeholders in the manual entry form. */
+  fetchedYears: StatementYearData[];
+  manualRows: ManualStatementRow[];
   currency: Currency;
   annotations: AnnotationLite[];
   /** true for markets whose source can't provide statements (e.g. PSX) */
   statementsUnsupported?: boolean;
+  /** true when no provider covers this instrument at all */
+  handKept?: boolean;
 }) {
   const [showGrowth, setShowGrowth] = useState(false);
   const [activeCell, setActiveCell] = useState<string | null>(null);
   const [noteDraft, setNoteDraft] = useState("");
+  const [noteError, setNoteError] = useState<string | null>(null);
   const [pending, startTransition] = useTransition();
 
   const byTarget = useMemo(() => {
@@ -73,11 +88,22 @@ export function StatementsSection({
 
   if (years.length === 0) {
     return (
-      <p className="rounded-md border border-dashed border-line bg-surface p-6 text-center text-sm text-ink-muted">
-        {statementsUnsupported
-          ? "Statements unavailable for this market — the source provides prices only. Trends and ratios need statements, so they stay empty here."
-          : "Statements unavailable yet — the weekly job brings every year the source provides."}
-      </p>
+      <section className="mt-10">
+        <h2 className="font-display mb-2 text-lg text-ink">Statements</h2>
+        <p className="rounded-md border border-dashed border-line bg-surface p-6 text-center text-sm text-ink-muted">
+          {handKept
+            ? "Nothing here yet — this one is hand-kept. Type the years you have from the annual report; ratios, trends and the valuation models all compute from whatever you enter."
+            : statementsUnsupported
+              ? "Statements unavailable for this market — the source provides prices only. You can type the years you have from the annual report; ratios and trends compute from whatever you enter."
+              : "Statements unavailable yet — the weekly job brings every year the source provides. You can also type years in by hand."}
+        </p>
+        <ManualStatementForm
+          instrumentId={instrumentId}
+          fetchedYears={fetchedYears}
+          manualRows={manualRows}
+          currency={currency}
+        />
+      </section>
     );
   }
 
@@ -109,7 +135,14 @@ export function StatementsSection({
     const body = noteDraft.trim();
     if (!body) return;
     startTransition(async () => {
-      await createAnnotation({ instrumentId, target, body });
+      const result = await createAnnotation({ instrumentId, target, body });
+      // Never close over a rejected save — a silently dropped note is worse
+      // than an error, because you think you wrote it down.
+      if (!result?.ok) {
+        setNoteError("Could not save that note. Try again.");
+        return;
+      }
+      setNoteError(null);
       setNoteDraft("");
       setActiveCell(null);
     });
@@ -133,7 +166,8 @@ export function StatementsSection({
         </div>
       </div>
       <p className="mt-1 mb-3 text-xs text-ink-muted">
-        Click any figure to attach a note to it.
+        Click any figure to attach a note to it. A dotted underline marks a
+        figure you entered yourself.
       </p>
 
       <Tabs defaultValue="income">
@@ -172,6 +206,9 @@ export function StatementsSection({
                             const target = `${kind}:${item.key}:${y.fiscalYear}`;
                             const value = cellValue(y, kind, item.key);
                             const notes = byTarget.get(target) ?? [];
+                            const isMine = y.manualKeys.includes(
+                              `${kind}:${item.key}`,
+                            );
                             const display =
                               item.key === "eps"
                                 ? value === null
@@ -191,12 +228,19 @@ export function StatementsSection({
                                     );
                                     setNoteDraft("");
                                   }}
-                                  title={
+                                  title={[
+                                    isMine ? "Your figure" : null,
                                     notes.length
                                       ? notes.map((n) => n.body).join("\n")
-                                      : "Add a note"
-                                  }
+                                      : "Add a note",
+                                  ]
+                                    .filter(Boolean)
+                                    .join(" · ")}
                                   className={`font-numeric w-full rounded-sm px-2 py-1 text-right tabular-nums transition hover:bg-surface-2 ${
+                                    isMine
+                                      ? "underline decoration-brand decoration-dotted underline-offset-4"
+                                      : ""
+                                  } ${
                                     notes.length
                                       ? "text-brand"
                                       : value === null
@@ -247,6 +291,11 @@ export function StatementsSection({
                                       placeholder={`Note on ${item.label} FY${y.fiscalYear}…`}
                                       className="w-full rounded-sm border border-line bg-background p-1.5 text-xs text-ink focus:border-brand focus:outline-none"
                                     />
+                                    {noteError ? (
+                                      <p className="mt-1 text-[11px] text-neg">
+                                        {noteError}
+                                      </p>
+                                    ) : null}
                                     <div className="mt-1 flex justify-end gap-2">
                                       <button
                                         type="button"
@@ -308,6 +357,13 @@ export function StatementsSection({
           ),
         )}
       </Tabs>
+
+      <ManualStatementForm
+        instrumentId={instrumentId}
+        fetchedYears={fetchedYears}
+        manualRows={manualRows}
+        currency={currency}
+      />
     </section>
   );
 }

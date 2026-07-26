@@ -23,12 +23,17 @@ def connect() -> psycopg.Connection:
 def tracked_instruments(
     conn: psycopg.Connection, kinds: tuple[str, ...], markets: tuple[str, ...]
 ) -> list[dict]:
-    """Only instruments someone actually tracks — never the whole market."""
+    """Only instruments someone actually tracks — never the whole market.
+
+    Hand-kept instruments (is_manual) are excluded: no provider covers them,
+    so a fetch attempt would only quarantine them as fetch_failing.
+    """
     rows = conn.execute(
         """
         SELECT i.id, i.kind, i.symbol, i.market, i.currency
         FROM instruments i
         WHERE i.status = 'active'
+          AND NOT i.is_manual
           AND i.kind = ANY(%s) AND i.market = ANY(%s)
           AND EXISTS (
             SELECT 1 FROM user_instruments ui WHERE ui.instrument_id = i.id

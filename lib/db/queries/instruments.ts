@@ -1,7 +1,12 @@
 import { and, desc, eq } from "drizzle-orm";
 
 import { db } from "../index";
-import { instruments, snapshots, userInstruments } from "../schema";
+import {
+  instruments,
+  priceHistory,
+  snapshots,
+  userInstruments,
+} from "../schema";
 
 export type Instrument = typeof instruments.$inferSelect;
 export type Snapshot = typeof snapshots.$inferSelect;
@@ -13,6 +18,7 @@ export async function getOrCreateInstrument(values: {
   market: string;
   currency: string;
   name: string | null;
+  isManual?: boolean;
 }): Promise<Instrument> {
   const inserted = await db()
     .insert(instruments)
@@ -33,6 +39,18 @@ export async function getOrCreateInstrument(values: {
     .limit(1);
   if (!existing[0]) throw new Error(`instrument ${values.symbol} vanished`);
   return existing[0];
+}
+
+export async function findInstrument(
+  symbol: string,
+  market: string,
+): Promise<Instrument | null> {
+  const rows = await db()
+    .select()
+    .from(instruments)
+    .where(and(eq(instruments.symbol, symbol), eq(instruments.market, market)))
+    .limit(1);
+  return rows[0] ?? null;
 }
 
 export async function addUserInstrument(
@@ -69,6 +87,32 @@ export async function insertSnapshotIfAbsent(
     .insert(snapshots)
     .values({ instrumentId, asOf, data, source })
     .onConflictDoNothing();
+}
+
+/** A hand-entered price for a manual instrument. Writes the same snapshot +
+ *  price_history shape the jobs write, so every downstream reader (charts,
+ *  day change, valuation, portfolio) works without a special case. */
+export async function setManualPrice(
+  instrumentId: string,
+  asOf: string,
+  price: number,
+  currency: string,
+): Promise<void> {
+  const data = { price, currency };
+  await db()
+    .insert(snapshots)
+    .values({ instrumentId, asOf, data, source: "manual" })
+    .onConflictDoUpdate({
+      target: [snapshots.instrumentId, snapshots.asOf],
+      set: { data, source: "manual", fetchedAt: new Date() },
+    });
+  await db()
+    .insert(priceHistory)
+    .values({ instrumentId, priceDate: asOf, close: String(price) })
+    .onConflictDoUpdate({
+      target: [priceHistory.instrumentId, priceHistory.priceDate],
+      set: { close: String(price) },
+    });
 }
 
 export async function latestSnapshotFor(

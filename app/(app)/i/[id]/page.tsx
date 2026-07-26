@@ -5,11 +5,13 @@ import { DeltaValue } from "@/components/base/delta-value";
 import { StaleBadge } from "@/components/base/stale-badge";
 import { StatValue } from "@/components/base/stat-value";
 import { groupStatementYears } from "@/lib/analysis/ratios";
+import { mergeManualStatements } from "@/lib/analysis/statements";
 import { getInstrumentPage } from "@/lib/db/queries/instruments";
 import { returnsSummary } from "@/lib/analysis/returns";
 import {
   getAnnotations,
   getDayChange,
+  getManualStatements,
   getNavSeries,
   getPriceSeries,
   getStatementRows,
@@ -23,6 +25,8 @@ import { createClient } from "@/lib/supabase/server";
 
 import { removeInstrument } from "../../instruments/actions";
 import { JournalSection } from "./journal-section";
+import { KeyFiguresSection } from "./key-figures-section";
+import { ManualPriceForm } from "./manual-price-form";
 import { ThesisSection } from "./thesis-section";
 import { NotesEditor } from "./notes-editor";
 import { SeriesChart } from "./series-chart";
@@ -73,6 +77,7 @@ export default async function InstrumentPage({
 
   const [
     statementRows,
+    manualRows,
     annotations,
     dayChange,
     savedValuations,
@@ -80,6 +85,7 @@ export default async function InstrumentPage({
     journal,
   ] = await Promise.all([
     isStock ? getStatementRows(instrument.id) : Promise.resolve([]),
+    isStock ? getManualStatements(user.id, instrument.id) : Promise.resolve([]),
     isStock ? getAnnotations(user.id, instrument.id) : Promise.resolve([]),
     getDayChange(instrument.id),
     isStock ? getValuations(user.id, instrument.id) : Promise.resolve([]),
@@ -95,13 +101,17 @@ export default async function InstrumentPage({
     .filter((p) => Number.isFinite(p.value) && p.value > 0);
   const summary = returnsSummary(seriesPoints);
 
-  const years = groupStatementYears(
+  // Provider years, then the user's own figures overlaid field by field.
+  // Everything downstream (ratios, trends, valuation seeds) reads the merged
+  // view, so a hand-typed year is a first-class year.
+  const fetchedYears = groupStatementYears(
     statementRows.map((r) => ({
       fiscalYear: r.fiscalYear,
       statement: r.statement,
       data: r.data as Record<string, number | null>,
     })),
   );
+  const years = mergeManualStatements(fetchedYears, manualRows);
 
   return (
     <main className="mx-auto w-full max-w-5xl px-6 py-6">
@@ -122,6 +132,11 @@ export default async function InstrumentPage({
         {isStale(latestSnapshot?.fetchedAt ?? null) ? (
           <StaleBadge asOf={latestSnapshot?.asOf ?? null} />
         ) : null}
+        {instrument.isManual ? (
+          <span className="rounded-sm bg-brand-soft px-1.5 py-0.5 text-xs text-brand">
+            hand-kept
+          </span>
+        ) : null}
         {instrument.status !== "active" ? (
           <span className="rounded-sm bg-warn-soft px-1.5 py-0.5 text-xs text-warn">
             {instrument.status === "fetch_failing"
@@ -131,8 +146,23 @@ export default async function InstrumentPage({
         ) : null}
       </header>
 
+      {instrument.isManual ? (
+        <ManualPriceForm
+          instrumentId={instrument.id}
+          currency={currency}
+          currentPrice={headlineValue}
+          asOf={latestSnapshot?.asOf ?? null}
+        />
+      ) : null}
+
       {isStock ? (
         <>
+          <KeyFiguresSection
+            snapshot={(latestSnapshot?.data as Record<string, unknown>) ?? null}
+            currency={currency}
+            asOf={latestSnapshot?.asOf ?? null}
+            isManual={instrument.isManual}
+          />
           <ValuationSection
             instrumentId={instrument.id}
             seeds={buildSeeds(
@@ -151,8 +181,11 @@ export default async function InstrumentPage({
           <StatementsSection
             instrumentId={instrument.id}
             years={years}
+            fetchedYears={fetchedYears}
+            manualRows={manualRows}
             currency={currency}
             statementsUnsupported={instrument.market === "PK"}
+            handKept={instrument.isManual}
             annotations={annotations.map((a) => ({
               id: a.id,
               target: a.target,
@@ -174,7 +207,7 @@ export default async function InstrumentPage({
             error={thesisError}
           />
           <TrendsSection years={years} currency={currency} />
-          <RatiosSection years={years} />
+          <RatiosSection years={years} currency={currency} />
         </>
       ) : (
         <section className="mt-8 space-y-6">

@@ -90,3 +90,19 @@ mention the provider (grep-enforced).
 **Duplicate breach emails should be impossible**: dedup is the partial unique
 constraint on `(thesis_id, fired_on)` plus intact↔breached state tracking.
 Check `select * from alert_events where thesis_id='...' order by fired_on`.
+
+**Hand-kept data.** Two escape hatches for what the free sources can't reach:
+
+- _Your own statement figures_ — "Add figures by hand" under Statements on any
+  stock. They land in `manual_statements` (user-owned, RLS) and are overlaid on
+  the provider's rows field by field at read time: a blank field keeps the
+  fetched figure, a filled one wins and is marked with a dotted underline. Jobs
+  cannot clobber them; other users never see them. Use it for the years
+  yfinance doesn't reach back to, and for PSX, which has no statements at all.
+- _Hand-kept instruments_ — "Add a company by hand" on `/instruments` for an
+  unlisted or uncovered company. `instruments.is_manual = true`, which excludes
+  it from both batch jobs (`tracked_instruments` filters on it). Its price is
+  typed on the instrument page and written through the normal
+  `snapshots` + `price_history` path, so charts, valuation and portfolio need no
+  special case. Ratios and all four valuation models compute from typed figures
+  exactly as they do from fetched ones.

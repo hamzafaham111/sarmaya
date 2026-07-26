@@ -3,6 +3,7 @@ import { and, asc, desc, eq, gte } from "drizzle-orm";
 import { db } from "../index";
 import {
   annotations,
+  manualStatements,
   navHistory,
   priceHistory,
   statements,
@@ -11,6 +12,7 @@ import {
 
 export type StatementRow = typeof statements.$inferSelect;
 export type Annotation = typeof annotations.$inferSelect;
+export type ManualStatementRow = typeof manualStatements.$inferSelect;
 
 export async function getStatementRows(
   instrumentId: string,
@@ -109,6 +111,63 @@ export async function deleteAnnotation(
     .delete(annotations)
     .where(
       and(eq(annotations.id, annotationId), eq(annotations.userId, userId)),
+    );
+}
+
+/** The user's own statement figures for this instrument (overlaid on the
+ *  fetched rows at read time — see lib/analysis/statements.ts). */
+export async function getManualStatements(
+  userId: string,
+  instrumentId: string,
+): Promise<ManualStatementRow[]> {
+  return db()
+    .select()
+    .from(manualStatements)
+    .where(
+      and(
+        eq(manualStatements.userId, userId),
+        eq(manualStatements.instrumentId, instrumentId),
+      ),
+    )
+    .orderBy(asc(manualStatements.fiscalYear));
+}
+
+export async function upsertManualStatement(values: {
+  userId: string;
+  instrumentId: string;
+  fiscalYear: number;
+  statement: string;
+  data: Record<string, number | null>;
+}): Promise<void> {
+  await db()
+    .insert(manualStatements)
+    .values(values)
+    .onConflictDoUpdate({
+      target: [
+        manualStatements.userId,
+        manualStatements.instrumentId,
+        manualStatements.fiscalYear,
+        manualStatements.statement,
+      ],
+      set: { data: values.data, updatedAt: new Date() },
+    });
+}
+
+export async function deleteManualStatement(
+  userId: string,
+  instrumentId: string,
+  fiscalYear: number,
+  statement: string,
+): Promise<void> {
+  await db()
+    .delete(manualStatements)
+    .where(
+      and(
+        eq(manualStatements.userId, userId),
+        eq(manualStatements.instrumentId, instrumentId),
+        eq(manualStatements.fiscalYear, fiscalYear),
+        eq(manualStatements.statement, statement),
+      ),
     );
 }
 

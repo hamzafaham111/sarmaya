@@ -1,20 +1,40 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
 
-import { DeltaValue } from "@/components/base/delta-value";
 import { EmptyState } from "@/components/base/empty-state";
 import { StatValue } from "@/components/base/stat-value";
+import {
+  attentionItems,
+  bucketDayChange,
+  dayChangeFromSeries,
+  latestClose,
+  rankMovers,
+  type MoverInput,
+} from "@/lib/analysis/overview";
 import { buildPortfolio } from "@/lib/analysis/portfolio";
 import { listUserInstruments } from "@/lib/db/queries/instruments";
+import { listAllEntries } from "@/lib/db/queries/journal";
 import { getPortfolioInputs } from "@/lib/db/queries/portfolio";
-import { getDayChange } from "@/lib/db/queries/study";
-import { formatMoney, type Currency, DASH } from "@/lib/format";
+import { getSeriesBatch } from "@/lib/db/queries/study";
+import { listUserTheses } from "@/lib/db/queries/theses";
+import { formatPercent } from "@/lib/format";
 import { createClient } from "@/lib/supabase/server";
 
 import { createExampleSet } from "./instruments/actions";
+import {
+  AttentionPanel,
+  MoversList,
+  PortfolioCards,
+  RecentDecisions,
+} from "./overview-sections";
 
-// The real overview: tracked instruments, per-currency portfolio totals,
-// thesis health — all derived, nothing decorative.
+const MOVERS_SHOWN = 6;
+const DECISIONS_SHOWN = 5;
+const SPARK_DAYS = 90;
+
+// The front page answers three questions, in this order: what is my money
+// doing, does anything need me today, and what moved. Everything on it is
+// derived from data we already hold — nothing decorative, no advice.
 export default async function OverviewPage() {
   const supabase = await createClient();
   const {
@@ -22,33 +42,75 @@ export default async function OverviewPage() {
   } = await supabase.auth.getUser();
   if (!user) redirect("/signin");
 
-  const [tracked, portfolioInputs] = await Promise.all([
+  const [tracked, portfolioInputs, theses, journal] = await Promise.all([
     listUserInstruments(user.id),
     getPortfolioInputs(user.id),
+    listUserTheses(user.id),
+    listAllEntries(user.id),
   ]);
-  const buckets = buildPortfolio(portfolioInputs);
 
-  const intact = portfolioInputs
-    .flatMap((i) => i.thesisStatuses)
-    .filter((s) => s === "intact").length;
-  const breached = portfolioInputs
-    .flatMap((i) => i.thesisStatuses)
-    .filter((s) => s === "breached").length;
-
-  const movers = await Promise.all(
-    tracked.slice(0, 8).map(async ({ instrument }) => ({
-      instrument,
-      dayChange: await getDayChange(instrument.id),
-    })),
+  // One batched query for every sparkline and day change on the page — the
+  // pooler gives us four connections, so no per-instrument round trips.
+  const series = await getSeriesBatch(
+    tracked.map((t) => t.instrument.id),
+    SPARK_DAYS,
   );
 
-  return (
-    <main className="mx-auto w-full max-w-4xl px-6 py-6">
-      <h1 className="font-display mb-6 text-2xl font-medium text-ink">
-        Overview
-      </h1>
+  const buckets = buildPortfolio(portfolioInputs);
+  const now = new Date();
 
-      {tracked.length === 0 ? (
+  const movers: MoverInput[] = tracked.map(({ instrument }) => {
+    const points = series.get(instrument.id);
+    return {
+      instrumentId: instrument.id,
+      symbol: instrument.symbol,
+      name: instrument.name,
+      kind: instrument.kind,
+      currency: instrument.currency,
+      price: latestClose(points),
+      dayChange: dayChangeFromSeries(points),
+      series: (points ?? []).map((p) => {
+        const n = Number(p.close);
+        return Number.isFinite(n) ? n : null;
+      }),
+    };
+  });
+  const dayChangeById = new Map(
+    movers.map((m) => [m.instrumentId, m.dayChange]),
+  );
+
+  const dayChanges: Record<string, number | null> = {};
+  for (const bucket of buckets) {
+    dayChanges[bucket.currency] = bucketDayChange(
+      bucket.rows.map((row) => ({
+        marketValue: row.marketValue,
+        dayChange: dayChangeById.get(row.instrumentId) ?? null,
+      })),
+    );
+  }
+
+  const attention = attentionItems({
+    theses,
+    instruments: tracked.map(({ instrument, latestSnapshot }) => ({
+      id: instrument.id,
+      symbol: instrument.symbol,
+      fetchedAt: latestSnapshot?.fetchedAt ?? null,
+      status: instrument.status,
+      isManual: instrument.isManual,
+    })),
+    unpricedHoldings: buckets.reduce((sum, b) => sum + b.excludedCount, 0),
+    now,
+  });
+
+  const breachedTheses = theses.filter((t) => t.status === "breached").length;
+  const held = buckets.reduce((sum, b) => sum + b.rows.length, 0);
+
+  if (tracked.length === 0) {
+    return (
+      <main className="mx-auto w-full max-w-5xl px-6 py-6">
+        <h1 className="font-display mb-6 text-2xl font-medium text-ink">
+          Overview
+        </h1>
         <EmptyState
           title="Welcome to Sarmaya"
           message="Track your first instrument from the Instruments page — or start with a pre-filled example set to see how the terminal works."
@@ -63,63 +125,109 @@ export default async function OverviewPage() {
             </form>
           }
         />
+      </main>
+    );
+  }
+
+  return (
+    <main className="mx-auto w-full max-w-5xl px-6 py-6">
+      <header className="mb-5 flex flex-wrap items-baseline justify-between gap-2">
+        <h1 className="font-display text-2xl font-medium text-ink">Overview</h1>
+        <p className="font-numeric text-xs text-ink-muted tabular-nums">
+          {now.toISOString().slice(0, 10)}
+        </p>
+      </header>
+
+      {/* One line of context above the money. */}
+      <section className="mb-5 grid grid-cols-2 gap-4 rounded-md border border-line bg-surface px-4 py-3 sm:grid-cols-4">
+        <StatValue label="Tracked" value={String(tracked.length)} />
+        <StatValue label="Held" value={held === 0 ? null : String(held)} />
+        <StatValue
+          label="Active theses"
+          value={theses.length === 0 ? null : String(theses.length)}
+        />
+        <StatValue
+          label="Breached"
+          value={breachedTheses === 0 ? "none" : String(breachedTheses)}
+        />
+      </section>
+
+      {buckets.length === 0 ? (
+        <div className="mb-5 rounded-md border border-dashed border-line bg-surface px-6 py-8 text-center">
+          <p className="text-sm text-ink">Nothing held yet</p>
+          <p className="mx-auto mt-1 max-w-md text-xs text-ink-muted">
+            Record a buy or a SIP from any instrument page — with the why — and
+            your positions, cost and unrealised return appear here.
+          </p>
+          <Link
+            href="/instruments"
+            className="mt-3 inline-block text-xs text-brand underline underline-offset-4"
+          >
+            Go to instruments
+          </Link>
+        </div>
       ) : (
-        <>
-          <section className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+        <div className="mb-5">
+          <PortfolioCards buckets={buckets} dayChanges={dayChanges} />
+          {buckets.length > 1 ? (
+            <p className="mt-2 text-[11px] text-ink-muted">
+              Buckets are never added together — Sarmaya does not convert
+              currencies.
+            </p>
+          ) : null}
+        </div>
+      )}
+
+      {/* min-w-0 on the columns: a grid child's automatic minimum size is
+          its content, which would push the page into a sideways scroll on a
+          narrow screen. */}
+      <div className="grid gap-5 lg:grid-cols-5">
+        <div className="min-w-0 space-y-5 lg:col-span-3">
+          <MoversList movers={rankMovers(movers, MOVERS_SHOWN)} />
+        </div>
+        <div className="min-w-0 space-y-5 lg:col-span-2">
+          <AttentionPanel items={attention} />
+          <RecentDecisions entries={journal.slice(0, DECISIONS_SHOWN)} />
+        </div>
+      </div>
+
+      {buckets.length > 0 && buckets[0].weighted.pe !== null ? (
+        <section className="mt-5 rounded-md border border-line bg-surface px-4 py-3">
+          <div className="mb-2 flex items-baseline justify-between">
+            <h2 className="font-display text-sm text-ink">
+              Your {buckets[0].currency} stocks as one business
+            </h2>
+            <Link
+              href="/portfolio"
+              className="text-[11px] text-ink-muted underline underline-offset-4 hover:text-brand"
+            >
+              full portfolio
+            </Link>
+          </div>
+          <div className="grid grid-cols-3 gap-4">
             <StatValue
-              label="Tracked instruments"
-              value={String(tracked.length)}
-              size="lg"
+              label="Weighted P / E"
+              value={buckets[0].weighted.pe.toFixed(2)}
             />
-            {buckets.slice(0, 2).map((b) => (
-              <StatValue
-                key={b.currency}
-                label={`Portfolio (${b.currency})`}
-                value={formatMoney(
-                  Number(b.totalMarketValue),
-                  b.currency as Currency,
-                  "compact",
-                )}
-              />
-            ))}
             <StatValue
-              label="Theses"
+              label="Weighted ROE"
               value={
-                intact + breached === 0
+                buckets[0].weighted.roe === null
                   ? null
-                  : `${intact} intact · ${breached} breached`
+                  : formatPercent(buckets[0].weighted.roe)
               }
             />
-          </section>
-
-          <section className="mt-8">
-            <h2 className="font-display mb-3 text-lg text-ink">Watchlist</h2>
-            <ul className="divide-y divide-line overflow-hidden rounded-md border border-line bg-surface">
-              {movers.map(({ instrument, dayChange }) => (
-                <li key={instrument.id}>
-                  <Link
-                    href={`/i/${instrument.id}`}
-                    className="flex items-baseline justify-between gap-4 px-4 py-2.5 transition hover:bg-surface-2"
-                  >
-                    <span className="flex min-w-0 items-baseline gap-3">
-                      <span className="font-numeric text-sm font-semibold text-ink">
-                        {instrument.symbol}
-                      </span>
-                      <span className="truncate text-xs text-ink-muted">
-                        {instrument.name ?? DASH}
-                      </span>
-                    </span>
-                    <DeltaValue
-                      value={dayChange === null ? null : dayChange * 100}
-                      className="text-xs"
-                    />
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </section>
-        </>
-      )}
+            <StatValue
+              label="Weighted debt / equity"
+              value={
+                buckets[0].weighted.debtToEquity === null
+                  ? null
+                  : buckets[0].weighted.debtToEquity.toFixed(2)
+              }
+            />
+          </div>
+        </section>
+      ) : null}
     </main>
   );
 }

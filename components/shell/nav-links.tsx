@@ -19,12 +19,16 @@ export function NavLinks({ orientation }: { orientation: "side" | "top" }) {
 
   if (orientation === "top") {
     return (
-      <nav className="flex gap-3 overflow-x-auto text-[13px]">
+      // min-w-0 lets the nav scroll inside itself; without it a flex item's
+      // min-content width pushes the whole page into a horizontal scroll.
+      <nav className="flex min-w-0 gap-3 overflow-x-auto text-[13px]">
         {NAV.map((item) => (
           <Link
             key={item.href}
             href={item.href}
-            className={isActive(item.href) ? "text-brand" : "text-ink-muted"}
+            className={`shrink-0 whitespace-nowrap ${
+              isActive(item.href) ? "text-brand" : "text-ink-muted"
+            }`}
           >
             {item.label}
           </Link>

@@ -1,4 +1,4 @@
-import { and, asc, desc, eq, gte } from "drizzle-orm";
+import { and, asc, desc, eq, gte, inArray } from "drizzle-orm";
 
 import { db } from "../index";
 import {
@@ -76,6 +76,62 @@ export async function getDayChange(
     return null;
   }
   return (latest - prev) / prev;
+}
+
+/**
+ * Daily closes (stocks/indices) AND NAVs (funds) for many instruments in two
+ * queries instead of one per instrument. The overview and watchlist both
+ * need a series per row; the free-tier pooler gives us four connections, so
+ * N+1 here is not an option.
+ */
+export async function getSeriesBatch(
+  instrumentIds: string[],
+  days: number,
+): Promise<Map<string, PricePoint[]>> {
+  const byInstrument = new Map<string, PricePoint[]>();
+  if (instrumentIds.length === 0) return byInstrument;
+
+  const since = new Date(Date.now() - days * 86_400_000)
+    .toISOString()
+    .slice(0, 10);
+
+  const [prices, navs] = await Promise.all([
+    db()
+      .select({
+        instrumentId: priceHistory.instrumentId,
+        date: priceHistory.priceDate,
+        close: priceHistory.close,
+      })
+      .from(priceHistory)
+      .where(
+        and(
+          inArray(priceHistory.instrumentId, instrumentIds),
+          gte(priceHistory.priceDate, since),
+        ),
+      )
+      .orderBy(asc(priceHistory.priceDate)),
+    db()
+      .select({
+        instrumentId: navHistory.instrumentId,
+        date: navHistory.navDate,
+        close: navHistory.nav,
+      })
+      .from(navHistory)
+      .where(
+        and(
+          inArray(navHistory.instrumentId, instrumentIds),
+          gte(navHistory.navDate, since),
+        ),
+      )
+      .orderBy(asc(navHistory.navDate)),
+  ]);
+
+  for (const row of [...prices, ...navs]) {
+    const list = byInstrument.get(row.instrumentId) ?? [];
+    list.push({ date: row.date, close: row.close });
+    byInstrument.set(row.instrumentId, list);
+  }
+  return byInstrument;
 }
 
 export async function getAnnotations(

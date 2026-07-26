@@ -3,7 +3,7 @@ import { and, asc, eq, sql } from "drizzle-orm";
 import type { Rule } from "@/lib/alerts/rules";
 
 import { db } from "../index";
-import { theses } from "../schema";
+import { instruments, theses } from "../schema";
 
 export type Thesis = typeof theses.$inferSelect;
 
@@ -18,6 +18,34 @@ export async function listTheses(
       and(eq(theses.userId, userId), eq(theses.instrumentId, instrumentId)),
     )
     .orderBy(asc(theses.createdAt));
+}
+
+export interface UserThesis {
+  id: string;
+  instrumentId: string;
+  symbol: string;
+  statement: string;
+  status: string;
+  lastReviewedAt: Date;
+}
+
+/** Every non-archived thesis the user holds, with its instrument's symbol —
+ *  one query for the overview's attention list. */
+export async function listUserTheses(userId: string): Promise<UserThesis[]> {
+  const rows = await db()
+    .select({
+      id: theses.id,
+      instrumentId: theses.instrumentId,
+      symbol: instruments.symbol,
+      statement: theses.statement,
+      status: theses.status,
+      lastReviewedAt: theses.lastReviewedAt,
+    })
+    .from(theses)
+    .innerJoin(instruments, eq(theses.instrumentId, instruments.id))
+    .where(and(eq(theses.userId, userId), sql`${theses.status} != 'archived'`))
+    .orderBy(asc(theses.lastReviewedAt));
+  return rows;
 }
 
 export async function countActiveTheses(

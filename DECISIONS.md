@@ -25,3 +25,5 @@ One line per decision: date, decision, why.
 - 2026-07-26 — Sentry wired runtime-only (inline instrumentation init, errors only, no build plugin); client uses NEXT_PUBLIC_SENTRY_DSN.
 - 2026-07-26 — Onboarding example set = RELIANCE.NS + Parag Parikh flexi fund + an [Example] journal note, created only on request from empty states.
 - 2026-07-26 — e2e is ONE long journey test (sign-in → study → valuation → fund → portfolio) with a 240s budget — it exercises the real DB, not mocks.
+- 2026-07-26 — Chart range windows (1Y/3Y/5Y) anchor to the LAST point in the series, not wall-clock now — keeps the render pure (no server/client hydration drift) and still shows a full window when the series ends before today.
+- 2026-07-26 — Email templates are the one sanctioned place for hex outside `app/globals.css` — email clients don't support CSS custom properties; the palette is mirrored by hand there.

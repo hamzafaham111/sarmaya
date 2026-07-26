@@ -1,4 +1,4 @@
-import { dcf, type DcfAssumptions } from "./dcf";
+import { dcf } from "./dcf";
 import { isApplicable, type ModelResult } from "./types";
 
 // Reverse DCF: what FCF growth does the CURRENT PRICE imply, given the same

@@ -35,7 +35,10 @@ export function SeriesChart({
   const data = useMemo(() => {
     const days = RANGES.find((r) => r.key === range)?.days ?? 365;
     if (!Number.isFinite(days)) return series;
-    const cutoff = Date.now() - (days as number) * 86_400_000;
+    // Anchor the window to the series end (pure — no wall clock in render).
+    const last = series[series.length - 1]?.date;
+    if (!last) return series;
+    const cutoff = new Date(last).getTime() - (days as number) * 86_400_000;
     return series.filter((p) => new Date(p.date).getTime() >= cutoff);
   }, [series, range]);
 

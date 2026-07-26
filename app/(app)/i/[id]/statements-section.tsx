@@ -74,8 +74,9 @@ export function StatementsSection({
   if (years.length === 0) {
     return (
       <p className="rounded-md border border-dashed border-line bg-surface p-6 text-center text-sm text-ink-muted">
-        Statements unavailable yet — the weekly job brings every year the source
-        provides.
+        {statementsUnsupported
+          ? "Statements unavailable for this market — the source provides prices only. Trends and ratios need statements, so they stay empty here."
+          : "Statements unavailable yet — the weekly job brings every year the source provides."}
       </p>
     );
   }
@@ -167,7 +168,7 @@ export function StatementsSection({
                           <td className="sticky left-0 bg-surface px-3 py-1.5 text-ink-muted">
                             {item.label}
                           </td>
-                          {years.map((y, idx) => {
+                          {years.map((y) => {
                             const target = `${kind}:${item.key}:${y.fiscalYear}`;
                             const value = cellValue(y, kind, item.key);
                             const notes = byTarget.get(target) ?? [];

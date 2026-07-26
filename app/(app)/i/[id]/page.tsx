@@ -14,12 +14,14 @@ import {
   getPriceSeries,
   getStatementRows,
 } from "@/lib/db/queries/study";
+import { listInstrumentEntries } from "@/lib/db/queries/journal";
 import { getValuations } from "@/lib/db/queries/valuations";
 import { buildSeeds } from "@/lib/valuation/seed";
 import { formatMoney, formatPercent, type Currency } from "@/lib/format";
 import { createClient } from "@/lib/supabase/server";
 
 import { removeInstrument } from "../../instruments/actions";
+import { JournalSection } from "./journal-section";
 import { NotesEditor } from "./notes-editor";
 import { SeriesChart } from "./series-chart";
 import { RatiosSection } from "./ratios-section";
@@ -36,10 +38,13 @@ function isStale(fetchedAt: Date | null): boolean {
 // treatment; indices price-only; funds get their own layout in Phase 5.
 export default async function InstrumentPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ id: string }>;
+  searchParams: Promise<{ journalError?: string }>;
 }) {
   const { id } = await params;
+  const { journalError } = await searchParams;
   if (!z.uuid().safeParse(id).success) notFound();
 
   const supabase = await createClient();
@@ -64,16 +69,23 @@ export default async function InstrumentPage({
   const isFund = instrument.kind === "fund";
   const headlineValue = isFund ? (data?.nav ?? null) : (data?.price ?? null);
 
-  const [statementRows, annotations, dayChange, savedValuations, series] =
-    await Promise.all([
-      isStock ? getStatementRows(instrument.id) : Promise.resolve([]),
-      isStock ? getAnnotations(user.id, instrument.id) : Promise.resolve([]),
-      getDayChange(instrument.id),
-      isStock ? getValuations(user.id, instrument.id) : Promise.resolve([]),
-      isFund
-        ? getNavSeries(instrument.id)
-        : getPriceSeries(instrument.id, 365 * 5),
-    ]);
+  const [
+    statementRows,
+    annotations,
+    dayChange,
+    savedValuations,
+    series,
+    journal,
+  ] = await Promise.all([
+    isStock ? getStatementRows(instrument.id) : Promise.resolve([]),
+    isStock ? getAnnotations(user.id, instrument.id) : Promise.resolve([]),
+    getDayChange(instrument.id),
+    isStock ? getValuations(user.id, instrument.id) : Promise.resolve([]),
+    isFund
+      ? getNavSeries(instrument.id)
+      : getPriceSeries(instrument.id, 365 * 5),
+    listInstrumentEntries(user.id, instrument.id),
+  ]);
 
   const seriesPoints = series
     .map((p) => ({ date: p.date, value: Number(p.close) }))
@@ -184,6 +196,17 @@ export default async function InstrumentPage({
           />
         </section>
       )}
+
+      {instrument.kind !== "index" ? (
+        <JournalSection
+          instrumentId={instrument.id}
+          entries={journal}
+          isFund={isFund}
+          currency={currency}
+          today={new Date().toISOString().slice(0, 10)}
+          error={journalError}
+        />
+      ) : null}
 
       <NotesEditor
         instrumentId={instrument.id}

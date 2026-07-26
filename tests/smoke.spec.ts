@@ -183,6 +183,43 @@ test("magic-link auth reaches the authed shell", async ({ page }) => {
     await expect(
       page.getByRole("heading", { name: "Statements" }),
     ).not.toBeVisible();
+    // Phase 6: record a buy with mandatory reasoning; portfolio buckets it.
+    await page.goto("/instruments");
+    await page
+      .getByRole("link", { name: /RELIANCE\.NS/ })
+      .first()
+      .click();
+    // The record form starts open for a fresh user (no entries yet).
+    await page.locator('input[name="price"]').fill("1278");
+    await page.locator('input[name="quantity"]').fill("10");
+    await page.locator('textarea[name="reasoning"]').fill("short");
+    // client minLength blocks; bypass to prove the server/DB reject too
+    await page
+      .locator('textarea[name="reasoning"]')
+      .evaluate((el) => el.removeAttribute("minlength"));
+    await page.getByRole("button", { name: "Record", exact: true }).click();
+    await expect(page.getByText(/Rejected|Invalid entry/)).toBeVisible({
+      timeout: 15_000,
+    });
+
+    await page.locator('input[name="price"]').fill("1278");
+    await page.locator('input[name="quantity"]').fill("10");
+    await page
+      .locator('textarea[name="reasoning"]')
+      .fill("smoke-test buy: durable energy-to-tech compounder");
+    await page.getByRole("button", { name: "Record", exact: true }).click();
+    await expect(
+      page.getByText("Holding 10 shares", { exact: false }),
+    ).toBeVisible({ timeout: 15_000 });
+
+    await page.goto("/portfolio");
+    await expect(
+      page.getByRole("heading", { name: "INR holdings" }),
+    ).toBeVisible();
+    await expect(
+      page.getByRole("link", { name: "RELIANCE.NS", exact: true }),
+    ).toBeVisible();
+    expect(await page.locator("main").innerText()).not.toContain("NaN");
   } finally {
     if (created?.user) await admin.auth.admin.deleteUser(created.user.id);
   }

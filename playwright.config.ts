@@ -7,7 +7,8 @@ const PORT = 3210;
 export default defineConfig({
   testDir: "./tests",
   testMatch: "**/*.spec.ts",
-  timeout: 90_000,
+  // One long journey test spanning phases 2-6 against a remote DB.
+  timeout: 240_000,
   expect: { timeout: 20_000 },
   use: { baseURL: `http://localhost:${PORT}` },
   webServer: {

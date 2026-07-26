@@ -60,6 +60,7 @@
   --color-line: var(--border);
   --color-brand: var(--brand);
   --color-brand-soft: var(--brand-soft);
+  --color-on-brand: var(--on-brand);
   --color-pos: var(--pos);
   --color-neg: var(--neg);
   --color-warn: var(--warn);
@@ -106,6 +107,7 @@
   --surface-2: #eef1f5;
   --brand: #2e6fe8;
   --brand-soft: #e5edfc;
+  --on-brand: #ffffff;
   --pos: #178a53;
   --neg: #c43d32;
   --warn: #8f5a10;
@@ -149,6 +151,7 @@
   --surface-2: #19202a;
   --brand: #5b9dff;
   --brand-soft: #14263f;
+  --on-brand: #0b1626;
   --pos: #4cc38a;
   --neg: #f0776d;
   --warn: #e0a24a;

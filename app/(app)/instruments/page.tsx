@@ -1,10 +1,13 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
 
+import { DeltaValue } from "@/components/base/delta-value";
 import { EmptyState } from "@/components/base/empty-state";
+import { Sparkline } from "@/components/base/sparkline";
 import { StaleBadge } from "@/components/base/stale-badge";
 import { SearchAdd } from "@/components/instruments/search-add";
 import { listUserInstruments } from "@/lib/db/queries/instruments";
+import { getDayChange, getPriceSeries } from "@/lib/db/queries/study";
 import { formatMoney, type Currency } from "@/lib/format";
 import { createClient } from "@/lib/supabase/server";
 
@@ -33,6 +36,14 @@ export default async function InstrumentsPage({
   if (!user) redirect("/signin");
 
   const items = await listUserInstruments(user.id);
+  const extras = await Promise.all(
+    items.map(async ({ instrument }) => ({
+      dayChange: await getDayChange(instrument.id),
+      series: (await getPriceSeries(instrument.id, 90)).map((p) =>
+        Number.isFinite(Number(p.close)) ? Number(p.close) : null,
+      ),
+    })),
+  );
 
   return (
     <main className="mx-auto w-full max-w-4xl px-6 py-6">
@@ -56,10 +67,11 @@ export default async function InstrumentsPage({
         </div>
       ) : (
         <ul className="mt-6 divide-y divide-line overflow-hidden rounded-md border border-line bg-surface">
-          {items.map(({ instrument, latestSnapshot }) => {
+          {items.map(({ instrument, latestSnapshot }, idx) => {
             const data = latestSnapshot?.data as {
               price?: number | null;
             } | null;
+            const { dayChange, series } = extras[idx];
             return (
               <li key={instrument.id}>
                 <Link
@@ -77,13 +89,18 @@ export default async function InstrumentsPage({
                       {instrument.kind} · {instrument.market}
                     </span>
                   </span>
-                  <span className="flex shrink-0 items-center gap-2">
-                    <span className="font-numeric text-sm text-ink tabular-nums">
+                  <span className="flex shrink-0 items-center gap-3">
+                    <Sparkline values={series} width={72} height={20} />
+                    <span className="font-numeric w-24 text-right text-sm text-ink tabular-nums">
                       {formatMoney(
                         data?.price ?? null,
                         instrument.currency as Currency,
                       )}
                     </span>
+                    <DeltaValue
+                      value={dayChange === null ? null : dayChange * 100}
+                      className="w-16 text-right text-xs"
+                    />
                     {isStale(latestSnapshot?.fetchedAt ?? null) ? (
                       <StaleBadge asOf={latestSnapshot?.asOf ?? null} />
                     ) : null}

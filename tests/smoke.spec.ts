@@ -99,6 +99,44 @@ test("magic-link auth reaches the authed shell", async ({ page }) => {
     await expect(
       page.getByRole("button", { name: /stop tracking RELIANCE\.NS/i }),
     ).toBeVisible();
+
+    // Phase 3: the study environment renders real statement data.
+    await expect(
+      page.getByRole("heading", { name: "Statements" }),
+    ).toBeVisible();
+    await expect(page.getByText(/data since \d{4}/)).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Ratios" })).toBeVisible();
+
+    // No NaN anywhere in the rendered page (automated criterion).
+    expect(await page.locator("main").innerText()).not.toContain("NaN");
+
+    // Annotation on a statement cell persists across reload.
+    await page
+      .getByRole("cell", { name: "Revenue" })
+      .locator("..")
+      .locator("button")
+      .first()
+      .click();
+    await page
+      .getByPlaceholder(/Note on Revenue/)
+      .fill("smoke-test annotation on revenue");
+    await page.getByRole("button", { name: "Save", exact: true }).click();
+    await page.reload();
+    await expect(
+      page.getByTitle("smoke-test annotation on revenue"),
+    ).toBeVisible({ timeout: 15_000 });
+
+    // Notes autosave survives reload.
+    await page
+      .getByPlaceholder("Your research notes (markdown)…")
+      .fill("smoke note: studying reliance");
+    await expect(page.getByText("Saved", { exact: true })).toBeVisible({
+      timeout: 10_000,
+    });
+    await page.reload();
+    await expect(
+      page.getByPlaceholder("Your research notes (markdown)…"),
+    ).toHaveValue("smoke note: studying reliance");
   } finally {
     if (created?.user) await admin.auth.admin.deleteUser(created.user.id);
   }

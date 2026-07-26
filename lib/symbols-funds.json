@@ -1,0 +1,5139 @@
+[
+  { "c": "152076", "n": "360 ONE Balanced Hybrid Fund- Direct Plan - Growth" },
+  { "c": "122715", "n": "360 ONE Dynamic Bond Fund Direct Plan Growth" },
+  {
+    "c": "151165",
+    "n": "360 ONE ELSS Tax Saver Nifty 50 Index Fund - Direct Plan - Growth"
+  },
+  { "c": "151796", "n": "360 ONE FLEXICAP FUND-DIRECT PLAN- GROWTH" },
+  { "c": "131580", "n": "360 ONE Focused Fund-Direct Plan-Growth" },
+  { "c": "125345", "n": "360 ONE LIQUID FUND DIRECT PLAN  GROWTH" },
+  {
+    "c": "153774",
+    "n": "360 ONE Multi Asset Allocation Fund - Direct Plan - Growth"
+  },
+  { "c": "153703", "n": "360 ONE Overnight Fund - Direct Plan - Growth" },
+  { "c": "149318", "n": "360 ONE QUANT FUND DIRECT GROWTH" },
+  {
+    "c": "146407",
+    "n": "ADITYA BIRLA SUN LIFE BAL BHAVISHYA YOJNA DIRECT GROWTH"
+  },
+  {
+    "c": "145486",
+    "n": "ADITYA BIRLA SUN LIFE OVERNIGHT FUND-DIRECT PLAN-GROWTH"
+  },
+  { "c": "153827", "n": "ANGEL ONE GOLD ETF FOF- DIRECT GROWTH" },
+  { "c": "153529", "n": "ANGEL ONE NIFTY 50 INDEX FUND-DIRECT-GROWTH" },
+  {
+    "c": "153330",
+    "n": "ANGEL ONE NIFTY TOTAL MARKET INDEX FUND DIRECT PLAN GROWTH OPTION"
+  },
+  {
+    "c": "153956",
+    "n": "ANGEL ONE NIFTY TOTAL MARKET MOMENTUM QUALITY 50 INDEX FUND - DIRECT GROWTH"
+  },
+  { "c": "154206", "n": "ANGEL ONE SILVER ETF FOF -DIRECT GROWTH" },
+  {
+    "c": "151435",
+    "n": "AXIS CRISIL IBX 50:50 Gilt Plus SDL September 2027 Index Fund- DIRECT PLAN-GROWTH"
+  },
+  { "c": "154043", "n": "Abakkus Flexi Cap Fund - Direct - Growth" },
+  { "c": "154051", "n": "Abakkus Liquid Fund - Direct Plan - Growth" },
+  { "c": "154215", "n": "Abakkus Small Cap Fund - Direct Plan - Growth" },
+  {
+    "c": "132185",
+    "n": "Aditya Birla Sun Life Aggressive Hybrid Omni FOF- Direct Plan - Growth Option"
+  },
+  {
+    "c": "119526",
+    "n": "Aditya Birla Sun Life Arbitrage Fund - Growth - Direct Plan"
+  },
+  {
+    "c": "153736",
+    "n": "Aditya Birla Sun Life BSE 500 Momentum 50 Index Fund-Direct Growth"
+  },
+  {
+    "c": "153740",
+    "n": "Aditya Birla Sun Life BSE 500 Quality 50 Index Fund - Direct Growth"
+  },
+  {
+    "c": "153081",
+    "n": "Aditya Birla Sun Life BSE India Infrastructure Index Fund-Direct Growth"
+  },
+  {
+    "c": "131670",
+    "n": "Aditya Birla Sun Life Balanced Advantage Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "119550",
+    "n": "Aditya Birla Sun Life Banking & PSU Debt Fund- Direct Plan-Growth"
+  },
+  {
+    "c": "125597",
+    "n": "Aditya Birla Sun Life Banking and Financial Services Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "149295",
+    "n": "Aditya Birla Sun Life Business Cycle Fund-Direct Growth"
+  },
+  {
+    "c": "151427",
+    "n": "Aditya Birla Sun Life CRISIL IBX SDL Jun 2032 INDEX FUND - Direct Growth"
+  },
+  {
+    "c": "119576",
+    "n": "Aditya Birla Sun Life Commodity Equities Fund - Global Agri Plan - Growth - Direct Plan"
+  },
+  {
+    "c": "153124",
+    "n": "Aditya Birla Sun Life Conglomerate Fund-Direct Growth"
+  },
+  {
+    "c": "132183",
+    "n": "Aditya Birla Sun Life Conservative Hybrid Active FOF- Direct Plan - Growth Option"
+  },
+  {
+    "c": "119591",
+    "n": "Aditya Birla Sun Life Consumption Fund - Growth - Direct Plan"
+  },
+  {
+    "c": "119533",
+    "n": "Aditya Birla Sun Life Corporate Bond Fund - Growth - Direct Plan"
+  },
+  {
+    "c": "134387",
+    "n": "Aditya Birla Sun Life Credit Risk Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "150702",
+    "n": "Aditya Birla Sun Life Crisil IBX 50:50 Gilt Plus SDL Apr 2028 Index Fund-Direct Growth"
+  },
+  {
+    "c": "150938",
+    "n": "Aditya Birla Sun Life Crisil IBX 60:40 SDL + AAA PSU APR 2026 Index Fund-Direct Growth"
+  },
+  {
+    "c": "150353",
+    "n": "Aditya Birla Sun Life Crisil IBX 60:40 SDL+AAA PSU-Apr 2027 Index Fund-Direct Growth"
+  },
+  {
+    "c": "151577",
+    "n": "Aditya Birla Sun Life Crisil IBX Gilt Apr 2028 Index Fund-Direct Growth"
+  },
+  {
+    "c": "152267",
+    "n": "Aditya Birla Sun Life Crisil IBX Gilt Apr 2033 Index Fund-Direct Growth"
+  },
+  {
+    "c": "152659",
+    "n": "Aditya Birla Sun Life Crisil IBX Gilt June 2027 Index Fund-Direct Growth"
+  },
+  {
+    "c": "150778",
+    "n": "Aditya Birla Sun Life Crisil IBX Gilt-Apr-2029 Index Fund-Direct Growth"
+  },
+  {
+    "c": "150698",
+    "n": "Aditya Birla Sun Life Crisil IBX Gilt-April 2026 Index Fund-Direct Growth"
+  },
+  {
+    "c": "153030",
+    "n": "Aditya Birla Sun Life Crisil-IBX AAA Financial Services Index-Sep 2027 Fund-Direct Growth"
+  },
+  {
+    "c": "152947",
+    "n": "Aditya Birla Sun Life Crisil-IBX AAA NBFC-HFC Index-Sep 2026 Fund-Direct Growth"
+  },
+  {
+    "c": "153443",
+    "n": "Aditya Birla Sun Life Crisil-IBX Financial Services 9-12 Months Debt Index Fund-Direct Growth"
+  },
+  {
+    "c": "153179",
+    "n": "Aditya Birla Sun Life Crisil-IBX financial Services 3 to 6 months Debt Index Fund-Direct Growth"
+  },
+  {
+    "c": "120539",
+    "n": "Aditya Birla Sun Life Digital India Fund - Growth - Direct Plan"
+  },
+  {
+    "c": "119507",
+    "n": "Aditya Birla Sun Life Dividend Yield Fund - Growth - Direct Plan"
+  },
+  {
+    "c": "132186",
+    "n": "Aditya Birla Sun Life Dynamic Asset Allocation Omni FOF- Direct Plan - Growth Option"
+  },
+  {
+    "c": "119505",
+    "n": "Aditya Birla Sun Life Dynamic Bond Fund - Growth - Direct Plan"
+  },
+  {
+    "c": "119544",
+    "n": "Aditya Birla Sun Life ELSS Tax Saver Fund - Growth - Direct Plan"
+  },
+  {
+    "c": "148637",
+    "n": "Aditya Birla Sun Life ESG Integration Strategy Fund-Direct Plan-Growth"
+  },
+  {
+    "c": "120517",
+    "n": "Aditya Birla Sun Life Equity Hybrid'95 Fund - Direct Plan-Growth"
+  },
+  {
+    "c": "132995",
+    "n": "Aditya Birla Sun Life Equity Savings Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "120564",
+    "n": "Aditya Birla Sun Life Flexi Cap Fund - Growth - Direct Plan"
+  },
+  {
+    "c": "122646",
+    "n": "Aditya Birla Sun Life Floating Rate Fund-Direct Plan-Growth"
+  },
+  {
+    "c": "119564",
+    "n": "Aditya Birla Sun Life Focused Fund - Growth - Direct Plan"
+  },
+  {
+    "c": "132140",
+    "n": "Aditya Birla Sun Life Global Emerging Opportunities Fund - Direct plan - Growth Option"
+  },
+  {
+    "c": "132009",
+    "n": "Aditya Birla Sun Life Global Excellence Equity Fund Of Fund - Retail Plan - Direct Plan - Growth Option"
+  },
+  {
+    "c": "120546",
+    "n": "Aditya Birla Sun Life Gold Fund - Growth - Direct Plan"
+  },
+  {
+    "c": "119605",
+    "n": "Aditya Birla Sun Life Government Securities Fund - Growth - Direct Plan"
+  },
+  {
+    "c": "119657",
+    "n": "Aditya Birla Sun Life Income Fund - Growth - Direct Plan"
+  },
+  {
+    "c": "131898",
+    "n": "Aditya Birla Sun Life Income Plus Arbitrage Active FOF- Direct Plan - Growth Option"
+  },
+  {
+    "c": "119514",
+    "n": "Aditya Birla Sun Life Infrastructure Fund - Growth - Direct Plan"
+  },
+  {
+    "c": "119517",
+    "n": "Aditya Birla Sun Life International Equity Fund - Growth - Direct Plan"
+  },
+  {
+    "c": "119518",
+    "n": "Aditya Birla Sun Life International Equity Fund - Plan B - Growth - Direct Plan"
+  },
+  {
+    "c": "119436",
+    "n": "Aditya Birla Sun Life Large & Mid Cap Fund - Growth - Direct Plan"
+  },
+  {
+    "c": "119528",
+    "n": "Aditya Birla Sun Life Large Cap Fund - Growth - Direct Plan"
+  },
+  {
+    "c": "119568",
+    "n": "Aditya Birla Sun Life Liquid Fund - Growth - Direct Plan"
+  },
+  {
+    "c": "150484",
+    "n": "Aditya Birla Sun Life Long Duration Fund-Direct Growth"
+  },
+  {
+    "c": "119523",
+    "n": "Aditya Birla Sun Life Low duration Fund - Growth - Direct Plan"
+  },
+  {
+    "c": "119646",
+    "n": "Aditya Birla Sun Life MNC Fund - Growth - Direct Plan"
+  },
+  {
+    "c": "133516",
+    "n": "Aditya Birla Sun Life Manufacturing Equity Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "119539",
+    "n": "Aditya Birla Sun Life Medium Term Plan - Growth - Direct Plan"
+  },
+  {
+    "c": "119620",
+    "n": "Aditya Birla Sun Life Midcap Fund - Growth - Direct Plan"
+  },
+  {
+    "c": "119511",
+    "n": "Aditya Birla Sun Life Money Manager Fund - Growth - Direct Plan"
+  },
+  {
+    "c": "151307",
+    "n": "Aditya Birla Sun Life Multi Asset Allocation Fund-Direct Growth"
+  },
+  {
+    "c": "131865",
+    "n": "Aditya Birla Sun Life Multi Asset Omni FoF- Direct Plan - Growth Option"
+  },
+  {
+    "c": "150688",
+    "n": "Aditya Birla Sun Life Multi-Asset Passive FOF-Direct Growth"
+  },
+  { "c": "148921", "n": "Aditya Birla Sun Life Multi-Cap Fund-Direct Growth" },
+  {
+    "c": "148962",
+    "n": "Aditya Birla Sun Life Nifty 50 Equal Weight Index Fund-Direct Growth"
+  },
+  {
+    "c": "119648",
+    "n": "Aditya Birla Sun Life Nifty 50 Index Fund - Growth - Direct Plan"
+  },
+  {
+    "c": "152798",
+    "n": "Aditya Birla Sun Life Nifty India Defence Index Fund-Direct Growth"
+  },
+  {
+    "c": "148807",
+    "n": "Aditya Birla Sun Life Nifty Midcap 150 Index Fund-Direct Growth"
+  },
+  {
+    "c": "149838",
+    "n": "Aditya Birla Sun Life Nifty Next 50 Index Fund-Direct Growth"
+  },
+  {
+    "c": "149794",
+    "n": "Aditya Birla Sun Life Nifty SDL Apr 2027 Index Fund-Direct Growth"
+  },
+  {
+    "c": "149199",
+    "n": "Aditya Birla Sun Life Nifty SDL Plus PSU Bond SEP 2026 60:40 Index Fund-Direct Growth"
+  },
+  {
+    "c": "151562",
+    "n": "Aditya Birla Sun Life Nifty SDL SEP 2027 Index Fund-Direct Growth"
+  },
+  {
+    "c": "150663",
+    "n": "Aditya Birla Sun Life Nifty SDL Sep 2025 Index Fund-Direct Growth"
+  },
+  {
+    "c": "148815",
+    "n": "Aditya Birla Sun Life Nifty Smallcap 50 Index Fund-Direct Growth"
+  },
+  {
+    "c": "147844",
+    "n": "Aditya Birla Sun Life PSU Equity Fund-Direct Plan-Growth"
+  },
+  {
+    "c": "147409",
+    "n": "Aditya Birla Sun Life Pharma and Healthcare Fund-Direct-Growth"
+  },
+  { "c": "152684", "n": "Aditya Birla Sun Life Quant Fund - Direct Growth" },
+  {
+    "c": "120705",
+    "n": "Aditya Birla Sun Life Regular Savings Fund - Growth / Payment - Direct Plan"
+  },
+  {
+    "c": "146575",
+    "n": "Aditya Birla Sun Life Retirement Fund-The 30s Plan-Direct Growth"
+  },
+  {
+    "c": "146930",
+    "n": "Aditya Birla Sun Life Retirement Fund-The 40s Plan-Direct Plan-Growth"
+  },
+  {
+    "c": "146940",
+    "n": "Aditya Birla Sun Life Retirement Fund-The 50s Plan-Direct Plan-Growth"
+  },
+  {
+    "c": "146943",
+    "n": "Aditya Birla Sun Life Retirement Fund-The 50s Plus-Debt Plan-Direct Plan-Growth"
+  },
+  {
+    "c": "119501",
+    "n": "Aditya Birla Sun Life Savings Fund - Growth - Direct Plan"
+  },
+  {
+    "c": "119498",
+    "n": "Aditya Birla Sun Life Short Term Fund - Growth - Direct Plan"
+  },
+  { "c": "149780", "n": "Aditya Birla Sun Life Silver ETF FOF-Direct Growth" },
+  {
+    "c": "119556",
+    "n": "Aditya Birla Sun Life Small Cap Fund - Growth - Direct Plan"
+  },
+  {
+    "c": "148539",
+    "n": "Aditya Birla Sun Life Special Opportunities Fund-Direct-Growth"
+  },
+  {
+    "c": "152158",
+    "n": "Aditya Birla Sun Life Transportation and Logistics Fund-Direct Growth"
+  },
+  {
+    "c": "149291",
+    "n": "Aditya Birla Sun Life US Equity Passive FOF-Direct-Growth"
+  },
+  {
+    "c": "152140",
+    "n": "Aditya Birla Sun Life US Treasury 1-3 Year Bond ETFs Fund Of Funds-Direct Growth"
+  },
+  {
+    "c": "152150",
+    "n": "Aditya Birla Sun Life US Treasury 3-10 Year Bond ETFs Fund Of Funds-Direct Growth"
+  },
+  {
+    "c": "119659",
+    "n": "Aditya Birla Sun Life Value Fund - Growth - Direct Plan"
+  },
+  {
+    "c": "144394",
+    "n": "Axis Aggressive Hybrid Fund - Direct Plan - Growth Option"
+  },
+  { "c": "130773", "n": "Axis Arbitrage Fund - Direct Plan - Growth" },
+  {
+    "c": "154171",
+    "n": "Axis BSE India Sectors Leaders Index Fund- Direct Plan- Growth Option"
+  },
+  { "c": "152422", "n": "Axis BSE Sensex Index Fund - Direct Plan - Growth" },
+  { "c": "141642", "n": "Axis Balanced Advantage Fund - Direct Plan - Growth" },
+  {
+    "c": "120438",
+    "n": "Axis Banking & PSU Debt Fund - Direct Plan - Growth Option"
+  },
+  { "c": "151368", "n": "Axis Business Cycles Fund - Direct Plan - Growth" },
+  {
+    "c": "151300",
+    "n": "Axis CRISIL IBX 50:50 Gilt Plus SDL June 2028 Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "149873",
+    "n": "Axis CRISIL IBX SDL May 2027 Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "153051",
+    "n": "Axis CRISIL-IBX AAA Bond Financial Services - Sep 2027 Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "152887",
+    "n": "Axis CRISIL-IBX AAA Bond NBFC - Jun 2027 Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "153172",
+    "n": "Axis CRISIL-IBX AAA Bond NBFC-HFC - Jun 2027 Index Fund - Direct Plan - Growth option"
+  },
+  {
+    "c": "153879",
+    "n": "Axis CRISIL-IBX Financial Services 3-6 Months Debt Index Fund - Direct Plan - Growth option"
+  },
+  { "c": "135762", "n": "Axis Children's Fund - Lock in - Direct Growth" },
+  { "c": "135764", "n": "Axis Children's Fund - No Lock in - Direct Growth" },
+  {
+    "c": "120480",
+    "n": "Axis Conservative Hybrid Fund - Direct Plan - Growth Option"
+  },
+  { "c": "152805", "n": "Axis Consumption Fund Direct Plan - Growth" },
+  { "c": "141588", "n": "Axis Corporate Bond Fund - Direct Plan Growth" },
+  { "c": "130314", "n": "Axis Credit Risk Fund - Direct Plan - Growth" },
+  {
+    "c": "120451",
+    "n": "Axis Dynamic Bond Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "120503",
+    "n": "Axis ELSS Tax Saver Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "147928",
+    "n": "Axis ESG Integration Strategy Fund - Direct Plan - Growth Option"
+  },
+  { "c": "135120", "n": "Axis Equity Savings Fund - Direct Plan - Growth" },
+  { "c": "141925", "n": "Axis Flexi Cap Fund - Direct Plan - Growth" },
+  { "c": "149049", "n": "Axis Floater Fund - Direct Plan - Growth" },
+  { "c": "120468", "n": "Axis Focused Fund - Direct Plan - Growth Option" },
+  { "c": "120447", "n": "Axis Gilt Fund - Direct Plan - Growth Option" },
+  {
+    "c": "148485",
+    "n": "Axis Global Equity Alpha Fund of Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "148954",
+    "n": "Axis Global Innovation Fund of Fund - Direct Plan - Growth"
+  },
+  { "c": "120473", "n": "Axis Gold Fund - Direct Plan - Growth option" },
+  {
+    "c": "154078",
+    "n": "Axis Gold and Silver Passive FOF - Direct Plan - Growth"
+  },
+  {
+    "c": "148699",
+    "n": "Axis Greater China Equity Fund of Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "147889",
+    "n": "Axis Income Plus Arbitrage Active FOF - Direct Plan - Growth Option"
+  },
+  {
+    "c": "153924",
+    "n": "Axis Income Plus Arbitrage Passive FOF - Direct Plan - Growth Option"
+  },
+  {
+    "c": "152202",
+    "n": "Axis India Manufacturing Fund - Direct Plan - Growth"
+  },
+  { "c": "148634", "n": "Axis Innovation Fund - Direct Plan - Growth Option" },
+  { "c": "145110", "n": "Axis Large & Mid Cap Fund - Direct Plan - Growth" },
+  { "c": "120465", "n": "Axis Large Cap Fund - Direct Plan - Growth" },
+  { "c": "120389", "n": "Axis Liquid Fund - Direct Plan - Growth Option" },
+  { "c": "151179", "n": "Axis Long Duration Fund - Direct Plan - Growth" },
+  { "c": "120505", "n": "Axis Midcap Fund - Direct Plan - Growth" },
+  { "c": "153083", "n": "Axis Momentum Fund - Direct Plan - Growth Option" },
+  {
+    "c": "147567",
+    "n": "Axis Money Market Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "120524",
+    "n": "Axis Multi Asset Allocation Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "149847",
+    "n": "Axis Multi Factor Passive FoF - Direct Plan - Growth Option"
+  },
+  { "c": "153960", "n": "Axis Multi-Asset Active FoF - Direct Plan - Growth" },
+  { "c": "149383", "n": "Axis Multicap Fund - Direct Growth" },
+  {
+    "c": "150751",
+    "n": "Axis NASDAQ 100 US Specific Equity Passive FOF - Direct Plan - Growth"
+  },
+  {
+    "c": "147666",
+    "n": "Axis Nifty 100 Index Fund - Direct Plan - Growth Option"
+  },
+  { "c": "149373", "n": "Axis Nifty 50 Index Fund - Direct Plan - Growth" },
+  {
+    "c": "152731",
+    "n": "Axis Nifty 500 Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "152629",
+    "n": "Axis Nifty Bank Index Fund - Direct Plan - Growth Option"
+  },
+  { "c": "151785", "n": "Axis Nifty IT Index Fund - Direct Plan - Growth" },
+  {
+    "c": "154326",
+    "n": "Axis Nifty India Defence Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "149936",
+    "n": "Axis Nifty Midcap 50 Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "149466",
+    "n": "Axis Nifty Next 50 Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "150854",
+    "n": "Axis Nifty SDL September 2026 Debt Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "149894",
+    "n": "Axis Nifty Smallcap 50 Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "153244",
+    "n": "Axis Nifty500 Momentum 50 Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "153829",
+    "n": "Axis Nifty500 Quality 50 Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "152949",
+    "n": "Axis Nifty500 Value 50 Index Fund - Direct Plan - Growth Option"
+  },
+  { "c": "146675", "n": "Axis Overnight Fund - Direct Plan - Growth Option" },
+  { "c": "148993", "n": "Axis Quant Fund - Direct Plan - Growth" },
+  {
+    "c": "147825",
+    "n": "Axis Retirement Fund - Aggressive Plan - Direct Growth"
+  },
+  {
+    "c": "147830",
+    "n": "Axis Retirement Fund - Conservative Plan - Direct Growth"
+  },
+  { "c": "147826", "n": "Axis Retirement Fund - Dynamic Plan - Direct Growth" },
+  {
+    "c": "153624",
+    "n": "Axis Services Opportunities Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "120510",
+    "n": "Axis Short Duration Fund - Direct Plan - Growth Option"
+  },
+  { "c": "150615", "n": "Axis Silver Fund of Fund- Direct Plan-Growth Option" },
+  { "c": "125354", "n": "Axis Small Cap Fund - Direct Plan - Growth" },
+  {
+    "c": "120475",
+    "n": "Axis Strategic Bond Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "120513",
+    "n": "Axis Treasury Advantage Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "152240",
+    "n": "Axis US Specific Treasury Dynamic Debt Passive FOF - Direct Plan - Growth Option"
+  },
+  { "c": "144754", "n": "Axis Ultra Short Duration Fund - Direct Plan Growth" },
+  { "c": "149166", "n": "Axis Value Fund - Direct Plan - Growth" },
+  { "c": "153075", "n": "BAJAJ FINSERV CONSUMPTION FUND - DIRECT - GROWTH" },
+  { "c": "153201", "n": "BAJAJ FINSERV ELSS TAX SAVER FUND - DIRECT - GROWTH" },
+  { "c": "153758", "n": "BAJAJ FINSERV EQUITY SAVINGS FUND - DIRECT - GROWTH" },
+  { "c": "153157", "n": "BAJAJ FINSERV HEALTHCARE FUND - DIRECT - GROWTH" },
+  { "c": "152783", "n": "BAJAJ FINSERV LARGE CAP FUND - DIRECT PLAN - GROWTH" },
+  { "c": "153309", "n": "BAJAJ FINSERV MULTI CAP FUND - DIRECT - GROWTH" },
+  { "c": "153612", "n": "BAJAJ FINSERV SMALL CAP FUND - DIRECT - GROWTH" },
+  { "c": "118474", "n": "BANDHAN Arbitrage Fund-Direct Plan- Growth" },
+  { "c": "131355", "n": "BANDHAN Balanced Advantage Fund Direct Plan Growth" },
+  {
+    "c": "150868",
+    "n": "BANDHAN CRISIL IBX 90:10 SDL PLUS GILT - NOV 2026 INDEX FUND - DIRECT GROWTH"
+  },
+  {
+    "c": "150888",
+    "n": "BANDHAN CRISIL IBX 90:10 SDL PLUS GILT - SEP27 INDEX FUND - DIRECT GROWTH"
+  },
+  {
+    "c": "150871",
+    "n": "BANDHAN CRISIL IBX 90:10 SDL PLUS GILT APRIL 2032 INDEX FUND - DIRECT GROWTH"
+  },
+  {
+    "c": "150746",
+    "n": "BANDHAN CRISIL IBX GILT APRIL 2026 INDEX FUND - DIRECT PLAN - GROWTH"
+  },
+  {
+    "c": "151408",
+    "n": "BANDHAN CRISIL IBX GILT APRIL 2032 INDEX FUND - DIRECT GROWTH"
+  },
+  {
+    "c": "148792",
+    "n": "BANDHAN CRISIL IBX Gilt April 2028 Index Fund Direct Plan-Growth"
+  },
+  {
+    "c": "148789",
+    "n": "BANDHAN CRISIL IBX Gilt June 2027 Index Fund Direct Plan-Growth"
+  },
+  { "c": "118491", "n": "BANDHAN Conservative Hybrid Fund-Direct Plan-Growth" },
+  { "c": "135916", "n": "BANDHAN Corporate Bond Fund - Direct Growth" },
+  { "c": "140603", "n": "BANDHAN Credit Risk Fund-Direct Plan-Growth" },
+  { "c": "118416", "n": "BANDHAN Dynamic Bond Fund-Direct Plan-Growth" },
+  { "c": "118473", "n": "BANDHAN ELSS Tax Saver Fund - Direct Plan - Growth" },
+  { "c": "118477", "n": "BANDHAN Equity Savings Fund-Direct Plan-Growth" },
+  {
+    "c": "151816",
+    "n": "BANDHAN FINANCIAL SERVICES FUND - DIRECT PLAN - GROWTH"
+  },
+  { "c": "148711", "n": "BANDHAN FLOATER FUND  - DIRECT PLAN GROWTH" },
+  { "c": "118424", "n": "BANDHAN Flexi Cap Fund-Direct Plan-Growth" },
+  { "c": "118469", "n": "BANDHAN Infrastructure Fund-Direct Plan-Growth" },
+  { "c": "118364", "n": "BANDHAN LIQUID Fund -Direct Plan-Growth" },
+  { "c": "118479", "n": "BANDHAN Large Cap Fund-Direct Plan-Growth" },
+  { "c": "118371", "n": "BANDHAN Low Duration Fund-Direct Plan-Growth" },
+  { "c": "150404", "n": "BANDHAN MIDCAP FUND - GROWTH - DIRECT PLAN" },
+  { "c": "149303", "n": "BANDHAN MULTI CAP FUND - GROWTH - DIRECT PLAN" },
+  { "c": "149832", "n": "BANDHAN NIFTY 100 INDEX FUND - DIRECT PLAN - GROWTH" },
+  {
+    "c": "150636",
+    "n": "BANDHAN NIFTY100 LOW VOLATILITY 30 INDEX FUND - GROWTH - DIRECT PLAN"
+  },
+  {
+    "c": "150591",
+    "n": "BANDHAN NIFTY200 MOMENTUM 30 INDEX FUND - GROWTH - DIRECT PLAN"
+  },
+  { "c": "118482", "n": "BANDHAN Nifty 50 Index Fund-Direct Plan-Growth" },
+  {
+    "c": "152264",
+    "n": "BANDHAN Nifty Smallcap 250 Index Fund - Direct Plan - Growth"
+  },
+  { "c": "146191", "n": "BANDHAN Overnight Fund - Direct Plan - Growth" },
+  { "c": "147946", "n": "BANDHAN SMALL CAP FUND - DIRECT PLAN GROWTH" },
+  {
+    "c": "150716",
+    "n": "BANDHAN TRANSPORTATION AND LOGISTICS FUND - GROWTH - DIRECT PLAN"
+  },
+  {
+    "c": "144173",
+    "n": "BANDHAN ULTRA SHORT DURATION FUND - DIRECT PLAN GROWTH"
+  },
+  { "c": "143614", "n": "BANK OF INDIA Arbitrage Fund Direct Plan Growth" },
+  {
+    "c": "127850",
+    "n": "BANK OF INDIA BALANCED ADVANTAGE FUND DIRECT PLAN  GROWTH"
+  },
+  {
+    "c": "119393",
+    "n": "BANK OF INDIA Conservative Hybrid Fund Fund-Direct Plan-Growth"
+  },
+  { "c": "119351", "n": "BANK OF INDIA ELSS Tax Saver -Direct Plan- Growth" },
+  { "c": "148404", "n": "BANK OF INDIA Flexi Cap Fund Direct Plan -Growth" },
+  {
+    "c": "119350",
+    "n": "BANK OF INDIA Large & Mid Cap Fund Direct Plan-Growth"
+  },
+  { "c": "148980", "n": "BANK OF INDIA Large Cap Fund Direct Plan Growth" },
+  { "c": "119369", "n": "BANK OF INDIA Liquid Fund- Direct Plan- Growth" },
+  {
+    "c": "139527",
+    "n": "BANK OF INDIA MID & SMALL CAP EQUITY & DEBT FUND - DIRECT PLAN GROWTH"
+  },
+  {
+    "c": "119364",
+    "n": "BANK OF INDIA Manufacturing & Infrastructure Fund-Direct Plan-Growth"
+  },
+  { "c": "147951", "n": "BANK OF INDIA Overnight Fund Direct Plan Growth" },
+  {
+    "c": "119382",
+    "n": "BANK OF INDIA Short Term Income Fund-Direct Plan- Growth"
+  },
+  { "c": "145678", "n": "BANK OF INDIA Small Cap Fund Direct Plan Growth" },
+  {
+    "c": "119379",
+    "n": "BANK OF INDIA Ultra Short Duration Fund- Direct Plan- Growth"
+  },
+  {
+    "c": "150251",
+    "n": "BARODA BNP PARIBAS ARBITRAGE FUND-DIRECT PLAN-GROWTH OPTION"
+  },
+  {
+    "c": "150206",
+    "n": "BARODA BNP PARIBAS Conservative Hybrid Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "150237",
+    "n": "BARODA BNP PARIBAS Corporate Bond Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "150159",
+    "n": "BARODA BNP PARIBAS ELSS Tax Saver Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "150264",
+    "n": "BARODA BNP PARIBAS Focused Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "150266",
+    "n": "BARODA BNP PARIBAS India Consumption Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "150187",
+    "n": "BARODA BNP PARIBAS LARGE CAP Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "150169",
+    "n": "BARODA BNP PARIBAS LOW DURATION Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "150212",
+    "n": "BARODA BNP PARIBAS Mid Cap Fund - Direct Plan - Growth Option"
+  },
+  { "c": "149401", "n": "BHARAT Bond ETF FOF - April 2032 Direct Growth" },
+  {
+    "c": "150989",
+    "n": "BHARAT Bond ETF FOF - April 2033 - Direct Plan - Growth"
+  },
+  {
+    "c": "148446",
+    "n": "BHARAT Bond FOF- April 2025- Direct Pan- Growth Option"
+  },
+  {
+    "c": "148450",
+    "n": "BHARAT Bond FOF- April 2031- Direct Plan- Growth Option"
+  },
+  { "c": "152077", "n": "Bajaj Finserv Arbitrage Fund-Direct Plan-Growth" },
+  {
+    "c": "152194",
+    "n": "Bajaj Finserv Balanced Advantage Fund-Direct Plan-Growth"
+  },
+  {
+    "c": "153937",
+    "n": "Bajaj Finserv Banking and Financial Services Fund - Direct - Growth"
+  },
+  {
+    "c": "152162",
+    "n": "Bajaj Finserv Banking and PSU Fund-Direct Plan- Growth"
+  },
+  { "c": "151895", "n": "Bajaj Finserv Flexi Cap Fund-Direct Plan-Growth" },
+  { "c": "153206", "n": "Bajaj Finserv Gilt Fund - Direct - Growth" },
+  {
+    "c": "152408",
+    "n": "Bajaj Finserv Large and Mid Cap Fund- Direct Plan- Growth"
+  },
+  { "c": "151833", "n": "Bajaj Finserv Liquid Fund - Direct Plan - Growth" },
+  { "c": "154204", "n": "Bajaj Finserv Low Duration Fund - Direct - Growth" },
+  { "c": "151889", "n": "Bajaj Finserv Money Market Fund-Direct Plan-Growth" },
+  {
+    "c": "152639",
+    "n": "Bajaj Finserv Multi Asset Allocation Fund - Direct Growth"
+  },
+  { "c": "153506", "n": "Bajaj Finserv Nifty 50 Index Fund - Direct - Growth" },
+  {
+    "c": "153479",
+    "n": "Bajaj Finserv Nifty Next 50 Index Fund - Direct - Growth"
+  },
+  { "c": "151849", "n": "Bajaj Finserv Overnight Fund - Direct Plan - Growth" },
+  { "c": "140382", "n": "Bandhan Aggressive Hybrid Fund-Direct Plan Growth" },
+  {
+    "c": "118485",
+    "n": "Bandhan Aggressive Hybrid Passive FOF - Direct Plan - Growth"
+  },
+  {
+    "c": "152844",
+    "n": "Bandhan BSE Healthcare Index Fund Direct Plan - Growth"
+  },
+  {
+    "c": "153838",
+    "n": "Bandhan BSE India Sector Leaders Index Fund - Direct Plan - Growth"
+  },
+  { "c": "121279", "n": "Bandhan Banking and PSU Fund - Direct Growth" },
+  { "c": "152878", "n": "Bandhan Business Cycle Fund - Direct Plan - Growth" },
+  {
+    "c": "153389",
+    "n": "Bandhan CRISIL-IBX 10:90 Gilt Plus SDL Index - Dec 2029 Fund-Direct Plan-Growth"
+  },
+  {
+    "c": "153407",
+    "n": "Bandhan CRISIL-IBX Financial Services 3-6 Months Debt Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "118486",
+    "n": "Bandhan Conservative Hybrid Passive FOF - Direct Plan - Growth"
+  },
+  { "c": "118421", "n": "Bandhan Focused Fund - Direct Plan - Growth" },
+  { "c": "118464", "n": "Bandhan Gilt Fund - Direct Plan - Growth" },
+  {
+    "c": "118387",
+    "n": "Bandhan Gilt Fund with 10 year constant duration Fund - Direct Plan - Growth"
+  },
+  { "c": "154129", "n": "Bandhan Gold ETF FOF-Direct-Growth" },
+  { "c": "153972", "n": "Bandhan Healthcare Fund - Direct Plan - Growth" },
+  {
+    "c": "118410",
+    "n": "Bandhan Income Plus Arbitrage Active FOF - Direct Plan - Growth"
+  },
+  { "c": "152607", "n": "Bandhan Innovation Fund - Direct Plan - Growth" },
+  { "c": "118419", "n": "Bandhan Large & Mid Cap Fund - Direct Plan - Growth" },
+  { "c": "152520", "n": "Bandhan Long Duration Fund - Direct Plan - Growth" },
+  { "c": "118401", "n": "Bandhan Medium Duration Fund - Direct Plan - Growth" },
+  {
+    "c": "118394",
+    "n": "Bandhan Medium to Long Duration Fund - Direct Plan - Growth"
+  },
+  { "c": "118384", "n": "Bandhan Money Market Fund -Direct Plan-Growth" },
+  {
+    "c": "152324",
+    "n": "Bandhan Multi Asset Allocation Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "118489",
+    "n": "Bandhan Multi-Asset Passive FOF - Direct Plan - Growth"
+  },
+  { "c": "153722", "n": "Bandhan Multi-Factor Fund - Direct Plan - Growth" },
+  {
+    "c": "153114",
+    "n": "Bandhan Nifty 200 Quality 30 Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "153003",
+    "n": "Bandhan Nifty 500 Momentum 50 Index Fund Direct Plan-Growth"
+  },
+  {
+    "c": "152990",
+    "n": "Bandhan Nifty 500 Value 50 Index Fund Direct Plan - Growth"
+  },
+  {
+    "c": "152177",
+    "n": "Bandhan Nifty Alpha 50 Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "153213",
+    "n": "Bandhan Nifty Alpha Low Volatility 30 Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "152793",
+    "n": "Bandhan Nifty Bank Index Fund - Direct Plan - Growth"
+  },
+  { "c": "152041", "n": "Bandhan Nifty IT Index Fund - Direct Plan - Growth" },
+  {
+    "c": "152855",
+    "n": "Bandhan Nifty Midcap 150 Index Fund-Direct Plan-Growth"
+  },
+  {
+    "c": "153350",
+    "n": "Bandhan Nifty Next 50 Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "152716",
+    "n": "Bandhan Nifty Total Market Index Fund - Direct Plan - Growth"
+  },
+  { "c": "152102", "n": "Bandhan Retirement Fund - Direct Plan - Growth" },
+  { "c": "118407", "n": "Bandhan Short Duration Fund - Direct Plan - Growth" },
+  { "c": "154136", "n": "Bandhan Silver ETF FOF-Direct-Growth" },
+  {
+    "c": "151548",
+    "n": "Bandhan US Treasury Bond 0-1 year specific Debt Passive FOF - DIRECT PLAN - GROWTH"
+  },
+  {
+    "c": "149098",
+    "n": "Bandhan US specific Equity Active FOF - GROWTH - DIRECT PLAN"
+  },
+  { "c": "118481", "n": "Bandhan Value Fund - Direct Plan - Growth" },
+  {
+    "c": "154093",
+    "n": "Bank of India Banking & Financial Services Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "152789",
+    "n": "Bank of India Business Cycle Fund - Direct Plan - Growth"
+  },
+  { "c": "153139", "n": "Bank of India Consumption Fund - Direct - Growth" },
+  { "c": "153728", "n": "Bank of India Mid Cap Fund - Direct Plan Growth" },
+  { "c": "153294", "n": "Bank of India Money Market Fund - Direct - Growth" },
+  {
+    "c": "152396",
+    "n": "Bank of India Multi Asset Allocation Fund-Direct Plan-Growth"
+  },
+  { "c": "151443", "n": "Bank of India Multi Cap Fund Direct Plan - Growth" },
+  {
+    "c": "150260",
+    "n": "Baroda BNP Paribas Aggressive Hybrid Fund- DIRECT PLAN - GROWTH OPTION"
+  },
+  {
+    "c": "150285",
+    "n": "Baroda BNP Paribas Aqua Fund of Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "145396",
+    "n": "Baroda BNP Paribas Balanced Advantage Fund-Direct Plan-Growth Option"
+  },
+  {
+    "c": "119333",
+    "n": "Baroda BNP Paribas Banking and Financial Services Fund - Direct - Growth Option"
+  },
+  {
+    "c": "154195",
+    "n": "Baroda BNP Paribas Best-in-Class Strategy Fund - Direct - Growth Option"
+  },
+  {
+    "c": "153847",
+    "n": "Baroda BNP Paribas Business Conglomerates Fund Direct Growth Option"
+  },
+  {
+    "c": "149141",
+    "n": "Baroda BNP Paribas Business Cycle Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "153171",
+    "n": "Baroda BNP Paribas Children's Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "133488",
+    "n": "Baroda BNP Paribas Credit Risk Fund -Direct-Growth Option"
+  },
+  {
+    "c": "152810",
+    "n": "Baroda BNP Paribas Dividend Yield Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "150180",
+    "n": "Baroda BNP Paribas Dynamic Bond Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "153225",
+    "n": "Baroda BNP Paribas Energy Opportunities Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "147496",
+    "n": "Baroda BNP Paribas Equity Savings Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "150387",
+    "n": "Baroda BNP Paribas Flexi Cap Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "119341",
+    "n": "Baroda BNP Paribas GILT FUND - Direct Plan - Growth Option"
+  },
+  {
+    "c": "153795",
+    "n": "Baroda BNP Paribas Gold ETF Fund of Funds Direct Growth"
+  },
+  {
+    "c": "153604",
+    "n": "Baroda BNP Paribas Health and Wellness Fund Direct Growth"
+  },
+  {
+    "c": "153536",
+    "n": "Baroda BNP Paribas Income Plus Arbitrage Active FOF Direct Growth"
+  },
+  {
+    "c": "152470",
+    "n": "Baroda BNP Paribas Innovation Fund Direct plan - Growth Option"
+  },
+  {
+    "c": "119415",
+    "n": "Baroda BNP Paribas LIQUID FUND - DIRECT PLAN - GROWTH OPTION"
+  },
+  {
+    "c": "148474",
+    "n": "Baroda BNP Paribas Large and Mid Cap Fund- Direct Plan -Growth Option"
+  },
+  {
+    "c": "119354",
+    "n": "Baroda BNP Paribas MULTI CAP FUND - Direct Plan - Growth Option"
+  },
+  {
+    "c": "152697",
+    "n": "Baroda BNP Paribas Manufacturing Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "147377",
+    "n": "Baroda BNP Paribas Money Market Fund- Direct Plan - Growth"
+  },
+  {
+    "c": "153552",
+    "n": "Baroda BNP Paribas Multi Asset Active FOF Direct Growth"
+  },
+  {
+    "c": "150865",
+    "n": "Baroda BNP Paribas Multi Asset Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "151574",
+    "n": "Baroda BNP Paribas NIFTY SDL December 2028 Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "152329",
+    "n": "Baroda BNP Paribas Nifty 50 Index Fund - Direct Plan - Growth option"
+  },
+  {
+    "c": "153000",
+    "n": "Baroda BNP Paribas Nifty Midcap 150 Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "151283",
+    "n": "Baroda BNP Paribas Nifty SDL December 2026 Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "152931",
+    "n": "Baroda BNP Paribas Nifty200 Momentum 30 Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "147196",
+    "n": "Baroda BNP Paribas Overnight Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "152628",
+    "n": "Baroda BNP Paribas Retirement Fund - Direct plan - Growth option"
+  },
+  {
+    "c": "119400",
+    "n": "Baroda BNP Paribas Short Duration Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "152128",
+    "n": "Baroda BNP Paribas Small Cap Fund - Direct Plan - Growth option"
+  },
+  {
+    "c": "143508",
+    "n": "Baroda BNP Paribas Ultra Short Duration Fund- Direct Plan- Growth"
+  },
+  {
+    "c": "151755",
+    "n": "Baroda BNP Paribas Value Fund - Direct Plan - Growth option"
+  },
+  {
+    "c": "147857",
+    "n": "Bharat Bond FOF - April 2030 - Direct Plan - Growth Option"
+  },
+  {
+    "c": "118309",
+    "n": "CANARA ROBECO CONSERVATIVE HYBRID FUND - DIRECT PLAN - GROWTH OPTION"
+  },
+  {
+    "c": "118273",
+    "n": "CANARA ROBECO CONSUMPTION FUND - DIRECT PLAN - GROWTH OPTION"
+  },
+  {
+    "c": "126685",
+    "n": "CANARA ROBECO CORPORATE BOND FUND - DIRECT PLAN - GROWTH OPTION"
+  },
+  {
+    "c": "118284",
+    "n": "CANARA ROBECO DYNAMIC BOND FUND - DIRECT PLAN - GROWTH OPTION"
+  },
+  {
+    "c": "118285",
+    "n": "CANARA ROBECO ELSS TAX SAVER - DIRECT PLAN - GROWTH OPTION"
+  },
+  {
+    "c": "118272",
+    "n": "CANARA ROBECO EQUITY HYBRID FUND - DIRECT PLAN - GROWTH OPTION"
+  },
+  {
+    "c": "118275",
+    "n": "CANARA ROBECO FLEXICAP FUND - DIRECT PLAN - GROWTH OPTION"
+  },
+  {
+    "c": "118299",
+    "n": "CANARA ROBECO GILT FUND - DIRECT PLAN - GROWTH OPTION"
+  },
+  {
+    "c": "118282",
+    "n": "CANARA ROBECO INCOME FUND - DIRECT PLAN - GROWTH OPTION"
+  },
+  {
+    "c": "118267",
+    "n": "CANARA ROBECO INFRASTRUCTURE FUND - DIRECT PLAN - GROWTH OPTION"
+  },
+  {
+    "c": "118278",
+    "n": "CANARA ROBECO LARGE AND MID CAP FUND - DIRECT PLAN - GROWTH OPTION"
+  },
+  {
+    "c": "118269",
+    "n": "CANARA ROBECO LARGE CAP FUND - DIRECT PLAN - GROWTH OPTION"
+  },
+  {
+    "c": "118305",
+    "n": "CANARA ROBECO LIQUID FUND - DIRECT PLAN - GROWTH OPTION"
+  },
+  {
+    "c": "147531",
+    "n": "CANARA ROBECO OVERNIGHT FUND - DIRECT PLAN - GROWTH OPTION"
+  },
+  {
+    "c": "118291",
+    "n": "CANARA ROBECO SAVINGS FUND - DIRECT PLAN - GROWTH OPTION"
+  },
+  {
+    "c": "118320",
+    "n": "CANARA ROBECO SHORT DURATION FUND - DIRECT PLAN - GROWTH OPTION"
+  },
+  {
+    "c": "146130",
+    "n": "CANARA ROBECO SMALL CAP FUND - DIRECT PLAN - GROWTH OPTION"
+  },
+  {
+    "c": "118317",
+    "n": "CANARA ROBECO ULTRA SHORT TERM FUND - DIRECT PLAN - GROWTH OPTION"
+  },
+  { "c": "153738", "n": "CAPITALMIND FLEXI CAP FUND DIRECT GROWTH" },
+  {
+    "c": "152688",
+    "n": "Canara Robeco Balanced Advantage Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "154250",
+    "n": "Canara Robeco Banking and Financials Services Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "150505",
+    "n": "Canara Robeco Banking and PSU Debt Fund- Direct Plan- Growth Option"
+  },
+  {
+    "c": "148883",
+    "n": "Canara Robeco Focused Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "139235",
+    "n": "Canara Robeco Liquid Fund -Unclaimed Redemption and Dividend Plan -Direct Growth Option"
+  },
+  {
+    "c": "152450",
+    "n": "Canara Robeco Manufacturing Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "150817",
+    "n": "Canara Robeco Mid Cap Fund- Direct Plan- Growth Option"
+  },
+  {
+    "c": "153465",
+    "n": "Canara Robeco Multi Asset Allocation Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "151824",
+    "n": "Canara Robeco Multi Cap Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "149085",
+    "n": "Canara Robeco Value Fund - Direct Plan - Growth Option"
+  },
+  { "c": "154236", "n": "Capitalmind Arbitrage Fund-Direct-Growth" },
+  { "c": "154011", "n": "Capitalmind Liquid Fund - Direct-Growth" },
+  {
+    "c": "154232",
+    "n": "Capitalmind Multi Asset Allocation Fund-Direct-Growth"
+  },
+  { "c": "154301", "n": "Choice Nifty 50 Index Fund - Direct Plan Growth" },
+  {
+    "c": "154304",
+    "n": "Choice Nifty Next 50 Index Fund - Direct Plan Growth"
+  },
+  { "c": "154413", "n": "Choice Overnight Fund - Growth Option - Direct Plan" },
+  { "c": "131301", "n": "DSP 10Y G-Sec Fund - Direct Plan - Growth" },
+  { "c": "119019", "n": "DSP Aggressive Hybrid Fund - Direct Plan - Growth" },
+  { "c": "142283", "n": "DSP Arbitrage Fund - Direct - Growth" },
+  { "c": "153219", "n": "DSP BSE SENSEX Next 30 Index Fund - Direct - Growth" },
+  {
+    "c": "152206",
+    "n": "DSP Banking & Financial Services Fund - Direct - Growth"
+  },
+  { "c": "124175", "n": "DSP Banking & PSU Debt Fund - Direct Plan - Growth" },
+  { "c": "118924", "n": "DSP Bond Fund - Direct Plan - Growth" },
+  { "c": "153121", "n": "DSP Business Cycle Fund - Direct - Growth" },
+  {
+    "c": "151329",
+    "n": "DSP CRISIL-IBX 50:50 Gilt Plus SDL - April 2033 Index Fund - Direct - Growth"
+  },
+  { "c": "144646", "n": "DSP Corporate Bond Fund - Direct - Growth" },
+  { "c": "119082", "n": "DSP Credit Risk Fund - Direct Plan - Growth" },
+  {
+    "c": "126393",
+    "n": "DSP Dynamic Asset Allocation Fund - Direct Plan - Growth"
+  },
+  { "c": "119242", "n": "DSP ELSS Tax Saver Fund - Direct Plan - Growth" },
+  { "c": "136567", "n": "DSP Equity Savings Fund - Direct Plan - Growth" },
+  { "c": "119076", "n": "DSP Flexi Cap Fund - Direct Plan - Growth" },
+  { "c": "148771", "n": "DSP Floater Fund - Direct Plan - Growth" },
+  { "c": "119096", "n": "DSP Focused Fund - Direct Plan - Growth" },
+  { "c": "119099", "n": "DSP Gilt Fund - Direct Plan - Growth" },
+  {
+    "c": "119275",
+    "n": "DSP Global Clean Energy Overseas Equity Omni FoF Direct Plan - Growth"
+  },
+  {
+    "c": "149816",
+    "n": "DSP Global Innovation Overseas Equity Omni FoF - Direct - Growth"
+  },
+  { "c": "152183", "n": "DSP Gold ETF Fund of Fund - Direct - Growth" },
+  { "c": "145454", "n": "DSP Healthcare Fund - Direct Plan - Growth" },
+  {
+    "c": "130493",
+    "n": "DSP Income Plus Arbitrage Omni FoF - Direct Plan - Growth"
+  },
+  { "c": "119247", "n": "DSP India T.I.G.E.R. Fund - Direct Plan - Growth" },
+  { "c": "119218", "n": "DSP Large & Mid Cap Fund - Direct Plan - Growth" },
+  { "c": "119250", "n": "DSP Large Cap Fund - Direct Plan - Growth" },
+  { "c": "119125", "n": "DSP Liquidity Fund - Direct Plan - Growth" },
+  { "c": "133925", "n": "DSP Low Duration Fund - Direct Plan - Growth" },
+  { "c": "119071", "n": "DSP Midcap Fund - Direct Plan - Growth" },
+  { "c": "152056", "n": "DSP Multi Asset Allocation Fund - Direct - Growth" },
+  {
+    "c": "154167",
+    "n": "DSP Multi Asset Omni Fund of Funds - Direct - Growth"
+  },
+  { "c": "152310", "n": "DSP Multicap Fund - Direct - Growth" },
+  {
+    "c": "119028",
+    "n": "DSP Natural Resources and New Energy Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "141877",
+    "n": "DSP Nifty 50 Equal Weight Index Fund - Direct Plan - Growth"
+  },
+  { "c": "146376", "n": "DSP Nifty 50 Index Fund - Direct Plan - Growth" },
+  { "c": "154088", "n": "DSP Nifty 500 Index Fund - Direct - Growth" },
+  { "c": "152654", "n": "DSP Nifty Bank Index Fund - Direct - Growth" },
+  { "c": "153594", "n": "DSP Nifty Healthcare Index Fund - Direct- Growth" },
+  { "c": "153590", "n": "DSP Nifty IT Index Fund - Direct - Growth" },
+  { "c": "154014", "n": "DSP Nifty Midcap 150 Index Fund - Direct - Growth" },
+  {
+    "c": "150428",
+    "n": "DSP Nifty Midcap 150 Quality 50 Index Fund - Direct - Growth"
+  },
+  { "c": "146381", "n": "DSP Nifty Next 50 Index Fund - Direct Plan - Growth" },
+  { "c": "153348", "n": "DSP Nifty Private Bank Index Fund - Direct - Growth" },
+  {
+    "c": "149970",
+    "n": "DSP Nifty SDL Plus G-Sec Jun 2028 30:70 Index Fund - Direct - Growth"
+  },
+  {
+    "c": "151373",
+    "n": "DSP Nifty SDL Plus G-Sec Sep 2027 50:50 Index Fund - Direct - Growth"
+  },
+  { "c": "154018", "n": "DSP Nifty Smallcap 250 Index Fund - Direct - Growth" },
+  {
+    "c": "152243",
+    "n": "DSP Nifty Smallcap250 Quality 50 Index Fund - Direct - Growth"
+  },
+  {
+    "c": "152814",
+    "n": "DSP Nifty Top 10 Equal Weight Index Fund - Direct - Growth"
+  },
+  {
+    "c": "153801",
+    "n": "DSP Nifty500 Flexicap Quality 30 Index Fund - Direct - Growth"
+  },
+  { "c": "146062", "n": "DSP Overnight Fund - Direct Plan - Growth" },
+  { "c": "147306", "n": "DSP Quant Fund - Direct Plan - Growth" },
+  { "c": "118994", "n": "DSP Regular Savings Fund - Direct Plan - Growth" },
+  { "c": "119106", "n": "DSP Savings Fund - Direct Plan - Growth" },
+  { "c": "119226", "n": "DSP Short Term Fund - Direct Plan - Growth" },
+  { "c": "153487", "n": "DSP Silver ETF Fund of Fund - Direct - Growth" },
+  { "c": "119212", "n": "DSP Small Cap Fund - Direct Plan - Growth" },
+  { "c": "119239", "n": "DSP Strategic Bond Fund - Direct Plan - Growth" },
+  { "c": "152528", "n": "DSP US Specific Debt Passive FoF - Direct - Growth" },
+  {
+    "c": "119252",
+    "n": "DSP US Specific Equity Omni FoF - Direct Plan - Growth"
+  },
+  { "c": "119205", "n": "DSP Ultra Short Fund - Direct Plan - Growth" },
+  { "c": "148595", "n": "DSP Value Fund - Direct Plan - Growth" },
+  {
+    "c": "119277",
+    "n": "DSP World Gold Mining Overseas Equity Omni FoF - Direct Plan - Growth"
+  },
+  {
+    "c": "119279",
+    "n": "DSP World Mining Overseas Equity Omni FoF - Direct Plan - Growth"
+  },
+  {
+    "c": "140256",
+    "n": "Edelweiss ASEAN Equity Off-shore Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "118624",
+    "n": "Edelweiss Aggressive Hybrid Fund-Direct Plan-Growth Option"
+  },
+  {
+    "c": "130206",
+    "n": "Edelweiss Arbitrage Fund- Direct Plan- Growth Option"
+  },
+  {
+    "c": "153497",
+    "n": "Edelweiss BSE Internet Economy Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "118615",
+    "n": "Edelweiss Balanced Advantage Fund -Direct Plan-Growth Option"
+  },
+  {
+    "c": "140286",
+    "n": "Edelweiss Banking and PSU Debt Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "152710",
+    "n": "Edelweiss Business Cycle Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "150671",
+    "n": "Edelweiss CRISIL IBX 50:50 Gilt Plus SDL April 2037 Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "150727",
+    "n": "Edelweiss CRISIL IBX 50:50 Gilt Plus SDL June 2027 Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "150807",
+    "n": "Edelweiss CRISIL IBX 50:50 Gilt Plus SDL Sep 2028 Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "151365",
+    "n": "Edelweiss CRISIL IBX 50:50 Gilt Plus SDL Short Duration Index fund - Direct Plan - Growth"
+  },
+  {
+    "c": "153335",
+    "n": "Edelweiss CRISIL IBX AAA Bond NBFC HFC Jun 2027 Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "153115",
+    "n": "Edelweiss CRISIL IBX AAA Financial Services - Jan 2028 Index Fund - Direct - Growth"
+  },
+  {
+    "c": "149950",
+    "n": "Edelweiss CRISIL PSU Plus SDL 50:50 Oct 2025 Index Fund - Direct Plan Growth"
+  },
+  { "c": "153214", "n": "Edelweiss Consumption Fund - Direct - Growth" },
+  {
+    "c": "118620",
+    "n": "Edelweiss ELSS Tax Saver Fund - Direct Plan-Growth Option"
+  },
+  {
+    "c": "140327",
+    "n": "Edelweiss Emerging Markets Opportunities Equity Offshore Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "140347",
+    "n": "Edelweiss Equity Savings Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "140296",
+    "n": "Edelweiss Europe Dynamic Equity Offshore Fund - Growth Option - Direct Plan"
+  },
+  {
+    "c": "154108",
+    "n": "Edelweiss Financial Services Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "140353",
+    "n": "Edelweiss Flexi Cap Fund - Direct Plan - Growth Option"
+  },
+  { "c": "150376", "n": "Edelweiss Focused Fund - Direct Plan - Growth" },
+  {
+    "c": "154208",
+    "n": "Edelweiss Gold ETF Fund of Fund Direct Plan Growth Option"
+  },
+  {
+    "c": "150581",
+    "n": "Edelweiss Gold and Silver ETF FOF - Direct Plan - Growth"
+  },
+  {
+    "c": "140298",
+    "n": "Edelweiss Government Securities Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "140243",
+    "n": "Edelweiss Greater China Equity Off-shore Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "153712",
+    "n": "Edelweiss Income Plus Arbitrage Active Fund of Funds - Direct Plan Growth"
+  },
+  {
+    "c": "140175",
+    "n": "Edelweiss Large & Mid Cap Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "118617",
+    "n": "Edelweiss Large Cap Fund - Direct Plan-Growth option"
+  },
+  { "c": "140196", "n": "Edelweiss Liquid Fund - Direct Plan - Growth Option" },
+  { "c": "153416", "n": "Edelweiss Low Duration Fund - Direct Plan Growth" },
+  {
+    "c": "148555",
+    "n": "Edelweiss MSCI India Domestic & World Healthcare 45 Index Fund Direct Plan - Growth"
+  },
+  {
+    "c": "140228",
+    "n": "Edelweiss Mid Cap Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "140237",
+    "n": "Edelweiss Money Market Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "151792",
+    "n": "Edelweiss Multi Asset Allocation Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "153776",
+    "n": "Edelweiss Multi Asset Omni Fund of Fund- Direct Plan - Growth"
+  },
+  { "c": "152094", "n": "Edelweiss Multi Cap Fund - Direct Plan - Growth" },
+  {
+    "c": "149343",
+    "n": "Edelweiss NIFTY Large Midcap 250 Index Fund - Direct Plan Growth"
+  },
+  {
+    "c": "148795",
+    "n": "Edelweiss NIFTY PSU Bond Plus SDL Apr 2026 50:50 Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "149247",
+    "n": "Edelweiss NIFTY PSU Bond Plus SDL Apr 2027 50:50 Index Fund - Direct Plan Growth"
+  },
+  {
+    "c": "149254",
+    "n": "Edelweiss Nifty 100 Quality 30 Index Fund Direct Plan Growth"
+  },
+  { "c": "149250", "n": "Edelweiss Nifty 50 Index Fund Direct Plan Growth" },
+  {
+    "c": "152616",
+    "n": "Edelweiss Nifty Alpha Low Volatility 30 Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "154310",
+    "n": "Edelweiss Nifty LargeMidcap 250 Plus 8-13 yr G-Sec 70-30 Index Fund Direct Plan Growth"
+  },
+  {
+    "c": "150902",
+    "n": "Edelweiss Nifty Midcap150 Momentum 50 Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "150899",
+    "n": "Edelweiss Nifty Next 50 Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "150892",
+    "n": "Edelweiss Nifty Smallcap 250 Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "152985",
+    "n": "Edelweiss Nifty500 Multicap Momentum Quality 50 Index Fund - Direct - Growth"
+  },
+  { "c": "147570", "n": "Edelweiss Overnight Fund - Direct Plan - Growth" },
+  {
+    "c": "142388",
+    "n": "Edelweiss Recently Listed IPO Fund Direct Plan Growth"
+  },
+  {
+    "c": "154072",
+    "n": "Edelweiss Silver ETF Fund of Fund - Direct Plan Growth Option"
+  },
+  { "c": "146196", "n": "Edelweiss Small Cap Fund - Direct Plan - Growth" },
+  { "c": "152437", "n": "Edelweiss Technology Fund - Direct Plan - Growth" },
+  {
+    "c": "148063",
+    "n": "Edelweiss US Technology Equity Fund of Fund- Direct Plan- Growth"
+  },
+  {
+    "c": "140274",
+    "n": "Edelweiss US Value Equity Offshore Fund - Direct Plan - Growth Option"
+  },
+  { "c": "118559", "n": "Franklin Asian Equity Fund - Direct - Growth" },
+  { "c": "118557", "n": "Franklin Build India Fund - Direct - Growth" },
+  {
+    "c": "118546",
+    "n": "Franklin India Aggressive Hybrid Fund - Direct - Growth"
+  },
+  { "c": "153043", "n": "Franklin India Arbitrage Fund - Direct - Growth" },
+  {
+    "c": "150481",
+    "n": "Franklin India Balanced Advantage Fund- Growth- Direct"
+  },
+  {
+    "c": "129008",
+    "n": "Franklin India Banking & PSU Debt Fund - Direct - Growth"
+  },
+  {
+    "c": "118574",
+    "n": "Franklin India Conservative Hybrid Fund - Direct - GROWTH"
+  },
+  {
+    "c": "118569",
+    "n": "Franklin India Corporate Debt Fund - Direct - GROWTH"
+  },
+  { "c": "118553", "n": "Franklin India Credit Risk Fund - Direct - Growth" },
+  {
+    "c": "118527",
+    "n": "Franklin India Dividend Yield Fund - Direct - Growth"
+  },
+  {
+    "c": "118495",
+    "n": "Franklin India Dynamic Accrual Fund - Direct - Growth"
+  },
+  {
+    "c": "118543",
+    "n": "Franklin India Dynamic Asset Allocation Active Fund Of Funds - Direct - Growth"
+  },
+  {
+    "c": "118540",
+    "n": "Franklin India ELSS Tax Saver Fund - Direct - Growth"
+  },
+  { "c": "144466", "n": "Franklin India Equity Savings Fund- Growth Direct" },
+  { "c": "118535", "n": "Franklin India Flexi Cap Fund - Direct - Growth" },
+  { "c": "118508", "n": "Franklin India Floating Rate Fund - Direct - Growth" },
+  {
+    "c": "118564",
+    "n": "Franklin India Focused Equity Fund - Direct - Growth"
+  },
+  {
+    "c": "118498",
+    "n": "Franklin India Government Securities Fund - Direct - Growth"
+  },
+  {
+    "c": "118581",
+    "n": "Franklin India INDEX FUND- NSE NIFTY 50 INDEX FUND- Direct - Growth"
+  },
+  {
+    "c": "118554",
+    "n": "Franklin India Income Opportunities Fund - Direct - Growth"
+  },
+  {
+    "c": "132989",
+    "n": "Franklin India Income Plus Arbitrage Active Fund of Funds- Growth Plan - Direct"
+  },
+  {
+    "c": "118510",
+    "n": "Franklin India Large & Mid Cap Fund - Direct - Growth"
+  },
+  { "c": "118531", "n": "Franklin India Large Cap Fund- Direct - Growth" },
+  {
+    "c": "118577",
+    "n": "Franklin India Liquid Fund - Super Institutional - Direct - Growth"
+  },
+  { "c": "153102", "n": "Franklin India Long Duration Fund - Direct - Growth" },
+  { "c": "118530", "n": "Franklin India Low Duration Fund - Direct - Growth" },
+  { "c": "153368", "n": "Franklin India Low Duration Fund-Direct-Growth" },
+  {
+    "c": "152851",
+    "n": "Franklin India Medium to Long Duration Fund - Direct Growth"
+  },
+  { "c": "118533", "n": "Franklin India Mid Cap Fund - Direct - Growth" },
+  { "c": "118506", "n": "Franklin India Money Market Fund - Direct - Growth" },
+  {
+    "c": "153731",
+    "n": "Franklin India Multi Asset Allocation Fund- Direct-Growth"
+  },
+  { "c": "152739", "n": "Franklin India Multi Cap Fund - Direct - Growth" },
+  { "c": "153942", "n": "Franklin India Multi-Factor Fund- Direct- Growth" },
+  { "c": "118539", "n": "Franklin India Opportunities Fund - Direct - Growth" },
+  { "c": "147214", "n": "Franklin India Overnight Fund- Growth - Direct" },
+  { "c": "118548", "n": "Franklin India Retirement Fund - Direct - Growth" },
+  {
+    "c": "118565",
+    "n": "Franklin India SHORT TERM INCOME PLAN - Direct - GROWTH"
+  },
+  { "c": "118525", "n": "Franklin India Small Cap Fund - Direct - Growth" },
+  { "c": "118537", "n": "Franklin India Technology Fund - Direct - Growth" },
+  {
+    "c": "118560",
+    "n": "Franklin India Ultra Short Bond Fund - Super Institutional Plan - Direct - Growth"
+  },
+  {
+    "c": "152825",
+    "n": "Franklin India Ultra Short Duration Fund - Direct - Growth"
+  },
+  {
+    "c": "118551",
+    "n": "Franklin U.S. Opportunities Equity Active Fund of Funds - Direct - Growth"
+  },
+  {
+    "c": "145599",
+    "n": "Groww Aggressive Hybrid Fund (formerly known as Indiabulls Equity Hybrid Fund) - Direct Plan - Growth option"
+  },
+  { "c": "154320", "n": "Groww Arbitrage Fund Direct Growth" },
+  { "c": "154200", "n": "Groww BSE Hospitals ETF FOF Direct Growth" },
+  { "c": "153745", "n": "Groww BSE Power ETF FOF Direct Growth" },
+  {
+    "c": "152254",
+    "n": "Groww Banking & Financial Services Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "145589",
+    "n": "Groww Dynamic Term Fund (formerly known as Indiabulls Dynamic Bond Fund) - Direct Plan - Growth option"
+  },
+  {
+    "c": "141808",
+    "n": "Groww ELSS Tax Saver Fund (formerly known as Indiabulls Tax Savings Fund)- Direct Plan- Growth Option"
+  },
+  { "c": "153477", "n": "Groww Gilt Fund - Direct - Growth" },
+  { "c": "152980", "n": "Groww Gold ETF FOF - DIRECT - GROWTH" },
+  {
+    "c": "119133",
+    "n": "Groww Largecap Fund (formerly known as Indiabulls Blue Chip Fund) - Direct Plan - Growth Option"
+  },
+  {
+    "c": "119135",
+    "n": "Groww Liquid Fund ( formerly known as Indiabulls Liquid )Fund - Direct Plan - Growth Option"
+  },
+  { "c": "153982", "n": "Groww Money Market Fund Direct Growth" },
+  { "c": "153821", "n": "Groww Multi Asset Allocation Fund Direct Growth" },
+  { "c": "154028", "n": "Groww Multi Asset Omni FOF Direct Growth" },
+  { "c": "153034", "n": "Groww Multicap Fund - Direct - Growth" },
+  { "c": "153328", "n": "Groww Nifty 200 ETF FOF - Direct - Growth" },
+  { "c": "153704", "n": "Groww Nifty 50 Index Fund Direct Growth" },
+  {
+    "c": "153453",
+    "n": "Groww Nifty 500 Momentum 50 ETF FOF - Direct Plan - Growth"
+  },
+  { "c": "153908", "n": "Groww Nifty Capital Markets ETF FOF Direct Growth" },
+  {
+    "c": "152770",
+    "n": "Groww Nifty EV & New Age Automotive ETF FOF- Direct Plan - Growth"
+  },
+  { "c": "152925", "n": "Groww Nifty India Defence ETF FOF - Direct Growth" },
+  {
+    "c": "153626",
+    "n": "Groww Nifty India Internet ETF FOF - Direct - Growth"
+  },
+  {
+    "c": "153230",
+    "n": "Groww Nifty India Railways PSU Index Fund - Direct Plan - Growth"
+  },
+  { "c": "153939", "n": "Groww Nifty Midcap 150 Index Fund Direct Growth" },
+  { "c": "153786", "n": "Groww Nifty Next 50 Index Fund Direct Growth" },
+  {
+    "c": "152637",
+    "n": "Groww Nifty Non-Cyclical Consumer Index Fund - Direct Plan Growth"
+  },
+  { "c": "154164", "n": "Groww Nifty PSE ETF FOF Direct Growth" },
+  { "c": "154278", "n": "Groww Nifty PSU Bank Index Fund Direct Growth" },
+  { "c": "154346", "n": "Groww Nifty Private Bank Index Fund Direct Growth" },
+  {
+    "c": "152431",
+    "n": "Groww Nifty Smallcap 250 Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "154383",
+    "n": "Groww Nifty Smallcap 250 Momentum Quality 100 Index Fund Direct Growth"
+  },
+  {
+    "c": "152092",
+    "n": "Groww Nifty Total Market Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "147450",
+    "n": "Groww Overnight Fund (formerly known as Indiabulls Overnight Fund)- Direct Plan- Growth Option"
+  },
+  {
+    "c": "123704",
+    "n": "Groww Short Term Fund (formerly known as Indiabulls Short Term Fund) - Direct Plan - Growth Option"
+  },
+  { "c": "153525", "n": "Groww Silver ETF FOF - Direct - Growth" },
+  { "c": "154063", "n": "Groww Small Cap Fund-Direct-Growth" },
+  {
+    "c": "135341",
+    "n": "Groww Value Fund (formerly known as Indiabulls Value Fund) - Direct Plan - Growth Option"
+  },
+  { "c": "129052", "n": "HDFC ARBITRAGE FUND -Direct Plan - Growth Option" },
+  {
+    "c": "151728",
+    "n": "HDFC BSE 500 Index Fund - Growth Option - Direct Plan"
+  },
+  {
+    "c": "153959",
+    "n": "HDFC BSE India Sector Leaders India Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "118968",
+    "n": "HDFC Balanced Advantage Fund - Growth Plan - Direct Plan"
+  },
+  {
+    "c": "148986",
+    "n": "HDFC Banking & Financial Services Fund - Growth Option - Direct Plan"
+  },
+  {
+    "c": "128629",
+    "n": "HDFC Banking and PSU Debt Fund - Growth Option - Direct Plan"
+  },
+  {
+    "c": "150805",
+    "n": "HDFC Business Cycle Fund - Growth Option - Direct Plan"
+  },
+  {
+    "c": "153517",
+    "n": "HDFC CRISIL-IBX Financial Services 3-6 Months Debt Index Fund - Direct Growth Plan"
+  },
+  {
+    "c": "154308",
+    "n": "HDFC CRISIL-IBX Financial Services 9-12 Months Debt Index Fund - Direct Growth Plan"
+  },
+  { "c": "151804", "n": "HDFC Consumption Fund - Growth Option - Direct Plan" },
+  {
+    "c": "118987",
+    "n": "HDFC Corporate Bond Fund - Growth Option - Direct Plan"
+  },
+  {
+    "c": "128051",
+    "n": "HDFC Credit Risk Debt Fund - Growth Option - Direct Plan"
+  },
+  { "c": "151750", "n": "HDFC Defence Fund - Growth Option - Direct Plan" },
+  {
+    "c": "149180",
+    "n": "HDFC Developed World Overseas Equity Passive FOF - Direct Plan - Growth Option"
+  },
+  {
+    "c": "153860",
+    "n": "HDFC Diversified Equity All Cap Active FOF - Direct Plan - Growth Plan"
+  },
+  {
+    "c": "148609",
+    "n": "HDFC Dividend Yield Fund - Growth Option Direct Plan"
+  },
+  {
+    "c": "119075",
+    "n": "HDFC Dynamic Debt Fund - Growth Option - Direct Plan"
+  },
+  { "c": "119060", "n": "HDFC ELSS Tax saver - Growth Option - Direct Plan" },
+  {
+    "c": "119128",
+    "n": "HDFC Equity Savings Fund - Growth Option - Direct Plan"
+  },
+  { "c": "118955", "n": "HDFC Flexi Cap Fund - Growth Option - Direct Plan" },
+  {
+    "c": "118961",
+    "n": "HDFC Floating Rate Debt Fund - Direct Plan - Growth Option"
+  },
+  { "c": "118950", "n": "HDFC Focused Fund - Growth Option - Direct Plan" },
+  { "c": "119116", "n": "HDFC Gilt Fund - Growth Option - Direct Plan" },
+  {
+    "c": "141924",
+    "n": "HDFC Housing Opportunities Fund  - Growth Option - Direct Plan"
+  },
+  { "c": "119118", "n": "HDFC Hybrid Debt Fund - Growth Option - Direct Plan" },
+  {
+    "c": "119062",
+    "n": "HDFC Hybrid Equity Fund - Growth Option - Direct Plan"
+  },
+  {
+    "c": "154262",
+    "n": "HDFC INCOME PLUS ARBITRAGE OMNI FOF - GROWTH OPTION - DIRECT PLAN"
+  },
+  { "c": "153620", "n": "HDFC INNOVATION FUND - DIRECT PLAN - GROWTH OPTION" },
+  { "c": "119069", "n": "HDFC Income Fund - Growth Option - Direct Plan" },
+  {
+    "c": "130543",
+    "n": "HDFC Income Plus Arbitrage Active FOF - Growth Option - Direct Plan"
+  },
+  {
+    "c": "118979",
+    "n": "HDFC Infrastructure Fund - Growth Option - Direct Plan"
+  },
+  { "c": "119018", "n": "HDFC Large Cap Fund - Growth Option - Direct Plan" },
+  {
+    "c": "130498",
+    "n": "HDFC Large and Mid Cap Fund - Growth Option - Direct Plan"
+  },
+  { "c": "119091", "n": "HDFC Liquid Fund - Growth Option - Direct Plan" },
+  {
+    "c": "151313",
+    "n": "HDFC Long Duration Debt Fund - Growth Option - Direct Plan"
+  },
+  {
+    "c": "118929",
+    "n": "HDFC Long Term Advantage Plan - Growth Option - Direct Plan"
+  },
+  { "c": "118942", "n": "HDFC Low Duration  Fund - Direct Plan - Growth" },
+  { "c": "151458", "n": "HDFC MNC Fund - Growth Option - Direct Plan" },
+  {
+    "c": "152600",
+    "n": "HDFC Manufacturing fund - Growth Option - Direct Plan"
+  },
+  {
+    "c": "119081",
+    "n": "HDFC Medium Term Debt Fund - Growth Option - Direct Plan"
+  },
+  { "c": "118989", "n": "HDFC Mid Cap Fund - Growth Option - Direct Plan" },
+  {
+    "c": "119092",
+    "n": "HDFC Money Market Fund - Growth Option - Direct Plan"
+  },
+  { "c": "149368", "n": "HDFC Multi Cap Fund - Growth Option - Direct Plan" },
+  {
+    "c": "148903",
+    "n": "HDFC Multi-Asset Active FOF - Growth Option -Direct Plan"
+  },
+  { "c": "119131", "n": "HDFC Multi-Asset Fund - Growth Option - Direct Plan" },
+  {
+    "c": "149868",
+    "n": "HDFC NIFTY 100 Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "152889",
+    "n": "HDFC NIFTY LargeMidcap 250 Index Fund - Growth Option - Direct"
+  },
+  {
+    "c": "151724",
+    "n": "HDFC NIFTY Midcap 150 Index Fund - Growth Option - Direct Plan"
+  },
+  {
+    "c": "149288",
+    "n": "HDFC NIFTY Next 50 Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "151570",
+    "n": "HDFC NIFTY SDL Plus G-Sec Jun 2027 40:60 Index Fund - Growth Option - Direct Plan"
+  },
+  {
+    "c": "151727",
+    "n": "HDFC NIFTY Smallcap 250 Index Fund - Growth Option - Direct Plan"
+  },
+  {
+    "c": "149107",
+    "n": "HDFC NIFTY50 Equal weight Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "149870",
+    "n": "HDFC Nifty 100 Equal Weight Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "154427",
+    "n": "HDFC Nifty Auto Index Fund- Direct Plan- Growth Option"
+  },
+  {
+    "c": "151495",
+    "n": "HDFC Nifty G-Sec Apr 2029 Index Fund - Growth Option - Direct Plan"
+  },
+  {
+    "c": "150845",
+    "n": "HDFC Nifty G-Sec Dec 2026 Index Fund - Growth Option - Direct Plan"
+  },
+  {
+    "c": "150847",
+    "n": "HDFC Nifty G-Sec July 2031 Index Fund - Growth Option - Direct Plan"
+  },
+  {
+    "c": "151181",
+    "n": "HDFC Nifty G-Sec Jun 2027 Index Fund - Growth Option - Direct Plan"
+  },
+  {
+    "c": "151489",
+    "n": "HDFC Nifty G-Sec Jun 2036 Index Fund - Growth Option - Direct Plan"
+  },
+  {
+    "c": "151183",
+    "n": "HDFC Nifty G-Sec Sep 2032 Index Fund - Growth Option - Direct Plan"
+  },
+  {
+    "c": "154179",
+    "n": "HDFC Nifty India Consumption Index Fund - Direct Growth Plan"
+  },
+  {
+    "c": "153097",
+    "n": "HDFC Nifty India Digital Index Fund - Growth Option - Direct"
+  },
+  {
+    "c": "151456",
+    "n": "HDFC Nifty SDL Oct 2026 Index Fund - Growth Option - Direct Plan"
+  },
+  { "c": "119110", "n": "HDFC Overnight Fund - Growth Option - Direct Plan" },
+  {
+    "c": "152082",
+    "n": "HDFC Pharma and Healthcare Fund - Growth Option - Direct Plan"
+  },
+  {
+    "c": "136094",
+    "n": "HDFC Retirement Savings Fund - Equity Plan - Growth Option - Direct Plan"
+  },
+  {
+    "c": "136465",
+    "n": "HDFC Retirement Savings Fund - Hybrid-Debt Plan - Growth Option - Direct Plan"
+  },
+  {
+    "c": "136464",
+    "n": "HDFC Retirement Savings Fund - Hybrid-Equity Plan - Growth Option - Direct Plan"
+  },
+  {
+    "c": "119016",
+    "n": "HDFC Short Term  Debt Fund - Growth Option - Direct Plan"
+  },
+  {
+    "c": "150737",
+    "n": "HDFC Silver ETF Fund of Fund - Growth Option - Direct Plan"
+  },
+  { "c": "130503", "n": "HDFC Small Cap Fund - Growth Option - Direct Plan" },
+  { "c": "152059", "n": "HDFC Technology Fund - Growth Option - Direct Plan" },
+  {
+    "c": "151901",
+    "n": "HDFC Transportation and Logistics Fund - Growth Option - Direct Plan"
+  },
+  {
+    "c": "145034",
+    "n": "HDFC Ultra Short Term Fund - Direct Plan-Growth Option"
+  },
+  { "c": "118935", "n": "HDFC Value Fund - Growth Option - Direct Plan" },
+  { "c": "129200", "n": "HSBC Aggressive Hybrid Active FOF - Growth Direct" },
+  { "c": "151122", "n": "HSBC Aggressive Hybrid Fund - Direct Growth" },
+  { "c": "151138", "n": "HSBC Arbitrage Fund - Direct Growth" },
+  {
+    "c": "127071",
+    "n": "HSBC Asia Pacific (Ex Japan) Dividend Yield Fund - Growth Direct"
+  },
+  { "c": "151129", "n": "HSBC Balanced Advantage Fund - Direct Growth" },
+  { "c": "151107", "n": "HSBC Banking and PSU Debt Fund - Direct Growth" },
+  { "c": "120035", "n": "HSBC Brazil Fund - Growth Direct" },
+  { "c": "151142", "n": "HSBC Business Cycles Fund - Direct Growth" },
+  {
+    "c": "149966",
+    "n": "HSBC CRISIL IBX 50:50 Gilt Plus SDL Apr 2028 Index Fund - Direct - Growth"
+  },
+  {
+    "c": "151479",
+    "n": "HSBC CRISIL IBX Gilt June 2027 Index Fund - Direct - Growth"
+  },
+  { "c": "120073", "n": "HSBC Conservative Hybrid Fund - Direct Growth" },
+  { "c": "152032", "n": "HSBC Consumption Fund - Direct Growth" },
+  { "c": "150996", "n": "HSBC Corporate Bond Fund - Direct Growth" },
+  { "c": "151045", "n": "HSBC Credit Risk Fund - Direct Growth" },
+  { "c": "151087", "n": "HSBC Dynamic Bond Fund - Direct Growth" },
+  { "c": "151078", "n": "HSBC ELSS Tax saver Fund - Direct Growth" },
+  { "c": "151060", "n": "HSBC Equity Savings Fund - Direct Growth" },
+  { "c": "153266", "n": "HSBC Financial Services Fund - Direct Growth" },
+  { "c": "120046", "n": "HSBC Flexi Cap Fund - Direct Growth" },
+  { "c": "148411", "n": "HSBC Focused Fund - Direct Growth" },
+  { "c": "151014", "n": "HSBC Gilt Fund - Direct Growth" },
+  { "c": "120043", "n": "HSBC Global Emerging Market Fund - Growth Direct" },
+  { "c": "154295", "n": "HSBC Gold ETF Fund of fund - Direct Growth" },
+  {
+    "c": "129197",
+    "n": "HSBC Income Plus Arbitrage Active FOF - Growth Direct"
+  },
+  {
+    "c": "152829",
+    "n": "HSBC India Export Opportunities Fund - Direct Growth"
+  },
+  { "c": "151040", "n": "HSBC Infrastructure Fund - Direct Growth" },
+  { "c": "146772", "n": "HSBC Large & Mid Cap Fund - Direct Growth" },
+  { "c": "120030", "n": "HSBC Large Cap Fund - Direct Growth" },
+  { "c": "120038", "n": "HSBC Liquid Fund -  Growth Direct" },
+  { "c": "151117", "n": "HSBC Low Duration Fund - Direct Growth" },
+  { "c": "151146", "n": "HSBC Medium Duration Fund - Direct Growth" },
+  { "c": "120059", "n": "HSBC Medium to Long Duration Fund - Direct Growth" },
+  { "c": "151036", "n": "HSBC Midcap Fund - Direct Growth" },
+  { "c": "151054", "n": "HSBC Money Market Fund - Direct Growth" },
+  { "c": "129193", "n": "HSBC Multi Asset Active FOF - Growth Direct" },
+  { "c": "152380", "n": "HSBC Multi Asset Allocation Fund - Direct - Growth" },
+  { "c": "151290", "n": "HSBC Multi Cap Fund - Direct - Growth" },
+  { "c": "151157", "n": "HSBC NIFTY 50 INDEX FUND - Direct Growth" },
+  { "c": "151160", "n": "HSBC NIFTY NEXT 50 INDEX FUND - Direct Growth" },
+  { "c": "147287", "n": "HSBC Overnight Fund - Direct Growth" },
+  { "c": "151067", "n": "HSBC Short Duration Fund - Direct Growth" },
+  { "c": "151130", "n": "HSBC Small Cap Fund - Direct Growth" },
+  { "c": "147908", "n": "HSBC Ultra Short Duration Fund - Direct Growth" },
+  { "c": "151113", "n": "HSBC Value Fund - Direct Growth" },
+  { "c": "154257", "n": "Helios Arbitrage Fund - Direct Growth" },
+  {
+    "c": "152509",
+    "n": "Helios Balanced Advantage Fund- Direct Plan- Growth Option"
+  },
+  {
+    "c": "152679",
+    "n": "Helios Financial Services Fund - Direct Plan - Growth Option"
+  },
+  { "c": "152135", "n": "Helios Flexi Cap Fund - Direct Plan - Growth Option" },
+  {
+    "c": "152941",
+    "n": "Helios Large & Mid Cap Fund - Direct Plan - Growth Option"
+  },
+  { "c": "153326", "n": "Helios Mid Cap Fund - Direct Plan - Growth Option" },
+  { "c": "152152", "n": "Helios Overnight Fund - Direct Plan - Growth Option" },
+  { "c": "153912", "n": "Helios Small Cap Fund - Direct Plan - Growth Option" },
+  {
+    "c": "152728",
+    "n": "ICICI PRUDENTIAL ENERGY OPPORTUNITIES FUND - Direct Plan - Growth"
+  },
+  {
+    "c": "150310",
+    "n": "ICICI PRUDENTIAL HOUSING OPPORTUNITIES FUND - Direct Plan Growth"
+  },
+  {
+    "c": "150685",
+    "n": "ICICI PRUDENTIAL TRANSPORTATION AND LOGISTICS FUND - Direct Plan - Growth"
+  },
+  {
+    "c": "153684",
+    "n": "ICICI Prudential Active Momentum Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "120700",
+    "n": "ICICI Prudential Aggressive Hybrid Active FOF - Direct Plan - Growth"
+  },
+  {
+    "c": "120603",
+    "n": "ICICI Prudential All Seasons Bond Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "120364",
+    "n": "ICICI Prudential Arbitrage Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "149331",
+    "n": "ICICI Prudential BSE 500 ETF FOF - Direct Plan - Growth"
+  },
+  {
+    "c": "120377",
+    "n": "ICICI Prudential Balanced Advantage Fund - Direct Plan -  Growth"
+  },
+  {
+    "c": "154417",
+    "n": "ICICI Prudential Balanced Hybrid Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "120244",
+    "n": "ICICI Prudential Banking and Financial Services Fund - Direct Plan -  Growth"
+  },
+  {
+    "c": "120256",
+    "n": "ICICI Prudential Banking and PSU Debt Fund - Direct Plan -  Growth"
+  },
+  {
+    "c": "146951",
+    "n": "ICICI Prudential Bharat Consumption Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "120310",
+    "n": "ICICI Prudential Blended Plan A-Direct Plan -  Growth"
+  },
+  {
+    "c": "120300",
+    "n": "ICICI Prudential Blended Plan B - Direct Plan -  Growth Option - I"
+  },
+  { "c": "120619", "n": "ICICI Prudential Bond Fund - Direct Plan - Growth" },
+  {
+    "c": "148651",
+    "n": "ICICI Prudential Business Cycle Fund Direct Plan Growth"
+  },
+  {
+    "c": "153236",
+    "n": "ICICI Prudential CRISIL-IBX AAA Bond Financial Services Index -Dec 2026 Fund- Direct Plan - Growth"
+  },
+  {
+    "c": "153411",
+    "n": "ICICI Prudential CRISIL-IBX Financial Services 3-6 Months Debt Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "147662",
+    "n": "ICICI Prudential Commodities Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "153867",
+    "n": "ICICI Prudential Conglomerate Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "131061",
+    "n": "ICICI Prudential Constant Maturity Gilt Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "120692",
+    "n": "ICICI Prudential Corporate Bond Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "120711",
+    "n": "ICICI Prudential Credit Risk Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "120702",
+    "n": "ICICI Prudential Diversified Debt Strategy Active FOF  - Direct Plan - Growth"
+  },
+  {
+    "c": "154266",
+    "n": "ICICI Prudential Diversified Equity All Cap Active FOF - Direct Plan - Growth"
+  },
+  {
+    "c": "148035",
+    "n": "ICICI Prudential Diversified Equity All Cap Omni FOF - Direct Plan - Growth"
+  },
+  {
+    "c": "129312",
+    "n": "ICICI Prudential Dividend Yield Equity Fund Direct Plan Growth Option"
+  },
+  {
+    "c": "120679",
+    "n": "ICICI Prudential Dynamic Asset Allocation Active FOF - Direct Plan - Growth"
+  },
+  {
+    "c": "120582",
+    "n": "ICICI Prudential Dynamic Bond Fund - Direct Plan -  Growth"
+  },
+  {
+    "c": "120592",
+    "n": "ICICI Prudential ELSS Tax Saver Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "148516",
+    "n": "ICICI Prudential ESG Exclusionary Strategy Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "120251",
+    "n": "ICICI Prudential Equity & Debt Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "153070",
+    "n": "ICICI Prudential Equity Minimum Variance Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "120688",
+    "n": "ICICI Prudential Exports & Services Fund - Direct Plan - Growth"
+  },
+  { "c": "120587", "n": "ICICI Prudential FMCG Fund - Direct Plan -  Growth" },
+  {
+    "c": "148990",
+    "n": "ICICI Prudential Flexicap Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "120425",
+    "n": "ICICI Prudential Floating Interest Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "120722",
+    "n": "ICICI Prudential Focused Equity Fund - Direct Plan - Growth"
+  },
+  { "c": "120590", "n": "ICICI Prudential Gilt Fund - Direct Plan - Growth" },
+  {
+    "c": "120605",
+    "n": "ICICI Prudential Gilt Fund Investment Plan PF Option - Direct Plan -Growth Option"
+  },
+  {
+    "c": "120611",
+    "n": "ICICI Prudential Gilt Fund Treasury Plan PF Option - Direct Plan -Growth Option"
+  },
+  {
+    "c": "147648",
+    "n": "ICICI Prudential Global Advantage Fund (FOF) - Direct Plan - Growth Option"
+  },
+  {
+    "c": "123654",
+    "n": "ICICI Prudential Global Stable Equity Fund (FOF) - Direct - Growth"
+  },
+  {
+    "c": "120685",
+    "n": "ICICI Prudential Gold ETF FOF - Direct Plan - Growth"
+  },
+  {
+    "c": "120313",
+    "n": "ICICI Prudential Income plus Arbitrage Omni FOF - Direct Plan - Growth"
+  },
+  {
+    "c": "120621",
+    "n": "ICICI Prudential Infrastructure Fund - Direct Plan -  Growth"
+  },
+  {
+    "c": "151580",
+    "n": "ICICI Prudential Innovation Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "120625",
+    "n": "ICICI Prudential Interval Fund Annual Interval Plan I - Direct Plan -  Growth"
+  },
+  {
+    "c": "120627",
+    "n": "ICICI Prudential Interval Fund Annual Interval Plan II - Direct Plan -  Growth"
+  },
+  {
+    "c": "120629",
+    "n": "ICICI Prudential Interval Fund Annual Interval Plan III - Direct Plan -  Growth"
+  },
+  {
+    "c": "120631",
+    "n": "ICICI Prudential Interval Fund Annual Interval Plan IV - Direct Plan -  Growth"
+  },
+  {
+    "c": "120639",
+    "n": "ICICI Prudential Interval Fund II Quarterly Interval - Direct Plan -  Growth"
+  },
+  {
+    "c": "120642",
+    "n": "ICICI Prudential Interval Fund II Quarterly Interval Plan A - Direct Plan -  Growth"
+  },
+  {
+    "c": "120643",
+    "n": "ICICI Prudential Interval Fund II Quarterly Interval Plan B - Direct Plan -  Growth"
+  },
+  {
+    "c": "120646",
+    "n": "ICICI Prudential Interval Fund II Quarterly Interval Plan C - Direct Plan -  Growth"
+  },
+  {
+    "c": "120649",
+    "n": "ICICI Prudential Interval Fund II Quarterly Interval Plan D - Direct Plan - Growth"
+  },
+  {
+    "c": "120652",
+    "n": "ICICI Prudential Interval Fund II Quarterly Interval Plan F - Direct Plan -  Growth"
+  },
+  {
+    "c": "120655",
+    "n": "ICICI Prudential Interval Fund III Quarterly Interval - Direct Plan -  Growth"
+  },
+  {
+    "c": "120623",
+    "n": "ICICI Prudential Interval Fund IV Quarterly Interval Plan B - Direct Plan -  Growth"
+  },
+  {
+    "c": "120636",
+    "n": "ICICI Prudential Interval Fund Monthly Interval Plan I - Direct Plan -  Growth"
+  },
+  {
+    "c": "120638",
+    "n": "ICICI Prudential Interval Fund Quarterly Interval Plan 1 - Direct Plan -  Growth"
+  },
+  {
+    "c": "120661",
+    "n": "ICICI Prudential Interval Fund V Monthly Interval Plan A - Direct Plan - Growth"
+  },
+  {
+    "c": "120596",
+    "n": "ICICI Prudential Large & Mid Cap Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "120586",
+    "n": "ICICI Prudential Large Cap Fund (erstwhile Bluechip Fund) - Direct Plan - Growth"
+  },
+  { "c": "120197", "n": "ICICI Prudential Liquid Fund - Direct Plan - Growth" },
+  {
+    "c": "120743",
+    "n": "ICICI Prudential Long Term Bond Fund - Direct Plan - Growth"
+  },
+  { "c": "120668", "n": "ICICI Prudential MIP - Direct Plan -  Growth" },
+  {
+    "c": "147346",
+    "n": "ICICI Prudential MNC Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "120670",
+    "n": "ICICI Prudential Medium Term Bond Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "120381",
+    "n": "ICICI Prudential MidCap Fund - Direct Plan -  Growth"
+  },
+  {
+    "c": "120211",
+    "n": "ICICI Prudential Money Market Fund Option - Direct Plan -  Growth"
+  },
+  {
+    "c": "120242",
+    "n": "ICICI Prudential Multi Sector Passive FOF - Direct Plan - Growth"
+  },
+  {
+    "c": "154449",
+    "n": "ICICI Prudential Multi-Asset Active FOF - Direct Plan - Growth"
+  },
+  {
+    "c": "120334",
+    "n": "ICICI Prudential Multi-Asset Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "120599",
+    "n": "ICICI Prudential Multicap Fund - Direct Plan -  Growth"
+  },
+  {
+    "c": "149219",
+    "n": "ICICI Prudential NASDAQ 100 Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "148822",
+    "n": "ICICI Prudential Nifty 100 Low Volatility 30 ETF FOF - Direct Plan - Growth"
+  },
+  {
+    "c": "150452",
+    "n": "ICICI Prudential Nifty 200 Momentum 30 Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "153161",
+    "n": "ICICI Prudential Nifty 500 Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "149158",
+    "n": "ICICI Prudential Nifty Alpha Low - Volatility 30 ETF FOF - Direct Plan - Growth"
+  },
+  {
+    "c": "150643",
+    "n": "ICICI Prudential Nifty Auto Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "149858",
+    "n": "ICICI Prudential Nifty Bank Index Fund - Direct Plan Growth"
+  },
+  {
+    "c": "153394",
+    "n": "ICICI Prudential Nifty EV & New Age Automotive ETF FOF - Direct Plan - Growth"
+  },
+  {
+    "c": "150733",
+    "n": "ICICI Prudential Nifty G-Sec Dec 2030 Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "150468",
+    "n": "ICICI Prudential Nifty IT Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "152482",
+    "n": "ICICI Prudential Nifty LargeMidcap 250 Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "149389",
+    "n": "ICICI Prudential Nifty Midcap 150 Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "120684",
+    "n": "ICICI Prudential Nifty Next 50 Index Fund - Direct Plan -  Growth"
+  },
+  {
+    "c": "149210",
+    "n": "ICICI Prudential Nifty PSU Bond Plus SDL Sep 2027 40:60 Index Fund - Direct Plan Growth"
+  },
+  {
+    "c": "150930",
+    "n": "ICICI Prudential Nifty Pharma Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "153679",
+    "n": "ICICI Prudential Nifty Private Bank Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "150729",
+    "n": "ICICI Prudential Nifty SDL Dec 2028 Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "151211",
+    "n": "ICICI Prudential Nifty SDL Sep 2026 Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "149999",
+    "n": "ICICI Prudential Nifty SDL Sep 2027 Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "149283",
+    "n": "ICICI Prudential Nifty Smallcap 250 Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "153614",
+    "n": "ICICI Prudential Nifty Top 15 Equal Weight Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "153546",
+    "n": "ICICI Prudential Nifty200 Quality 30 Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "152936",
+    "n": "ICICI Prudential Nifty200 Value 30 Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "150639",
+    "n": "ICICI Prudential Nifty50 Equal Weight Index Fund- Direct Plan - Growth"
+  },
+  {
+    "c": "152365",
+    "n": "ICICI Prudential Nifty50 Value 20 Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "145536",
+    "n": "ICICI Prudential Overnight Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "150539",
+    "n": "ICICI Prudential PSU Equity Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "149441",
+    "n": "ICICI Prudential Passive Multi-Asset Fund of Funds - Direct Plan - Growth"
+  },
+  {
+    "c": "153458",
+    "n": "ICICI Prudential Quality Fund - Direct Plan - Growth"
+  },
+  { "c": "148600", "n": "ICICI Prudential Quant Fund Direct Plan Growth" },
+  {
+    "c": "120616",
+    "n": "ICICI Prudential Regular Savings Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "146721",
+    "n": "ICICI Prudential Retirement Fund - Hybrid Aggressive - Direct Plan - Growth Option"
+  },
+  {
+    "c": "146716",
+    "n": "ICICI Prudential Retirement Fund - Hybrid Conservative - Direct Plan - Growth Option"
+  },
+  {
+    "c": "146727",
+    "n": "ICICI Prudential Retirement Fund - Pure Debt - Direct Plan - Growth Option"
+  },
+  {
+    "c": "146349",
+    "n": "ICICI Prudential Retirement Fund - Pure Equity - Direct Plan - Growth Option"
+  },
+  {
+    "c": "153184",
+    "n": "ICICI Prudential Rural Opportunities Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "120398",
+    "n": "ICICI Prudential Savings Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "120754",
+    "n": "ICICI Prudential Short Term Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "120608",
+    "n": "ICICI Prudential Short Term Gilt Fund - Direct Plan -  Growth"
+  },
+  {
+    "c": "149775",
+    "n": "ICICI Prudential Silver ETF FOF - Direct Plan - Growth"
+  },
+  {
+    "c": "120591",
+    "n": "ICICI Prudential Smallcap Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "149455",
+    "n": "ICICI Prudential Strategic Metal and Energy Equity Fund of Fund - Direct Plan Growth"
+  },
+  {
+    "c": "120594",
+    "n": "ICICI Prudential Technology Fund - Direct Plan -  Growth"
+  },
+  {
+    "c": "120186",
+    "n": "ICICI Prudential US Bluechip Equity Fund - Direct Plan -  Growth"
+  },
+  {
+    "c": "120676",
+    "n": "ICICI Prudential Ultra Short Term Fund - Direct Plan -  Growth"
+  },
+  {
+    "c": "120323",
+    "n": "ICICI Prudential Value Fund (erstwhile Value Discovery Fund) - Direct Plan - Growth"
+  },
+  { "c": "147617", "n": "ITI Arbitrage Fund - Direct Plan - Growth Option" },
+  {
+    "c": "147789",
+    "n": "ITI Balanced Advantage Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "148534",
+    "n": "ITI Banking & PSU Debt Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "149321",
+    "n": "ITI Banking and Financial Services Fund - Direct Plan - Growth Option"
+  },
+  { "c": "153260", "n": "ITI Bharat Consumption Fund - Direct Plan - Growth" },
+  { "c": "154157", "n": "ITI Business Cycle Fund- Direct Plan- Growth" },
+  { "c": "149029", "n": "ITI Dynamic Term Fund - Direct Plan - Growth Option" },
+  {
+    "c": "147541",
+    "n": "ITI ELSS Tax Saver Fund - Direct Plan - Growth Option"
+  },
+  { "c": "151379", "n": "ITI Flexi Cap Fund- Direct Plan- Growth" },
+  { "c": "151777", "n": "ITI Focused Fund - Direct Plan - Growth" },
+  { "c": "152821", "n": "ITI Large & Midcap Fund - Direct Plan - Growth" },
+  { "c": "148353", "n": "ITI Large Cap Fund - Direct Plan - Growth Option" },
+  { "c": "147157", "n": "ITI Liquid Fund - Direct Plan - Growth Option" },
+  { "c": "148733", "n": "ITI Mid Cap Fund - Direct Plan - Growth Option" },
+  { "c": "147183", "n": "ITI Multi Cap Fund - Direct Plan - Growth Option" },
+  { "c": "147713", "n": "ITI Overnight Fund - Direct Plan - Growth Option" },
+  {
+    "c": "149268",
+    "n": "ITI Pharma and Healthcare Fund - Direct Plan - Growth Option"
+  },
+  { "c": "147919", "n": "ITI Small Cap Fund - Direct Plan - Growth Option" },
+  {
+    "c": "148913",
+    "n": "ITI Ultra Short Term Fund - Direct Plan - Growth Option"
+  },
+  { "c": "148972", "n": "ITI Value Fund - Direct Plan - Growth Option" },
+  {
+    "c": "149961",
+    "n": "Invesco India - Invesco EQQQ Nasdaq-100 ETF Fund of Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "148614",
+    "n": "Invesco India - Invesco Global Consumer Trends Fund of Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "129188",
+    "n": "Invesco India - Invesco Global Equity Income Fund of Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "126353",
+    "n": "Invesco India - Invesco Pan European Equity Fund of Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "143537",
+    "n": "Invesco India Aggressive Hybrid Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "120401",
+    "n": "Invesco India Arbitrage Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "154340",
+    "n": "Invesco India BSE Sensex Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "120333",
+    "n": "Invesco India Balanced Advantage Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "120444",
+    "n": "Invesco India Banking and PSU Fund - Direct Plan -  Growth Option"
+  },
+  {
+    "c": "153291",
+    "n": "Invesco India Business Cycle Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "153900",
+    "n": "Invesco India Consumption Fund - Direct Plan - Growth"
+  },
+  { "c": "120348", "n": "Invesco India Contra Fund - Direct Plan - Growth" },
+  {
+    "c": "120497",
+    "n": "Invesco India Corporate Bond Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "130722",
+    "n": "Invesco India Credit Risk Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "120416",
+    "n": "Invesco India ELSS Tax Saver Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "148751",
+    "n": "Invesco India ESG Integration Strategy Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "146457",
+    "n": "Invesco India Equity Savings Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "120385",
+    "n": "Invesco India Financial Services Fund - Direct Plan - Growth"
+  },
+  { "c": "149763", "n": "Invesco India Flexi Cap Fund - Direct Plan - Growth" },
+  { "c": "148481", "n": "Invesco India Focused Fund - Direct Plan - Growth" },
+  { "c": "120520", "n": "Invesco India Gilt Fund - Direct  Plan - Growth" },
+  {
+    "c": "120531",
+    "n": "Invesco India Gold ETF Fund of Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "153697",
+    "n": "Invesco India Income Plus Arbitrage Active Fund of Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "120405",
+    "n": "Invesco India Infrastructure Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "120357",
+    "n": "Invesco India Large & Mid Cap Fund - Direct Plan - Growth"
+  },
+  { "c": "120392", "n": "Invesco India Largecap Fund - Direct Plan - Growth" },
+  { "c": "120537", "n": "Invesco India Liquid Fund - Direct Plan - Growth" },
+  {
+    "c": "120570",
+    "n": "Invesco India Low Duration Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "152756",
+    "n": "Invesco India Manufacturing Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "149011",
+    "n": "Invesco India Medium Duration Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "120403",
+    "n": "Invesco India Midcap Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "120507",
+    "n": "Invesco India Money Market Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "153047",
+    "n": "Invesco India Multi Asset Allocation Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "120413",
+    "n": "Invesco India Multicap Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "154343",
+    "n": "Invesco India Nifty Bank Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "151593",
+    "n": "Invesco India Nifty G-sec Jul 2027 Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "151597",
+    "n": "Invesco India Nifty G-sec Sep 2032 Index Fund - Direct Plan - Growth"
+  },
+  { "c": "147883", "n": "Invesco India Overnight Fund - Direct Plan - Growth" },
+  {
+    "c": "120395",
+    "n": "Invesco India PSU Equity Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "120560",
+    "n": "Invesco India Short Duration Fund - Direct Plan - Growth"
+  },
+  { "c": "145137", "n": "Invesco India Smallcap Fund - Direct Plan - Growth" },
+  {
+    "c": "152863",
+    "n": "Invesco India Technology Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "120541",
+    "n": "Invesco India Ultra Short Duration Fund - Direct Plan - Growth"
+  },
+  { "c": "120484", "n": "JM Aggressive Hybrid Fund (Direct) - Growth Option" },
+  { "c": "120482", "n": "JM Arbitrage Fund (Direct) - Growth Option" },
+  { "c": "120435", "n": "JM Dynamic Bond Fund - (Direct) - Growth Option" },
+  { "c": "120494", "n": "JM ELSS Tax Saver Fund (Direct) - Growth Option" },
+  { "c": "120492", "n": "JM Flexicap Fund (Direct) - Growth Option" },
+  { "c": "120488", "n": "JM Focused Fund (Direct)  - Growth Option" },
+  { "c": "153629", "n": "JM Large & Mid Cap Fund (Direct) - Growth Option" },
+  { "c": "120490", "n": "JM Large Cap Fund (Direct) - Growth Option" },
+  { "c": "120406", "n": "JM Liquid Fund (Direct) - Growth Option" },
+  {
+    "c": "148414",
+    "n": "JM Liquid Fund - Unclaimed Application Refund Amount I.E.F. (Direct) - Growth Plan"
+  },
+  {
+    "c": "148413",
+    "n": "JM Liquid Fund - Unclaimed Brokerage I.E.F. (Direct) - Growth Plan"
+  },
+  {
+    "c": "148415",
+    "n": "JM Liquid Fund - Withheld Brokerage I.E.F. (Direct) - Growth Plan"
+  },
+  {
+    "c": "139258",
+    "n": "JM Liquid Fund Unclaimed Dividend (Direct) Growth Plan"
+  },
+  {
+    "c": "139260",
+    "n": "JM Liquid Fund Unclaimed Dividend IEF (Direct) Growth Plan"
+  },
+  {
+    "c": "139257",
+    "n": "JM Liquid Fund Unclaimed Redemption (Direct) Growth Plan"
+  },
+  {
+    "c": "139259",
+    "n": "JM Liquid Fund Unclaimed Redemption IEF (Direct) Growth Plan"
+  },
+  { "c": "143612", "n": "JM Low Duration Fund (Direct) - Growth" },
+  {
+    "c": "120430",
+    "n": "JM Medium to Long Duration Fund (Direct) - Growth Option"
+  },
+  { "c": "150815", "n": "JM Midcap Fund (Direct) - Growth" },
+  { "c": "143597", "n": "JM Money Market Fund (Direct) - Growth" },
+  {
+    "c": "154423",
+    "n": "JM Multi Asset Allocation Fund (Direct) - Growth Option"
+  },
+  { "c": "147837", "n": "JM Overnight Fund - (Direct) - Growth" },
+  {
+    "c": "149828",
+    "n": "JM Overnight Fund - (Direct) - Unclaimed IDCW - Growth Plan"
+  },
+  {
+    "c": "149827",
+    "n": "JM Overnight Fund - (Direct) - Unclaimed IDCW I.E.F. - Growth Plan"
+  },
+  {
+    "c": "149829",
+    "n": "JM Overnight Fund - (Direct) - Unclaimed Redemption - Growth Plan"
+  },
+  {
+    "c": "149826",
+    "n": "JM Overnight Fund - (Direct) - Unclaimed Redemption I.E.F. - Growth Plan"
+  },
+  { "c": "150545", "n": "JM Short Duration Fund (Direct) - Growth" },
+  { "c": "120471", "n": "JM Short Term Fund (Direct) - Growth Option" },
+  { "c": "152614", "n": "JM Small Cap Fund (Direct) - Growth Option" },
+  {
+    "c": "120458",
+    "n": "JM Ultra Short Duration Fund - (Direct) - Growth Option"
+  },
+  { "c": "120486", "n": "JM Value Fund (Direct) - Growth Option" },
+  {
+    "c": "154076",
+    "n": "JioBlackRock Arbitrage Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "153859",
+    "n": "JioBlackRock Flexi Cap Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "154307",
+    "n": "JioBlackRock Large Cap Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "153651",
+    "n": "JioBlackRock Liquid Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "154081",
+    "n": "JioBlackRock Low Duration Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "153649",
+    "n": "JioBlackRock Money Market Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "153787",
+    "n": "JioBlackRock Nifty 50 Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "153791",
+    "n": "JioBlackRock Nifty 8-13 yr G-Sec Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "153788",
+    "n": "JioBlackRock Nifty Midcap 150 Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "153789",
+    "n": "JioBlackRock Nifty Next 50 Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "153790",
+    "n": "JioBlackRock Nifty Smallcap 250 Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "153650",
+    "n": "JioBlackRock Overnight Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "154082",
+    "n": "JioBlackRock Sector Rotation Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "154079",
+    "n": "JioBlackRock Short Duration Fund - Direct Plan - Growth Option"
+  },
+  { "c": "147269", "n": "KOTAK FLOATING RATE FUND-DIRECT PLAN-GROWTH OPTION" },
+  {
+    "c": "153660",
+    "n": "KOTAK NIFTY 200 QUALITY 30 INDEX FUND - DIRECT PLAN - GROWTH"
+  },
+  {
+    "c": "153401",
+    "n": "KOTAK NIFTY MIDCAP 150 INDEX FUND-DIRECT PLAN-GROWTH"
+  },
+  {
+    "c": "152767",
+    "n": "KOTAK NIFTY MIDCAP 50 INDEX FUND-DIRECT PLAN- GROWTH"
+  },
+  {
+    "c": "153753",
+    "n": "Kotak Active Momentum Fund - Direct Plan - Growth option"
+  },
+  { "c": "133035", "n": "Kotak Aggressive Hybrid Fund - Direct Plan -Growth" },
+  { "c": "119771", "n": "Kotak Arbitrage Fund - Direct Plan - Growth" },
+  {
+    "c": "152039",
+    "n": "Kotak BSE Housing Index Fund - Direct Plan - Growth Option"
+  },
+  { "c": "152755", "n": "Kotak BSE PSU Index Fund - Direct Plan - Growth" },
+  { "c": "153286", "n": "Kotak BSE Sensex Index Fund- Direct - Growth" },
+  {
+    "c": "144335",
+    "n": "Kotak Balanced Advantage Fund  - Direct Plan -Growth Option"
+  },
+  {
+    "c": "151384",
+    "n": "Kotak Banking & Financial Services Fund - Direct Plan - Growth"
+  },
+  { "c": "123693", "n": "Kotak Banking and PSU Debt Direct - Growth" },
+  { "c": "119735", "n": "Kotak Bond Fund - Growth - Direct" },
+  { "c": "119739", "n": "Kotak Bond Short Term Plan-(Growth) - Direct" },
+  { "c": "150624", "n": "Kotak Business Cycle - Direct Plan - Growth" },
+  {
+    "c": "153313",
+    "n": "Kotak CRISIL - IBX AAA Bond Financial Services Index Dec 2026 Fund - Direct - Growth"
+  },
+  {
+    "c": "152869",
+    "n": "Kotak CRISIL -IBX AAA Financial Services Index Sep-2027 Fund-DIRECT PLAN-GROWTH Option"
+  },
+  {
+    "c": "153372",
+    "n": "Kotak CRISIL-IBX Financial Services 3-6 Months Debt Index Fund-Direct-Growth"
+  },
+  {
+    "c": "153875",
+    "n": "Kotak CRISIL-IBX Financial Services 9 to 12 Months Debt Index Fund - Direct - Growth"
+  },
+  {
+    "c": "152169",
+    "n": "Kotak Consumption Fund - Direct plan - Growth Option"
+  },
+  { "c": "119769", "n": "Kotak Contra Fund - Direct Plan - Growth" },
+  {
+    "c": "133791",
+    "n": "Kotak Corporate Bond Fund- Direct Plan- Growth Option"
+  },
+  { "c": "119741", "n": "Kotak Credit Risk Fund - Growth - Direct" },
+  { "c": "120154", "n": "Kotak Debt Hybrid - Growth - Direct" },
+  { "c": "154097", "n": "Kotak Dividend Yield Fund - Direct - Growth" },
+  { "c": "119755", "n": "Kotak Dynamic Bond Fund - Growth - Direct" },
+  { "c": "119773", "n": "Kotak ELSS Tax Saver Fund-Growth - Direct" },
+  {
+    "c": "148606",
+    "n": "Kotak ESG Exclusionary Strategy Fund - Direct Plan - Growth Option"
+  },
+  { "c": "153447", "n": "Kotak Energy Opportunities Fund-Direct-Growth" },
+  { "c": "131373", "n": "Kotak Equity Savings Fund - Direct - Growth" },
+  { "c": "120166", "n": "Kotak Flexicap Fund - Growth - Direct" },
+  { "c": "147473", "n": "Kotak Focused Fund- Direct Plan- Growth option" },
+  {
+    "c": "119757",
+    "n": "Kotak Gilt-Investment  Provident Fund and Trust-Growth - Direct"
+  },
+  { "c": "119759", "n": "Kotak Gilt-Investment Regular-Growth - Direct" },
+  {
+    "c": "119779",
+    "n": "Kotak Global Emerging Market overseas Equity Omni FOF - Growth - Direct"
+  },
+  {
+    "c": "149059",
+    "n": "Kotak Global Innovation Overseas Equity Omni FOF- Direct Plan -Growth"
+  },
+  { "c": "119781", "n": "Kotak Gold Fund Growth - Direct" },
+  {
+    "c": "153921",
+    "n": "Kotak Gold Silver Passive FOF - Direct Plan - Growth"
+  },
+  { "c": "152214", "n": "Kotak Healthcare Fund - Direct Plan - Growth Option" },
+  {
+    "c": "150822",
+    "n": "Kotak Income Plus Arbitrage Omni FOF-Direct Plan-Growth"
+  },
+  {
+    "c": "133801",
+    "n": "Kotak Infrastructure & Economic Reform Fund- Direct Plan- Growth Option"
+  },
+  {
+    "c": "148646",
+    "n": "Kotak International REIT Overseas Equity Omni FOF - Direct Plan - Growth"
+  },
+  { "c": "120158", "n": "Kotak Large & Midcap Fund - Direct- Growth" },
+  { "c": "120152", "n": "Kotak Large Cap  Fund - Growth - Direct" },
+  { "c": "119766", "n": "Kotak Liquid Fund - Direct Plan - Growth" },
+  { "c": "152491", "n": "Kotak Long Duration Fund - Direct Plan - Growth" },
+  { "c": "133810", "n": "Kotak Low Duration Fund- Direct Plan- Growth Option" },
+  { "c": "152910", "n": "Kotak MNC Fund-Direct Plan-Growth" },
+  {
+    "c": "149841",
+    "n": "Kotak Manufacture in India Fund - Direct Plan Growth"
+  },
+  { "c": "128006", "n": "Kotak Medium Term Fund - Direct Growth" },
+  { "c": "119775", "n": "Kotak Midcap Fund - Direct Plan - Growth" },
+  { "c": "119746", "n": "Kotak Money Market Fund - (Growth) - Direct" },
+  { "c": "154316", "n": "Kotak Multi Asset Active FOF - Direct - Growth" },
+  {
+    "c": "152064",
+    "n": "Kotak Multi Asset Allocation Fund - Direct Plan - Growth Option"
+  },
+  { "c": "119777", "n": "Kotak Multi Asset Omni FOF - Direct Growth - Direct" },
+  { "c": "154275", "n": "Kotak Multi Factor Passive FOF - Direct- Growth" },
+  { "c": "149185", "n": "Kotak Multicap Fund-Direct Plan-Growth" },
+  {
+    "c": "152663",
+    "n": "Kotak NIFTY 100 Low Volatility 30 Index Fund - Direct plan - Growth option"
+  },
+  {
+    "c": "153146",
+    "n": "Kotak Nifty 100 Equal Weight Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "151781",
+    "n": "Kotak Nifty 200 Momentum 30 Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "153150",
+    "n": "Kotak Nifty 50 Equal Weight Index Fund - Direct Plan - Growth"
+  },
+  { "c": "148978", "n": "Kotak Nifty 50 Index Fund - Direct Plan-Growth" },
+  {
+    "c": "153680",
+    "n": "Kotak Nifty AAA Bond Financial Services Mar 2028 Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "153781",
+    "n": "Kotak Nifty Alpha 50 Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "154388",
+    "n": "Kotak Nifty Alpha Low Volatility 30 Index Fund - Direct- Growth"
+  },
+  { "c": "153353", "n": "Kotak Nifty Commodities Index Fund-Direct Growth" },
+  {
+    "c": "151911",
+    "n": "Kotak Nifty Financial Services Ex-Bank Index Fund - Direct Plan - Growth option"
+  },
+  {
+    "c": "152098",
+    "n": "Kotak Nifty G-Sec July 2033 Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "152870",
+    "n": "Kotak Nifty India Tourism Index Fund-Direct-Growth Option"
+  },
+  {
+    "c": "152916",
+    "n": "Kotak Nifty Midcap 150 Momentum 50 Index Fund-Direct Plan-Growth"
+  },
+  {
+    "c": "148745",
+    "n": "Kotak Nifty Next 50 Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "149855",
+    "n": "Kotak Nifty SDL Apr  2027 Top 12 Equal Weight Index Fund-Direct Plan-Growth"
+  },
+  {
+    "c": "149865",
+    "n": "Kotak Nifty SDL Apr 2032 Top 12 Equal Weight Index Fund-Direct Plan- Growth"
+  },
+  {
+    "c": "151218",
+    "n": "Kotak Nifty SDL Jul 2026 Index Fund Direct Plan Growth"
+  },
+  {
+    "c": "151420",
+    "n": "Kotak Nifty SDL Jul 2033 Index Fund Direct Plan Growth Option"
+  },
+  {
+    "c": "150725",
+    "n": "Kotak Nifty SDL Plus AAA PSU Bond Jul 2028 60:40 Index Fund Direct Plan - Growth"
+  },
+  {
+    "c": "153223",
+    "n": "Kotak Nifty SmallCap 250 Index Fund- Direct - Growth"
+  },
+  {
+    "c": "151649",
+    "n": "Kotak Nifty Smallcap 50 Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "153461",
+    "n": "Kotak Nifty Top 10 Equal Weight Index Fund-Direct Plan-Growth"
+  },
+  {
+    "c": "154145",
+    "n": "Kotak Nifty200 Value 30 Index Fund - Direct - Growth"
+  },
+  {
+    "c": "154032",
+    "n": "Kotak Nifty500 Momentum 50 Index Fund - Direct Plan - Growth"
+  },
+  { "c": "146141", "n": "Kotak Overnight Fund -Direct Plan-Growth Option" },
+  { "c": "147727", "n": "Kotak Pioneer Fund- Direct Plan- Growth Option" },
+  {
+    "c": "154287",
+    "n": "Kotak Quality Overseas Equity Omni FOF - Direct Plan - Growth-"
+  },
+  { "c": "151881", "n": "Kotak Quant Fund - Direct Plan - Growth Option" },
+  {
+    "c": "153970",
+    "n": "Kotak Rural Opportunities Fund - Direct Plan - Growth"
+  },
+  { "c": "119750", "n": "Kotak Savings Fund-Growth - Direct" },
+  { "c": "154149", "n": "Kotak Services Fund - Direct - Growth" },
+  {
+    "c": "151603",
+    "n": "Kotak Silver ETF Fund of Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "152702",
+    "n": "Kotak Special Opportunities Fund - Direct Plan - Growth Option"
+  },
+  { "c": "152462", "n": "Kotak Technology Fund - Direct Plan - Growth Option" },
+  { "c": "153118", "n": "Kotak Transportation & Logistics Fund-Direct Growth" },
+  { "c": "133831", "n": "Kotak US Equity Fund - Direct Plan - Growth option" },
+  {
+    "c": "148662",
+    "n": "Kotak US Specific Equity Passive FOF- Direct Plan - Growth"
+  },
+  { "c": "133816", "n": "Kotak World Gold Fund- Direct Plan- Growth Option" },
+  { "c": "120164", "n": "Kotak-Small Cap Fund - Growth - Direct" },
+  { "c": "120261", "n": "LIC MF Aggressive Hybrid Fund-Direct Plan-Growth" },
+  { "c": "145895", "n": "LIC MF Arbitrage Fund-Direct Plan-Growth" },
+  { "c": "120308", "n": "LIC MF BSE Sensex Index Fund-Direct Plan-Growth" },
+  { "c": "149261", "n": "LIC MF Balanced Advantage Fund-Direct Plan-Growth" },
+  { "c": "120338", "n": "LIC MF Banking & PSU Fund-Direct Plan-Growth" },
+  {
+    "c": "134017",
+    "n": "LIC MF Banking and Financial Services Fund-Direct Plan-Growth"
+  },
+  { "c": "120285", "n": "LIC MF Children's Fund-Direct Plan-Growth" },
+  { "c": "120276", "n": "LIC MF Conservative Hybrid Fund-Direct Plan-Growth" },
+  { "c": "153948", "n": "LIC MF Consumption Fund-Direct Plan-Growth" },
+  { "c": "152022", "n": "LIC MF Dividend Yield Fund-Direct Plan-Growth" },
+  { "c": "120270", "n": "LIC MF ELSS Tax Saver-Direct Plan-Growth" },
+  { "c": "151952", "n": "LIC MF Equity Savings Fund-Direct Plan-Growth" },
+  { "c": "120264", "n": "LIC MF Flexi Cap Fund-Direct Plan-Growth" },
+  { "c": "152010", "n": "LIC MF Focused Fund-Direct Plan-Growth" },
+  { "c": "120282", "n": "LIC MF Gilt Fund-Direct Plan-Growth" },
+  { "c": "151974", "n": "LIC MF Gold ETF Fund of Fund-Direct Plan-Growth" },
+  { "c": "152024", "n": "LIC MF Healthcare Fund-Direct Plan-Growth" },
+  { "c": "120351", "n": "LIC MF Infrastructure Fund-Direct Plan-Growth" },
+  { "c": "133710", "n": "LIC MF Large & Mid Cap Fund-Direct Plan-Growth" },
+  { "c": "120267", "n": "LIC MF Large Cap Fund-Direct Plan-Growth" },
+  { "c": "120249", "n": "LIC MF Liquid Fund-Direct Plan-Growth" },
+  { "c": "120315", "n": "LIC MF Low Duration Fund-Direct Plan-Growth" },
+  { "c": "152920", "n": "LIC MF Manufacturing Fund-Direct Plan-Growth" },
+  {
+    "c": "120279",
+    "n": "LIC MF Medium to Long Duration Fund-Direct Plan-Growth"
+  },
+  { "c": "152002", "n": "LIC MF Mid Cap Fund-Direct Plan-Growth" },
+  { "c": "150392", "n": "LIC MF Money Market Fund-Direct Plan-Growth" },
+  {
+    "c": "153246",
+    "n": "LIC MF Multi Asset Allocation Fund-Direct Plan-Growth"
+  },
+  { "c": "150659", "n": "LIC MF Multi Cap Fund-Direct Plan-Growth" },
+  { "c": "120307", "n": "LIC MF Nifty 50 Index Fund-Direct Plan-Growth" },
+  { "c": "151937", "n": "LIC MF Nifty Next 50 Index Fund-Direct Plan-Growth" },
+  { "c": "147515", "n": "LIC MF Overnight Fund-Direct Plan-Growth" },
+  { "c": "145954", "n": "LIC MF Short Duration Fund-Direct Plan-Growth" },
+  { "c": "152004", "n": "LIC MF Small Cap Fund-Direct Plan-Growth" },
+  { "c": "154244", "n": "LIC MF Technology Fund-Direct Plan-Growth" },
+  { "c": "147772", "n": "LIC MF Ultra Short Duration Fund-Direct Plan-Growth" },
+  { "c": "152018", "n": "LIC MF Value Fund-Direct Plan-Growth" },
+  {
+    "c": "147446",
+    "n": "Mahindra Manulife Aggressive Hybrid Fund - Direct Plan -Growth"
+  },
+  {
+    "c": "148468",
+    "n": "Mahindra Manulife Arbitrage Fund - Direct Plan -Growth"
+  },
+  {
+    "c": "149230",
+    "n": "Mahindra Manulife Asia Pacific REITs FOF - Direct Plan - Growth"
+  },
+  {
+    "c": "149406",
+    "n": "Mahindra Manulife Balanced Advantage Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "153674",
+    "n": "Mahindra Manulife Banking & Financial Services Fund - Direct - Growth"
+  },
+  {
+    "c": "152045",
+    "n": "Mahindra Manulife Business Cycle Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "145356",
+    "n": "Mahindra Manulife Consumption Fund - Direct Plan -Growth"
+  },
+  {
+    "c": "144403",
+    "n": "Mahindra Manulife Dynamic Bond Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "139781",
+    "n": "Mahindra Manulife ELSS Tax Saver Fund - Direct Plan -Growth"
+  },
+  {
+    "c": "140444",
+    "n": "Mahindra Manulife Equity Savings Fund - Direct Plan -Growth"
+  },
+  {
+    "c": "149104",
+    "n": "Mahindra Manulife Flexi Cap Fund - Direct Plan -Growth"
+  },
+  {
+    "c": "148567",
+    "n": "Mahindra Manulife Focused Fund - Direct Plan -Growth"
+  },
+  {
+    "c": "154007",
+    "n": "Mahindra Manulife Income Plus Arbitrage Active FOF  - Direct - Growth"
+  },
+  {
+    "c": "154121",
+    "n": "Mahindra Manulife Innovation Opportunities Fund - Direct - Growth"
+  },
+  {
+    "c": "147840",
+    "n": "Mahindra Manulife Large & Mid Cap Fund - Direct Plan -Growth"
+  },
+  {
+    "c": "146549",
+    "n": "Mahindra Manulife Large Cap Fund - Direct Plan -Growth"
+  },
+  { "c": "139538", "n": "Mahindra Manulife Liquid Fund - Direct Plan -Growth" },
+  {
+    "c": "140613",
+    "n": "Mahindra Manulife Low Duration Fund - Direct Plan -Growth"
+  },
+  {
+    "c": "152672",
+    "n": "Mahindra Manulife Manufacturing Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "142110",
+    "n": "Mahindra Manulife Mid Cap Fund - Direct Plan -Growth"
+  },
+  {
+    "c": "152443",
+    "n": "Mahindra Manulife Multi Asset Allocation Fund- Direct Plan - Growth"
+  },
+  {
+    "c": "141226",
+    "n": "Mahindra Manulife Multi Cap Fund - Direct Plan -Growth"
+  },
+  {
+    "c": "147564",
+    "n": "Mahindra Manulife Overnight Fund - Direct Plan -Growth"
+  },
+  {
+    "c": "148729",
+    "n": "Mahindra Manulife Short Duration Fund - Direct Plan -Growth"
+  },
+  {
+    "c": "150915",
+    "n": "Mahindra Manulife Small Cap Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "147731",
+    "n": "Mahindra Manulife Ultra Short Duration Fund - Direct Plan -Growth"
+  },
+  { "c": "153303", "n": "Mahindra Manulife Value Fund - Direct Plan - Growth" },
+  {
+    "c": "134813",
+    "n": "Mirae Asset Aggressive Hybrid Fund - Direct Plan - Growth"
+  },
+  { "c": "148401", "n": "Mirae Asset Arbitrage Fund Direct Growth" },
+  {
+    "c": "153380",
+    "n": "Mirae Asset BSE 200 Equal Weight ETF Fund of Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "154187",
+    "n": "Mirae Asset BSE India Defence ETF FOF - Direct Plan - Growth"
+  },
+  {
+    "c": "154474",
+    "n": "Mirae Asset BSE Midcap 150 Momentum 30 ETF FOF - Direct Plan - Growth"
+  },
+  {
+    "c": "153385",
+    "n": "Mirae Asset BSE Select IPO ETF Fund of Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "150470",
+    "n": "Mirae Asset Balanced Advantage Fund Direct Plan- Growth"
+  },
+  {
+    "c": "148623",
+    "n": "Mirae Asset Banking and Financial Services Fund Direct Growth"
+  },
+  {
+    "c": "148419",
+    "n": "Mirae Asset Banking and PSU Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "150792",
+    "n": "Mirae Asset CRISIL IBX Gilt Index - April 2033 Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "153634",
+    "n": "Mirae Asset CRISIL-IBX Financial Services 9-12 Months Debt Index Fund - Direct Plan - Growth"
+  },
+  { "c": "148755", "n": "Mirae Asset Corporate Bond Fund Direct Growth Plan" },
+  {
+    "c": "148500",
+    "n": "Mirae Asset Diversified Equity Allocator Passive FOF - Direct Plan - Growth"
+  },
+  { "c": "140769", "n": "Mirae Asset Dynamic Bond Fund -Direct Plan -Growth" },
+  {
+    "c": "135781",
+    "n": "Mirae Asset ELSS Tax Saver Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "145693",
+    "n": "Mirae Asset Equity Savings Fund- Direct Plan- Growth"
+  },
+  { "c": "151412", "n": "Mirae Asset Flexi Cap Fund - Direct Plan - Growth" },
+  { "c": "147206", "n": "Mirae Asset Focused Fund Direct Plan Growth" },
+  {
+    "c": "150595",
+    "n": "Mirae Asset Global Electric & Autonomous Vehicles Equity Passive FOF - Direct Plan - Growth"
+  },
+  {
+    "c": "150597",
+    "n": "Mirae Asset Global X Artificial Intelligence & Technology ETF Fund of Fund - Direct Plan- Growth"
+  },
+  {
+    "c": "153007",
+    "n": "Mirae Asset Gold ETF Fund of Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "153812",
+    "n": "Mirae Asset Gold Silver Passive FoF - Direct Plan - Growth"
+  },
+  {
+    "c": "118837",
+    "n": "Mirae Asset Great Consumer Fund - Direct Plan - Growth"
+  },
+  { "c": "143783", "n": "Mirae Asset Healthcare Fund Direct Growth" },
+  {
+    "c": "153638",
+    "n": "Mirae Asset Income plus Arbitrage Active FOF - Direct Plan - Growth"
+  },
+  {
+    "c": "153983",
+    "n": "Mirae Asset Infrastructure Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "118834",
+    "n": "Mirae Asset Large & Midcap Fund - Direct Plan - Growth"
+  },
+  { "c": "118825", "n": "Mirae Asset Large Cap Fund - Direct Plan - Growth" },
+  { "c": "118859", "n": "Mirae Asset Liquid Fund - Direct Plan - Growth" },
+  {
+    "c": "153105",
+    "n": "Mirae Asset Long Duration Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "118840",
+    "n": "Mirae Asset Low Duration Fund - Direct Plan - Growth"
+  },
+  { "c": "147445", "n": "Mirae Asset Midcap Fund- Direct Growth Option" },
+  { "c": "149112", "n": "Mirae Asset Money Market Fund Direct Growth" },
+  {
+    "c": "152344",
+    "n": "Mirae Asset Multi Asset Allocation Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "153816",
+    "n": "Mirae Asset Multi Factor Passive FOF - Direct Plan - Growth"
+  },
+  { "c": "151810", "n": "Mirae Asset Multicap Fund - Direct Plan - Growth" },
+  {
+    "c": "148928",
+    "n": "Mirae Asset NYSE FANG + ETF Fund of Fund Direct Growth"
+  },
+  {
+    "c": "148574",
+    "n": "Mirae Asset Nifty 100 ESG Sector Leaders Fund of Fund Direct Growth"
+  },
+  {
+    "c": "152972",
+    "n": "Mirae Asset Nifty 50 Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "149790",
+    "n": "Mirae Asset Nifty India Manufacturing ETF FOF - Direct Plan - Growth"
+  },
+  {
+    "c": "153192",
+    "n": "Mirae Asset Nifty India New Age Consumption ETF Fund of Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "152976",
+    "n": "Mirae Asset Nifty LargeMidcap 250 Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "154216",
+    "n": "Mirae Asset Nifty Metal ETF FOF - Direct Plan - Growth"
+  },
+  {
+    "c": "152645",
+    "n": "Mirae Asset Nifty MidSmallcap400 Momentum Quality 100 ETF Fund of Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "150358",
+    "n": "Mirae Asset Nifty SDL Jun 2027 Index Fund -Direct Plan - Growth"
+  },
+  {
+    "c": "151691",
+    "n": "Mirae Asset Nifty SDL June 2028 Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "152459",
+    "n": "Mirae Asset Nifty Smallcap 250 Momentum Quality 100 ETF Fund of Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "152968",
+    "n": "Mirae Asset Nifty Total Market Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "152718",
+    "n": "Mirae Asset Nifty200 Alpha 30 ETF Fund of Fund - Direct Plan - Growth"
+  },
+  { "c": "147736", "n": "Mirae Asset Overnight Fund Direct Plan Growth" },
+  {
+    "c": "149170",
+    "n": "Mirae Asset S&P 500 Top 50 ETF Fund of Fund Direct Growth"
+  },
+  {
+    "c": "142641",
+    "n": "Mirae Asset Short Duration Fund - Direct Plan - Growth"
+  },
+  { "c": "154279", "n": "Mirae Asset Silver ETF FOF - Direct Plan - Growth" },
+  { "c": "153196", "n": "Mirae Asset Small Cap Fund - Direct Plan - Growth" },
+  { "c": "148529", "n": "Mirae Asset Ultra Short Duration Fund Direct Growth" },
+  {
+    "c": "149381",
+    "n": "Mirae AssetHang Seng TECH ETF Fund of Fund Direct Plan - Growth Option"
+  },
+  {
+    "c": "149240",
+    "n": "Motilal Oswal 5 Year G-Sec Fund Of Fund Direct -Growth"
+  },
+  { "c": "153364", "n": "Motilal Oswal Active Momentum Fund- Direct-Growth" },
+  { "c": "153187", "n": "Motilal Oswal Arbitrage Fund-Direct Plan-Growth" },
+  {
+    "c": "148750",
+    "n": "Motilal Oswal Asset Allocation FOF- C- Direct Growth"
+  },
+  {
+    "c": "153596",
+    "n": "Motilal Oswal BSE 1000 Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "150443",
+    "n": "Motilal Oswal BSE Financials ex Bank 30 Index Fund Direct Growth"
+  },
+  {
+    "c": "139872",
+    "n": "Motilal Oswal Balanced Advantage Fund  (MOFDYNAMIC) - Direct Plan - Growth Option"
+  },
+  {
+    "c": "152796",
+    "n": "Motilal Oswal Business Cycle Fund - Direct Plan- Growth"
+  },
+  { "c": "153913", "n": "Motilal Oswal Consumption Fund-Direct-Growth" },
+  { "c": "154337", "n": "Motilal Oswal Contra Fund - Direct – Growth" },
+  {
+    "c": "152090",
+    "n": "Motilal Oswal Developed Market Ex US ETFs Fund of Funds Direct Plan Growth"
+  },
+  {
+    "c": "152964",
+    "n": "Motilal Oswal Digital India Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "154112",
+    "n": "Motilal Oswal Diversified Equity Flexicap Passive Fund of Funds- Direct - Growth"
+  },
+  {
+    "c": "133386",
+    "n": "Motilal Oswal ELSS Tax Saver Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "154142",
+    "n": "Motilal Oswal Financial Services Fund- Direct Growth"
+  },
+  {
+    "c": "129046",
+    "n": "Motilal Oswal Flexi cap Fund Direct Plan-Growth Option"
+  },
+  {
+    "c": "122389",
+    "n": "Motilal Oswal Focused Fund - Direct Plan Growth Option"
+  },
+  { "c": "153484", "n": "Motilal Oswal Infrastructure Fund-Direct-Growth" },
+  {
+    "c": "153258",
+    "n": "Motilal Oswal Innovation Opportunities Fund - Direct Plan- Growth"
+  },
+  { "c": "152354", "n": "Motilal Oswal Large Cap Direct Plan Growth" },
+  {
+    "c": "147704",
+    "n": "Motilal Oswal Large and Midcap Fund - Direct Plan Growth"
+  },
+  { "c": "145834", "n": "Motilal Oswal Liquid Fund - Direct Growth" },
+  {
+    "c": "152760",
+    "n": "Motilal Oswal Manufacturing Fund - Direct Plan- Growth"
+  },
+  { "c": "127042", "n": "Motilal Oswal Midcap Fund-Direct Plan-Growth Option" },
+  {
+    "c": "148747",
+    "n": "Motilal Oswal Multi Asset Passive Fund of Fund - Direct Growth"
+  },
+  { "c": "152651", "n": "Motilal Oswal Multi Cap Fund-Direct Plan Growth" },
+  {
+    "c": "145552",
+    "n": "Motilal Oswal Nasdaq 100 Fund of Fund- Direct Plan Growth"
+  },
+  {
+    "c": "147794",
+    "n": "Motilal Oswal Nifty 50 Index Fund - Direct plan - Growth"
+  },
+  {
+    "c": "152875",
+    "n": "Motilal Oswal Nifty 500 Momentum 50 Index Fund-Direct Plan-Growth"
+  },
+  {
+    "c": "153138",
+    "n": "Motilal Oswal Nifty Capital Market Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "152712",
+    "n": "Motilal Oswal Nifty India Defence Index Fund Direct Plan Growth"
+  },
+  {
+    "c": "151814",
+    "n": "Motilal Oswal Nifty Microcap 250 Index Fund- Direct- Growth Option"
+  },
+  {
+    "c": "153027",
+    "n": "Motilal Oswal Nifty MidSmall Financial Services Index Fund - Direct Plan- Growth"
+  },
+  {
+    "c": "153023",
+    "n": "Motilal Oswal Nifty MidSmall Healthcare Index Fund- Direct Plan-Growth"
+  },
+  {
+    "c": "153029",
+    "n": "Motilal Oswal Nifty MidSmall IT and Telecom Index Fund - Direct Plan- Growth"
+  },
+  {
+    "c": "153025",
+    "n": "Motilal Oswal Nifty MidSmall India Consumption Index Fund - Direct Plan- Growth"
+  },
+  {
+    "c": "147796",
+    "n": "Motilal Oswal Nifty Next 50 Index Fund - Direct plan - Growth"
+  },
+  { "c": "152694", "n": "Motilal Oswal Quant Fund - Direct - Growth" },
+  {
+    "c": "148381",
+    "n": "Motilal Oswal S&P 500 Index Fund - Direct Plan Growth"
+  },
+  { "c": "153558", "n": "Motilal Oswal Services Fund - Direct Plan - Growth" },
+  { "c": "152237", "n": "Motilal Oswal Small Cap Fund - Direct - Growth" },
+  {
+    "c": "153749",
+    "n": "Motilal Oswal Special Opportunities Fund - Direct - Growth"
+  },
+  {
+    "c": "124234",
+    "n": "Motilal Oswal Ultra Short Term Fund (MOFUSTF) -Direct Plan- Growth"
+  },
+  { "c": "152062", "n": "NAVI BSE SENSEX INDEX FUND - DIRECT PLAN - GROWTH" },
+  {
+    "c": "151471",
+    "n": "NAVI ELSS TAX SAVER NIFTY 50 INDEX FUND - DIRECT PLAN GROWTH"
+  },
+  {
+    "c": "118666",
+    "n": "NIPPON INDIA GROWTH MID CAP FUND - DIRECT Plan - IDCW Option"
+  },
+  { "c": "150367", "n": "NJ Arbitrage Fund - Direct Plan - Growth Option" },
+  {
+    "c": "149264",
+    "n": "NJ Balanced Advantage Fund - Direct Plan - Growth Option"
+  },
+  { "c": "151611", "n": "NJ ELSS Tax Saver Scheme Direct Growth" },
+  { "c": "151917", "n": "NJ Flexi Cap Fund - Direct Plan - Growth Option" },
+  { "c": "150369", "n": "NJ Overnight Fund - Direct Plan - Growth Option" },
+  { "c": "143163", "n": "Navi Aggressive Hybrid Fund - Direct Plan - Growth" },
+  {
+    "c": "135654",
+    "n": "Navi ELSS Tax Saver Fund- Direct Plan- Growth Option"
+  },
+  { "c": "143793", "n": "Navi Flexi Cap Fund - Direct Plan - Growth" },
+  {
+    "c": "135677",
+    "n": "Navi Large & Midcap Fund- Direct Plan- Growth Option"
+  },
+  { "c": "119164", "n": "Navi Liquid Fund-Direct Plan-Growth Option" },
+  {
+    "c": "149910",
+    "n": "Navi NASDAQ100 US Specific Equity Passive FOF- Direct- Growth"
+  },
+  { "c": "149039", "n": "Navi Nifty 50 Index Fund-Direct Plan-Growth" },
+  { "c": "149804", "n": "Navi Nifty Bank Index Fund- Direct Plan- Growth" },
+  {
+    "c": "150515",
+    "n": "Navi Nifty India Manufacturing Index Fund- Direct Plan- Growth"
+  },
+  {
+    "c": "149892",
+    "n": "Navi Nifty Midcap 150 Index Fund Direct Plan- Growth"
+  },
+  { "c": "149447", "n": "Navi Nifty Next 50 Index Fund- Direct Plan- Growth" },
+  {
+    "c": "154027",
+    "n": "Navi Nifty midsmallcap 400 Index Fund- Direct - Growth"
+  },
+  { "c": "152535", "n": "Navi NiftyIT Index Fund - Direct Plan- Growth" },
+  {
+    "c": "149830",
+    "n": "Navi Total Stock Market US Specific Equity Passive FoF- Direct Plan- Growth"
+  },
+  {
+    "c": "153274",
+    "n": "Nippon India Active Momentum Fund-Direct Plan - Growth Option"
+  },
+  {
+    "c": "118794",
+    "n": "Nippon India Aggressive Hybrid Fund  - Direct Plan Growth Plan"
+  },
+  {
+    "c": "147689",
+    "n": "Nippon India Aggressive Hybrid Fund - Segregated Portfolio 1 - Direct Plan - Growth Plan"
+  },
+  {
+    "c": "118585",
+    "n": "Nippon India Arbitrage Fund - Direct Plan Growth Plan - Growth Option"
+  },
+  {
+    "c": "153567",
+    "n": "Nippon India BSE Sensex Next 30 Index Fund- Direct Plan- Growth Option"
+  },
+  {
+    "c": "118737",
+    "n": "Nippon India Balanced Advantage Fund - Direct Plan Growth Plan - Bonus Option"
+  },
+  {
+    "c": "118736",
+    "n": "Nippon India Balanced Advantage Fund - Direct Plan Growth Plan - Growth Option"
+  },
+  {
+    "c": "118588",
+    "n": "Nippon India Banking & Financial Services Fund - Direct Plan Growth Plan - Bonus Option"
+  },
+  {
+    "c": "118589",
+    "n": "Nippon India Banking & Financial Services Fund - Direct Plan Growth Plan - Growth Option"
+  },
+  {
+    "c": "134547",
+    "n": "Nippon India Banking and PSU  Fund- Direct Plan-Growth Plan- Growth Option"
+  },
+  {
+    "c": "134552",
+    "n": "Nippon India Banking and PSU Fund- Direct Plan-Growth Plan- Bonus Option"
+  },
+  {
+    "c": "152992",
+    "n": "Nippon India CRISIL - IBX AAA Financial Services - Dec 2026 Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "152996",
+    "n": "Nippon India CRISIL - IBX AAA Financial Services - Jan 2028 Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "154271",
+    "n": "Nippon India CRISIL-IBX Financial Services 3-6 Months Debt Index Fund- Direct Plan- Growth Option"
+  },
+  {
+    "c": "154252",
+    "n": "Nippon India CRISIL-IBX Financial Services 9-12 Months Debt Index Fund -Direct Plan - Growth Option"
+  },
+  {
+    "c": "118726",
+    "n": "Nippon India Conservative Hybrid  Fund - Direct Plan Growth Plan - Growth Option"
+  },
+  {
+    "c": "148143",
+    "n": "Nippon India Conservative Hybrid  Fund - Segregated Portfolio 1 - Direct Plan Growth Plan - Growth Option"
+  },
+  {
+    "c": "118722",
+    "n": "Nippon India Consumption Fund - Direct Plan Growth Plan - Bonus"
+  },
+  {
+    "c": "118724",
+    "n": "Nippon India Consumption Fund - Direct Plan Growth Plan - Growth Option"
+  },
+  {
+    "c": "118807",
+    "n": "Nippon India Corporate Bond Fund - Direct Plan Growth Plan - Bonus"
+  },
+  {
+    "c": "118814",
+    "n": "Nippon India Corporate Bond Fund - Direct Plan Growth Plan - Growth Option"
+  },
+  {
+    "c": "118780",
+    "n": "Nippon India Credit Risk Fund - Direct Plan - Growth Plan"
+  },
+  {
+    "c": "148101",
+    "n": "Nippon India Credit Risk Fund - Segregated Portfolio 1 - Direct Plan - Growth Plan"
+  },
+  {
+    "c": "148642",
+    "n": "Nippon India Diversified Equity Flexicap Passive FoF - Direct Plan - Growth Option"
+  },
+  {
+    "c": "118747",
+    "n": "Nippon India Dynamic Bond Fund - Direct Plan Growth Plan - Growth Option"
+  },
+  {
+    "c": "118803",
+    "n": "Nippon India ELSS Tax Saver Fund - Direct Plan Growth Plan - Growth Option"
+  },
+  {
+    "c": "147691",
+    "n": "Nippon India Equity Savings Fund - Segregated Portfolio 1 - Direct Plan - Growth Plan - Bonus Option"
+  },
+  {
+    "c": "147697",
+    "n": "Nippon India Equity Savings Fund - Segregated Portfolio 1 - Direct Plan - Growth Plan - Growth Option"
+  },
+  {
+    "c": "134595",
+    "n": "Nippon India Equity Savings Fund- Direct Plan- Growth Plan- Bonus Option"
+  },
+  {
+    "c": "134594",
+    "n": "Nippon India Equity Savings Fund- Direct Plan- Growth Plan-Growth Option"
+  },
+  {
+    "c": "149094",
+    "n": "Nippon India Flexi Cap Fund - Direct Plan - Growth Plan - Growth Option"
+  },
+  {
+    "c": "118656",
+    "n": "Nippon India Floater Fund  - Direct Plan Growth Plan - Growth Option"
+  },
+  {
+    "c": "118692",
+    "n": "Nippon India Focused Fund - Direct Plan Growth Plan - Growth Option"
+  },
+  {
+    "c": "118672",
+    "n": "Nippon India Gilt  Fund - Direct Plan Growth Plan - Growth Option"
+  },
+  {
+    "c": "133265",
+    "n": "Nippon India Gilt  Fund- Direct Plan- Growth Plan- Bonus Option"
+  },
+  {
+    "c": "118663",
+    "n": "Nippon India Gold Savings Fund - Direct Plan Growth Plan - Growth Option"
+  },
+  {
+    "c": "118665",
+    "n": "Nippon India Growth Mid Cap Fund - Direct Plan Growth Plan - Bonus Option"
+  },
+  {
+    "c": "118668",
+    "n": "Nippon India Growth Mid Cap Fund - Direct Plan Growth Plan - Growth Option"
+  },
+  {
+    "c": "153600",
+    "n": "Nippon India Income Plus Arbitrage Active Fund of Fund- Direct Plan- Growth Option"
+  },
+  {
+    "c": "118785",
+    "n": "Nippon India Index Fund - BSE Sensex Plan - Direct Plan Growth Plan - Bonus Option"
+  },
+  {
+    "c": "118791",
+    "n": "Nippon India Index Fund - BSE Sensex Plan - Direct Plan Growth Plan - Growth Option"
+  },
+  {
+    "c": "118742",
+    "n": "Nippon India Index Fund - Nifty 50 Plan - Direct Plan Growth Plan - Bonus Option"
+  },
+  {
+    "c": "118741",
+    "n": "Nippon India Index Fund - Nifty 50 Plan - Direct Plan Growth Plan - Growth Option"
+  },
+  {
+    "c": "152033",
+    "n": "Nippon India Innovation Fund-Direct Plan-Growth Option"
+  },
+  {
+    "c": "130861",
+    "n": "Nippon India Japan Equity Fund- Direct Plan- Growth Plan- Bonus Option"
+  },
+  {
+    "c": "130860",
+    "n": "Nippon India Japan Equity Fund- Direct Plan- Growth Plan- Growth Option"
+  },
+  {
+    "c": "118633",
+    "n": "Nippon India Large Cap Fund - Direct Plan Growth Plan - Bonus Option"
+  },
+  {
+    "c": "118632",
+    "n": "Nippon India Large Cap Fund - Direct Plan Growth Plan - Growth Option"
+  },
+  {
+    "c": "118701",
+    "n": "Nippon India Liquid Fund - Direct Plan Growth Plan - Growth Option"
+  },
+  {
+    "c": "118702",
+    "n": "Nippon India Low Duration Fund - Direct Plan Growth Plan - Bonus Option"
+  },
+  {
+    "c": "118709",
+    "n": "Nippon India Low Duration Fund - Direct Plan Growth Plan - Growth Option"
+  },
+  { "c": "153693", "n": "Nippon India MNC Fund- Direct Plan- Growth Option" },
+  {
+    "c": "130050",
+    "n": "Nippon India Medium Duration Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "148080",
+    "n": "Nippon India Medium Duration Fund - Segregated Portfolio 1 - Direct Plan - Growth Option"
+  },
+  {
+    "c": "118679",
+    "n": "Nippon India Medium to Long Duration  Fund - Direct Plan Growth Plan-Bonus Option"
+  },
+  {
+    "c": "118687",
+    "n": "Nippon India Medium to Long Duration Fund - Direct Plan Growth Plan - Growth Option"
+  },
+  {
+    "c": "118715",
+    "n": "Nippon India Money Market Fund - Direct Plan Growth Plan - Bonus Option"
+  },
+  {
+    "c": "118719",
+    "n": "Nippon India Money Market Fund - Direct Plan Growth Plan - Growth Option"
+  },
+  {
+    "c": "148666",
+    "n": "Nippon India Multi - Asset Omni FoF - Direct Plan - Growth Option"
+  },
+  {
+    "c": "148457",
+    "n": "Nippon India Multi Asset Allocation Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "118651",
+    "n": "Nippon India Multi Cap Fund - Direct Plan Growth Plan - Bonus Option"
+  },
+  {
+    "c": "118650",
+    "n": "Nippon India Multi Cap Fund - Direct Plan Growth Plan - Growth Option"
+  },
+  {
+    "c": "148721",
+    "n": "Nippon India Nifty 50 Value 20 Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "152842",
+    "n": "Nippon India Nifty 500 Equal Weight Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "153474",
+    "n": "Nippon India Nifty 500 Low Volatility 50 Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "152881",
+    "n": "Nippon India Nifty 500 Momentum 50 Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "153470",
+    "n": "Nippon India Nifty 500 Quality 50 Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "150012",
+    "n": "Nippon India Nifty AAA CPSE Bond Plus SDL - Apr 2027 Maturity 60:40 Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "150754",
+    "n": "Nippon India Nifty AAA PSU Bond Plus SDL - Sep 2026 Maturity 50:50 Index Fund-Direct Plan-Growth Option"
+  },
+  {
+    "c": "150487",
+    "n": "Nippon India Nifty Alpha Low Volatility 30 Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "153064",
+    "n": "Nippon India Nifty Auto Index Fund - Direct Plan- Growth Option"
+  },
+  {
+    "c": "152389",
+    "n": "Nippon India Nifty Bank Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "150920",
+    "n": "Nippon India Nifty G-Sec Jun 2036 Maturity Index Fund-Direct Plan-Growth Option"
+  },
+  {
+    "c": "151440",
+    "n": "Nippon India Nifty G-Sec Oct 2028 Maturity Index Fund-Direct Plan-Growth Option"
+  },
+  {
+    "c": "150906",
+    "n": "Nippon India Nifty G-Sec Sep 2027 Maturity Index Fund-Direct Plan-Growth Option"
+  },
+  {
+    "c": "152392",
+    "n": "Nippon India Nifty IT Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "153806",
+    "n": "Nippon India Nifty India Manufacturing Index Fund- Direct Plan- Growth Option"
+  },
+  {
+    "c": "148726",
+    "n": "Nippon India Nifty Midcap 150 Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "146513",
+    "n": "Nippon India Nifty Next 50 Junior BeES FoF - Direct Plan - Growth Plan - Growth Option"
+  },
+  {
+    "c": "153060",
+    "n": "Nippon India Nifty Realty Index Fund-Direct Plan- Growth Option"
+  },
+  {
+    "c": "150824",
+    "n": "Nippon India Nifty SDL Plus G-Sec - Jun 2028 Maturity 70:30 Index Fund-Direct Plan-Growth Option"
+  },
+  {
+    "c": "151390",
+    "n": "Nippon India Nifty SDL Plus G-Sec-Jun 2029 Maturity 70:30 Index Fund-Direct Plan-Growth Option"
+  },
+  {
+    "c": "148519",
+    "n": "Nippon India Nifty Smallcap 250 Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "143704",
+    "n": "Nippon India Nivesh Lakshya Long Duration Fund- Direct Plan- Growth Option"
+  },
+  {
+    "c": "145810",
+    "n": "Nippon India Overnight Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "118758",
+    "n": "Nippon India Pharma Fund - Direct Plan Growth Plan - Bonus Option"
+  },
+  {
+    "c": "118759",
+    "n": "Nippon India Pharma Fund - Direct Plan Growth Plan - Growth Option"
+  },
+  {
+    "c": "118762",
+    "n": "Nippon India Power & Infra Fund - Direct Plan Growth Plan - Bonus Option"
+  },
+  {
+    "c": "118763",
+    "n": "Nippon India Power & Infra Fund - Direct Plan Growth Plan - Growth Option"
+  },
+  {
+    "c": "118770",
+    "n": "Nippon India Quant Fund - Direct Plan Growth Plan - Bonus Option"
+  },
+  {
+    "c": "118769",
+    "n": "Nippon India Quant Fund - Direct Plan Growth Plan - Growth Option"
+  },
+  {
+    "c": "133569",
+    "n": "Nippon India Retirement Fund- Income Generation Scheme- Direct Plan- Growth Plan - Growth Option"
+  },
+  {
+    "c": "133629",
+    "n": "Nippon India Retirement Fund- Income Generation Scheme- Direct Plan-Growth Plan- Bonus Option"
+  },
+  {
+    "c": "133568",
+    "n": "Nippon India Retirement Fund- Wealth Creation Scheme- Direct Plan- Growth Plan - Growth Option"
+  },
+  {
+    "c": "133630",
+    "n": "Nippon India Retirement Fund- Wealth Creation Scheme- Direct Plan-Growth Plan- Bonus Option"
+  },
+  {
+    "c": "118796",
+    "n": "Nippon India Short Duration Fund - Direct Plan Growth Plan - Growth Option"
+  },
+  {
+    "c": "149760",
+    "n": "Nippon India Silver ETF FOF- Direct Plan-Growth Option"
+  },
+  {
+    "c": "118777",
+    "n": "Nippon India Small Cap Fund - Direct Plan Growth Plan - Bonus Option"
+  },
+  {
+    "c": "118778",
+    "n": "Nippon India Small Cap Fund - Direct Plan Growth Plan - Growth Option"
+  },
+  {
+    "c": "149329",
+    "n": "Nippon India Taiwan Equity Fund- Direct Plan- Growth Option"
+  },
+  {
+    "c": "134923",
+    "n": "Nippon India US Equity Opportunities Fund- Direct Plan- Growth Plan- Growth Option"
+  },
+  {
+    "c": "143494",
+    "n": "Nippon India Ultra Short Duration Fund- Direct Plan- Growth Option"
+  },
+  { "c": "118784", "n": "Nippon India Value Fund - Direct Plan Growth Plan" },
+  {
+    "c": "118675",
+    "n": "Nippon India Vision Large & Mid Cap Fund - Direct Plan Growth Plan - Bonus Option"
+  },
+  {
+    "c": "118678",
+    "n": "Nippon India Vision Large & Mid Cap Fund - Direct Plan Growth Plan - Growth Option"
+  },
+  { "c": "153979", "n": "Old Bridge Arbitrage Fund Direct Growth" },
+  { "c": "154225", "n": "Old Bridge Flexi Cap Fund Direct Growth" },
+  { "c": "152358", "n": "Old Bridge Focused Fund - Direct Growth" },
+  {
+    "c": "138386",
+    "n": "PGIM India Aggressive Hybrid Equity Fund - Direct Plan - Growth"
+  },
+  { "c": "138875", "n": "PGIM India Arbitrage Fund - Direct Plan - Growth" },
+  {
+    "c": "148658",
+    "n": "PGIM India Balanced Advantage Fund -  Direct Plan - Growth Option"
+  },
+  {
+    "c": "151407",
+    "n": "PGIM India CRISIL IBX Gilt Index - Apr 2028 Fund - Direct Plan, Growth Option"
+  },
+  {
+    "c": "138330",
+    "n": "PGIM India Corporate Bond Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "120084",
+    "n": "PGIM India Dynamic Bond Fund - Direct Plan-Growth Option"
+  },
+  {
+    "c": "135601",
+    "n": "PGIM India ELSS Tax Saver Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "138456",
+    "n": "PGIM India Emerging Markets Equity Fund of Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "138376",
+    "n": "PGIM India Equity Savings Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "133839",
+    "n": "PGIM India Flexi Cap Fund - Direct Plan - Growth Option"
+  },
+  { "c": "138472", "n": "PGIM India Gilt Fund - Direct Plan - Growth" },
+  {
+    "c": "138528",
+    "n": "PGIM India Global Equity Opportunities Fund of Fund- Direct Plan - Growth"
+  },
+  {
+    "c": "149298",
+    "n": "PGIM India Global Select Real Estate Securities Fund of Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "153039",
+    "n": "PGIM India Healthcare Fund - Direct Plan - Growth Option"
+  },
+  { "c": "138312", "n": "PGIM India Large Cap Fund - Direct Plan - Growth" },
+  {
+    "c": "152382",
+    "n": "PGIM India Large and Midcap Fund - Direct Plan - Growth Option"
+  },
+  { "c": "138299", "n": "PGIM India Liquid Fund - Direct Plan - Growth" },
+  {
+    "c": "125307",
+    "n": "PGIM India Midcap Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "148161",
+    "n": "PGIM India Money Market Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "153987",
+    "n": "PGIM India Multi Asset Allocation Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "152815",
+    "n": "PGIM India Multi Cap Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "147606",
+    "n": "PGIM India Overnight Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "152537",
+    "n": "PGIM India Retirement Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "149019",
+    "n": "PGIM India Small Cap Fund - Direct Plan- Growth Option"
+  },
+  {
+    "c": "138358",
+    "n": "PGIM India Ultra Short Duration Fund - Direct Plan - Growth"
+  },
+  { "c": "152109", "n": "Parag Parikh Arbitrage Fund - Direct Plan Growth" },
+  {
+    "c": "148958",
+    "n": "Parag Parikh Conservative Hybrid Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "152468",
+    "n": "Parag Parikh Dynamic Asset Allocation Fund - Direct Plan Growth"
+  },
+  { "c": "147481", "n": "Parag Parikh ELSS Tax Saver Fund- Direct Growth" },
+  { "c": "122639", "n": "Parag Parikh Flexi Cap Fund - Direct Plan - Growth" },
+  { "c": "154155", "n": "Parag Parikh Large Cap Fund - Direct Plan - Growth" },
+  { "c": "143269", "n": "Parag Parikh Liquid Fund- Direct Plan- Growth" },
+  {
+    "c": "147372",
+    "n": "QUANTUM ESG BEST IN CLASS STRATEGY FUND - DIRECT PLAN - GROWTH OPTION"
+  },
+  { "c": "152107", "n": "QUANTUM SMALL CAP FUND - DIRECT PLAN GROWTH OPTION" },
+  { "c": "149335", "n": "Quant Value Fund - Growth Option  - Direct Plan" },
+  {
+    "c": "112039",
+    "n": "Quantum Diversified Equity All Cap Active FOF - Direct Plan Growth Option"
+  },
+  {
+    "c": "134494",
+    "n": "Quantum Dynamic Term Fund - Direct Plan Growth Option"
+  },
+  {
+    "c": "111549",
+    "n": "Quantum ELSS Tax Saver Fund - Direct Plan Growth Option"
+  },
+  { "c": "153094", "n": "Quantum Ethical Fund - Direct Plan Growth Option" },
+  { "c": "115132", "n": "Quantum Gold ETF FOF - Direct Plan Growth Option" },
+  { "c": "103734", "n": "Quantum Liquid Fund - Direct Plan Growth Option" },
+  {
+    "c": "117608",
+    "n": "Quantum Multi Asset Active FOF - Direct Plan Growth Option"
+  },
+  {
+    "c": "152474",
+    "n": "Quantum Multi Asset Allocation Fund - Direct Plan Growth Option"
+  },
+  { "c": "150390", "n": "Quantum Nifty 50 ETF FOF - Direct Plan - Growth" },
+  { "c": "103490", "n": "Quantum Value Fund - Direct Plan Growth Option" },
+  {
+    "c": "124679",
+    "n": "Reliance Interval Fund - II - Series 1 -Direct Plan -Growth Option"
+  },
+  {
+    "c": "124749",
+    "n": "Reliance Interval Fund - II - Series 2 - Direct Plan - Growth Plan - Growth Option"
+  },
+  {
+    "c": "124753",
+    "n": "Reliance Interval Fund - II - Series 3 - Direct Plan - Growth Plan - Growth Option"
+  },
+  {
+    "c": "124876",
+    "n": "Reliance Interval Fund - II - Series 4-Direct Plan-Growth Plan -Growth Option"
+  },
+  {
+    "c": "121701",
+    "n": "Reliance Yearly Interval Fund - Series 5 - Direct Plan - Growth Plan - Growth Option"
+  },
+  {
+    "c": "122653",
+    "n": "Reliance Yearly Interval Fund - Series 8 - Direct Plan - Growth Plan - Growth Option"
+  },
+  {
+    "c": "122726",
+    "n": "Reliance Yearly Interval Fund - Series 9 - Direct Plan - Growth Plan - Growth Option"
+  },
+  { "c": "119821", "n": "SBI  SAVINGS FUND - DIRECT PLAN - GROWTH" },
+  {
+    "c": "152657",
+    "n": "SBI Automotive Opportunities Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "133859",
+    "n": "SBI BANKING & FINANCIAL SERVICES FUND - DIRECT PLAN - GROWTH"
+  },
+  { "c": "125503", "n": "SBI BANKING & PSU FUND - Direct Plan - Growth" },
+  { "c": "153432", "n": "SBI BSE PSU BANK INDEX FUND- Direct Plan- Growth" },
+  { "c": "151769", "n": "SBI BSE Sensex Index Fund - Direct Plan - Growth" },
+  { "c": "149134", "n": "SBI Balanced Advantage Fund - Direct Plan - Growth" },
+  { "c": "119705", "n": "SBI COMMA Fund - DIRECT PLAN - Growth" },
+  {
+    "c": "120137",
+    "n": "SBI CONSTANT MATURITY 10 YEAR GILT FUND - DIRECT PLAN - GROWTH"
+  },
+  {
+    "c": "120575",
+    "n": "SBI CONSUMPTION OPPORTUNITIES FUND - DIRECT PLAN - GROWTH"
+  },
+  { "c": "119835", "n": "SBI CONTRA FUND - DIRECT PLAN - GROWTH" },
+  {
+    "c": "149474",
+    "n": "SBI CPSE Bond Plus SDL Sep 2026 50:50 Index Fund - Direct Plan - Growth"
+  },
+  { "c": "119798", "n": "SBI CREDIT RISK FUND - DIRECT PLAN -GROWTH" },
+  {
+    "c": "154331",
+    "n": "SBI CRISIL - IBX Financial Services 3-6 Months Debt Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "154334",
+    "n": "SBI CRISIL - IBX Financial Services 9-12 Months Debt Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "150706",
+    "n": "SBI CRISIL IBX Gilt Index - April 2029 Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "150711",
+    "n": "SBI CRISIL IBX SDL Index - September 2027 Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "154370",
+    "n": "SBI CRISIL-IBX 10:90 GILT + SDL INDEX DEC 2029 INDEX FUND - DIRECT - GROWTH"
+  },
+  {
+    "c": "148490",
+    "n": "SBI Children's Fund - Investment Plan - Direct Plan - Growth"
+  },
+  {
+    "c": "119719",
+    "n": "SBI Children's Fund - Savings Plan - DIRECT PLAN - GROWTH"
+  },
+  { "c": "119839", "n": "SBI Conservative Hybrid Fund - Direct Plan - Growth" },
+  { "c": "146215", "n": "SBI Corporate Bond Fund - Direct Plan - Growth" },
+  {
+    "c": "154467",
+    "n": "SBI Crisil - IBX SDL Index - June 2034 Index Fund - Direct Plan - Growth"
+  },
+  { "c": "151478", "n": "SBI Dividend Yield Fund - Direct Plan - Growth" },
+  {
+    "c": "153832",
+    "n": "SBI Dynamic Asset Allocation Active FoF - Direct Plan - Growth"
+  },
+  { "c": "119671", "n": "SBI Dynamic Bond Fund - DIRECT PLAN - Growth" },
+  { "c": "119723", "n": "SBI ELSS Tax Saver FUND - DIRECT PLAN -GROWTH" },
+  { "c": "119609", "n": "SBI EQUITY HYBRID FUND - DIRECT PLAN - Growth" },
+  {
+    "c": "119709",
+    "n": "SBI ESG Exclusionary Strategy Fund - Direct Plan -Growth"
+  },
+  {
+    "c": "152417",
+    "n": "SBI Energy Opportunities Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "146643",
+    "n": "SBI Equity Minimum Variance Fund - Direct Plan - Growth"
+  },
+  { "c": "134643", "n": "SBI Equity Savings Fund - Direct Plan - Growth" },
+  { "c": "119727", "n": "SBI FOCUSED FUND - DIRECT PLAN -GROWTH" },
+  { "c": "119718", "n": "SBI Flexicap Fund - DIRECT PLAN - Growth Option" },
+  { "c": "148550", "n": "SBI Floating Rate Debt Fund - Direct Plan - Growth" },
+  { "c": "119707", "n": "SBI GILT FUND - DIRECT PLAN - GROWTH" },
+  { "c": "119788", "n": "SBI GOLD FUND- DIRECT PLAN - GROWTH" },
+  {
+    "c": "119783",
+    "n": "SBI HEALTHCARE OPPORTUNITIES FUND - DIRECT PLAN -GROWTH"
+  },
+  { "c": "119700", "n": "SBI INFRASTRUCTURE FUND -  DIRECT PLAN - GROWTH" },
+  {
+    "c": "153498",
+    "n": "SBI Income Plus Arbitrage Active FOF- Direct Plan- Growth"
+  },
+  {
+    "c": "152776",
+    "n": "SBI Innovative Opportunities Fund - Direct Plan - Growth"
+  },
+  { "c": "119721", "n": "SBI LARGE & MIDCAP FUND -DIRECT PLAN -Growth" },
+  { "c": "119812", "n": "SBI LOW DURATION FUND - DIRECT PLAN - GROWTH" },
+  { "c": "119598", "n": "SBI Large Cap FUND-DIRECT PLAN -GROWTH" },
+  { "c": "119800", "n": "SBI Liquid Fund - DIRECT PLAN -Growth" },
+  { "c": "151214", "n": "SBI Long Duration Fund - Direct Plan - Growth" },
+  { "c": "119824", "n": "SBI MEDIUM DURATION FUND - DIRECT PLAN - GROWTH" },
+  { "c": "119716", "n": "SBI MIDCAP FUND - DIRECT PLAN - GROWTH" },
+  { "c": "119711", "n": "SBI MNC FUND - DIRECT PLAN -GROWTH" },
+  {
+    "c": "119843",
+    "n": "SBI MULTI ASSET ALLOCATION FUND - DIRECT PLAN - GROWTH"
+  },
+  {
+    "c": "119714",
+    "n": "SBI Medium to Long Duration Fund-DIRECT PLAN -Growth"
+  },
+  { "c": "149882", "n": "SBI Multicap Fund- Direct Plan- Growth option" },
+  {
+    "c": "154372",
+    "n": "SBI NIFTY G-SEC JUL 2031 INDEX FUND - DIRECT - GROWTH"
+  },
+  { "c": "119827", "n": "SBI NIFTY INDEX FUND - DIRECT PLAN - GROWTH" },
+  { "c": "152908", "n": "SBI Nifty 500 Index Fund- Direct Plan- Growth" },
+  { "c": "153250", "n": "SBI Nifty Bank Index Fund-Direct Plan- Growth" },
+  { "c": "153320", "n": "SBI Nifty IT Index Fund - Direct Plan - Growth" },
+  {
+    "c": "153015",
+    "n": "SBI Nifty India Consumption Index Fund- Direct Plan- Growth"
+  },
+  {
+    "c": "150673",
+    "n": "SBI Nifty Midcap 150 Index Fund - Direct Plan - Growth"
+  },
+  { "c": "148945", "n": "SBI Nifty Next 50 Index Fund - Direct Plan - Growth" },
+  {
+    "c": "150677",
+    "n": "SBI Nifty Smallcap 250 Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "153718",
+    "n": "SBI Nifty100 Low Volatility 30 Index Fund- Direct Plan- Growth"
+  },
+  {
+    "c": "153662",
+    "n": "SBI Nifty200 Momentum 30 Index Fund- Direct Plan- Growth"
+  },
+  {
+    "c": "153555",
+    "n": "SBI Nifty200 Quality 30 Index Fund-Direct Plan- Growth"
+  },
+  {
+    "c": "152370",
+    "n": "SBI Nifty50 Equal Weight Index Fund - Direct Plan - Growth"
+  },
+  { "c": "119833", "n": "SBI OVERNIGHT FUND - DIRECT PLAN - GROWTH" },
+  { "c": "119732", "n": "SBI PSU Fund - DIRECT PLAN - GROWTH" },
+  { "c": "154177", "n": "SBI Quality Fund - Direct Plan - Growth" },
+  { "c": "153154", "n": "SBI Quant Fund- Direct Plan- Growth" },
+  {
+    "c": "148685",
+    "n": "SBI Retirement Benefit Fund - Aggressive Hybrid Plan - Direct Plan - Growth"
+  },
+  {
+    "c": "148683",
+    "n": "SBI Retirement Benefit Fund - Aggressive Plan - Direct Plan - Growth"
+  },
+  {
+    "c": "148690",
+    "n": "SBI Retirement Benefit Fund - Conservative Hybrid Plan - Direct Plan - Growth"
+  },
+  {
+    "c": "148688",
+    "n": "SBI Retirement Benefit Fund - Conservative Plan - Direct Plan - Growth"
+  },
+  { "c": "119816", "n": "SBI SHORT TERM DEBT FUND - DIRECT PLAN -GROWTH" },
+  { "c": "152735", "n": "SBI Silver ETF Fund of Fund- Direct Plan - Growth" },
+  { "c": "125497", "n": "SBI Small Cap Fund - Direct Plan - Growth" },
+  {
+    "c": "120578",
+    "n": "SBI TECHNOLOGY OPPORTUNITIES FUND - DIRECT PLAN - GROWTH"
+  },
+  {
+    "c": "119828",
+    "n": "SBI ULTRA SHORT DURATION FUND - DIRECT PLAN - GROWTH"
+  },
+  {
+    "c": "148760",
+    "n": "SBI US Specific Equity Active FoF - Direct Plan - Growth"
+  },
+  {
+    "c": "150681",
+    "n": "SBI |CRISIL IBX Gilt Index - June 2036 Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "151753",
+    "n": "Samco Active Momentum Fund - Direct Plan - Growth Option"
+  },
+  { "c": "153090", "n": "Samco Arbitrage Fund - Direct Plan - Growth" },
+  {
+    "c": "152188",
+    "n": "Samco Dynamic Asset Allocation Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "150838",
+    "n": "Samco ELSS Tax Saver Fund - Direct Plan - Growth Option"
+  },
+  { "c": "149450", "n": "Samco Flexi Cap Fund - Direct Plan - Growth Option" },
+  {
+    "c": "153534",
+    "n": "Samco Large & Mid Cap Fund - Direct Plan - Growth Option"
+  },
+  { "c": "153239", "n": "Samco Large Cap Fund - Direct Plan - Growth Option" },
+  {
+    "c": "153092",
+    "n": "Samco Multi Asset Allocation Fund - Direct Plan - Growth"
+  },
+  { "c": "152847", "n": "Samco Multi Cap Fund - Direct Plan - Growth" },
+  { "c": "150631", "n": "Samco Overnight Fund - Direct Plan - Growth Option" },
+  {
+    "c": "152586",
+    "n": "Samco Special Opportunities Fund - Direct Plan - Growth"
+  },
+  { "c": "125711", "n": "Shriram Aggressive Hybrid Fund- Direct Growth" },
+  { "c": "147406", "n": "Shriram Balanced Advantage Fund - Direct Growth" },
+  { "c": "145819", "n": "Shriram ELSS Tax Saver Fund - Direct Growth" },
+  { "c": "144905", "n": "Shriram Flexi Cap Fund - Direct Growth" },
+  { "c": "153035", "n": "Shriram Liquid Fund - Direct Plan Growth Option" },
+  {
+    "c": "154144",
+    "n": "Shriram Money Market Fund - Direct Plan Growth Option"
+  },
+  { "c": "152051", "n": "Shriram Multi Asset Allocation Fund - Direct Growth" },
+  {
+    "c": "153076",
+    "n": "Shriram Multi Sector Rotation Fund - Direct Plan Growth Option"
+  },
+  { "c": "154394", "n": "Shriram Overnight Fund- Direct Growth" },
+  {
+    "c": "149601",
+    "n": "Sundaram Aggressive Hybrid Fund (Formerly Known as Principal Hybrid Equity Fund)- Direct Plan - Growth Option"
+  },
+  {
+    "c": "149550",
+    "n": "Sundaram Arbitrage Fund (Formerly Known as Prinicpal Arbitrage Fund) - Direct Plan - Growth"
+  },
+  {
+    "c": "149717",
+    "n": "Sundaram Balanced Advantage Fund ( Formerly Known as Principal Balanced Advantage Fund) - Direct Plan - Growth Option"
+  },
+  {
+    "c": "134363",
+    "n": "Sundaram Banking & PSU Fund (Formerly Known as Sundaram Banking & PSU Debt Fund) - Direct Growth"
+  },
+  {
+    "c": "119625",
+    "n": "Sundaram Banking & PSU Fund (Formerly Known as Sundaram Banking and PSU Debt Fund) Direct Plan - Growth"
+  },
+  { "c": "152677", "n": "Sundaram Business Cycle Fund Direct Plan Growth" },
+  {
+    "c": "119635",
+    "n": "Sundaram Conservative Hybrid Fund (Formerly Known as Sundaram Debt Oriented Hybrid Fund) Direct Plan - Growth"
+  },
+  {
+    "c": "119595",
+    "n": "Sundaram Consumption Fund (Formerly Known as Sundaram Rural and Consumption Fund Direct Plan - Growth)"
+  },
+  { "c": "119621", "n": "Sundaram Corporate Bond Fund Direct Plan - Growth" },
+  {
+    "c": "149700",
+    "n": "Sundaram Dividend Yield Fund (Formerly Known as Principal Dividend Yield Fund) - Direct Plan - Growth Option"
+  },
+  { "c": "149570", "n": "Sundaram ELSS Tax Saver Fund Direct Plan Growth" },
+  {
+    "c": "149679",
+    "n": "Sundaram Equity Savings Fund (Formerly Known as Principal Equity Savings Fund) - Direct Plan - Growth Option"
+  },
+  {
+    "c": "119597",
+    "n": "Sundaram Financial Services Opportunities Fund Direct Plan - Growth"
+  },
+  { "c": "150571", "n": "Sundaram Flexicap Fund Direct Growth" },
+  {
+    "c": "149533",
+    "n": "Sundaram Focused Fund (Formerly Known as Principal Focused Multicap Fund)- Direct Plan - Growth Option"
+  },
+  {
+    "c": "119602",
+    "n": "Sundaram Global Brand Theme-Equity Active FOF - Direct Growth"
+  },
+  {
+    "c": "154123",
+    "n": "Sundaram Income Plus Arbitrage Active FoF Fund-Direct-Growth"
+  },
+  {
+    "c": "129212",
+    "n": "Sundaram Infrastructure Advantage Fund Direct Plan - Growth"
+  },
+  {
+    "c": "148507",
+    "n": "Sundaram Large Cap Fund (Formerly Known as Sundaram Blue Chip Fund)Direct Plan - Growth"
+  },
+  { "c": "119566", "n": "Sundaram Large and Midcap Fund Direct Plan - Growth" },
+  {
+    "c": "149664",
+    "n": "Sundaram Liquid Fund (Formerly Known as Principal Cash Management Fund) - Direct Plan - Growth Option"
+  },
+  {
+    "c": "149526",
+    "n": "Sundaram Low Duration Fund (Formerly Known as Principal Low Duration Fund) - Direct Plan - Growth Option"
+  },
+  {
+    "c": "119675",
+    "n": "Sundaram Medium Duration Fund (Formerly Known as Sundaram Medium Term Bond Fund) Direct Plan - Growth"
+  },
+  { "c": "119581", "n": "Sundaram Mid Cap Fund Direct Plan - Growth" },
+  { "c": "145050", "n": "Sundaram Money Market Fund Direct Plan - Growth" },
+  {
+    "c": "152314",
+    "n": "Sundaram Multi Asset Allocation Fund Direct Plan Growth"
+  },
+  {
+    "c": "149668",
+    "n": "Sundaram Multi Cap Fund (Formerly Known as Principal Multi Cap Growth Fund) - Direct Plan - Income Distribution CUM Capital Withdrawal Option (IDCW)"
+  },
+  {
+    "c": "149669",
+    "n": "Sundaram Multi Cap Fund (Formerly Known as Principal Multi Cap Growth Fund)-Direct Plan - Growth Option"
+  },
+  { "c": "153669", "n": "Sundaram Multi-Factor Fund - Direct - Growth" },
+  {
+    "c": "149483",
+    "n": "Sundaram Nifty 100 Equal Weight Fund (Formerly Known as Principal Nifty 100 Equal Weight Fund) - Direct Plan - Growth Option"
+  },
+  { "c": "146963", "n": "Sundaram Overnight Fund Direct Plan - Growth" },
+  { "c": "144835", "n": "Sundaram Services Fund Direct Plan - Growth" },
+  {
+    "c": "149587",
+    "n": "Sundaram Short Duration Fund (Formerly Known as Principal Short Term Debt Fund)- Direct Plan - Growth Option"
+  },
+  { "c": "119589", "n": "Sundaram Small Cap Fund Direct Plan - Growth" },
+  {
+    "c": "149539",
+    "n": "Sundaram Ultra Short Duration Fund (Formerly Known as Principal Ultra Short Term Fund)- Direct Plan -Growth Option"
+  },
+  { "c": "119549", "n": "Sundaram Value Fund Direct Plan - Growth" },
+  {
+    "c": "150692",
+    "n": "TATA CRISIL-IBX GILT INDEX - APRIL 2026 INDEX FUND - DIRECT PLAN - GROWTH"
+  },
+  { "c": "153891", "n": "THE WEALTH COMPANY ARBITRAGE FUND DIRECT GROWTH" },
+  { "c": "153895", "n": "THE WEALTH COMPANY ETHICAL FUND DIRECT GROWTH" },
+  { "c": "153872", "n": "THE WEALTH COMPANY FLEXI CAP FUND - DIRECT GROWTH" },
+  { "c": "154131", "n": "THE WEALTH COMPANY GOLD ETF FOF DIRECT GROWTH" },
+  { "c": "153883", "n": "THE WEALTH COMPANY LIQUID FUND DIRECT GROWTH" },
+  { "c": "149797", "n": "TRUST MF OVERNIGHT FUND-DIRECT PLAN-GROWTH" },
+  { "c": "153804", "n": "TRUSTMF ARBITRAGE FUND -DIRECT PLAN-GROWTH" },
+  { "c": "151320", "n": "TRUSTMF CORPORATE BOND FUND-DIRECT PLAN-GROWTH" },
+  { "c": "152584", "n": "TRUSTMF Flexi Cap Fund-Direct Plan- Growth" },
+  { "c": "148841", "n": "TRUSTMF Liquid Fund-Direct Plan-Growth" },
+  { "c": "154210", "n": "TRUSTMF MID CAP FUND -DIRECT -GROWTH" },
+  { "c": "150513", "n": "TRUSTMF MONEY MARKET FUND-DIRECT PLAN-GROWTH" },
+  { "c": "153644", "n": "TRUSTMF MULTI CAP FUND -DIRECT PLAN-GROWTH" },
+  { "c": "152939", "n": "TRUSTMF SMALL CAP FUND -DIRECT PLAN-GROWTH" },
+  { "c": "149076", "n": "TRUSTMF Short Duration Fund-Direct Plan-Growth" },
+  {
+    "c": "119053",
+    "n": "Tata Aggressive Hybrid Fund -Direct Plan- Growth Option"
+  },
+  { "c": "145724", "n": "Tata Arbitrage Fund-Direct Plan-Growth" },
+  {
+    "c": "154066",
+    "n": "Tata BSE Multicap Consumption 50:30:20 Index Fund - Direct Plan Growth Option"
+  },
+  {
+    "c": "153420",
+    "n": "Tata BSE Quality Index Fund Direct plan Growth Option"
+  },
+  {
+    "c": "153132",
+    "n": "Tata BSE Select Business Groups Index Fund - Direct Growth"
+  },
+  { "c": "146010", "n": "Tata Balanced Advantage Fund-Direct Plan-Growth" },
+  {
+    "c": "135793",
+    "n": "Tata Banking And Financial Services Fund-Direct Plan-Growth"
+  },
+  { "c": "149071", "n": "Tata Business Cycle Fund-Direct Plan-Growth" },
+  { "c": "119312", "n": "Tata Childrens Fund-Direct Plan-Growth Option" },
+  { "c": "149361", "n": "Tata Corporate Bond Fund-Direct Plan-Growth" },
+  { "c": "135800", "n": "Tata Digital India Fund-Direct Plan-Growth" },
+  { "c": "148947", "n": "Tata Dividend Yield Fund-Direct Plan-Growth" },
+  { "c": "119097", "n": "Tata Dynamic Bond Fund- Direct Plan-Growth Option" },
+  { "c": "132756", "n": "Tata ELSS Fund-Growth-Direct Plan" },
+  {
+    "c": "119960",
+    "n": "Tata Equity Savings Fund- Direct Plan- Growth Option"
+  },
+  { "c": "119172", "n": "Tata Ethical Fund -Direct Plan- Growth Option" },
+  { "c": "144546", "n": "Tata Flexi Cap Fund-Direct Plan-Growth" },
+  { "c": "149007", "n": "Tata Floating Rate Fund -Direct Plan-Growth" },
+  { "c": "147757", "n": "Tata Focused Fund-Direct Plan-Growth" },
+  {
+    "c": "119953",
+    "n": "Tata Gilt Securities Fund- Direct Plan - Growth Option"
+  },
+  {
+    "c": "152287",
+    "n": "Tata Gold ETF Fund of Fund Direct Plan Growth Option"
+  },
+  {
+    "c": "150532",
+    "n": "Tata Housing Opportunities Fund - Direct Plan - Growth"
+  },
+  { "c": "119876", "n": "Tata Income Fund - Direct Plan - Growth Option" },
+  {
+    "c": "153513",
+    "n": "Tata Income Plus Arbitrage Active FOF - Direct Plan Growth Option"
+  },
+  { "c": "135805", "n": "Tata India Consumer Fund-Direct Plan-Growth" },
+  { "c": "153055", "n": "Tata India Innovation Fund- Direct Growth" },
+  {
+    "c": "135810",
+    "n": "Tata India Pharma & Healthcare Fund-Direct Plan-Growth"
+  },
+  {
+    "c": "119243",
+    "n": "Tata Infrastructure Fund -Direct Plan -Growth Option"
+  },
+  {
+    "c": "119202",
+    "n": "Tata Large & MId Cap Fund -Direct Plan- Growth Option"
+  },
+  { "c": "119160", "n": "Tata Large Cap Fund -Direct Plan Growth Option" },
+  { "c": "119861", "n": "Tata Liquid Fund- Direct Plan-Growth Option" },
+  { "c": "119127", "n": "Tata Medium Term Fund- Direct Plan- Growth Option" },
+  { "c": "119178", "n": "Tata Mid Cap Fund - Direct Plan- Growth Option" },
+  { "c": "119424", "n": "Tata Money Market Fund- Direct Plan- Growth Option" },
+  { "c": "148053", "n": "Tata Multi Asset Allocation Fund-Direct Plan-Growth" },
+  {
+    "c": "154409",
+    "n": "Tata Multi Sector Passive FOF Direct Plan Growth Option"
+  },
+  { "c": "151232", "n": "Tata Multicap Fund - Direct Plan - Growth" },
+  { "c": "152557", "n": "Tata Nifty Auto Index Fund - Direct Plan - Growth" },
+  {
+    "c": "152951",
+    "n": "Tata Nifty Capital Markets Index Fund - Direct Plan Growth Option"
+  },
+  {
+    "c": "152577",
+    "n": "Tata Nifty Financial Services Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "151301",
+    "n": "Tata Nifty G Sec Dec 2026 Index Fund-Direct Plan-Growth"
+  },
+  {
+    "c": "151273",
+    "n": "Tata Nifty G-Sec Dec 2029 Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "150344",
+    "n": "Tata Nifty India Digital ETF Fund of Fund-Direct Plan-Growth"
+  },
+  {
+    "c": "152742",
+    "n": "Tata Nifty India Tourism Index Fund - Direct - Growth"
+  },
+  {
+    "c": "152564",
+    "n": "Tata Nifty MidSmall Healthcare Index Fund - Direct Plan - Growth"
+  },
+  {
+    "c": "153581",
+    "n": "Tata Nifty Midcap 150 Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "150738",
+    "n": "Tata Nifty Midcap 150 Momentum 50 Index Fund - Growth - Direct Plan"
+  },
+  {
+    "c": "153858",
+    "n": "Tata Nifty Next 50 Index Fund - Direct Plan Growth Option"
+  },
+  { "c": "152570", "n": "Tata Nifty Realty Index Fund - Direct Plan - Growth" },
+  {
+    "c": "150326",
+    "n": "Tata Nifty SDL Plus AAA PSU Bond Dec 6040 Index Fund- Direct Plan-Growth"
+  },
+  { "c": "152836", "n": "Tata Nifty200 Alpha 30 Index Fund - Direct -Growth" },
+  {
+    "c": "152588",
+    "n": "Tata Nifty500 Multicap India Manufacturing 50:30:20 Index Fund -Direct Plan-Growth"
+  },
+  {
+    "c": "152595",
+    "n": "Tata Nifty500 Multicap Infrastructure 50:30:20 Index Fund - Direct Plan - Growth"
+  },
+  { "c": "146980", "n": "Tata Overnight Fund-Direct Plan-Growth" },
+  { "c": "135813", "n": "Tata Resources & Energy Fund-Direct Plan-Growth" },
+  {
+    "c": "119256",
+    "n": "Tata Retirement Savings Fund- Conservative Plan-Direct Plan-Growth Option"
+  },
+  {
+    "c": "119255",
+    "n": "Tata Retirement Savings Fund- Moderate Plan -Direct Plan-Growth Option"
+  },
+  {
+    "c": "119251",
+    "n": "Tata Retirement Savings Fund- Progressive Plan -Direct Plan-Growth Option"
+  },
+  {
+    "c": "119949",
+    "n": "Tata Short Term Bond Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "152293",
+    "n": "Tata Silver ETF Fund of Fund Direct Plan Growth Option"
+  },
+  { "c": "145206", "n": "Tata Small Cap Fund-Direct Plan-Growth" },
+  {
+    "c": "119863",
+    "n": "Tata Treasury Advantage Fund - Direct Plan - Growth Option"
+  },
+  { "c": "146075", "n": "Tata Ultra Short Term Fund-Direct Plan-Growth" },
+  { "c": "119231", "n": "Tata Value Fund -Direct Plan Growth Option" },
+  {
+    "c": "118868",
+    "n": "Taurus Banking & Financial Services Fund - Direct Plan - Growth"
+  },
+  { "c": "118866", "n": "Taurus ELSS Tax Saver Fund - Direct Plan - Growth" },
+  { "c": "118876", "n": "Taurus Ethical Fund - Direct Plan - Growth" },
+  { "c": "118883", "n": "Taurus Flexi Cap Fund - Direct Plan - Growth" },
+  { "c": "118879", "n": "Taurus Infrastructure Fund - Direct Plan - Growth" },
+  { "c": "118870", "n": "Taurus Large Cap Fund - Direct Plan - Growth" },
+  { "c": "118872", "n": "Taurus Mid Cap Fund - Direct Plan - Growth" },
+  { "c": "118881", "n": "Taurus Nifty 50 Index Fund - Direct Plan - Growth" },
+  { "c": "118494", "n": "Templeton India Value Fund - Direct - Growth" },
+  {
+    "c": "154185",
+    "n": "The Wealth Company Balanced Advantage Fund - Direct Growth"
+  },
+  {
+    "c": "154381",
+    "n": "The Wealth Company Large & Mid Cap Fund Direct Growth"
+  },
+  {
+    "c": "153999",
+    "n": "The Wealth Company Multi Asset Allocation Fund - Direct Growth"
+  },
+  { "c": "154269", "n": "The Wealth Company Small Cap Fund- Direct-Growth" },
+  {
+    "c": "148086",
+    "n": "UTI - Bond Fund (Segregated - 17022020) - Direct Plan - Growth Option"
+  },
+  {
+    "c": "148147",
+    "n": "UTI - Credit Risk Fund (Segregated - 17022020) - Direct Plan - Growth Option"
+  },
+  {
+    "c": "148118",
+    "n": "UTI - Dynamic Bond Fund (Segregated - 17022020) - Direct Plan - Growth Option"
+  },
+  { "c": "120662", "n": "UTI - Flexi Cap Fund-Growth Option - Direct" },
+  { "c": "145295", "n": "UTI - Floater Fund - Direct Plan - Growth Option" },
+  { "c": "120792", "n": "UTI - GILT FUND - Direct Plan - Growth Option" },
+  { "c": "120682", "n": "UTI - MNC Fund - Growth Option - Direct" },
+  {
+    "c": "148136",
+    "n": "UTI - Medium Term Fund (Segregated - 17022020) - Direct Plan - Growth Option"
+  },
+  { "c": "120785", "n": "UTI - Overnight Fund - Direct Plan - Growth Option" },
+  {
+    "c": "148106",
+    "n": "UTI - Regular Saving Fund (Segregated - 17022020) - Direct Plan - Growth Option"
+  },
+  { "c": "120674", "n": "UTI Aggressive Hybrid Fund -Direct Plan - Growth" },
+  { "c": "120795", "n": "UTI Arbitrage Fund - Direct Plan - Growth Option" },
+  {
+    "c": "151764",
+    "n": "UTI BSE Housing Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "149881",
+    "n": "UTI BSE Low Volatility Index Fund - Direct Plan  - Growth Option"
+  },
+  {
+    "c": "149803",
+    "n": "UTI BSE Sensex Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "151885",
+    "n": "UTI Balanced Advantage Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "126940",
+    "n": "UTI Banking & PSU Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "120733",
+    "n": "UTI Banking and Financial Services Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "151185",
+    "n": "UTI CRISIL SDL Maturity April 2033 Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "151239",
+    "n": "UTI CRISIL SDL Maturity June 2027 Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "120724",
+    "n": "UTI Children's Equity Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "120779",
+    "n": "UTI Conservative Hybrid Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "144339",
+    "n": "UTI Corporate Bond Fund - Direct Plan - Growth Option"
+  },
+  { "c": "120764", "n": "UTI Credit Risk Fund - Direct Plan - Growth Option" },
+  { "c": "120762", "n": "UTI Dynamic Bond Fund - Direct Plan - Growth Option" },
+  {
+    "c": "120715",
+    "n": "UTI ELSS Tax Saver Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "144490",
+    "n": "UTI Equity Savings Fund - Direct Plan - Growth Option"
+  },
+  { "c": "149091", "n": "UTI Focused Fund - Direct Plan - Growth Option" },
+  {
+    "c": "150410",
+    "n": "UTI Gilt Fund with 10 year Constant Duration - Direct Plan - Growth Option"
+  },
+  {
+    "c": "150714",
+    "n": "UTI Gold ETF Fund of Fund - Direct Plan - Growth Option"
+  },
+  { "c": "120782", "n": "UTI Healthcare Fund - Direct Plan - Growth Option" },
+  {
+    "c": "153442",
+    "n": "UTI Income Plus Arbitrage Active Fund of Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "120780",
+    "n": "UTI India Consumer Fund - Direct Plan - Growth Option"
+  },
+  { "c": "120728", "n": "UTI Infrastructure Fund-Growth Option- Direct" },
+  { "c": "152087", "n": "UTI Innovation Fund - Direct Plan - Growth Option" },
+  {
+    "c": "120665",
+    "n": "UTI Large & Mid Cap Fund - Direct Plan - Growth Option"
+  },
+  { "c": "120656", "n": "UTI Large Cap Fund - Direct Plan - Growth Option" },
+  { "c": "120304", "n": "UTI Liquid Fund - Direct Plan - Growth Option" },
+  {
+    "c": "151523",
+    "n": "UTI Long Duration Fund - Direct Plan - Growth Option"
+  },
+  { "c": "120735", "n": "UTI Low Duration Fund - Direct Plan - Growth Option" },
+  { "c": "120299", "n": "UTI MMF - Direct Plan - Growth Option" },
+  {
+    "c": "134503",
+    "n": "UTI Medium Duration Fund - Direct Plan - Growth Option"
+  },
+  { "c": "120689", "n": "UTI Medium to Long Duration Fund-Growth - Direct" },
+  { "c": "120726", "n": "UTI Mid Cap Fund-Growth Option- Direct" },
+  {
+    "c": "120760",
+    "n": "UTI Multi Asset Allocation Fund - Direct Plan - Growth Option"
+  },
+  { "c": "153515", "n": "UTI Multi Cap Fund - Direct Plan - Growth Option" },
+  {
+    "c": "151364",
+    "n": "UTI NIFTY SDL Plus AAA PSU Bond Apr 2026 75:25 Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "151487",
+    "n": "UTI NIFTY SDL Plus AAA PSU Bond Apr 2028- 75:25 Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "148703",
+    "n": "UTI Nifty 200 Momentum 30 Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "152859",
+    "n": "UTI Nifty 200 Quality 30 Index Fund - Direct Plan - Growth Option"
+  },
+  { "c": "120716", "n": "UTI Nifty 50 Index Fund - Growth Option- Direct" },
+  {
+    "c": "151739",
+    "n": "UTI Nifty 500 Value 50 Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "153086",
+    "n": "UTI Nifty Alpha Low-Volatility 30 Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "153270",
+    "n": "UTI Nifty India Manufacturing Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "153089",
+    "n": "UTI Nifty Midcap 150 Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "150313",
+    "n": "UTI Nifty Midcap 150 Quality 50 Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "153272",
+    "n": "UTI Nifty Midsmallcap 400 Momentum Quality 100 Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "143341",
+    "n": "UTI Nifty Next 50 Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "152864",
+    "n": "UTI Nifty Private Bank Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "151762",
+    "n": "UTI Nifty50 Equal Weight Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "154197",
+    "n": "UTI Nifty500 Shariah Index Fund - Direct Plan Growth Option"
+  },
+  { "c": "153204", "n": "UTI Quant Fund - Direct Plan - Growth Option" },
+  {
+    "c": "120718",
+    "n": "UTI Short Duration Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "151731",
+    "n": "UTI Silver ETF Fund of Fund - Direct Plan - Growth Option"
+  },
+  { "c": "148618", "n": "UTI Small Cap Fund - Direct Plan - Growth Option" },
+  {
+    "c": "120746",
+    "n": "UTI Ultra Short Duration Fund - Direct Plan - Growth Option"
+  },
+  { "c": "120751", "n": "UTI Value Fund - Direct Plan - Growth Option" },
+  { "c": "120749", "n": "UTI-Dividend Yield Fund.-Growth-Direct" },
+  {
+    "c": "120731",
+    "n": "UTI-Transportation and Logistics  Fund-Growth Option- Direct"
+  },
+  { "c": "153376", "n": "Unifi Dynamic Asset Allocation Fund - Direct Growth" },
+  { "c": "153543", "n": "Unifi Flexi Cap Fund - Direct Growth" },
+  { "c": "153570", "n": "Unifi Liquid Fund- Direct Growth" },
+  {
+    "c": "153109",
+    "n": "Union Active Momentum Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "148592",
+    "n": "Union Aggressive Hybrid Fund - Direct Plan - Growth Option"
+  },
+  { "c": "146297", "n": "Union Arbitrage Fund - Direct Plan - Growth Option" },
+  {
+    "c": "142038",
+    "n": "Union Balanced Advantage Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "152409",
+    "n": "Union Business Cycle Fund - Direct Plan - Growth Option"
+  },
+  { "c": "152219", "n": "Union Children's Fund - Direct Plan - Growth Option" },
+  {
+    "c": "154020",
+    "n": "Union Consumption Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "143241",
+    "n": "Union Corporate Bond Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "153824",
+    "n": "Union Diversified Equity All Cap Active FOF - Direct Plan - Growth Option"
+  },
+  {
+    "c": "119311",
+    "n": "Union Dynamic Bond Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "119307",
+    "n": "Union ELSS Tax Saver Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "144312",
+    "n": "Union Equity Savings Fund - Direct Plan - Growth Option"
+  },
+  { "c": "119292", "n": "Union Flexi Cap Fund - Direct Plan - Growth Option" },
+  { "c": "147492", "n": "Union Focused Fund - Direct Plan - Growth Option" },
+  { "c": "150407", "n": "Union Gilt Fund - Direct Plan - Growth Option" },
+  {
+    "c": "153340",
+    "n": "Union Gold ETF Fund of Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "153575",
+    "n": "Union Income Plus Arbitrage Active FOF - Direct Plan - Growth Option"
+  },
+  {
+    "c": "151905",
+    "n": "Union Innovation & Opportunities Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "147750",
+    "n": "Union Large & Midcap Fund - Direct Plan - Growth Option"
+  },
+  { "c": "141248", "n": "Union Largecap Fund - Direct Plan - Growth Option" },
+  { "c": "119303", "n": "Union Liquid Fund - Direct Plan - Growth Option" },
+  {
+    "c": "153654",
+    "n": "Union Low Duration Fund - Direct Plan - Growth Option"
+  },
+  { "c": "148073", "n": "Union Midcap Fund - Direct Plan - Growth Option" },
+  {
+    "c": "149117",
+    "n": "Union Money Market Fund - Direct Plan -  Growth Option"
+  },
+  {
+    "c": "152787",
+    "n": "Union Multi Asset Allocation Fund- Direct Plan - Growth Option"
+  },
+  { "c": "150858", "n": "Union Multicap Fund - Direct Plan - Growth Option" },
+  { "c": "147003", "n": "Union Overnight Fund - Direct Plan - Growth Option" },
+  { "c": "150554", "n": "Union Retirement Fund - Direct Plan - Growth Option" },
+  {
+    "c": "153242",
+    "n": "Union Short Duration Fund - Direct Plan - Growth Option"
+  },
+  { "c": "129649", "n": "Union Small Cap Fund - Direct Plan - Growth Option" },
+  { "c": "145473", "n": "Union Value Fund - Direct Plan - Growth Option" },
+  {
+    "c": "154392",
+    "n": "WhiteOak Capital Aggressive Hybrid Fund Direct Plan Growth"
+  },
+  { "c": "152849", "n": "WhiteOak Capital Arbitrage Fund Direct Plan Growth" },
+  {
+    "c": "151267",
+    "n": "WhiteOak Capital Balanced Advantage Fund Direct Plan Growth"
+  },
+  {
+    "c": "152132",
+    "n": "WhiteOak Capital Balanced Hybrid Fund Direct Plan Growth"
+  },
+  {
+    "c": "152321",
+    "n": "WhiteOak Capital Banking & Financial Services Fund - Direct Growth"
+  },
+  {
+    "c": "154161",
+    "n": "WhiteOak Capital Consumption Opportunities Fund Direct Plan Growth"
+  },
+  {
+    "c": "152915",
+    "n": "WhiteOak Capital Digital Bharat Fund Direct Plan Growth"
+  },
+  {
+    "c": "150587",
+    "n": "WhiteOak Capital ELSS Tax Saver Fund Direct Plan Growth"
+  },
+  {
+    "c": "152962",
+    "n": "WhiteOak Capital ESG Best-In-Class Strategy Fund Direct Plan Growth"
+  },
+  {
+    "c": "153355",
+    "n": "WhiteOak Capital Equity Savings Fund Direct Plan Growth"
+  },
+  { "c": "150346", "n": "WhiteOak Capital Flexi Cap Fund Direct Plan-Growth" },
+  { "c": "150797", "n": "WhiteOak Capital Large Cap Fund Direct Plan Growth" },
+  {
+    "c": "145971",
+    "n": "WhiteOak Capital Liquid Fund- Direct plan-Growth Option"
+  },
+  { "c": "150584", "n": "WhiteOak Capital Mid Cap Fund Direct Plan Growth" },
+  {
+    "c": "151745",
+    "n": "WhiteOak Capital Multi Asset Allocation Fund Direct Plan Growth"
+  },
+  { "c": "152071", "n": "WhiteOak Capital Multi Cap Fund Direct Plan Growth" },
+  {
+    "c": "152349",
+    "n": "WhiteOak Capital Pharma and Heathcare Fund Direct Plan Growth"
+  },
+  {
+    "c": "153189",
+    "n": "WhiteOak Capital Quality Equity Fund Direct Plan Growth"
+  },
+  {
+    "c": "152644",
+    "n": "WhiteOak Capital Special Opportunities Fund - Direct Growth"
+  },
+  {
+    "c": "147311",
+    "n": "WhiteOak Capital Ultra Short Duration Fund- Direct plan-Growth Option"
+  },
+  {
+    "c": "152226",
+    "n": "Whiteoak Capital Large & Mid Cap Fund Direct Plan Growth"
+  },
+  {
+    "c": "152157",
+    "n": "Zerodha ELSS Tax Saver Nifty LargeMidcap 250 Index Fund - Direct Plan - Growth option"
+  },
+  { "c": "153011", "n": "Zerodha Gold ETF FoF-Direct Plan - Growth Option" },
+  { "c": "154436", "n": "Zerodha Life Cycle Fund 2036 - Direct - Growth" },
+  { "c": "154437", "n": "Zerodha Life Cycle Fund 2041 - Direct - Growth" },
+  { "c": "153757", "n": "Zerodha Multi Asset Passive FoF - Direct - Growth" },
+  { "c": "153906", "n": "Zerodha Nifty 50 Index Fund - Direct Plan - Growth" },
+  {
+    "c": "152156",
+    "n": "Zerodha Nifty LargeMidcap 250 Index Fund - Direct Plan - Growth option"
+  },
+  {
+    "c": "154321",
+    "n": "Zerodha Nifty LargeMidcap250 Plus 8-13 Yr G-Sec 70:30 Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "154306",
+    "n": "Zerodha Nifty MidSmallcap400 50:50 Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "154109",
+    "n": "Zerodha Nifty Short Duration G-Sec Index Fund - Direct Plan - Growth Option"
+  },
+  {
+    "c": "153436",
+    "n": "Zerodha Overnight Fund - Direct Plan - Growth Option"
+  },
+  { "c": "153656", "n": "Zerodha Silver ETF FoF - Direct Growth" },
+  {
+    "c": "120819",
+    "n": "quant Aggressive Hybrid Fund-Growth Option-Direct Plan"
+  },
+  { "c": "153426", "n": "quant Arbitrage Fund - Growth Option - Direct Plan" },
+  { "c": "151791", "n": "quant BFSI Fund - Growth Option - Direct Plan" },
+  {
+    "c": "151757",
+    "n": "quant Business Cycle Fund - Growth Option - Direct Plan"
+  },
+  {
+    "c": "152255",
+    "n": "quant Commodities Fund - Growth Option - Direct Plan"
+  },
+  {
+    "c": "152336",
+    "n": "quant Consumption Fund - Growth Option - Direct Plan"
+  },
+  {
+    "c": "151713",
+    "n": "quant Dynamic Asset Allocation Fund - Growth Option - Direct Plan"
+  },
+  {
+    "c": "120847",
+    "n": "quant ELSS Tax Saver Fund - Growth Option - Direct Plan"
+  },
+  {
+    "c": "148564",
+    "n": "quant ESG Integration Strategy Fund - Growth Option - Direct Plan"
+  },
+  {
+    "c": "153705",
+    "n": "quant Equity Savings Fund - Growth Option - Direct Plan"
+  },
+  { "c": "120843", "n": "quant Flexi Cap Fund - Growth Option-Direct Plan" },
+  { "c": "120834", "n": "quant Focused Fund - Growth Option-Direct Plan" },
+  { "c": "151228", "n": "quant Gilt Fund - Growth Option - Direct Plan" },
+  { "c": "151853", "n": "quant Healthcare Fund - Growth Option - Direct Plan" },
+  {
+    "c": "120833",
+    "n": "quant Infrastructure Fund - Growth Option-Direct Plan"
+  },
+  {
+    "c": "120826",
+    "n": "quant Large & Mid Cap Fund - Growth Option-Direct Plan"
+  },
+  { "c": "150440", "n": "quant Large Cap Fund - Growth Option - Direct Plan" },
+  { "c": "120837", "n": "quant Liquid Fund - Growth Option - Direct Plan" },
+  {
+    "c": "151916",
+    "n": "quant Manufacturing Fund - Growth Option - Direct Plan"
+  },
+  { "c": "120841", "n": "quant Mid Cap Fund - Growth Option - Direct Plan" },
+  { "c": "152189", "n": "quant Momentum Fund - Growth Option - Direct Plan" },
+  {
+    "c": "120821",
+    "n": "quant Multi Asset Allocation Fund-GROWTH OPTION-Direct Plan"
+  },
+  { "c": "120823", "n": "quant Multi Cap Fund-GROWTH OPTION-Direct Plan" },
+  { "c": "151190", "n": "quant Overnight Fund - Growth Option - Direct Plan" },
+  { "c": "152415", "n": "quant PSU Fund - Growth Option - Direct Plan" },
+  {
+    "c": "148925",
+    "n": "quant Quantamental Fund - Growth Option - Direct Plan"
+  },
+  { "c": "120828", "n": "quant Small Cap Fund - Growth Option - Direct Plan" },
+  { "c": "152067", "n": "quant Teck Fund - Growth Option - Direct Plan" }
+]

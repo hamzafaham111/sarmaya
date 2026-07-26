@@ -3,20 +3,25 @@ import { z } from "zod";
 
 import { DeltaValue } from "@/components/base/delta-value";
 import { StaleBadge } from "@/components/base/stale-badge";
+import { StatValue } from "@/components/base/stat-value";
 import { groupStatementYears } from "@/lib/analysis/ratios";
 import { getInstrumentPage } from "@/lib/db/queries/instruments";
+import { returnsSummary } from "@/lib/analysis/returns";
 import {
   getAnnotations,
   getDayChange,
+  getNavSeries,
+  getPriceSeries,
   getStatementRows,
 } from "@/lib/db/queries/study";
 import { getValuations } from "@/lib/db/queries/valuations";
 import { buildSeeds } from "@/lib/valuation/seed";
-import { formatMoney, type Currency } from "@/lib/format";
+import { formatMoney, formatPercent, type Currency } from "@/lib/format";
 import { createClient } from "@/lib/supabase/server";
 
 import { removeInstrument } from "../../instruments/actions";
 import { NotesEditor } from "./notes-editor";
+import { SeriesChart } from "./series-chart";
 import { RatiosSection } from "./ratios-section";
 import { StatementsSection } from "./statements-section";
 import { TrendsSection } from "./trends-section";
@@ -48,16 +53,32 @@ export default async function InstrumentPage({
 
   const { instrument, userInstrument, latestSnapshot } = page;
   const currency = instrument.currency as Currency;
-  const data = latestSnapshot?.data as { price?: number | null } | null;
+  const data = latestSnapshot?.data as {
+    price?: number | null;
+    nav?: number | null;
+    nav_date?: string | null;
+    fund_house?: string | null;
+    scheme_category?: string | null;
+  } | null;
   const isStock = instrument.kind === "stock";
+  const isFund = instrument.kind === "fund";
+  const headlineValue = isFund ? (data?.nav ?? null) : (data?.price ?? null);
 
-  const [statementRows, annotations, dayChange, savedValuations] =
+  const [statementRows, annotations, dayChange, savedValuations, series] =
     await Promise.all([
       isStock ? getStatementRows(instrument.id) : Promise.resolve([]),
       isStock ? getAnnotations(user.id, instrument.id) : Promise.resolve([]),
       getDayChange(instrument.id),
       isStock ? getValuations(user.id, instrument.id) : Promise.resolve([]),
+      isFund
+        ? getNavSeries(instrument.id)
+        : getPriceSeries(instrument.id, 365 * 5),
     ]);
+
+  const seriesPoints = series
+    .map((p) => ({ date: p.date, value: Number(p.close) }))
+    .filter((p) => Number.isFinite(p.value) && p.value > 0);
+  const summary = returnsSummary(seriesPoints);
 
   const years = groupStatementYears(
     statementRows.map((r) => ({
@@ -77,7 +98,7 @@ export default async function InstrumentPage({
           {instrument.symbol} · {instrument.market}
         </span>
         <span className="font-numeric text-xl text-ink tabular-nums">
-          {formatMoney(data?.price ?? null, currency)}
+          {formatMoney(headlineValue, currency)}
         </span>
         <DeltaValue
           value={dayChange === null ? null : dayChange * 100}
@@ -126,9 +147,42 @@ export default async function InstrumentPage({
           <RatiosSection years={years} />
         </>
       ) : (
-        <div className="mt-8 rounded-md border border-dashed border-line bg-surface p-6 text-center text-sm text-ink-muted">
-          Index pages get price history and returns in Phase 5.
-        </div>
+        <section className="mt-8 space-y-6">
+          {isFund && (data?.fund_house || data?.scheme_category) ? (
+            <p className="text-sm text-ink-muted">
+              {data?.fund_house ?? ""}
+              {data?.fund_house && data?.scheme_category ? " · " : ""}
+              {data?.scheme_category ?? ""}
+            </p>
+          ) : null}
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+            <StatValue
+              label="1M return"
+              value={summary.r1m === null ? null : formatPercent(summary.r1m)}
+            />
+            <StatValue
+              label="1Y return"
+              value={summary.r1y === null ? null : formatPercent(summary.r1y)}
+            />
+            <StatValue
+              label="3Y CAGR"
+              value={
+                summary.cagr3y === null ? null : formatPercent(summary.cagr3y)
+              }
+            />
+            <StatValue
+              label="5Y CAGR"
+              value={
+                summary.cagr5y === null ? null : formatPercent(summary.cagr5y)
+              }
+            />
+          </div>
+          <SeriesChart
+            series={seriesPoints}
+            currency={currency}
+            label={isFund ? "NAV" : "Index level"}
+          />
+        </section>
       )}
 
       <NotesEditor

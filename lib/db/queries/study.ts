@@ -3,6 +3,7 @@ import { and, asc, desc, eq, gte } from "drizzle-orm";
 import { db } from "../index";
 import {
   annotations,
+  navHistory,
   priceHistory,
   statements,
   userInstruments,
@@ -47,6 +48,17 @@ export async function getPriceSeries(
 }
 
 /** Last two closes -> day change fraction, display-only. */
+export async function getNavSeries(
+  instrumentId: string,
+): Promise<PricePoint[]> {
+  const rows = await db()
+    .select({ date: navHistory.navDate, close: navHistory.nav })
+    .from(navHistory)
+    .where(eq(navHistory.instrumentId, instrumentId))
+    .orderBy(asc(navHistory.navDate));
+  return rows;
+}
+
 export async function getDayChange(
   instrumentId: string,
 ): Promise<number | null> {

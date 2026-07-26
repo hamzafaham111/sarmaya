@@ -106,3 +106,32 @@ export function resolveCatalogEntry(
 export function isPlausibleUsTicker(query: string): boolean {
   return US_SYMBOL_RE.test(query.trim().toUpperCase());
 }
+
+/** India mutual funds (AMFI scheme codes) — loaded lazily; the list is an
+ *  order of magnitude bigger than the stock universe. */
+export async function loadFundEntries(): Promise<CatalogEntry[]> {
+  const funds = (await import("./symbols-funds.json")).default as {
+    c: string;
+    n: string;
+  }[];
+  return funds.map((f) => ({
+    kind: "fund" as const,
+    symbol: f.c,
+    market: "IN" as const,
+    currency: "INR" as const,
+    name: f.n,
+    display: f.n,
+  }));
+}
+
+export async function resolveInstrument(
+  symbol: string,
+  market: string,
+  kind: string,
+): Promise<CatalogEntry | null> {
+  if (kind === "fund") {
+    const funds = await loadFundEntries();
+    return funds.find((f) => f.symbol === symbol && market === "IN") ?? null;
+  }
+  return resolveCatalogEntry(symbol, market);
+}

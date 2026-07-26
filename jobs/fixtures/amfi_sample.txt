@@ -1,0 +1,400 @@
+Scheme Code;ISIN Div Payout/ ISIN Growth;ISIN Div Reinvestment;Scheme Name;Net Asset Value;Date
+ 
+Open Ended Schemes(Debt Scheme - Banking and PSU Fund)
+ 
+Aditya Birla Sun Life Mutual Fund
+ 
+119551;INF209KA12Z1;INF209KA13Z9;Aditya Birla Sun Life Banking & PSU Debt Fund  - DIRECT - IDCW;106.5961;24-Jul-2026
+119552;INF209K01YM2;-;Aditya Birla Sun Life Banking & PSU Debt Fund  - DIRECT - MONTHLY IDCW;117.3538;24-Jul-2026
+119553;INF209K01YO8;-;Aditya Birla Sun Life Banking & PSU Debt Fund  - Direct - Quarterly IDCW;104.6337;24-Jul-2026
+108272;INF209K01LX6;INF209KA11Z3;Aditya Birla Sun Life Banking & PSU Debt Fund  - REGULAR - IDCW;149.1917;24-Jul-2026
+110282;INF209K01LU2;-;Aditya Birla Sun Life Banking & PSU Debt Fund  - REGULAR - MONTHLY IDCW;112.6241;24-Jul-2026
+108274;INF209K01LN7;-;Aditya Birla Sun Life Banking & PSU Debt Fund  - REGULAR - Quarterly IDCW;102.2182;24-Jul-2026
+108273;INF209K01LV0;-;Aditya Birla Sun Life Banking & PSU Debt Fund - Regular Plan-Growth;386.4889;24-Jul-2026
+119550;INF209K01YN0;-;Aditya Birla Sun Life Banking & PSU Debt Fund- Direct Plan-Growth;402.5690;24-Jul-2026
+ 
+Axis Mutual Fund
+ 
+128952;INF846K01NF8;-;Axis Banking & PSU Debt Fund - Direct Plan - Bonus Option;1532.8272;14-Jun-2017
+120437;-;INF846K01CU0;Axis Banking & PSU Debt Fund - Direct Plan - Daily IDCW;1037.8202;24-Jul-2026
+120438;INF846K01CR6;-;Axis Banking & PSU Debt Fund - Direct Plan - Growth Option;2884.9381;24-Jul-2026
+120439;INF846K01CT2;INF846K01CS4;Axis Banking & PSU Debt Fund - Direct Plan - Monthly IDCW;1036.4208;24-Jul-2026
+120436;INF846K01CV8;INF846K01CW6;Axis Banking & PSU Debt Fund - Direct Plan - Weekly IDCW;1036.8930;24-Jul-2026
+128953;INF846K01NG6;-;Axis Banking & PSU Debt Fund - Regular Plan - Bonus Option;1289.4075;18-May-2015
+117447;-;INF846K01CC8;Axis Banking & PSU Debt Fund - Regular Plan - Daily IDCW;1037.6744;24-Jul-2026
+117446;INF846K01CB0;-;Axis Banking & PSU Debt Fund - Regular Plan - Growth option;2789.3379;24-Jul-2026
+117449;INF846K01CF1;INF846K01CG9;Axis Banking & PSU Debt Fund - Regular Plan - Monthly IDCW;1036.1791;24-Jul-2026
+117448;INF846K01CD6;INF846K01CE4;Axis Banking & PSU Debt Fund - Regular Plan - Weekly IDCW;1036.7460;24-Jul-2026
+ 
+Bajaj Finserv Mutual Fund
+ 
+152164;INF0QA701649;INF0QA701631;Bajaj Finserv Banking and PSU Fund-  Direct Plan-Monthly- IDCW;10.9870;24-Jul-2026
+152163;INF0QA701615;INF0QA701623;Bajaj Finserv Banking and PSU Fund- Direct Plan- IDCW;12.1737;24-Jul-2026
+152165;INF0QA701557;-;Bajaj Finserv Banking and PSU Fund- Regular Plan- Growth;11.9947;24-Jul-2026
+152166;INF0QA701565;INF0QA701573;Bajaj Finserv Banking and PSU Fund- Regular Plan- IDCW;11.9947;24-Jul-2026
+152162;INF0QA701607;-;Bajaj Finserv Banking and PSU Fund-Direct Plan- Growth;12.1737;24-Jul-2026
+152167;INF0QA701599;INF0QA701581;Bajaj Finserv Banking and PSU Fund-Regular Plan-Monthly-IDCW;10.9168;24-Jul-2026
+ 
+Bandhan Mutual Fund
+ 
+121936;INF194K019M8;-;Bandhan Banking and PSU Fund - Direct Annual IDCW;12.3394;24-Jul-2026
+127471;-;INF194KA1JD3;Bandhan Banking and PSU Fund - Direct Daily IDCW;10.4575;24-Jul-2026
+121934;-;INF194K010N5;Bandhan Banking and PSU Fund - Direct Fortnightly IDCW;10.4527;24-Jul-2026
+121279;INF194K015G8;-;Bandhan Banking and PSU Fund - Direct Growth;26.9626;24-Jul-2026
+121281;INF194K016G6;INF194K017G4;Bandhan Banking and PSU Fund - Direct IDCW;14.1829;24-Jul-2026
+121935;-;INF194K011N3;Bandhan Banking and PSU Fund - Direct Monthly IDCW;10.4329;24-Jul-2026
+121938;INF194K018M0;-;Bandhan Banking and PSU Fund - Direct Quarterly IDCW;11.0052;24-Jul-2026
+121933;INF194K015M6;-;Bandhan Banking and PSU Fund - Regular Annual IDCW;11.3511;24-Jul-2026
+127470;-;INF194KA1JC5;Bandhan Banking and PSU Fund - Regular Daily IDCW;10.8572;24-Jul-2026
+121931;-;INF194K016M4;Bandhan Banking and PSU Fund - Regular Fortnightly IDCW;10.6057;24-Jul-2026
+121280;INF194K01SN6;-;Bandhan Banking and PSU Fund - Regular Growth;26.1150;24-Jul-2026
+121282;INF194K01SO4;INF194K012D2;Bandhan Banking and PSU Fund - Regular IDCW;14.1019;24-Jul-2026
+121932;-;INF194K017M2;Bandhan Banking and PSU Fund - Regular Monthly IDCW;10.6749;24-Jul-2026
+121937;INF194K014M9;-;Bandhan Banking and PSU Fund - Regular Quarterly IDCW;10.8990;24-Jul-2026
+ 
+Canara Robeco Mutual Fund
+ 
+150505;INF760K01KC4;-;Canara Robeco Banking and PSU Debt Fund- Direct Plan- Growth Option;12.8629;24-Jul-2026
+150507;INF760K01KE0;INF760K01KD2;Canara Robeco Banking and PSU Debt Fund- Direct Plan- IDCW Payout;10.7833;24-Jul-2026
+150503;INF760K01KF7;-;Canara Robeco Banking and PSU Debt Fund- Regular Plan- Growth Option;12.7107;24-Jul-2026
+150504;INF760K01KH3;INF760K01KG5;Canara Robeco Banking and PSU Debt Fund- Regular Plan- IDCW (Payout/ Reinvestment);10.6647;24-Jul-2026
+ 
+DSP Mutual Fund
+ 
+124175;INF740K01ZW2;-;DSP Banking & PSU Debt Fund - Direct Plan - Growth;26.2740;24-Jul-2026
+124178;INF740K01A18;INF740K01A26;DSP Banking & PSU Debt Fund - Direct Plan - IDCW;10.6036;24-Jul-2026
+124182;-;INF740KA1OF7;DSP Banking & PSU Debt Fund - Direct Plan - IDCW - Daily Reinvest;10.1609;24-Jul-2026
+124176;INF740K01ZX0;INF740K01ZY8;DSP Banking & PSU Debt Fund - Direct Plan - IDCW - Monthly;10.4264;24-Jul-2026
+124177;INF740K01ZZ5;INF740K01A00;DSP Banking & PSU Debt Fund - Direct Plan - IDCW - Quarterly ;10.4411;24-Jul-2026
+124183;INF740KA1OG5;INF740KA1OH3;DSP Banking & PSU Debt Fund - Direct Plan - IDCW - Weekly;10.1607;24-Jul-2026
+124172;INF740K01ZP6;-;DSP Banking & PSU Debt Fund - Regular Plan - Growth;25.3020;24-Jul-2026
+124174;INF740K01ZU6;INF740K01ZV4;DSP Banking & PSU Debt Fund - Regular Plan - IDCW;10.5910;24-Jul-2026
+124173;-;INF740KA1OI1;DSP Banking & PSU Debt Fund - Regular Plan - IDCW - Daily Reinvest;10.1594;24-Jul-2026
+124180;INF740K01ZQ4;INF740K01ZR2;DSP Banking & PSU Debt Fund - Regular Plan - IDCW - Monthly;10.4122;24-Jul-2026
+124181;INF740K01ZS0;INF740K01ZT8;DSP Banking & PSU Debt Fund - Regular Plan - IDCW - Quarterly ;10.4303;24-Jul-2026
+124179;INF740KA1OJ9;INF740KA1OK7;DSP Banking & PSU Debt Fund - Regular Plan - IDCW - Weekly;10.1590;24-Jul-2026
+ 
+Edelweiss Mutual Fund
+ 
+140286;INF843K01FC8;-;Edelweiss Banking and PSU Debt Fund - Direct Plan - Growth Option;26.8938;24-Jul-2026
+140288;INF843K01FD6;INF843K01FE4;Edelweiss Banking and PSU Debt Fund - Direct Plan - IDCW Option;18.6289;24-Jul-2026
+140291;INF843K01FG9;-;Edelweiss Banking and PSU Debt Fund - Direct Plan Fortnightly - IDCW Option;14.3698;24-Jul-2026
+140293;INF843K01FI5;INF843K01FH7;Edelweiss Banking and PSU Debt Fund - Direct Plan Monthly - IDCW Option;10.9331;24-Jul-2026
+140290;INF843K01FF1;-;Edelweiss Banking and PSU Debt Fund - Direct Plan weekly - IDCW Option;10.5561;24-Jul-2026
+140283;INF843K01FK1;-;Edelweiss Banking and PSU Debt Fund - Regular Plan - Growth Option;25.8718;24-Jul-2026
+140284;INF843K01FL9;INF843K01FM7;Edelweiss Banking and PSU Debt Fund - Regular Plan - IDCW Option;17.6864;24-Jul-2026
+140294;INF843K01FO3;-;Edelweiss Banking and PSU Debt Fund - Regular Plan Fortnightly - IDCW Option;13.8919;24-Jul-2026
+140292;INF843K01FQ8;INF843K01FP0;Edelweiss Banking and PSU Debt Fund - Regular Plan Monthly - IDCW Option;11.1775;24-Jul-2026
+140289;INF843K01FN5;-;Edelweiss Banking and PSU Debt Fund - Regular Plan Weekly - IDCW Option;10.1486;24-Jul-2026
+ 
+Franklin Templeton Mutual Fund
+ 
+129008;INF090I01KR8;-;Franklin India Banking & PSU Debt Fund - Direct - Growth;25.1186;24-Jul-2026
+129006;INF090I01KO5;-;Franklin India Banking & PSU Debt Fund - Growth;23.9667;24-Jul-2026
+129009;INF090I01KS6;INF090I01KT4;Franklin India Banking and PSU Debt Fund - Direct - IDCW ;11.5451;24-Jul-2026
+129007;INF090I01KP2;INF090I01KQ0;Franklin India Banking and PSU Debt Fund - IDCW ;10.9163;24-Jul-2026
+ 
+HDFC Mutual Fund
+ 
+128628;INF179KA1JC4;-;HDFC Banking and PSU Debt Fund - Growth Option;24.3128;24-Jul-2026
+128629;INF179KA1IZ7;-;HDFC Banking and PSU Debt Fund - Growth Option - Direct Plan;25.4158;24-Jul-2026
+128627;INF179KA1JD2;INF179KA1JE0;HDFC Banking and PSU Debt Fund - IDCW Option;10.1192;24-Jul-2026
+128626;INF179KA1JA8;INF179KA1JB6;HDFC Banking and PSU Debt Fund - IDCW Option - Direct Plan;10.0112;24-Jul-2026
+ 
+ICICI Prudential Mutual Fund
+ 
+112343;INF109K01WS5;INF109K01RV9;ICICI Prudential Banking and PSU Debt Fund -  Daily IDCW;10.0549;16-Sep-2022
+112344;INF109K01WR7;INF109K01RU1;ICICI Prudential Banking and PSU Debt Fund -  Weekly IDCW;10.2427;16-Sep-2022
+130897;INF109KA1B57;-;ICICI Prudential Banking and PSU Debt Fund - Bonus;15.8889;24-Apr-2020
+120257;INF109K01Z89;INF109K01Z97;ICICI Prudential Banking and PSU Debt Fund - Direct Plan -  Daily IDCW;10.2538;16-Sep-2022
+120256;INF109K010A6;-;ICICI Prudential Banking and PSU Debt Fund - Direct Plan -  Growth;36.3213;24-Jul-2026
+120258;INF109K011A4;INF109K012A2;ICICI Prudential Banking and PSU Debt Fund - Direct Plan -  Quarterly IDCW;13.1724;24-Jul-2026
+120255;INF109K013A0;INF109K014A8;ICICI Prudential Banking and PSU Debt Fund - Direct Plan -  Weekly IDCW;10.3708;16-Sep-2022
+130950;INF109KA1B40;-;ICICI Prudential Banking and PSU Debt Fund - Direct Plan Bonus;13.8665;10-Apr-2018
+131148;INF109KA1M96;INF109KA1M88;ICICI Prudential Banking and PSU Debt Fund - Direct Plan Half Yearly IDCW Option;13.1098;16-Sep-2022
+112342;INF109K01RT3;-;ICICI Prudential Banking and PSU Debt Fund - Growth;34.7183;24-Jul-2026
+116174;INF109K01YE1;INF109K01YD3;ICICI Prudential Banking and PSU Debt Fund - Quarterly IDCW;11.1464;24-Jul-2026
+131147;INF109KA1M70;INF109KA1M62;ICICI Prudential Banking and PSU Debt Fund Half Yearly IDCW Option;12.9261;16-Sep-2022
+113247;INF109K01WW7;INF109K01JM5;ICICI Prudential Banking and PSU Debt Fund Retail Daily Dividend;10.0122;24-Apr-2020
+113242;INF109K01II5;-;ICICI Prudential Banking and PSU Debt Fund Retail Growth;21.631;24-Apr-2020
+113243;INF109K01WV9;INF109K01IJ3;ICICI Prudential Banking and PSU Debt Fund Retail Weekly Dividend;10.3305;20-Aug-2015
+ 
+Invesco Mutual Fund
+ 
+120444;INF205K01KT4;-;Invesco India Banking and PSU Fund - Direct Plan -  Growth Option;2570.1791;24-Jul-2026
+120443;-;INF205K01KS6;Invesco India Banking and PSU Fund - Direct Plan - Daily IDCW (Reinvestment);1063.3563;24-Jul-2026
+120445;INF205K01KU2;INF205K01KV0;Invesco India Banking and PSU Fund - Direct Plan - Monthly IDCW (Payout / Reinvestment);1012.0299;24-Jul-2026
+118234;-;INF205K01JX8;Invesco India Banking and PSU Fund - Regular Plan - Daily IDCW (Reinvestment);1050.0511;24-Jul-2026
+118232;INF205K01JV2;-;Invesco India Banking and PSU Fund - Regular Plan - Growth Option;2391.2005;24-Jul-2026
+118233;INF205K01JW0;INF205K01JY6;Invesco India Banking and PSU Fund - Regular Plan - Monthly IDCW (Payout / Reinvestment);1062.822;24-Jul-2026
+ 
+ITI Mutual Fund
+ 
+148534;INF00XX01861;-;ITI Banking & PSU Debt Fund - Direct Plan - Growth Option;14.1379;24-Jul-2026
+148536;INF00XX01879;INF00XX01887;ITI Banking & PSU Debt Fund - Direct Plan - IDCW Option;14.1363;24-Jul-2026
+148535;INF00XX01838;-;ITI Banking & PSU Debt Fund - Regular Plan - Growth Option;13.6984;24-Jul-2026
+148533;INF00XX01846;INF00XX01853;ITI Banking & PSU Debt Fund - Regular Plan - IDCW Option;13.6996;24-Jul-2026
+ 
+Kotak Mahindra Mutual Fund
+ 
+123690;INF174K01FO3;-;Kotak Banking and PSU Debt - Growth;69.3946;24-Jul-2026
+123691;INF174K01FQ8;INF174K01FP0;Kotak Banking and PSU Debt - Monthly Payout of Income Distribution cum capital withdrawal option;13.0378;24-Jul-2026
+123689;INF174K01KI5;INF174K01KJ3;Kotak Banking and PSU Debt Direct - Annual Dividend;17.1427;15-Sep-2017
+123693;INF174K01KH7;-;Kotak Banking and PSU Debt Direct - Growth;72.574;24-Jul-2026
+123692;INF174K01KK1;INF174K01KL9;Kotak Banking and PSU Debt Direct - Monthly Payout of Income Distribution cum capital withdrawal option;10.2484;24-Jul-2026
+ 
+LIC Mutual Fund
+ 
+120337;INF767K01GJ2;INF767K01GM6;LIC MF Banking & PSU Fund-Direct Plan-Daily IDCW;14.2922;24-Jul-2026
+120338;INF767K01GI4;-;LIC MF Banking & PSU Fund-Direct Plan-Growth;39.812;24-Jul-2026
+120339;INF767K01GK0;INF767K01GN4;LIC MF Banking & PSU Fund-Direct Plan-Monthly IDCW;14.9937;24-Jul-2026
+120336;INF767K01GL8;INF767K01GO2;LIC MF Banking & PSU Fund-Direct Plan-Weekly IDCW;10.053;24-Jul-2026
+105822;INF767K01519;INF767K01527;LIC MF Banking & PSU Fund-Regular Plan-Daily IDCW;11.7877;24-Jul-2026
+105823;INF767K01535;-;LIC MF Banking & PSU Fund-Regular Plan-Growth;36.7403;24-Jul-2026
+105856;INF767K01543;INF767K01550;LIC MF Banking & PSU Fund-Regular Plan-Monthly IDCW;13.7505;24-Jul-2026
+105857;INF767K01568;INF767K01576;LIC MF Banking & PSU Fund-Regular Plan-Weekly IDCW;10.3824;24-Jul-2026
+ 
+Mirae Asset Mutual Fund
+ 
+148419;INF769K01FY9;-;Mirae Asset Banking and PSU Fund - Direct Plan - Growth;13.9659;24-Jul-2026
+148417;INF769K01FX1;INF769K01FZ6;Mirae Asset Banking and PSU Fund - Direct Plan - IDCW;13.9588;24-Jul-2026
+148416;INF769K01FV5;-;Mirae Asset Banking and PSU Fund - Regular Plan - Growth;13.5944;24-Jul-2026
+148418;INF769K01FU7;INF769K01FW3;Mirae Asset Banking and PSU Fund - Regular plan - IDCW;13.5955;24-Jul-2026
+ 
+Nippon India Mutual Fund
+ 
+134555;INF204KA1U79;INF204KA1U87;NIPPON INDIA BANKING and PSU  FUND - Direct Plan - IDCW Option;22.8275;24-Jul-2026
+134553;INF204KA1U12;INF204KA1U20;NIPPON INDIA BANKING and PSU  FUND - WEEKLY IDCW Option;10.2686;24-Jul-2026
+134547;INF204KA1U53;-;Nippon India Banking and PSU  Fund- Direct Plan-Growth Plan- Growth Option;22.8275;24-Jul-2026
+134550;INF204KA1V37;INF204KA1V45;NIPPON INDIA BANKING and PSU FUND - Direct Plan - MONTHLY IDCW Option;10.7662;24-Jul-2026
+134556;INF204KA1U95;INF204KA1V03;NIPPON INDIA BANKING and PSU FUND - Direct Plan - QUARTERLY IDCW Option;10.8860;24-Jul-2026
+134554;INF204KA1V11;INF204KA1V29;NIPPON INDIA BANKING and PSU FUND - Direct Plan - WEEKLY IDCW Option;10.2680;24-Jul-2026
+134548;INF204KA1T72;INF204KA1T80;NIPPON INDIA BANKING and PSU FUND - IDCW Option;21.9050;24-Jul-2026
+134549;INF204KA1U38;INF204KA1U46;NIPPON INDIA BANKING and PSU FUND - MONTHLY IDCW Option;10.6965;24-Jul-2026
+134551;INF204KA1T98;INF204KA1U04;NIPPON INDIA BANKING and PSU FUND - QUARTERLY IDCW Option;10.8195;24-Jul-2026
+134552;INF204KA1U61;-;Nippon India Banking and PSU Fund- Direct Plan-Growth Plan- Bonus Option;22.8269;24-Jul-2026
+134546;INF204KA1T64;-;Nippon India Banking and PSU Fund- Growth Plan- Bonus Option;12.3452;02-Feb-2018
+134545;INF204KA1T56;-;Nippon India Banking and PSU Fund- Growth Plan- Growth Option;21.9050;24-Jul-2026
+ 
+SBI Mutual Fund
+ 
+125502;-;INF200K01V16;SBI Banking & PSU Fund - Direct Plan - Daily Income Distribution cum Capital Withdrawal Option (IDCW);1547.3576;24-Jul-2026
+125503;INF200K01V08;-;SBI BANKING & PSU FUND - Direct Plan - Growth;3512.9512;24-Jul-2026
+125505;INF200K01V40;INF200K01V57;SBI Banking & PSU Fund - Direct Plan - Monthly Income Distribution cum Capital Withdrawal Option (IDCW);1319.7537;24-Jul-2026
+125504;INF200K01V32;INF200K01V24;SBI Banking & PSU Fund - Direct Plan - Weekly Income Distribution cum Capital Withdrawal Option (IDCW);1543.9226;24-Jul-2026
+125498;INF200K01U41;-;SBI BANKING & PSU FUND - Regular Paln - Growth;3292.1192;24-Jul-2026
+125499;-;INF200K01U58;SBI Banking & PSU Fund - Regular Plan - Daily Income Distribution cum Capital Withdrawal Option (IDCW);1501.9563;24-Jul-2026
+125501;INF200K01U82;INF200K01U90;SBI Banking & PSU Fund - Regular Plan - Monthly Income Distribution cum Capital Withdrawal Option (IDCW);1228.6624;24-Jul-2026
+125500;INF200K01U74;INF200K01U66;SBI Banking & PSU Fund - Regular Plan - Weekly Income Distribution cum Capital Withdrawal Option (IDCW);1501.5989;24-Jul-2026
+ 
+Sundaram Mutual Fund
+ 
+134363;INF903J017I5;-;Sundaram Banking & PSU Fund (Formerly Known as Sundaram Banking & PSU Debt Fund) - Direct Growth;11.7065;17-Mar-2017
+134370;INF903J012J4;INF903J013J2;Sundaram Banking & PSU Fund (Formerly Known as Sundaram Banking & PSU Debt Fund) - Direct Monthly Dividend;11.4008;17-Mar-2017
+134369;INF903J019I1;INF903J014J0;Sundaram Banking & PSU Fund (Formerly Known as Sundaram Banking & PSU Debt Fund) - Direct Quarterly Dividend;10.6356;31-Mar-2016
+134355;INF903J016I7;-;Sundaram Banking & PSU Fund (Formerly Known as Sundaram Banking & PSU Debt Fund) - Regular Annual Bonus;11.6319;17-Feb-2017
+134358;-;INF903J010I0;Sundaram Banking & PSU Fund (Formerly Known as Sundaram Banking & PSU Debt Fund) - Regular Daily Dividend Reinvestment;11.6582;17-Mar-2017
+134356;INF903J016H9;-;Sundaram Banking & PSU Fund (Formerly Known as Sundaram Banking & PSU Debt Fund) - Regular Growth;11.6493;17-Mar-2017
+134359;INF903J018H5;INF903J012I6;Sundaram Banking & PSU Fund (Formerly Known as Sundaram Banking & PSU Debt Fund) - Regular Monthly Dividend;11.1411;17-Mar-2017
+134361;INF903J014I2;-;Sundaram Banking & PSU Fund (Formerly Known as Sundaram Banking & PSU Debt Fund) - Regular Quarterly Bonus;11.1681;16-Aug-2016
+134362;INF903J019H3;INF903J013I4;Sundaram Banking & PSU Fund (Formerly Known as Sundaram Banking & PSU Debt Fund) - Regular Quarterly Dividend;11.0236;17-Mar-2017
+134360;INF903J017H7;INF903J011I8;Sundaram Banking & PSU Fund (Formerly Known as Sundaram Banking & PSU Debt Fund) - Regular Weekly Dividend;10.1418;17-Mar-2017
+119629;INF903J01RI4;-;Sundaram Banking & PSU Fund (Formerly Known as Sundaram Banking and PSU Debt Fund) Direct Plan - Bonus;21.8981;27-Jun-2025
+119627;-;INF903J01PC1;Sundaram Banking & PSU Fund (Formerly Known as Sundaram Banking and PSU Debt Fund) Direct Plan - Daily Reinvestment of Income Distribution cum Capital Withdrawal (IDCW);10.2300;28-Jun-2024
+119625;INF903J01PA5;-;Sundaram Banking & PSU Fund (Formerly Known as Sundaram Banking and PSU Debt Fund) Direct Plan - Growth;46.2199;24-Jul-2026
+119626;INF903J01PB3;INF903J01PE7;Sundaram Banking & PSU Fund (Formerly Known as Sundaram Banking and PSU Debt Fund) Direct Plan - Income Distribution cum Capital Withdrawal (IDCW);11.5066;24-Jul-2026
+118326;INF903J01LY4;-;Sundaram Banking & PSU Fund (Formerly Known as Sundaram Banking and PSU Debt Fund) Regular Plan - Bonus;21.7644;27-Jun-2025
+100782;-;INF903J01IP8;Sundaram Banking & PSU Fund (Formerly Known as Sundaram Banking and PSU Debt Fund) Regular Plan - Daily Reinvestment of Income Distribution cum Capital Withdrawal (IDCW);10.3550;28-Jun-2024
+100784;INF903J01IN3;-;Sundaram Banking & PSU Fund (Formerly Known as Sundaram Banking and PSU Debt Fund) Regular Plan - Growth;45.4988;24-Jul-2026
+100793;INF903J01IO1;INF903J01IR4;Sundaram Banking & PSU Fund (Formerly Known as Sundaram Banking and PSU Debt Fund) Regular Plan - Income Distribution cum Capital Withdrawal (IDCW);11.5303;24-Jul-2026
+100783;-;INF903J01IQ6;Sundaram Banking & PSU Fund (Formerly Known as Sundaram Banking and PSU Debt Fund) Regular Plan - Weekly Reinvestment of Income Distribution cum Capital Withdrawal (IDCW);12.1035;28-Jun-2024
+100781;INF903J01IK9;-;Sundaram Banking & PSU Fund (Formerly Known as Sundaram Banking and PSU Debt Fund) Retail Plan - Growth;35.6206;28-Jun-2024
+100780;INF903J01IL7;INF903J01IM5;Sundaram Banking & PSU Fund (Formerly Known as Sundaram Banking and PSU Debt Fund) Retail Plan - Monthly Income Distribution cum Capital Withdrawal (IDCW);11.4908;28-Jun-2024
+ 
+UTI Mutual Fund
+ 
+140135;INF789FA1V03;INF789FA1V11;UTI Banking & PSU Fund - Direct Plan - Annual IDCW;13.6201;24-Jul-2026
+133972;INF789FA1V29;INF789FA1V37;UTI Banking & PSU Fund - Direct Plan - Flexi IDCW;20.4955;24-Jul-2026
+126940;INF789F015Z6;-;UTI Banking & PSU Fund - Direct Plan - Growth Option;23.784;24-Jul-2026
+141375;INF789FA1U87;INF789FA1U95;UTI Banking & PSU Fund - Direct Plan - Half-Yearly IDCW;15.7825;24-Jul-2026
+134026;INF789FC1HE1;INF789FC1HF8;UTI Banking & PSU Fund - Direct Plan - Monthly IDCW;13.6828;24-Jul-2026
+126942;INF789F016Z4;INF789F017Z2;UTI Banking & PSU Fund - Direct Plan - Quarterly IDCW;17.7021;24-Jul-2026
+140116;INF789FA1U46;INF789FA1U53;UTI Banking & PSU Fund - Regular Plan - Annual IDCW;13.3261;24-Jul-2026
+133971;INF789FA1U61;INF789FA1U79;UTI Banking & PSU Fund - Regular Plan - Flexi IDCW;15.6405;24-Jul-2026
+139407;INF789FA1U20;INF789FA1U38;UTI Banking & PSU Fund - Regular Plan - Half-Yearly IDCW;15.5749;24-Jul-2026
+136110;INF789FC1HC5;INF789FC1HD3;UTI Banking & PSU Fund - Regular Plan - Monthly IDCW;13.4096;24-Jul-2026
+126941;INF789F012Z3;INF789F013Z1;UTI Banking & PSU Fund - Regular Plan - Quarterly IDCW;16.0052;24-Jul-2026
+126939;INF789F014Z9;-;UTI Banking & PSU Fund- Regular Plan - Growth Option;23.3227;24-Jul-2026
+ 
+Open Ended Schemes(Debt Scheme - Corporate Bond Fund)
+ 
+Aditya Birla Sun Life Mutual Fund
+ 
+119533;INF209K01S38;-;Aditya Birla Sun Life Corporate Bond Fund - Growth - Direct Plan;121.4547;24-Jul-2026
+103178;INF209K01785;-;Aditya Birla Sun Life Corporate Bond Fund - Growth - Regular Plan;119.1913;24-Jul-2026
+124832;INF209KA1KT0;-;Aditya Birla Sun Life Corporate Bond Fund -DIRECT - IDCW;10.6295;24-Jul-2026
+119532;INF209K01N90;INF209KA1KU8;Aditya Birla Sun Life Corporate Bond Fund -DIRECT - MONTHLY IDCW;12.8383;24-Jul-2026
+124833;INF209KA1KS2;-;Aditya Birla Sun Life Corporate Bond Fund -REGULAR - IDCW;11.9145;24-Jul-2026
+103183;INF209K01983;INF209K01DL8;Aditya Birla Sun Life Corporate Bond Fund -REGULAR - MONTHLY IDCW;12.6158;24-Jul-2026
+ 
+Axis Mutual Fund
+ 
+141586;INF846K01ZN6;-;Axis Corporate Bond Fund - Direct Plan - Daily IDCW;10.2101;24-Jul-2026
+141590;INF846K01ZQ9;INF846K01ZR7;Axis Corporate Bond Fund - Direct Plan - Monthly IDCW;10.2218;24-Jul-2026
+141591;INF846K01ZS5;INF846K01ZT3;Axis Corporate Bond Fund - Direct Plan - Regular IDCW;15.0419;24-Jul-2026
+141587;INF846K01ZO4;INF846K01ZP1;Axis Corporate Bond Fund - Direct Plan - Weekly IDCW;10.3390;24-Jul-2026
+141588;INF846K01ZM8;-;Axis Corporate Bond Fund - Direct Plan Growth;19.2806;24-Jul-2026
+141589;INF846K01ZV9;-;Axis Corporate Bond Fund - Regular Plan - Daily IDCW;10.2069;24-Jul-2026
+141594;INF846K01ZY3;INF846K01ZZ0;Axis Corporate Bond Fund - Regular Plan - Monthly IDCW;10.2141;24-Jul-2026
+141595;INF846K01A03;INF846K01A11;Axis Corporate Bond Fund - Regular Plan - Regular IDCW;13.9872;24-Jul-2026
+141592;INF846K01ZW7;INF846K01ZX5;Axis Corporate Bond Fund - Regular Plan - Weekly IDCW;10.2183;24-Jul-2026
+141593;INF846K01ZU1;-;Axis Corporate Bond Fund - Regular Plan Growth;18.1041;24-Jul-2026
+ 
+Bandhan Mutual Fund
+ 
+139201;INF194KA1T34;INF194KA1T42;BANDHAN Corporate Bond Fund - Direct Annual IDCW;10.5073;24-Jul-2026
+135916;INF194KA1M23;-;BANDHAN Corporate Bond Fund - Direct Growth;21.0902;24-Jul-2026
+139200;INF194KA1T00;INF194KA1T18;BANDHAN Corporate Bond Fund - Direct Half Yearly IDCW;11.8306;24-Jul-2026
+139198;INF194KA1S43;INF194KA1S50;BANDHAN Corporate Bond Fund - Direct Monthly IDCW;10.3426;24-Jul-2026
+135917;INF194KA1M31;INF194KA1M49;BANDHAN Corporate Bond Fund - Direct Periodic IDCW;13.9921;24-Jul-2026
+139199;INF194KA1S76;INF194KA1S84;BANDHAN Corporate Bond Fund - Direct Quarterly IDCW;10.6827;24-Jul-2026
+139204;INF194KA1S19;INF194KA1S27;BANDHAN Corporate Bond Fund - Regular Annual IDCW;10.4881;24-Jul-2026
+135914;INF194KA1L81;-;BANDHAN Corporate Bond Fund - Regular Growth;20.4116;24-Jul-2026
+139203;INF194KA1R85;INF194KA1R93;BANDHAN Corporate Bond Fund - Regular Half Yearly IDCW;11.1927;24-Jul-2026
+139202;INF194KA1R28;INF194KA1R36;BANDHAN Corporate Bond Fund - Regular Monthly IDCW;10.5940;24-Jul-2026
+135915;INF194KA1L99;INF194KA1M07;BANDHAN Corporate Bond Fund - Regular Periodic IDCW;13.7601;24-Jul-2026
+139205;INF194KA1R51;INF194KA1R69;BANDHAN Corporate Bond Fund - Regular Quarterly IDCW;10.7126;24-Jul-2026
+ 
+Baroda BNP Paribas Mutual Fund
+ 
+150230;INF251K01EN4;INF251K01EO2;BARODA BNP PARIBAS Corporate Bond Fund - Defunct Plan - Annual-IDCW Option;12.1969;24-Jul-2026
+150229;INF251K01EI4;-;BARODA BNP PARIBAS Corporate Bond Fund - Defunct Plan - Growth Option;33.8836;24-Jul-2026
+150231;INF251K01EJ2;INF251K01EK0;BARODA BNP PARIBAS Corporate Bond Fund - Defunct Plan - Monthly-IDCW Option;10.3837;24-Jul-2026
+150228;INF251K01EL8;INF251K01EM6;BARODA BNP PARIBAS Corporate Bond Fund - Defunct Plan - Quarterly-IDCW Option;10.3794;24-Jul-2026
+150236;INF251K01GU4;INF251K01GV2;BARODA BNP PARIBAS Corporate Bond Fund - Direct Plan - Annual IDCW Option;12.4992;24-Jul-2026
+150237;INF251K01GP4;-;BARODA BNP PARIBAS Corporate Bond Fund - Direct Plan - Growth Option;31.1830;24-Jul-2026
+150238;INF251K01GQ2;INF251K01GR0;BARODA BNP PARIBAS Corporate Bond Fund - Direct Plan - Monthly IDCW Option;10.6006;24-Jul-2026
+150239;INF251K01GS8;INF251K01GT6;BARODA BNP PARIBAS Corporate Bond Fund - Direct Plan - Quarterly IDCW Option;10.6330;24-Jul-2026
+150233;INF251K01EU9;INF251K01EV7;BARODA BNP PARIBAS CORPORATE BOND FUND - Regular Plan - ANNUAL IDCW OPTION;12.1179;24-Jul-2026
+150235;INF251K01EP9;-;BARODA BNP PARIBAS CORPORATE BOND FUND - Regular Plan - GROWTH OPTION;29.2751;24-Jul-2026
+150234;INF251K01EQ7;INF251K01ER5;BARODA BNP PARIBAS CORPORATE BOND FUND - Regular Plan - MONTHLY IDCW OPTION;10.4291;24-Jul-2026
+150232;INF251K01ES3;INF251K01ET1;BARODA BNP PARIBAS CORPORATE BOND FUND - Regular Plan - QUARTERLY IDCW OPTION;10.3922;24-Jul-2026
+ 
+Canara Robeco Mutual Fund
+ 
+126685;INF760K01HB2;-;CANARA ROBECO CORPORATE BOND FUND - DIRECT PLAN - GROWTH OPTION;24.5647;24-Jul-2026
+126686;INF760K01HC0;INF760K01HD8;CANARA ROBECO CORPORATE BOND FUND - DIRECT PLAN - IDCW (Payout/Reinvestment);12.4285;24-Jul-2026
+126687;INF760K01GY6;-;CANARA ROBECO CORPORATE BOND FUND - REGULAR PLAN - GROWTH OPTION;22.7701;24-Jul-2026
+126688;INF760K01GZ3;INF760K01HA4;CANARA ROBECO CORPORATE BOND FUND - REGULAR PLAN - IDCW (Payout/Reinvestment);11.5442;24-Jul-2026
+ 
+DSP Mutual Fund
+ 
+144646;INF740KA1KE8;-;DSP Corporate Bond Fund - Direct - Growth;17.3164;24-Jul-2026
+144647;INF740KA1KF5;INF740KA1KG3;DSP Corporate Bond Fund - Direct - IDCW;11.5095;24-Jul-2026
+144651;INF740KA1KH1;INF740KA1KI9;DSP Corporate Bond Fund - Direct - IDCW - Monthly;10.6497;24-Jul-2026
+144648;INF740KA1KJ7;INF740KA1KK5;DSP Corporate Bond Fund - Direct - IDCW - Quarterly ;11.4373;24-Jul-2026
+144644;INF740KA1JX0;-;DSP Corporate Bond Fund - Regular - Growth;16.9744;24-Jul-2026
+144650;INF740KA1JY8;INF740KA1JZ5;DSP Corporate Bond Fund - Regular - IDCW;11.4775;24-Jul-2026
+144645;INF740KA1KA6;INF740KA1KB4;DSP Corporate Bond Fund - Regular - IDCW - Monthly;10.6234;24-Jul-2026
+144649;INF740KA1KC2;INF740KA1KD0;DSP Corporate Bond Fund - Regular - IDCW - Quarterly ;10.7822;24-Jul-2026
+ 
+Franklin Templeton Mutual Fund
+ 
+119289;INF090I01KC0;-;Franklin India Corporate Debt Fund - Direct - Bonus;0.0000;08-May-2015
+118569;INF090I01FW8;-;Franklin India Corporate Debt Fund - Direct - GROWTH;115.5374;24-Jul-2026
+100528;INF090I01DG6;-;Franklin India Corporate Debt Fund - Growth;106.0988;24-Jul-2026
+100532;INF090I01DC5;-;Franklin India Corporate Debt Fund - Monthly Bonus;0.0000;08-Jun-2015
+100527;INF090I01DH4;INF090I01DI2;Franklin India Corporate Debt Fund - Plan A - Annual - IDCW;16.9341;24-Jul-2026
+118570;INF090I01FX6;INF090I01FY4;Franklin India Corporate Debt Fund - Plan A - Direct - Annual - IDCW;19.0143;24-Jul-2026
+118573;INF090I01FU2;INF090I01FV0;Franklin India Corporate Debt Fund - Plan A - Direct - Half yearly - IDCW;14.9078;24-Jul-2026
+118571;INF090I01FQ0;INF090I01FR8;Franklin India Corporate Debt Fund - Plan A - Direct - Monthly - IDCW;17.0440;24-Jul-2026
+118572;INF090I01FS6;INF090I01FT4;Franklin India Corporate Debt Fund - Plan A - Direct - Quarterly - IDCW;13.6253;24-Jul-2026
+100531;INF090I01DN2;INF090I01DO0;Franklin India Corporate Debt Fund - Plan B - Half yearly - IDCW;12.6269;24-Jul-2026
+100529;INF090I01DJ0;INF090I01DK8;Franklin India Corporate Debt Fund - Plan B - Monthly - IDCW;15.2659;24-Jul-2026
+100530;INF090I01DL6;INF090I01DM4;Franklin India Corporate Debt Fund - Plan B - Quarterly - IDCW;12.0262;24-Jul-2026
+ 
+HDFC Mutual Fund
+ 
+113070;INF179K01DC2;-;HDFC Corporate Bond Fund - Growth Option;34.3279;24-Jul-2026
+118987;INF179K01XD8;-;HDFC Corporate Bond Fund - Growth Option - Direct Plan;35.1718;24-Jul-2026
+132848;INF179KA1D33;INF179KA1D25;HDFC Corporate Bond Fund - IDCW Option;20.781;24-Jul-2026
+132849;INF179KA1D17;-;HDFC Corporate Bond Fund - IDCW Option - Direct Plan;21.5508;24-Jul-2026
+113071;INF179K01DD0;INF179K01DE8;HDFC Corporate Bond Fund - Quarterly IDCW Option;10.564;24-Jul-2026
+118986;INF179K01XB2;INF179K01XC0;HDFC Corporate Bond Fund - Quarterly IDCW Option - Direct Plan;10.4586;24-Jul-2026
+ 
+HSBC Mutual Fund
+ 
+151000;INF917K01VZ8;INF917K01VY1;HSBC Corporate Bond Fund - Direct Annual IDCW;11.7496;24-Jul-2026
+150996;INF917K01HN3;-;HSBC Corporate Bond Fund - Direct Growth;82.7195;24-Jul-2026
+150998;INF917K01HP8;INF917K01HO1;HSBC Corporate Bond Fund - Direct Quarterly IDCW;11.2639;24-Jul-2026
+150997;INF917K01HR4;INF917K01HQ6;HSBC Corporate Bond Fund - Direct Semi Annual IDCW;19.9936;24-Jul-2026
+151001;INF917K01WB7;INF917K01WA9;HSBC Corporate Bond Fund - Regular Annual IDCW;11.4611;24-Jul-2026
+150992;INF917K01AH0;-;HSBC Corporate Bond Fund - Regular Growth;77.4278;24-Jul-2026
+150993;INF917K01AF4;INF917K01AG2;HSBC Corporate Bond Fund - Regular Quarterly IDCW;10.8453;24-Jul-2026
+150994;INF917K01AI8;INF917K01AJ6;HSBC Corporate Bond Fund - Regular Semi Annual IDCW;16.6691;24-Jul-2026
+150995;INF917K01AK4;-;HSBC Corporate Bond Fund -Regular Plan - Bonus;29.4112;24-Jul-2026
+ 
+ICICI Prudential Mutual Fund
+ 
+130947;INF109KA1I84;-;ICICI Prudential Corporate Bond Fund - Bonus;14.9782;24-Apr-2020
+111988;INF109K01CR9;-;ICICI Prudential Corporate Bond Fund - Daily IDCW;10.1065;16-Sep-2022
+120695;INF109K013B8;-;ICICI Prudential Corporate Bond Fund - Direct Plan - Daily IDCW;10.1008;16-Sep-2022
+120696;INF109K014B6;INF109K015B3;ICICI Prudential Corporate Bond Fund - Direct Plan - Fortnightly IDCW;12.1669;16-Sep-2022
+120692;INF109K016B1;-;ICICI Prudential Corporate Bond Fund - Direct Plan - Growth;33.3905;24-Jul-2026
+131152;INF109KA1N38;INF109KA1N20;ICICI Prudential Corporate Bond Fund - Direct Plan - Half Yearly IDCW Option;12.8827;16-Sep-2022
+120697;INF109K017B9;INF109K018B7;ICICI Prudential Corporate Bond Fund - Direct Plan - Monthly IDCW;10.2243;24-Jul-2026
+120694;INF109K019B5;INF109K012C8;ICICI Prudential Corporate Bond Fund - Direct Plan - Quarterly IDCW;15.7006;24-Jul-2026
+120693;INF109K010C2;INF109K011C0;ICICI Prudential Corporate Bond Fund - Direct Plan - Weekly IDCW;10.2332;16-Sep-2022
+111990;INF109K01SJ2;INF109K01CS7;ICICI Prudential Corporate Bond Fund - Fortnightly IDCW;10.2243;16-Sep-2022
+111987;INF109K01CQ1;-;ICICI Prudential Corporate Bond Fund - Growth;31.8042;24-Jul-2026
+131151;INF109KA1N12;INF109KA1N04;ICICI Prudential Corporate Bond Fund - Half Yearly IDCW Option;12.6555;16-Sep-2022
+111991;INF109K01SK0;INF109K01CT5;ICICI Prudential Corporate Bond Fund - Monthly IDCW;10.3776;24-Jul-2026
+111982;INF109K01CL2;-;ICICI Prudential Corporate Bond Fund - Premium Daily Dividend;10.0277;24-Apr-2020
+111985;INF109K01CO6;-;ICICI Prudential Corporate Bond Fund - Premium Monthly Dividend;10.0770;04-Aug-2015
+111989;INF109K01SL8;INF109K01SM6;ICICI Prudential Corporate Bond Fund - Weekly IDCW;10.3040;16-Sep-2022
+111992;INF109K01SN4;INF109K01SO2;ICICI Prudential Corporate Bond Fund -Quarterly IDCW;11.3466;24-Jul-2026
+111976;INF109K01CF4;-;ICICI Prudential Corporate Bond Fund Retail Daily Dividend;10.0275;24-Apr-2020
+111978;INF109K01SF0;INF109K01CH0;ICICI Prudential Corporate Bond Fund Retail Fort Nightly Dividend;10.3041;24-Apr-2020
+111972;INF109K01CE7;-;ICICI Prudential Corporate Bond Fund Retail Growth;22.7853;24-Apr-2020
+111979;INF109K01QM0;INF109K01CI8;ICICI Prudential Corporate Bond Fund Retail Monthly Dividend;10.3008;24-Apr-2020
+111980;INF109K01FQ4;INF109K01CJ6;ICICI Prudential Corporate Bond Fund Retail Quarterly Dividend;10.9335;24-Apr-2020
+111977;INF109K01SE3;INF109K01CG2;ICICI Prudential Corporate Bond Fund Retail Weekly Dividend;10.2202;24-Apr-2020
+ 
+Invesco Mutual Fund
+ 
+120500;INF205K01RA9;INF205K01RB7;Invesco India Corporate Bond Fund - Direct Plan - Annual IDCW (Payout / Reinvestment);1240.7318;24-Jul-2026
+120499;INF205K01RD3;INF205K01RE1;Invesco India Corporate Bond Fund - Direct Plan - Discretionary IDCW (Payout / Reinvestment);3612.8047;24-Jul-2026
+120497;INF205K01RF8;-;Invesco India Corporate Bond Fund - Direct Plan - Growth;3611.6517;24-Jul-2026
+120496;INF205K01RG6;INF205K01RH4;Invesco India Corporate Bond Fund - Direct Plan - Monthly IDCW (Payout / Reinvestment);1257.1697;24-Jul-2026
+120501;INF205K01RI2;INF205K01RJ0;Invesco India Corporate Bond Fund - Direct Plan - Quarterly IDCW (Payout / Reinvestment);1170.9622;24-Jul-2026
+106179;INF205K01QX3;INF205K01QY1;Invesco India Corporate Bond Fund - Regular Plan - Annual IDCW (Payout / Reinvestment);1335.957;24-Jul-2026
+116109;INF205K01RK8;INF205K01RL6;Invesco India Corporate Bond Fund - Regular Plan - Discretionary IDCW (Payout / Reinvestment);3525.8139;24-Jul-2026
+106177;INF205K01RM4;-;Invesco India Corporate Bond Fund - Regular Plan - Growth;3355.9792;24-Jul-2026
+106171;INF205K01RN2;INF205K01RO0;Invesco India Corporate Bond Fund - Regular Plan - Monthly IDCW (Payout / Reinvestment);1923.536;24-Jul-2026
+106172;INF205K01RP7;INF205K01RQ5;Invesco India Corporate Bond Fund - Regular Plan - Quarterly IDCW (Payout / Reinvestment);1165.538;24-Jul-2026
+ 
+Mirae Asset Mutual Fund
+ 
+148755;INF769K01HD9;-;Mirae Asset Corporate Bond Fund Direct Growth Plan;13.7633;24-Jul-2026
+148756;INF769K01HC1;INF769K01HE7;Mirae Asset Corporate Bond Fund Direct IDCW;13.7598;24-Jul-2026
+148757;INF769K01HA5;-;Mirae Asset Corporate Bond Fund Regular Growth;13.4442;24-Jul-2026
+148758;INF769K01GZ4;INF769K01HB3;Mirae Asset Corporate Bond Fund Regular IDCW;13.4442;24-Jul-2026
+ 
+Nippon India Mutual Fund
+ 
+109472;-;INF204K01EG7;NIPPON INDIA CORPORATE BOND FUND - DAILY IDCW Option;17.0690;24-Jul-2026
+118808;-;INF204K01C23;NIPPON INDIA CORPORATE BOND FUND - DIRECT Plan - DAILY IDCW Option;17.0724;24-Jul-2026
+125266;INF204KA1EO9;INF204KA1EP6;NIPPON INDIA CORPORATE BOND FUND - DIRECT Plan - IDCW Option;21.2111;24-Jul-2026
+118809;INF204K01C56;INF204K01C64;NIPPON INDIA CORPORATE BOND FUND - DIRECT Plan - MONTHLY IDCW Option;11.7828;24-Jul-2026
+118811;INF204K01C72;INF204K01C80;NIPPON INDIA CORPORATE BOND FUND - DIRECT Plan - QUARTERLY IDCW Option;12.1967;24-Jul-2026
+118812;INF204K01C31;INF204K01C49;NIPPON INDIA CORPORATE BOND FUND - DIRECT Plan - WEEKLY IDCW Option;17.0743;24-Jul-2026
+118807;INF204K01D63;-;Nippon India Corporate Bond Fund - Direct Plan Growth Plan - Bonus;47.7908;24-Jul-2026
+118814;INF204K01C15;-;Nippon India Corporate Bond Fund - Direct Plan Growth Plan - Growth Option;66.9387;24-Jul-2026
+100859;INF204KA12N8;-;Nippon India Corporate Bond Fund - Growth Plan - Bonus Option;45.3642;24-Jul-2026
+100856;INF204K01EF9;-;Nippon India Corporate Bond Fund - Growth Plan - Growth Option;63.5181;24-Jul-2026
+125267;INF204KA1EM3;INF204KA1EN1;NIPPON INDIA CORPORATE BOND FUND - IDCW Option;20.3495;24-Jul-2026
+100857;INF204K01EJ1;INF204K01EK9;NIPPON INDIA CORPORATE BOND FUND - MONTHLY IDCW Option;11.6516;24-Jul-2026
+100858;INF204K01EL7;INF204K01EM5;NIPPON INDIA CORPORATE BOND FUND - QUARTERLY IDCW Option;12.0342;24-Jul-2026
+109473;INF204K01EH5;INF204K01EI3;NIPPON INDIA CORPORATE BOND FUND - WEEKLY IDCW Option;17.0711;24-Jul-2026
+ 
+PGIM India Mutual Fund

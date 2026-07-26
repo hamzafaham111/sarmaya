@@ -3,19 +3,20 @@
 import { redirect } from "next/navigation";
 import { z } from "zod";
 
-import { resolveCatalogEntry } from "@/lib/catalog";
+import { resolveInstrument } from "@/lib/catalog";
 import {
   addUserInstrument,
   getOrCreateInstrument,
   insertSnapshotIfAbsent,
   removeUserInstrument,
 } from "@/lib/db/queries/instruments";
-import { fetchQuickQuote } from "@/lib/providers/quick-quote";
+import { fetchQuickNav, fetchQuickQuote } from "@/lib/providers/quick-quote";
 import { createClient } from "@/lib/supabase/server";
 
 const addSchema = z.object({
   symbol: z.string().trim().min(1).max(20).toUpperCase(),
   market: z.enum(["IN", "PK", "US"]),
+  kind: z.enum(["stock", "fund", "index"]).default("stock"),
 });
 
 async function requireUserId(): Promise<string> {
@@ -33,10 +34,15 @@ export async function addInstrument(formData: FormData) {
   const parsed = addSchema.safeParse({
     symbol: formData.get("symbol"),
     market: formData.get("market"),
+    kind: formData.get("kind") || "stock",
   });
   if (!parsed.success) redirect("/instruments?error=invalid");
 
-  const entry = resolveCatalogEntry(parsed.data.symbol, parsed.data.market);
+  const entry = await resolveInstrument(
+    parsed.data.symbol,
+    parsed.data.market,
+    parsed.data.kind,
+  );
   if (!entry) redirect("/instruments?error=unknown");
 
   const instrument = await getOrCreateInstrument({
@@ -50,14 +56,26 @@ export async function addInstrument(formData: FormData) {
 
   // The ONE permitted request-time fetch: a minimal first snapshot so the
   // page isn't empty until tonight's job. Fail-soft by design.
-  const quote = await fetchQuickQuote(instrument.symbol);
-  if (quote) {
-    await insertSnapshotIfAbsent(
-      instrument.id,
-      new Date().toISOString().slice(0, 10),
-      quote.data,
-      quote.source,
-    );
+  if (entry.kind === "fund") {
+    const nav = await fetchQuickNav(instrument.symbol);
+    if (nav) {
+      await insertSnapshotIfAbsent(
+        instrument.id,
+        nav.asOf,
+        nav.data,
+        nav.source,
+      );
+    }
+  } else {
+    const quote = await fetchQuickQuote(instrument.symbol);
+    if (quote) {
+      await insertSnapshotIfAbsent(
+        instrument.id,
+        new Date().toISOString().slice(0, 10),
+        quote.data,
+        quote.source,
+      );
+    }
   }
 
   redirect(`/i/${instrument.id}`);

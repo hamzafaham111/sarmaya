@@ -30,6 +30,48 @@ export function emptySnapshotData(): SnapshotData {
   };
 }
 
+/** Best-effort latest NAV for a fund scheme (one sync fetch on add). */
+export async function fetchQuickNav(schemeCode: string): Promise<{
+  data: Record<string, unknown>;
+  asOf: string;
+  source: string;
+} | null> {
+  try {
+    const res = await fetch(`https://api.mfapi.in/mf/${schemeCode}/latest`, {
+      headers: { "User-Agent": "sarmaya-add-instrument" },
+      signal: AbortSignal.timeout(8_000),
+      cache: "no-store",
+    });
+    if (!res.ok) return null;
+    const body = (await res.json()) as {
+      meta?: {
+        scheme_name?: string;
+        fund_house?: string;
+        scheme_category?: string;
+      };
+      data?: { date?: string; nav?: string }[];
+    };
+    const row = body.data?.[0];
+    const nav = Number(row?.nav);
+    if (!row?.date || !Number.isFinite(nav) || nav <= 0) return null;
+    // mfapi dates are DD-MM-YYYY
+    const [dd, mm, yyyy] = row.date.split("-");
+    const asOf = `${yyyy}-${mm}-${dd}`;
+    return {
+      data: {
+        nav,
+        nav_date: asOf,
+        scheme_category: body.meta?.scheme_category ?? null,
+        fund_house: body.meta?.fund_house ?? null,
+      },
+      asOf,
+      source: "quick-nav",
+    };
+  } catch {
+    return null;
+  }
+}
+
 /** Best-effort minimal quote; returns null on any failure (the add flow
  *  degrades to "first data with tonight's update"). */
 export async function fetchQuickQuote(

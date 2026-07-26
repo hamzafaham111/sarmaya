@@ -163,6 +163,26 @@ test("magic-link auth reaches the authed shell", async ({ page }) => {
     await expect(
       page.getByPlaceholder("Your research notes (markdown)…"),
     ).toHaveValue("smoke note: studying reliance");
+    // Phase 5: add a real fund by searching its name; NAV history + returns
+    // render with the kind-specific layout (no valuation/statements).
+    await page.goto("/instruments");
+    await page.getByLabel("Search instruments").fill("parag parikh flexi");
+    await page
+      .getByRole("button", { name: /Parag Parikh Flexi Cap Fund/ })
+      .first()
+      .click();
+    await expect(page).toHaveURL(/\/i\/[0-9a-f-]{36}$/, { timeout: 30_000 });
+    await expect(
+      page.getByRole("heading", { name: /Parag Parikh Flexi Cap/ }),
+    ).toBeVisible();
+    await expect(page.getByText("5Y CAGR")).toBeVisible();
+    await expect(page.getByText("NAV", { exact: true })).toBeVisible();
+    await expect(
+      page.getByRole("heading", { name: "Valuation — your models" }),
+    ).not.toBeVisible();
+    await expect(
+      page.getByRole("heading", { name: "Statements" }),
+    ).not.toBeVisible();
   } finally {
     if (created?.user) await admin.auth.admin.deleteUser(created.user.id);
   }

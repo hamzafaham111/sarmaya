@@ -1,8 +1,12 @@
 "use client";
 
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
-import { isPlausibleUsTicker, searchCatalog } from "@/lib/catalog";
+import {
+  isPlausibleUsTicker,
+  searchCatalog,
+  type CatalogEntry,
+} from "@/lib/catalog";
 
 // Client-side fuzzy search over the static in-repo universe — no external
 // search API (CLAUDE.md). Picking a result submits the server-action form.
@@ -13,18 +17,47 @@ export function SearchAdd({
 }) {
   const [query, setQuery] = useState("");
   const [open, setOpen] = useState(false);
+  const [funds, setFunds] = useState<CatalogEntry[]>([]);
   const formRef = useRef<HTMLFormElement>(null);
   const symbolRef = useRef<HTMLInputElement>(null);
   const marketRef = useRef<HTMLInputElement>(null);
+  const kindRef = useRef<HTMLInputElement>(null);
 
-  const results = useMemo(() => searchCatalog(query), [query]);
+  useEffect(() => {
+    // The fund list is 10× the stock universe — load it lazily, off the
+    // critical path.
+    let cancelled = false;
+    import("@/lib/catalog").then(async (m) => {
+      const entries = await m.loadFundEntries();
+      if (!cancelled) setFunds(entries);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  const results = useMemo(() => {
+    const base = searchCatalog(query);
+    const q = query.trim().toUpperCase();
+    if (!q || q.length < 3) return base;
+    const fundHits = funds
+      .filter((f) => f.name.toUpperCase().includes(q))
+      .slice(0, Math.max(0, 8 - base.length));
+    return [...base, ...fundHits];
+  }, [query, funds]);
   const usFallback =
     query && results.length === 0 && isPlausibleUsTicker(query);
 
-  function pick(symbol: string, market: string) {
-    if (symbolRef.current && marketRef.current && formRef.current) {
+  function pick(symbol: string, market: string, kind: string) {
+    if (
+      symbolRef.current &&
+      marketRef.current &&
+      kindRef.current &&
+      formRef.current
+    ) {
       symbolRef.current.value = symbol;
       marketRef.current.value = market;
+      kindRef.current.value = kind;
       formRef.current.requestSubmit();
     }
   }
@@ -34,6 +67,7 @@ export function SearchAdd({
       <form ref={formRef} action={action}>
         <input type="hidden" name="symbol" ref={symbolRef} />
         <input type="hidden" name="market" ref={marketRef} />
+        <input type="hidden" name="kind" ref={kindRef} />
         <input
           value={query}
           onChange={(e) => {
@@ -42,7 +76,7 @@ export function SearchAdd({
           }}
           onFocus={() => setOpen(true)}
           onBlur={() => setTimeout(() => setOpen(false), 150)}
-          placeholder="Search NSE stocks, indices… (e.g. reliance)"
+          placeholder="Search NSE stocks, funds, indices… (e.g. reliance)"
           className="w-full rounded-sm border border-line bg-surface px-3 py-2 text-sm text-ink placeholder:text-ink-muted focus:border-brand focus:ring-2 focus:ring-brand/30 focus:outline-none"
           aria-label="Search instruments"
         />
@@ -54,7 +88,7 @@ export function SearchAdd({
             <li key={`${e.market}:${e.symbol}`}>
               <button
                 type="button"
-                onMouseDown={() => pick(e.symbol, e.market)}
+                onMouseDown={() => pick(e.symbol, e.market, e.kind)}
                 className="flex w-full items-baseline justify-between px-3 py-2 text-left text-sm transition hover:bg-surface-2"
               >
                 <span>
@@ -73,7 +107,9 @@ export function SearchAdd({
             <li>
               <button
                 type="button"
-                onMouseDown={() => pick(query.trim().toUpperCase(), "US")}
+                onMouseDown={() =>
+                  pick(query.trim().toUpperCase(), "US", "stock")
+                }
                 className="flex w-full items-baseline justify-between px-3 py-2 text-left text-sm transition hover:bg-surface-2"
               >
                 <span className="text-ink">

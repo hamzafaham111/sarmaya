@@ -15,6 +15,7 @@ import {
   getStatementRows,
 } from "@/lib/db/queries/study";
 import { listInstrumentEntries } from "@/lib/db/queries/journal";
+import { listTheses } from "@/lib/db/queries/theses";
 import { getValuations } from "@/lib/db/queries/valuations";
 import { buildSeeds } from "@/lib/valuation/seed";
 import { formatMoney, formatPercent, type Currency } from "@/lib/format";
@@ -22,6 +23,7 @@ import { createClient } from "@/lib/supabase/server";
 
 import { removeInstrument } from "../../instruments/actions";
 import { JournalSection } from "./journal-section";
+import { ThesisSection } from "./thesis-section";
 import { NotesEditor } from "./notes-editor";
 import { SeriesChart } from "./series-chart";
 import { RatiosSection } from "./ratios-section";
@@ -41,10 +43,10 @@ export default async function InstrumentPage({
   searchParams,
 }: {
   params: Promise<{ id: string }>;
-  searchParams: Promise<{ journalError?: string }>;
+  searchParams: Promise<{ journalError?: string; thesisError?: string }>;
 }) {
   const { id } = await params;
-  const { journalError } = await searchParams;
+  const { journalError, thesisError } = await searchParams;
   if (!z.uuid().safeParse(id).success) notFound();
 
   const supabase = await createClient();
@@ -86,6 +88,7 @@ export default async function InstrumentPage({
       : getPriceSeries(instrument.id, 365 * 5),
     listInstrumentEntries(user.id, instrument.id),
   ]);
+  const thesesRows = isStock ? await listTheses(user.id, instrument.id) : [];
 
   const seriesPoints = series
     .map((p) => ({ date: p.date, value: Number(p.close) }))
@@ -154,6 +157,20 @@ export default async function InstrumentPage({
               target: a.target,
               body: a.body,
             }))}
+          />
+          <ThesisSection
+            instrumentId={instrument.id}
+            theses={thesesRows}
+            metrics={Object.fromEntries(
+              Object.entries(
+                (latestSnapshot?.data as Record<string, unknown>) ?? {},
+              ).filter(([, v]) => typeof v === "number" || v === null) as [
+                string,
+                number | null,
+              ][],
+            )}
+            hasEstimate={savedValuations.length > 0}
+            error={thesisError}
           />
           <TrendsSection years={years} currency={currency} />
           <RatiosSection years={years} />

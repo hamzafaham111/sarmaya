@@ -77,9 +77,7 @@ test("magic-link auth reaches the authed shell", async ({ page }) => {
       `/auth/confirm?token_hash=${tokenHash}&type=magiclink&next=/`,
     );
     await expect(page).toHaveURL(/\/$/);
-    await expect(
-      page.getByRole("heading", { name: "Sarmaya" }).first(),
-    ).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Overview" })).toBeVisible();
     await expect(page.getByText(email)).toBeVisible();
     await expect(
       page.getByRole("button", { name: "Sign out" }).first(),

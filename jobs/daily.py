@@ -175,7 +175,7 @@ def main() -> int:
     with common.connect() as conn:
         job_id = common.start_job(conn, "daily")
         instruments = common.tracked_instruments(
-            conn, kinds=("stock", "index"), markets=("IN", "US")
+            conn, kinds=("stock", "index"), markets=("IN", "US", "PK")
         )
         random.shuffle(instruments)
         common.log(f"{len(instruments)} tracked instruments in rotation")

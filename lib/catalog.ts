@@ -1,4 +1,5 @@
 import nse from "./symbols-nse.json";
+import psx from "./symbols-psx.json";
 
 import type { CurrencyCode, InstrumentKind, Market } from "@/lib/providers";
 
@@ -60,7 +61,22 @@ export const NSE_STOCKS: CatalogEntry[] = (
   display: e.s,
 }));
 
-export const CATALOG: CatalogEntry[] = [...INDICES, ...NSE_STOCKS];
+export const PSX_STOCKS: CatalogEntry[] = (
+  psx as { s: string; n: string }[]
+).map((e) => ({
+  kind: "stock" as const,
+  symbol: e.s,
+  market: "PK" as const,
+  currency: "PKR" as const,
+  name: e.n,
+  display: e.s,
+}));
+
+export const CATALOG: CatalogEntry[] = [
+  ...INDICES,
+  ...NSE_STOCKS,
+  ...PSX_STOCKS,
+];
 
 const US_SYMBOL_RE = /^[A-Z]{1,6}$/;
 

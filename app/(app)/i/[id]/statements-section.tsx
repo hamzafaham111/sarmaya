@@ -49,11 +49,14 @@ export function StatementsSection({
   years,
   currency,
   annotations,
+  statementsUnsupported = false,
 }: {
   instrumentId: string;
   years: StatementYearData[];
   currency: Currency;
   annotations: AnnotationLite[];
+  /** true for markets whose source can't provide statements (e.g. PSX) */
+  statementsUnsupported?: boolean;
 }) {
   const [showGrowth, setShowGrowth] = useState(false);
   const [activeCell, setActiveCell] = useState<string | null>(null);

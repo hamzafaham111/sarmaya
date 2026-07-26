@@ -17,3 +17,11 @@ One line per decision: date, decision, why.
 - 2026-07-25 — Reusing the existing Supabase project (same URL/keys); user confirmed the leftover Thesis-era tables will be DROPPED at Phase 1 start so Sarmaya's new schema applies to a clean public schema.
 - 2026-07-25 — Continuous execution of ALL phases per user instruction (overrides stop-after-each-phase); criteria needing user accounts demonstrated as they arrive.
 - 2026-07-25 — Design v2 after owner review: serif/editorial direction rejected ("newspaper"); pivot to Space Grotesk display + cool slate darks + blue accent + app shell. Density, tokens-only-hex, dark-default, mono numerals unchanged.
+- 2026-07-26 — Ratios include an fcf_margin row and ROIC as a pre-tax proxy (op income / (equity+debt−cash)); interest coverage omitted — no interest-expense line item in the source.
+- 2026-07-26 — price_history kept separate from nav_history (clean semantics per kind); both backfill on first sight via ONE unnest insert (the pooler is far away).
+- 2026-07-26 — Fund NAV history backfills once via the per-scheme API (whitelisted mfapi.in), then the daily AMFI bulk file keeps it fresh — the bulk file only carries the latest NAV.
+- 2026-07-26 — Fund search list = open-ended DIRECT+GROWTH schemes only (1.7k of 14k; regular/IDCW variants are noise); lazy-loaded client-side.
+- 2026-07-26 — PSX v1 is prices-only via the portal's EOD JSON; statements show an honest "unavailable for this market" gap; parser rejects malformed rows defensively (fixtures incl. a broken one).
+- 2026-07-26 — Sentry wired runtime-only (inline instrumentation init, errors only, no build plugin); client uses NEXT_PUBLIC_SENTRY_DSN.
+- 2026-07-26 — Onboarding example set = RELIANCE.NS + Parag Parikh flexi fund + an [Example] journal note, created only on request from empty states.
+- 2026-07-26 — e2e is ONE long journey test (sign-in → study → valuation → fund → portfolio) with a 240s budget — it exercises the real DB, not mocks.

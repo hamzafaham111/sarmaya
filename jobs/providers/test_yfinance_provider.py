@@ -15,7 +15,11 @@ from providers.yfinance_provider import (
     normalize_statements,
 )
 
-FIXTURES = sorted((Path(__file__).parent.parent / "fixtures").glob("*.json"))
+FIXTURES = sorted(
+    p
+    for p in (Path(__file__).parent.parent / "fixtures").glob("*.json")
+    if not p.stem.startswith(("psx_", "amfi_"))  # other adapters own those
+)
 
 
 def load(path: Path) -> dict:

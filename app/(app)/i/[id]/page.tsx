@@ -152,6 +152,7 @@ export default async function InstrumentPage({
             instrumentId={instrument.id}
             years={years}
             currency={currency}
+            statementsUnsupported={instrument.market === "PK"}
             annotations={annotations.map((a) => ({
               id: a.id,
               target: a.target,

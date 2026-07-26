@@ -72,11 +72,42 @@ export async function fetchQuickNav(schemeCode: string): Promise<{
   }
 }
 
+/** Best-effort latest PSX close (one sync fetch on add). */
+async function fetchQuickPsx(
+  symbol: string,
+): Promise<{ data: SnapshotData; source: string } | null> {
+  try {
+    const res = await fetch(
+      `https://dps.psx.com.pk/timeseries/eod/${encodeURIComponent(symbol)}`,
+      {
+        headers: { "User-Agent": "Mozilla/5.0 (sarmaya-add-instrument)" },
+        signal: AbortSignal.timeout(8_000),
+        cache: "no-store",
+      },
+    );
+    if (!res.ok) return null;
+    const body = (await res.json()) as {
+      status?: number;
+      data?: [number, number, ...unknown[]][];
+    };
+    const close = body.status === 1 ? body.data?.[0]?.[1] : null;
+    if (typeof close !== "number" || close <= 0) return null;
+    const data = emptySnapshotData();
+    data.price = close;
+    data.currency = "PKR";
+    return { data, source: "quick-psx" };
+  } catch {
+    return null;
+  }
+}
+
 /** Best-effort minimal quote; returns null on any failure (the add flow
  *  degrades to "first data with tonight's update"). */
 export async function fetchQuickQuote(
   symbol: string,
+  market?: string,
 ): Promise<{ data: SnapshotData; source: string } | null> {
+  if (market === "PK") return fetchQuickPsx(symbol);
   try {
     const res = await fetch(
       `${CHART_URL}${encodeURIComponent(symbol)}?interval=1d&range=5d`,

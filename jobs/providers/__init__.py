@@ -12,8 +12,12 @@ def _impl(market: str):
         from providers import fake_provider
 
         return fake_provider
-    # IN + US (stocks & indices) share one adapter today; PSX joins in
-    # Phase 8, AMFI (funds) in Phase 5 via its own bulk entry point.
+    if market == "PK":
+        from providers import psx_provider
+
+        return psx_provider
+    # IN + US (stocks & indices) share one adapter; AMFI (funds) has its own
+    # bulk entry point in the daily job.
     from providers import yfinance_provider
 
     return yfinance_provider

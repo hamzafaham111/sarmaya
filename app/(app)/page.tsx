@@ -1,109 +1,125 @@
-import { DataTable } from "@/components/base/data-table";
+import Link from "next/link";
+import { redirect } from "next/navigation";
+
 import { DeltaValue } from "@/components/base/delta-value";
-import { RangeBand } from "@/components/base/range-band";
+import { EmptyState } from "@/components/base/empty-state";
 import { StatValue } from "@/components/base/stat-value";
-import { formatMoney } from "@/lib/format";
+import { buildPortfolio } from "@/lib/analysis/portfolio";
+import { listUserInstruments } from "@/lib/db/queries/instruments";
+import { getPortfolioInputs } from "@/lib/db/queries/portfolio";
+import { getDayChange } from "@/lib/db/queries/study";
+import { formatMoney, type Currency, DASH } from "@/lib/format";
+import { createClient } from "@/lib/supabase/server";
 
-// Overview with PREVIEW data — real screens land with Phases 1–3 (auth,
-// data layer, study environment). Everything here is honest placeholder,
-// labeled as such; it exists so the shell reads as an application.
-export default function HomePage() {
+import { createExampleSet } from "./instruments/actions";
+
+// The real overview: tracked instruments, per-currency portfolio totals,
+// thesis health — all derived, nothing decorative.
+export default async function OverviewPage() {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) redirect("/signin");
+
+  const [tracked, portfolioInputs] = await Promise.all([
+    listUserInstruments(user.id),
+    getPortfolioInputs(user.id),
+  ]);
+  const buckets = buildPortfolio(portfolioInputs);
+
+  const intact = portfolioInputs
+    .flatMap((i) => i.thesisStatuses)
+    .filter((s) => s === "intact").length;
+  const breached = portfolioInputs
+    .flatMap((i) => i.thesisStatuses)
+    .filter((s) => s === "breached").length;
+
+  const movers = await Promise.all(
+    tracked.slice(0, 8).map(async ({ instrument }) => ({
+      instrument,
+      dayChange: await getDayChange(instrument.id),
+    })),
+  );
+
   return (
-    <>
-      <main className="mx-auto w-full max-w-4xl px-6 py-6">
-        <div className="mb-6 flex items-baseline justify-between">
-          <h1 className="font-display text-2xl font-medium text-ink">
-            Sarmaya
-          </h1>
-          <span className="rounded-sm bg-warn-soft px-1.5 py-0.5 text-[11px] text-warn">
-            preview data — live data arrives with Phase 2
-          </span>
-        </div>
+    <main className="mx-auto w-full max-w-4xl px-6 py-6">
+      <h1 className="font-display mb-6 text-2xl font-medium text-ink">
+        Overview
+      </h1>
 
-        <section className="grid grid-cols-2 gap-4 sm:grid-cols-4">
-          <StatValue label="Watchlist" value="4 instruments" />
-          <StatValue
-            label="Portfolio (INR)"
-            value={formatMoney(2_84_55_000, "INR", "compact")}
-          />
-          <StatValue
-            label="Portfolio (USD)"
-            value={formatMoney(12_450, "USD", "compact")}
-          />
-          <StatValue label="Theses intact" value="5 / 6" />
-        </section>
+      {tracked.length === 0 ? (
+        <EmptyState
+          title="Welcome to Sarmaya"
+          message="Track your first instrument from the Instruments page — or start with a pre-filled example set to see how the terminal works."
+          action={
+            <form action={createExampleSet}>
+              <button
+                type="submit"
+                className="rounded-sm bg-brand px-3 py-1.5 text-sm text-on-brand"
+              >
+                Create example set
+              </button>
+            </form>
+          }
+        />
+      ) : (
+        <>
+          <section className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+            <StatValue
+              label="Tracked instruments"
+              value={String(tracked.length)}
+              size="lg"
+            />
+            {buckets.slice(0, 2).map((b) => (
+              <StatValue
+                key={b.currency}
+                label={`Portfolio (${b.currency})`}
+                value={formatMoney(
+                  Number(b.totalMarketValue),
+                  b.currency as Currency,
+                  "compact",
+                )}
+              />
+            ))}
+            <StatValue
+              label="Theses"
+              value={
+                intact + breached === 0
+                  ? null
+                  : `${intact} intact · ${breached} breached`
+              }
+            />
+          </section>
 
-        <section className="mt-8">
-          <h2 className="font-display mb-3 text-lg text-ink">Watchlist</h2>
-          <DataTable
-            ariaLabel="Watchlist preview"
-            columns={[
-              { key: "kind", header: "Kind", numeric: false },
-              { key: "price", header: "Price" },
-              { key: "delta", header: "1D" },
-              { key: "band", header: "Your range", numeric: false },
-            ]}
-            rows={[
-              {
-                label: "RELIANCE — Reliance Industries",
-                cells: [
-                  "stock · IN",
-                  formatMoney(1610.45, "INR"),
-                  "+0.84%",
-                  "band preview below",
-                ],
-              },
-              {
-                label: "HDFCBANK — HDFC Bank",
-                cells: [
-                  "stock · IN",
-                  formatMoney(1729.1, "INR"),
-                  "-0.32%",
-                  "—",
-                ],
-              },
-              {
-                label: "Parag Parikh Flexi Cap",
-                cells: ["fund · IN", formatMoney(82.61, "INR"), "+0.12%", "—"],
-              },
-              {
-                label: "AAPL — Apple Inc.",
-                cells: [
-                  "stock · US",
-                  formatMoney(333.02, "USD"),
-                  "-1.05%",
-                  "—",
-                ],
-              },
-            ]}
-          />
-        </section>
-
-        <section className="mt-8 max-w-md">
-          <h2 className="font-display mb-1 text-lg text-ink">
-            The signature: your estimate range
-          </h2>
-          <p className="mb-4 text-xs text-ink-muted">
-            Four models, your assumptions, one band — against today&apos;s
-            price. Activates in Phase 4.
-          </p>
-          <RangeBand
-            low={1240}
-            high={2180}
-            marker={1610}
-            format={(n) => formatMoney(n, "INR")}
-            caption="models: DCF · EPV · Graham · Reverse DCF"
-          />
-          <div className="mt-4 flex gap-6 text-sm">
-            <span>
-              1D <DeltaValue value={0.84} />
-            </span>
-            <span>
-              1Y <DeltaValue value={14.2} />
-            </span>
-          </div>
-        </section>
-      </main>
-    </>
+          <section className="mt-8">
+            <h2 className="font-display mb-3 text-lg text-ink">Watchlist</h2>
+            <ul className="divide-y divide-line overflow-hidden rounded-md border border-line bg-surface">
+              {movers.map(({ instrument, dayChange }) => (
+                <li key={instrument.id}>
+                  <Link
+                    href={`/i/${instrument.id}`}
+                    className="flex items-baseline justify-between gap-4 px-4 py-2.5 transition hover:bg-surface-2"
+                  >
+                    <span className="flex min-w-0 items-baseline gap-3">
+                      <span className="font-numeric text-sm font-semibold text-ink">
+                        {instrument.symbol}
+                      </span>
+                      <span className="truncate text-xs text-ink-muted">
+                        {instrument.name ?? DASH}
+                      </span>
+                    </span>
+                    <DeltaValue
+                      value={dayChange === null ? null : dayChange * 100}
+                      className="text-xs"
+                    />
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        </>
+      )}
+    </main>
   );
 }

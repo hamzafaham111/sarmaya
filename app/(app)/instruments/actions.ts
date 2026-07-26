@@ -10,6 +10,7 @@ import {
   insertSnapshotIfAbsent,
   removeUserInstrument,
 } from "@/lib/db/queries/instruments";
+import { insertEntry } from "@/lib/db/queries/journal";
 import { fetchQuickNav, fetchQuickQuote } from "@/lib/providers/quick-quote";
 import { createClient } from "@/lib/supabase/server";
 
@@ -67,7 +68,7 @@ export async function addInstrument(formData: FormData) {
       );
     }
   } else {
-    const quote = await fetchQuickQuote(instrument.symbol);
+    const quote = await fetchQuickQuote(instrument.symbol, instrument.market);
     if (quote) {
       await insertSnapshotIfAbsent(
         instrument.id,
@@ -79,6 +80,41 @@ export async function addInstrument(formData: FormData) {
   }
 
   redirect(`/i/${instrument.id}`);
+}
+
+// Onboarding: a pre-filled example set (one stock, one fund, one journal
+// note clearly marked as example) so a new user sees the product shape.
+export async function createExampleSet() {
+  const userId = await requireUserId();
+
+  const stock = await getOrCreateInstrument({
+    kind: "stock",
+    symbol: "RELIANCE.NS",
+    market: "IN",
+    currency: "INR",
+    name: "Reliance Industries Ltd.",
+  });
+  const fund = await getOrCreateInstrument({
+    kind: "fund",
+    symbol: "122639",
+    market: "IN",
+    currency: "INR",
+    name: "Parag Parikh Flexi Cap Fund - Direct Plan - Growth",
+  });
+  await addUserInstrument(userId, stock.id);
+  await addUserInstrument(userId, fund.id);
+  await insertEntry({
+    userId,
+    instrumentId: stock.id,
+    kind: "note",
+    tradeDate: new Date().toISOString().slice(0, 10),
+    price: null,
+    quantity: null,
+    reasoning:
+      "[Example] This is your decision journal. Record every buy, sell and SIP with the why — future you will want to know what past you was thinking. Delete this note anytime.",
+  });
+
+  redirect("/instruments");
 }
 
 export async function removeInstrument(instrumentId: string) {

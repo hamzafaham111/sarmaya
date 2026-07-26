@@ -167,14 +167,12 @@ try {
   if (anonRows?.length) fail("unauthenticated anon key reads user rows");
   else pass("unauthenticated anon key reads zero rows");
 
-  const { error: writeShared } = await a.client
-    .from("instruments")
-    .insert({
-      kind: "stock",
-      symbol: "EVIL.NS",
-      market: "IN",
-      currency: "INR",
-    });
+  const { error: writeShared } = await a.client.from("instruments").insert({
+    kind: "stock",
+    symbol: "EVIL.NS",
+    market: "IN",
+    currency: "INR",
+  });
   if (writeShared) pass("users cannot write the shared instruments catalog");
   else fail("authenticated user inserted into instruments");
 } finally {

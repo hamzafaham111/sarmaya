@@ -84,6 +84,21 @@ test("magic-link auth reaches the authed shell", async ({ page }) => {
     await expect(
       page.getByRole("button", { name: "Sign out" }).first(),
     ).toBeVisible();
+
+    // Phase 2: search "reliance", add it, land on the instrument shell.
+    await page.goto("/instruments");
+    await page.getByLabel("Search instruments").fill("reliance");
+    await page
+      .getByRole("button", { name: /^RELIANCEReliance Industries/ })
+      .first()
+      .click();
+    await expect(page).toHaveURL(/\/i\/[0-9a-f-]{36}$/, { timeout: 30_000 });
+    await expect(
+      page.getByRole("heading", { name: /Reliance Industries/ }),
+    ).toBeVisible();
+    await expect(
+      page.getByRole("button", { name: /stop tracking RELIANCE\.NS/i }),
+    ).toBeVisible();
   } finally {
     if (created?.user) await admin.auth.admin.deleteUser(created.user.id);
   }

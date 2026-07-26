@@ -1,0 +1,26 @@
+name: daily
+
+on:
+  schedule:
+    - cron: "30 22 * * 1-5" # 22:30 UTC weekdays — after both IN and US closes
+  workflow_dispatch:
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: jobs/requirements.txt
+      - run: pip install -r jobs/requirements.txt
+      - name: Daily snapshots + prices
+        working-directory: jobs
+        run: python daily.py
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          APP_BASE_URL: ${{ secrets.APP_BASE_URL }}
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
+          ALERT_WEBHOOK_URL: ${{ secrets.ALERT_WEBHOOK_URL }}

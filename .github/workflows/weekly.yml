@@ -1,0 +1,24 @@
+name: weekly
+
+on:
+  schedule:
+    - cron: "0 6 * * 6" # Saturday 06:00 UTC — statements refresh
+  workflow_dispatch:
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: jobs/requirements.txt
+      - run: pip install -r jobs/requirements.txt
+      - name: Weekly statements refresh
+        working-directory: jobs
+        run: python weekly.py
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          ALERT_WEBHOOK_URL: ${{ secrets.ALERT_WEBHOOK_URL }}

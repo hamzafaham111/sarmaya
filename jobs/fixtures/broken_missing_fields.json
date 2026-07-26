@@ -1,0 +1,19 @@
+{
+  "snapshot": {
+    "currentPrice": "not-a-number",
+    "trailingPE": true,
+    "marketCap": null,
+    "revenueGrowth": [1, 2],
+    "currency": 42,
+    "grossMargins": NaN
+  },
+  "statements": {
+    "income": {
+      "bogus-year": {
+        "Total Revenue": 1
+      }
+    },
+    "balance": "corrupted",
+    "cashflow": {}
+  }
+}

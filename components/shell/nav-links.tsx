@@ -25,7 +25,7 @@ const NAV = [
   { href: "/instruments", label: "Instruments", live: true },
   { href: "/portfolio", label: "Portfolio", live: true },
   { href: "/journal", label: "Journal", live: true },
-  { href: "/styleguide", label: "Styleguide", live: true },
+  { href: "/learn", label: "Learn", live: true },
 ] as const;
 
 export function NavLinks({ orientation }: { orientation: "side" | "top" }) {

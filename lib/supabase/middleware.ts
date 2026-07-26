@@ -2,7 +2,7 @@ import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
 
 // The terminal is private: everything requires auth except these.
-const PUBLIC_PREFIXES = ["/signin", "/auth", "/styleguide"];
+const PUBLIC_PREFIXES = ["/signin", "/auth", "/learn"];
 
 /**
  * Headers carrying the identity this middleware has ALREADY verified with

@@ -1,0 +1,82 @@
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useMemo, useState } from "react";
+
+import type { Section } from "@/lib/learn";
+
+/**
+ * The documentation sidebar: every section and article, with a filter.
+ * Client-side because the filter is instant and the whole curriculum is
+ * already in the bundle — no round trip to search.
+ */
+export function LearnNav({ sections }: { sections: Section[] }) {
+  const pathname = usePathname();
+  const [query, setQuery] = useState("");
+
+  const filtered = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    if (!q) return sections;
+    return sections
+      .map((section) => ({
+        ...section,
+        articles: section.articles.filter(
+          (a) =>
+            a.title.toLowerCase().includes(q) ||
+            a.summary.toLowerCase().includes(q) ||
+            section.title.toLowerCase().includes(q),
+        ),
+      }))
+      .filter((s) => s.articles.length > 0);
+  }, [sections, query]);
+
+  return (
+    <nav className="lg:sticky lg:top-6" aria-label="Learn contents">
+      <label className="block">
+        <span className="sr-only">Filter topics</span>
+        <input
+          type="search"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder="Filter topics…"
+          className="w-full rounded-lg border border-line bg-surface px-3 py-2 text-sm text-ink placeholder:text-ink-muted focus:border-brand focus:outline-none"
+        />
+      </label>
+
+      <div className="mt-4 space-y-5">
+        {filtered.map((section) => (
+          <div key={section.slug}>
+            <p className="mb-1.5 text-[12px] font-semibold tracking-wide text-ink-muted uppercase">
+              {section.title}
+            </p>
+            <ul className="space-y-0.5 border-l border-line">
+              {section.articles.map((article) => {
+                const href = `/learn/${article.slug}`;
+                const active = pathname === href;
+                return (
+                  <li key={article.slug}>
+                    <Link
+                      href={href}
+                      aria-current={active ? "page" : undefined}
+                      className={`pressable-row -ml-px block border-l-2 py-1.5 pl-3 text-[14px] ${
+                        active
+                          ? "border-l-brand font-medium text-brand"
+                          : "border-l-transparent text-ink-muted hover:border-l-line hover:text-ink"
+                      }`}
+                    >
+                      {article.title}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        ))}
+        {filtered.length === 0 ? (
+          <p className="text-xs text-ink-muted">Nothing matches that.</p>
+        ) : null}
+      </div>
+    </nav>
+  );
+}

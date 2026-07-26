@@ -6,7 +6,7 @@ never ours), manage a multi-currency portfolio, and record your thinking.
 
 Read [CLAUDE.md](./CLAUDE.md) (rules, valuation doctrine, UI mandate) and
 [PLAN.md](./PLAN.md) before working on this repo. Design system:
-[DESIGN.md](./DESIGN.md), live at `/styleguide`. Decisions log:
+[DESIGN.md](./DESIGN.md). Project briefing: [PROJECT-OVERVIEW.md](./PROJECT-OVERVIEW.md). Decisions log:
 [DECISIONS.md](./DECISIONS.md).
 
 ## Architecture in one paragraph

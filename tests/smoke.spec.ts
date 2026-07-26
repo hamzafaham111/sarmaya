@@ -16,24 +16,36 @@ try {
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const SERVICE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
-test("styleguide renders dark-first with all base components", async ({
+// Learn is public and needs no data, which makes it the right place to
+// assert the theme contract without signing in.
+test("learn is readable signed-out, dark-first, and light on toggle", async ({
   page,
 }) => {
-  await page.goto("/styleguide");
+  await page.goto("/learn");
 
-  await expect(
-    page.getByRole("heading", { name: /styleguide/i }),
-  ).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Learn" })).toBeVisible();
   await expect(page.locator("html")).toHaveClass(/dark/);
+  await expect(page.getByText("Education, not advice")).toBeVisible();
 
+  // Section and article navigation both render.
   await expect(
-    page.getByRole("heading", { name: "RangeBand — the signature" }),
+    page.getByRole("heading", { name: "Reading a business" }).first(),
   ).toBeVisible();
+  await page
+    .getByRole("link", { name: /The three financial statements/ })
+    .first()
+    .click();
+  await expect(page).toHaveURL(/\/learn\/the-three-statements$/);
   await expect(
-    page.getByText("models: DCF · EPV · Graham · Reverse DCF"),
+    page.getByRole("heading", { name: "The three financial statements" }),
   ).toBeVisible();
-  await expect(page.getByRole("heading", { name: "DataTable" })).toBeVisible();
-  await expect(page.getByText("1,23,45,678.00 · 99.10")).toBeVisible();
+  await expect(page.getByText("assets = liabilities + equity")).toBeVisible();
+
+  // The sidebar filter narrows the contents list.
+  await page.getByPlaceholder("Filter topics…").fill("valuation");
+  await expect(
+    page.getByRole("link", { name: "Why there is no single value" }),
+  ).toBeVisible();
 
   await page
     .getByRole("button", { name: /toggle color theme/i })

@@ -8,7 +8,7 @@ export function StaleBadge({ asOf }: { asOf: string | Date | null }) {
 
   return (
     <span className="inline-flex items-center gap-1.5 rounded-sm bg-warn-soft px-1.5 py-0.5 text-xs text-warn">
-      <span aria-hidden className="text-[8px] leading-none">
+      <span aria-hidden className="text-[10px] leading-none">
         ●
       </span>
       stale · {label}

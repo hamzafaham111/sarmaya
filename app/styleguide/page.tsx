@@ -35,7 +35,7 @@ function Section({
 
 function StateLabel({ children }: { children: React.ReactNode }) {
   return (
-    <div className="mb-1.5 text-[11px] tracking-wider text-ink-muted uppercase">
+    <div className="mb-1.5 text-[12px] tracking-wider text-ink-muted uppercase">
       {children}
     </div>
   );

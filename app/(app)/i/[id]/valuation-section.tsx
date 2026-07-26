@@ -62,7 +62,7 @@ function Num({
       <span className="text-ink-muted">
         {label}
         {auto ? (
-          <span className="ml-1 rounded-sm bg-brand-soft px-1 py-px text-[9px] text-brand">
+          <span className="ml-1 rounded-sm bg-gold-soft px-1 py-px text-[11px] text-gold">
             auto — edit me
           </span>
         ) : null}
@@ -101,9 +101,9 @@ function ModelCard({
 }) {
   const info = MODEL_INFO[name];
   return (
-    <div className="flex flex-col rounded-md border border-line bg-surface p-3">
+    <div className="flex flex-col rounded-xl border border-line bg-surface p-3">
       <div className="mb-2 flex items-baseline justify-between">
-        <span className="text-[11px] font-medium tracking-wide text-ink uppercase">
+        <span className="text-[12px] font-medium tracking-wide text-ink uppercase">
           {info.title}
         </span>
         <Popover>
@@ -269,7 +269,7 @@ export function ValuationSection({
           ) : null}
         </div>
       ) : (
-        <p className="mb-6 rounded-md border border-dashed border-line bg-surface p-4 text-center text-xs text-ink-muted">
+        <p className="mb-6 rounded-xl border border-dashed border-line bg-surface p-4 text-center text-xs text-ink-muted">
           No applicable models yet — fill in the inputs below and your estimate
           range will appear here.
         </p>

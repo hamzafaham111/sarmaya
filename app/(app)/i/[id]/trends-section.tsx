@@ -47,8 +47,8 @@ function ChartCard({
   children: React.ReactNode;
 }) {
   return (
-    <div className="rounded-md border border-line bg-surface p-3">
-      <p className="mb-1 text-[11px] tracking-wide text-ink-muted uppercase">
+    <div className="rounded-xl border border-line bg-surface p-3">
+      <p className="mb-1 text-[12px] tracking-wide text-ink-muted uppercase">
         {title}
       </p>
       <div className="h-28">{children}</div>

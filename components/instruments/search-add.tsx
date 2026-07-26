@@ -77,7 +77,7 @@ export function SearchAdd({
           onFocus={() => setOpen(true)}
           onBlur={() => setTimeout(() => setOpen(false), 150)}
           placeholder="Search NSE stocks, funds, indices… (e.g. reliance)"
-          className="w-full rounded-sm border border-line bg-surface px-3 py-2 text-sm text-ink placeholder:text-ink-muted focus:border-brand focus:ring-2 focus:ring-brand/30 focus:outline-none"
+          className="w-full rounded-sm border border-line bg-surface px-4 py-3 text-sm text-ink placeholder:text-ink-muted focus:border-brand focus:ring-2 focus:ring-brand/30 focus:outline-none"
           aria-label="Search instruments"
         />
       </form>
@@ -89,7 +89,7 @@ export function SearchAdd({
               <button
                 type="button"
                 onMouseDown={() => pick(e.symbol, e.market, e.kind)}
-                className="flex w-full items-baseline justify-between px-3 py-2 text-left text-sm transition hover:bg-surface-2"
+                className="flex w-full items-baseline justify-between px-4 py-3 text-left text-sm pressable-row hover:bg-surface-2"
               >
                 <span>
                   <span className="font-numeric font-medium text-ink">
@@ -97,7 +97,7 @@ export function SearchAdd({
                   </span>
                   <span className="ml-2 text-ink-muted">{e.name}</span>
                 </span>
-                <span className="text-[11px] text-ink-muted">
+                <span className="text-[12px] text-ink-muted">
                   {e.kind} · {e.market}
                 </span>
               </button>
@@ -110,7 +110,7 @@ export function SearchAdd({
                 onMouseDown={() =>
                   pick(query.trim().toUpperCase(), "US", "stock")
                 }
-                className="flex w-full items-baseline justify-between px-3 py-2 text-left text-sm transition hover:bg-surface-2"
+                className="flex w-full items-baseline justify-between px-4 py-3 text-left text-sm pressable-row hover:bg-surface-2"
               >
                 <span className="text-ink">
                   Add{" "}
@@ -119,7 +119,7 @@ export function SearchAdd({
                   </span>{" "}
                   as a US ticker
                 </span>
-                <span className="text-[11px] text-ink-muted">stock · US</span>
+                <span className="text-[12px] text-ink-muted">stock · US</span>
               </button>
             </li>
           ) : null}

@@ -8,9 +8,9 @@ import { groupStatementYears } from "@/lib/analysis/ratios";
 import { mergeManualStatements } from "@/lib/analysis/statements";
 import { getInstrumentPage } from "@/lib/db/queries/instruments";
 import { returnsSummary } from "@/lib/analysis/returns";
+import { dayChangeFromSeries } from "@/lib/analysis/overview";
 import {
   getAnnotations,
-  getDayChange,
   getManualStatements,
   getNavSeries,
   getPriceSeries,
@@ -21,7 +21,7 @@ import { listTheses } from "@/lib/db/queries/theses";
 import { getValuations } from "@/lib/db/queries/valuations";
 import { buildSeeds } from "@/lib/valuation/seed";
 import { formatMoney, formatPercent, type Currency } from "@/lib/format";
-import { createClient } from "@/lib/supabase/server";
+import { getCurrentUser } from "@/lib/supabase/current-user";
 
 import { removeInstrument } from "../../instruments/actions";
 import { JournalSection } from "./journal-section";
@@ -53,10 +53,7 @@ export default async function InstrumentPage({
   const { journalError, thesisError } = await searchParams;
   if (!z.uuid().safeParse(id).success) notFound();
 
-  const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  const user = await getCurrentUser();
   if (!user) redirect("/signin");
 
   const page = await getInstrumentPage(user.id, id);
@@ -79,22 +76,26 @@ export default async function InstrumentPage({
     statementRows,
     manualRows,
     annotations,
-    dayChange,
     savedValuations,
     series,
     journal,
+    thesesRows,
   ] = await Promise.all([
     isStock ? getStatementRows(instrument.id) : Promise.resolve([]),
     isStock ? getManualStatements(user.id, instrument.id) : Promise.resolve([]),
     isStock ? getAnnotations(user.id, instrument.id) : Promise.resolve([]),
-    getDayChange(instrument.id),
     isStock ? getValuations(user.id, instrument.id) : Promise.resolve([]),
     isFund
       ? getNavSeries(instrument.id)
       : getPriceSeries(instrument.id, 365 * 5),
     listInstrumentEntries(user.id, instrument.id),
+    isStock ? listTheses(user.id, instrument.id) : Promise.resolve([]),
   ]);
-  const thesesRows = isStock ? await listTheses(user.id, instrument.id) : [];
+
+  // Derived from the series we already loaded rather than its own query —
+  // and this is what finally gives funds a day change, since the old
+  // getDayChange only ever read price_history.
+  const dayChange = dayChangeFromSeries(series);
 
   const seriesPoints = series
     .map((p) => ({ date: p.date, value: Number(p.close) }))
@@ -133,7 +134,7 @@ export default async function InstrumentPage({
           <StaleBadge asOf={latestSnapshot?.asOf ?? null} />
         ) : null}
         {instrument.isManual ? (
-          <span className="rounded-sm bg-brand-soft px-1.5 py-0.5 text-xs text-brand">
+          <span className="rounded-sm bg-gold-soft px-1.5 py-0.5 text-xs text-gold">
             hand-kept
           </span>
         ) : null}

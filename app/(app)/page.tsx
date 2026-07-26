@@ -3,6 +3,7 @@ import { redirect } from "next/navigation";
 
 import { EmptyState } from "@/components/base/empty-state";
 import { StatValue } from "@/components/base/stat-value";
+import { SubmitButton } from "@/components/base/submit-button";
 import {
   attentionItems,
   bucketDayChange,
@@ -18,7 +19,7 @@ import { getPortfolioInputs } from "@/lib/db/queries/portfolio";
 import { getSeriesBatch } from "@/lib/db/queries/study";
 import { listUserTheses } from "@/lib/db/queries/theses";
 import { formatPercent } from "@/lib/format";
-import { createClient } from "@/lib/supabase/server";
+import { getCurrentUser } from "@/lib/supabase/current-user";
 
 import { createExampleSet } from "./instruments/actions";
 import {
@@ -36,10 +37,7 @@ const SPARK_DAYS = 90;
 // doing, does anything need me today, and what moved. Everything on it is
 // derived from data we already hold — nothing decorative, no advice.
 export default async function OverviewPage() {
-  const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  const user = await getCurrentUser();
   if (!user) redirect("/signin");
 
   const [tracked, portfolioInputs, theses, journal] = await Promise.all([
@@ -108,7 +106,7 @@ export default async function OverviewPage() {
   if (tracked.length === 0) {
     return (
       <main className="mx-auto w-full max-w-5xl px-6 py-6">
-        <h1 className="font-display mb-6 text-2xl font-medium text-ink">
+        <h1 className="font-display text-grad-brand mb-6 text-2xl font-semibold">
           Overview
         </h1>
         <EmptyState
@@ -116,12 +114,9 @@ export default async function OverviewPage() {
           message="Track your first instrument from the Instruments page — or start with a pre-filled example set to see how the terminal works."
           action={
             <form action={createExampleSet}>
-              <button
-                type="submit"
-                className="rounded-sm bg-brand px-3 py-1.5 text-sm text-on-brand"
-              >
+              <SubmitButton pendingLabel="Setting up…">
                 Create example set
-              </button>
+              </SubmitButton>
             </form>
           }
         />
@@ -132,14 +127,16 @@ export default async function OverviewPage() {
   return (
     <main className="mx-auto w-full max-w-5xl px-6 py-6">
       <header className="mb-5 flex flex-wrap items-baseline justify-between gap-2">
-        <h1 className="font-display text-2xl font-medium text-ink">Overview</h1>
+        <h1 className="font-display text-grad-brand text-2xl font-semibold">
+          Overview
+        </h1>
         <p className="font-numeric text-xs text-ink-muted tabular-nums">
           {now.toISOString().slice(0, 10)}
         </p>
       </header>
 
       {/* One line of context above the money. */}
-      <section className="mb-5 grid grid-cols-2 gap-4 rounded-md border border-line bg-surface px-4 py-3 sm:grid-cols-4">
+      <section className="bg-grad-surface mb-5 grid grid-cols-2 gap-4 rounded-xl border border-line px-5 py-4 shadow-sm sm:grid-cols-4">
         <StatValue label="Tracked" value={String(tracked.length)} />
         <StatValue label="Held" value={held === 0 ? null : String(held)} />
         <StatValue
@@ -153,7 +150,7 @@ export default async function OverviewPage() {
       </section>
 
       {buckets.length === 0 ? (
-        <div className="mb-5 rounded-md border border-dashed border-line bg-surface px-6 py-8 text-center">
+        <div className="mb-5 rounded-xl border border-dashed border-line bg-surface px-6 py-8 text-center">
           <p className="text-sm text-ink">Nothing held yet</p>
           <p className="mx-auto mt-1 max-w-md text-xs text-ink-muted">
             Record a buy or a SIP from any instrument page — with the why — and
@@ -170,7 +167,7 @@ export default async function OverviewPage() {
         <div className="mb-5">
           <PortfolioCards buckets={buckets} dayChanges={dayChanges} />
           {buckets.length > 1 ? (
-            <p className="mt-2 text-[11px] text-ink-muted">
+            <p className="mt-2 text-[12px] text-ink-muted">
               Buckets are never added together — Sarmaya does not convert
               currencies.
             </p>
@@ -192,14 +189,14 @@ export default async function OverviewPage() {
       </div>
 
       {buckets.length > 0 && buckets[0].weighted.pe !== null ? (
-        <section className="mt-5 rounded-md border border-line bg-surface px-4 py-3">
+        <section className="mt-5 rounded-xl border border-line bg-surface px-5 py-3.5">
           <div className="mb-2 flex items-baseline justify-between">
             <h2 className="font-display text-sm text-ink">
               Your {buckets[0].currency} stocks as one business
             </h2>
             <Link
               href="/portfolio"
-              className="text-[11px] text-ink-muted underline underline-offset-4 hover:text-brand"
+              className="text-[12px] text-ink-muted underline underline-offset-4 hover:text-brand"
             >
               full portfolio
             </Link>

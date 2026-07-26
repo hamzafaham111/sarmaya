@@ -90,7 +90,7 @@ export function StatementsSection({
     return (
       <section className="mt-10">
         <h2 className="font-display mb-2 text-lg text-ink">Statements</h2>
-        <p className="rounded-md border border-dashed border-line bg-surface p-6 text-center text-sm text-ink-muted">
+        <p className="rounded-xl border border-dashed border-line bg-surface p-6 text-center text-sm text-ink-muted">
           {handKept
             ? "Nothing here yet — this one is hand-kept. Type the years you have from the annual report; ratios, trends and the valuation models all compute from whatever you enter."
             : statementsUnsupported
@@ -180,15 +180,15 @@ export function StatementsSection({
         {(Object.keys(LINE_ITEMS) as (keyof typeof LINE_ITEMS)[]).map(
           (kind) => (
             <TabsContent key={kind} value={kind}>
-              <div className="overflow-x-auto rounded-md border border-line bg-surface">
-                <table className="w-full min-w-max text-[13px] leading-[1.4]">
+              <div className="overflow-x-auto rounded-xl border border-line bg-surface">
+                <table className="w-full min-w-max text-[14px] leading-[1.4]">
                   <thead>
                     <tr className="border-b border-line">
-                      <th className="sticky left-0 bg-surface px-3 py-1.5 text-left font-medium text-ink-muted" />
+                      <th className="sticky left-0 bg-surface px-4 py-2.5 text-left font-medium text-ink-muted" />
                       {years.map((y) => (
                         <th
                           key={y.fiscalYear}
-                          className="px-3 py-1.5 text-right font-medium text-ink-muted"
+                          className="px-4 py-2.5 text-right font-medium text-ink-muted"
                         >
                           FY{y.fiscalYear}
                         </th>
@@ -199,7 +199,7 @@ export function StatementsSection({
                     {LINE_ITEMS[kind].map((item) => (
                       <Fragment key={item.key}>
                         <tr className="border-b border-line last:border-0 hover:bg-surface-2">
-                          <td className="sticky left-0 bg-surface px-3 py-1.5 text-ink-muted">
+                          <td className="sticky left-0 bg-surface px-4 py-2.5 text-ink-muted">
                             {item.label}
                           </td>
                           {years.map((y) => {
@@ -236,9 +236,9 @@ export function StatementsSection({
                                   ]
                                     .filter(Boolean)
                                     .join(" · ")}
-                                  className={`font-numeric w-full rounded-sm px-2 py-1 text-right tabular-nums transition hover:bg-surface-2 ${
+                                  className={`font-numeric w-full rounded-sm px-2 py-1 text-right tabular-nums pressable-row hover:bg-surface-2 ${
                                     isMine
-                                      ? "underline decoration-brand decoration-dotted underline-offset-4"
+                                      ? "underline decoration-gold decoration-dotted underline-offset-4"
                                       : ""
                                   } ${
                                     notes.length
@@ -250,17 +250,17 @@ export function StatementsSection({
                                 >
                                   {display}
                                   {notes.length ? (
-                                    <span className="ml-1 align-super text-[9px]">
+                                    <span className="ml-1 align-super text-[11px]">
                                       ●
                                     </span>
                                   ) : null}
                                 </button>
                                 {activeCell === target ? (
-                                  <div className="absolute z-20 mt-1 w-64 rounded-md border border-line bg-surface p-2 text-left shadow-lg">
+                                  <div className="absolute z-20 mt-1 w-64 rounded-xl border border-line bg-surface p-2 text-left shadow-lg">
                                     {notes.map((n) => (
                                       <div
                                         key={n.id}
-                                        className="mb-1.5 flex items-start justify-between gap-2 rounded-sm bg-brand-soft px-2 py-1 text-xs text-ink"
+                                        className="mb-1.5 flex items-start justify-between gap-2 rounded-sm border border-gold/30 bg-gold-soft px-2 py-1 text-xs text-ink"
                                       >
                                         <span className="whitespace-pre-wrap">
                                           {n.body}
@@ -292,7 +292,7 @@ export function StatementsSection({
                                       className="w-full rounded-sm border border-line bg-background p-1.5 text-xs text-ink focus:border-brand focus:outline-none"
                                     />
                                     {noteError ? (
-                                      <p className="mt-1 text-[11px] text-neg">
+                                      <p className="mt-1 text-[12px] text-neg">
                                         {noteError}
                                       </p>
                                     ) : null}
@@ -322,9 +322,9 @@ export function StatementsSection({
                         {showGrowth ? (
                           <tr
                             key={`${item.key}-growth`}
-                            className="border-b border-line text-[11px] last:border-0"
+                            className="border-b border-line text-[12px] last:border-0"
                           >
-                            <td className="sticky left-0 bg-surface px-3 py-0.5 text-ink-muted">
+                            <td className="sticky left-0 bg-surface px-4 py-1.5 text-ink-muted">
                               Δ YoY
                             </td>
                             {years.map((y, idx) => {
@@ -332,7 +332,7 @@ export function StatementsSection({
                               return (
                                 <td
                                   key={`${item.key}-g-${y.fiscalYear}`}
-                                  className={`font-numeric px-3 py-0.5 text-right tabular-nums ${
+                                  className={`font-numeric px-4 py-1.5 text-right tabular-nums ${
                                     g === null
                                       ? "text-ink-muted"
                                       : g >= 0

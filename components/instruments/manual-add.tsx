@@ -1,3 +1,5 @@
+import { SubmitButton } from "@/components/base/submit-button";
+
 // Hand-created instrument: for a company no provider covers. Plain form +
 // server action — no client JS needed beyond the disclosure.
 export function ManualAdd({
@@ -9,8 +11,8 @@ export function ManualAdd({
     "font-numeric w-full rounded-sm border border-line bg-background px-2 py-1 text-sm text-ink focus:border-brand focus:outline-none";
 
   return (
-    <details className="mt-3 rounded-md border border-line bg-surface [&[open]]:border-brand/40">
-      <summary className="cursor-pointer px-3 py-2 text-xs text-ink-muted transition hover:text-brand">
+    <details className="mt-3 rounded-xl border border-line bg-surface [&[open]]:border-brand/40">
+      <summary className="cursor-pointer px-4 py-3 text-xs text-ink-muted transition hover:text-brand">
         Not in the list? Add a company by hand
       </summary>
       <div className="border-t border-line p-4">
@@ -62,12 +64,9 @@ export function ManualAdd({
             </label>
           </div>
           <div className="lg:col-span-4">
-            <button
-              type="submit"
-              className="rounded-sm bg-brand px-3 py-1.5 text-xs text-on-brand"
-            >
+            <SubmitButton size="sm" pendingLabel="Creating…">
               Create hand-kept instrument
-            </button>
+            </SubmitButton>
           </div>
         </form>
       </div>

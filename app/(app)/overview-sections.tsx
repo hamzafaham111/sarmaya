@@ -60,20 +60,25 @@ export function PortfolioCards({
           <Link
             key={bucket.currency}
             href="/portfolio"
-            className="group rounded-md border border-line bg-surface p-4 transition hover:border-brand/50"
+            className="pressable-row bg-grad-surface group relative overflow-hidden rounded-xl border border-line p-5 shadow-sm hover:border-brand/50"
           >
+            {/* The hero gets the signature gradient as a top edge. */}
+            <span
+              aria-hidden
+              className="bg-grad-brand absolute inset-x-0 top-0 h-[3px]"
+            />
             <div className="flex items-baseline justify-between">
-              <span className="text-[11px] tracking-wide text-ink-muted uppercase">
+              <span className="text-[12px] font-medium tracking-wide text-ink-muted uppercase">
                 {bucket.currency} portfolio
               </span>
-              <span className="text-[11px] text-ink-muted">
+              <span className="text-[12px] text-ink-muted">
                 {bucket.rows.length} holding
                 {bucket.rows.length === 1 ? "" : "s"}
               </span>
             </div>
 
-            <div className="mt-2 flex items-baseline gap-3">
-              <span className="font-numeric text-2xl text-ink tabular-nums">
+            <div className="mt-2 flex flex-wrap items-baseline gap-x-3 gap-y-1">
+              <span className="font-numeric text-2xl font-semibold text-ink tabular-nums">
                 {formatMoney(value, currency)}
               </span>
               <span className="flex items-baseline gap-1 text-xs text-ink-muted">
@@ -85,7 +90,7 @@ export function PortfolioCards({
               </span>
             </div>
 
-            <dl className="mt-3 grid grid-cols-3 gap-2 border-t border-line pt-3 text-[11px]">
+            <dl className="mt-3 grid grid-cols-3 gap-2 border-t border-line pt-3 text-[12px]">
               <div>
                 <dt className="text-ink-muted">Invested</dt>
                 <dd className="font-numeric mt-0.5 text-ink tabular-nums">
@@ -108,20 +113,20 @@ export function PortfolioCards({
                 <dd className="mt-0.5">
                   <DeltaValue
                     value={pnlPct === null ? null : pnlPct * 100}
-                    className="text-[11px]"
+                    className="text-[12px]"
                   />
                 </dd>
               </div>
             </dl>
 
             {bucket.breachedValuePct !== null && bucket.breachedValuePct > 0 ? (
-              <p className="mt-2 text-[11px] text-warn">
+              <p className="mt-2 text-[12px] text-warn">
                 {formatPercent(bucket.breachedValuePct, 0)} of stock value has a
                 breached thesis
               </p>
             ) : null}
             {bucket.excludedCount > 0 ? (
-              <p className="mt-2 text-[11px] text-ink-muted">
+              <p className="mt-2 text-[12px] text-ink-muted">
                 {bucket.excludedCount} holding
                 {bucket.excludedCount === 1 ? "" : "s"} excluded — no price
               </p>
@@ -140,12 +145,12 @@ export function AttentionPanel({ items }: { items: AttentionItem[] }) {
   return (
     <section>
       <h2 className="font-display mb-2 text-sm text-ink">Needs attention</h2>
-      <ul className="divide-y divide-line overflow-hidden rounded-md border border-line bg-surface">
+      <ul className="divide-y divide-line overflow-hidden rounded-xl border border-line bg-surface">
         {items.map((item) => (
           <li key={item.key}>
             <Link
               href={item.href}
-              className="flex items-start gap-2.5 px-3 py-2.5 transition hover:bg-surface-2"
+              className="flex items-start gap-2.5 px-4 py-3 pressable-row hover:bg-surface-2"
             >
               <span
                 aria-hidden
@@ -173,37 +178,42 @@ export function MoversList({ movers }: { movers: MoverInput[] }) {
         <h2 className="font-display text-sm text-ink">Biggest moves today</h2>
         <Link
           href="/instruments"
-          className="text-[11px] text-ink-muted underline underline-offset-4 hover:text-brand"
+          className="text-[12px] text-ink-muted underline underline-offset-4 hover:text-brand"
         >
           all instruments
         </Link>
       </div>
-      <ul className="divide-y divide-line overflow-hidden rounded-md border border-line bg-surface">
+      <ul className="divide-y divide-line overflow-hidden rounded-xl border border-line bg-surface">
         {movers.map((m) => {
           const { primary, secondary } = identity(m.kind, m.symbol, m.name);
           return (
             <li key={m.instrumentId}>
               <Link
                 href={`/i/${m.instrumentId}`}
-                className="flex items-center gap-3 px-3 py-2 transition hover:bg-surface-2"
+                className="flex items-center gap-3 px-4 py-3 pressable-row hover:bg-surface-2"
               >
                 <span className="min-w-0 flex-1">
                   <span
-                    className={`block truncate text-[13px] font-semibold text-ink ${
+                    className={`block truncate text-[14px] font-semibold text-ink ${
                       m.kind === "fund" ? "" : "font-numeric"
                     }`}
                   >
                     {primary}
                   </span>
-                  <span className="block truncate text-[11px] text-ink-muted">
+                  <span className="block truncate text-[12px] text-ink-muted">
                     {secondary}
                   </span>
                 </span>
                 <span className="hidden sm:block">
-                  <Sparkline values={m.series} width={64} height={20} />
+                  <Sparkline
+                    values={m.series}
+                    width={64}
+                    height={20}
+                    tone="violet"
+                  />
                 </span>
                 {/* Exact, not compact: a price is read to the rupee. */}
-                <span className="font-numeric shrink-0 text-right text-[13px] text-ink tabular-nums">
+                <span className="font-numeric shrink-0 text-right text-[14px] text-ink tabular-nums">
                   {formatMoney(m.price, m.currency as Currency)}
                 </span>
                 <DeltaValue
@@ -231,30 +241,30 @@ export function RecentDecisions({
         <h2 className="font-display text-sm text-ink">Recent decisions</h2>
         <Link
           href="/journal"
-          className="text-[11px] text-ink-muted underline underline-offset-4 hover:text-brand"
+          className="text-[12px] text-ink-muted underline underline-offset-4 hover:text-brand"
         >
           full journal
         </Link>
       </div>
 
       {entries.length === 0 ? (
-        <p className="rounded-md border border-dashed border-line bg-surface px-3 py-6 text-center text-xs text-ink-muted">
+        <p className="rounded-xl border border-dashed border-line bg-surface px-3 py-6 text-center text-xs text-ink-muted">
           Nothing recorded yet. Every buy, sell and SIP carries its why — that
           record is what you will reread in three years.
         </p>
       ) : (
-        <ul className="divide-y divide-line overflow-hidden rounded-md border border-line bg-surface">
+        <ul className="divide-y divide-line overflow-hidden rounded-xl border border-line bg-surface">
           {entries.map((item) => (
             <li key={item.entry.id}>
               <Link
                 href={`/i/${item.instrumentId}`}
-                className="block px-3 py-2.5 transition hover:bg-surface-2"
+                className="block px-4 py-3 pressable-row hover:bg-surface-2"
               >
                 <span className="flex items-baseline gap-2">
                   {/* Neutral chip; the meaning rides on the text colour so
                       no new palette entries are needed. */}
                   <span
-                    className={`rounded-sm bg-surface-2 px-1 py-px text-[10px] ${
+                    className={`rounded-sm bg-surface-2 px-1 py-px text-[12px] ${
                       item.entry.kind === "sell"
                         ? "text-neg"
                         : item.entry.kind === "note"
@@ -265,17 +275,17 @@ export function RecentDecisions({
                     {KIND_LABEL[item.entry.kind] ?? item.entry.kind}
                   </span>
                   <span
-                    className={`min-w-0 truncate text-[12px] font-semibold text-ink ${
+                    className={`min-w-0 truncate text-[13px] font-semibold text-ink ${
                       item.kind === "fund" ? "" : "font-numeric"
                     }`}
                   >
                     {identity(item.kind, item.symbol, item.name).primary}
                   </span>
-                  <span className="font-numeric ml-auto shrink-0 text-[11px] whitespace-nowrap text-ink-muted tabular-nums">
+                  <span className="font-numeric ml-auto shrink-0 text-[12px] whitespace-nowrap text-ink-muted tabular-nums">
                     {item.entry.tradeDate}
                   </span>
                 </span>
-                <p className="mt-1 line-clamp-2 text-[11px] leading-[1.5] text-ink-muted">
+                <p className="mt-1 line-clamp-2 text-[12px] leading-[1.5] text-ink-muted">
                   {item.entry.reasoning}
                 </p>
               </Link>

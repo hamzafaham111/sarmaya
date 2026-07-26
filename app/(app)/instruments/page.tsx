@@ -7,10 +7,11 @@ import { Sparkline } from "@/components/base/sparkline";
 import { StaleBadge } from "@/components/base/stale-badge";
 import { ManualAdd } from "@/components/instruments/manual-add";
 import { SearchAdd } from "@/components/instruments/search-add";
+import { dayChangeFromSeries } from "@/lib/analysis/overview";
 import { listUserInstruments } from "@/lib/db/queries/instruments";
-import { getDayChange, getPriceSeries } from "@/lib/db/queries/study";
+import { getSeriesBatch } from "@/lib/db/queries/study";
 import { formatMoney, type Currency } from "@/lib/format";
-import { createClient } from "@/lib/supabase/server";
+import { getCurrentUser } from "@/lib/supabase/current-user";
 
 import { addInstrument, addManualInstrument } from "./actions";
 
@@ -34,25 +35,29 @@ export default async function InstrumentsPage({
   searchParams: Promise<{ error?: string }>;
 }) {
   const { error } = await searchParams;
-  const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  const user = await getCurrentUser();
   if (!user) redirect("/signin");
 
   const items = await listUserInstruments(user.id);
-  const extras = await Promise.all(
-    items.map(async ({ instrument }) => ({
-      dayChange: await getDayChange(instrument.id),
-      series: (await getPriceSeries(instrument.id, 90)).map((p) =>
+  // One batched series query for every row — this page used to make two
+  // round trips per instrument, and each one costs ~400ms.
+  const series = await getSeriesBatch(
+    items.map((i) => i.instrument.id),
+    90,
+  );
+  const extras = items.map(({ instrument }) => {
+    const points = series.get(instrument.id);
+    return {
+      dayChange: dayChangeFromSeries(points),
+      series: (points ?? []).map((p) =>
         Number.isFinite(Number(p.close)) ? Number(p.close) : null,
       ),
-    })),
-  );
+    };
+  });
 
   return (
     <main className="mx-auto w-full max-w-4xl px-6 py-6">
-      <h1 className="font-display mb-4 text-2xl font-medium text-ink">
+      <h1 className="font-display text-grad-brand mb-4 text-2xl font-semibold">
         Instruments
       </h1>
 
@@ -72,7 +77,7 @@ export default async function InstrumentsPage({
           />
         </div>
       ) : (
-        <ul className="mt-6 divide-y divide-line overflow-hidden rounded-md border border-line bg-surface">
+        <ul className="mt-6 divide-y divide-line overflow-hidden rounded-xl border border-line bg-surface">
           {items.map(({ instrument, latestSnapshot }, idx) => {
             const data = latestSnapshot?.data as {
               price?: number | null;
@@ -82,7 +87,7 @@ export default async function InstrumentsPage({
               <li key={instrument.id}>
                 <Link
                   href={`/i/${instrument.id}`}
-                  className="flex items-baseline justify-between gap-4 px-4 py-3 transition hover:bg-surface-2"
+                  className="flex items-baseline justify-between gap-4 px-5 py-3.5 pressable-row hover:bg-surface-2"
                 >
                   <span className="flex min-w-0 items-baseline gap-3">
                     <span className="font-numeric text-sm font-semibold text-ink">
@@ -91,17 +96,22 @@ export default async function InstrumentsPage({
                     <span className="truncate text-sm text-ink-muted">
                       {instrument.name ?? "—"}
                     </span>
-                    <span className="rounded-sm bg-surface-2 px-1.5 py-0.5 text-[10px] text-ink-muted">
+                    <span className="rounded-sm bg-surface-2 px-1.5 py-0.5 text-[12px] text-ink-muted">
                       {instrument.kind} · {instrument.market}
                     </span>
                     {instrument.isManual ? (
-                      <span className="rounded-sm bg-brand-soft px-1.5 py-0.5 text-[10px] text-brand">
+                      <span className="rounded-sm bg-gold-soft px-1.5 py-0.5 text-[12px] text-gold">
                         hand-kept
                       </span>
                     ) : null}
                   </span>
                   <span className="flex shrink-0 items-center gap-3">
-                    <Sparkline values={series} width={72} height={20} />
+                    <Sparkline
+                      values={series}
+                      width={72}
+                      height={20}
+                      tone="violet"
+                    />
                     <span className="font-numeric w-24 text-right text-sm text-ink tabular-nums">
                       {formatMoney(
                         data?.price ?? null,

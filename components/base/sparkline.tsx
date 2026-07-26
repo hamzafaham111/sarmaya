@@ -13,8 +13,9 @@ export function Sparkline({
   values: (number | null)[];
   width?: number;
   height?: number;
-  /** muted (default) for context lines; brand for user-authored series */
-  tone?: "muted" | "brand" | "ink";
+  /** muted (default) for context lines; brand/violet for emphasis; gold is
+   *  reserved for series the user authored themselves. */
+  tone?: "muted" | "brand" | "violet" | "gold" | "ink";
 }) {
   const nonNull = values.filter((v): v is number => v !== null);
   if (nonNull.length < 2) {
@@ -29,9 +30,13 @@ export function Sparkline({
   const stroke =
     tone === "brand"
       ? "var(--brand)"
-      : tone === "ink"
-        ? "var(--foreground)"
-        : "var(--muted-foreground)";
+      : tone === "violet"
+        ? "var(--violet)"
+        : tone === "gold"
+          ? "var(--gold)"
+          : tone === "ink"
+            ? "var(--foreground)"
+            : "var(--muted-foreground)";
 
   return (
     <div style={{ width, height }} aria-hidden>

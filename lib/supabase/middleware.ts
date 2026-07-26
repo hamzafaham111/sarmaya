@@ -4,6 +4,18 @@ import { NextResponse, type NextRequest } from "next/server";
 // The terminal is private: everything requires auth except these.
 const PUBLIC_PREFIXES = ["/signin", "/auth", "/styleguide"];
 
+/**
+ * Headers carrying the identity this middleware has ALREADY verified with
+ * the auth server, so the render doesn't pay for a second round trip.
+ *
+ * Safe because the middleware runs on every matched request and always
+ * writes both headers — deleting them first means a client cannot inject
+ * its own. Anything not matched by the proxy falls back to a real
+ * getUser() call (see current-user.ts).
+ */
+export const VERIFIED_USER_ID = "x-sarmaya-user-id";
+export const VERIFIED_USER_EMAIL = "x-sarmaya-user-email";
+
 export async function updateSession(request: NextRequest) {
   let supabaseResponse = NextResponse.next({ request });
 
@@ -45,5 +57,22 @@ export async function updateSession(request: NextRequest) {
     return NextResponse.redirect(url);
   }
 
-  return supabaseResponse;
+  // Strip first, then set — an inbound header of the same name must never
+  // survive into the render.
+  const headers = new Headers(request.headers);
+  headers.delete(VERIFIED_USER_ID);
+  headers.delete(VERIFIED_USER_EMAIL);
+  if (user) {
+    headers.set(VERIFIED_USER_ID, user.id);
+    if (user.email) {
+      headers.set(VERIFIED_USER_EMAIL, encodeURIComponent(user.email));
+    }
+  }
+
+  const response = NextResponse.next({ request: { headers } });
+  // Carry over any refreshed auth cookies Supabase just set.
+  for (const cookie of supabaseResponse.cookies.getAll()) {
+    response.cookies.set(cookie);
+  }
+  return response;
 }

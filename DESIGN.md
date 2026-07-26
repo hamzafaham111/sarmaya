@@ -1,5 +1,63 @@
 # DESIGN.md — Sarmaya design plan
 
+## v3 "Midnight, Violet & Gold" (owner review, 2026-07-26) — CURRENT
+
+The owner reviewed v2 and asked for a modern theme with at least three
+distinct colours and generous gradients, suited to business/investment, and
+easier to read. That overrides v2's "~5 colours, no decorative gradients,
+density over whitespace". Everything else — tokens-only hex, dark default,
+tabular numerals, the RangeBand signature, colour-means-something — stands.
+
+**Three brand hues, each with a job.** Blue is interactive. Violet is data
+visualisation. Gold is the user's own hand — their inputs, annotations,
+estimates, manual figures and hand-kept instruments. Green and red stay
+reserved for gain and loss, which is why no brand hue comes from those
+families.
+
+| token          | dark                              | light                             | role                                     |
+| -------------- | --------------------------------- | --------------------------------- | ---------------------------------------- |
+| `background`   | `#0a0f1e`                         | `#f4f6fc`                         | deep navy page                           |
+| `surface`      | `#141c33`                         | `#ffffff`                         | raised panels                            |
+| `surface-2`    | `#1e2745`                         | `#eef2fb`                         | insets, hover, chips                     |
+| `ink`          | `#eef2ff`                         | `#0f172a`                         | text and numbers                         |
+| `ink-muted`    | `#a3aecc`                         | `#515e85`                         | labels (contrast raised from v2)         |
+| `line`         | `#2a3559`                         | `#dae1f2`                         | hairlines                                |
+| `brand`        | `#4f7df9`                         | `#3b5fe0`                         | interactive, primary actions             |
+| `violet`       | `#a78bfa`                         | `#7c3aed`                         | charts, sparklines, second gradient stop |
+| `gold`         | `#f0b429`                         | `#b4790b`                         | **the user's own hand** — never chrome   |
+| `pos/neg/warn` | `#34d399` / `#fb7185` / `#fbbf24` | `#067a52` / `#d92d20` / `#a05a08` | gain / loss / stale                      |
+
+**Gradients** (`--grad-*`, exposed as utilities): `grad-brand`
+(blue→violet) on the portfolio hero edge, primary buttons, the active nav
+rail, page titles (`text-grad-brand`) and the RangeBand; `grad-gold` on
+every control that writes the user's own data; `grad-surface` /
+`grad-shell` for panel and chrome depth; and an SVG area fill in the price
+chart, where the gradient genuinely carries information (magnitude fading
+to nothing) rather than decorating.
+
+**Type**: body 15px / 1.55 (was 13px / 1.4). Scale redefined at the theme
+level — `--text-xs` 13px, `--text-sm` 15px, `--text-lg` 19px, `--text-2xl`
+28px — so `text-xs` grows everywhere at once. Nothing below 12px except one
+superscript annotation marker. Table rows `px-4 py-2.5`; cards `p-5`;
+radius base 0.625rem with `rounded-xl` panels.
+
+**Press feedback** is part of the design, not an afterthought: `.pressable`
+dips and darkens on `:active`, `.pressable-row` for list rows,
+`SubmitButton` (`useFormStatus`) disables and spins while a server action is
+in flight, and nav links show a spinner via `useLinkStatus`. All of it
+respects `prefers-reduced-motion`.
+
+> **Do not add a `loading.tsx` under `app/(app)/`.** It was tried and
+> reverted: the Suspense boundary it creates re-suspends whenever a server
+> action calls `revalidatePath`, and inside a `useTransition` that pending
+> state never settles — every save button in the app stuck on "Saving…"
+> forever while the write had actually succeeded. `useLinkStatus` gives the
+> same navigation feedback without a boundary.
+
+---
+
+## v1/v2 (superseded — kept for the record)
+
 The brief (CLAUDE.md UI mandate): **calm, dense, precise — a professional
 instrument, not a dashboard toy.** Numbers are the protagonist. Dark is home.
 

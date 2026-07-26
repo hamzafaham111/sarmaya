@@ -57,7 +57,7 @@ export function NotesEditor({
         onChange={(e) => onChange(e.target.value)}
         rows={8}
         placeholder="Your research notes (markdown)…"
-        className="font-numeric w-full rounded-md border border-line bg-surface p-3 text-[13px] leading-relaxed text-ink placeholder:text-ink-muted focus:border-brand focus:ring-2 focus:ring-brand/30 focus:outline-none"
+        className="font-numeric w-full rounded-xl border border-line bg-surface p-3 text-[14px] leading-relaxed text-ink placeholder:text-ink-muted focus:border-brand focus:ring-2 focus:ring-brand/30 focus:outline-none"
       />
     </section>
   );

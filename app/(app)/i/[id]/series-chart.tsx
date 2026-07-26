@@ -2,9 +2,9 @@
 
 import { useMemo, useState } from "react";
 import {
+  Area,
+  AreaChart,
   CartesianGrid,
-  Line,
-  LineChart,
   ResponsiveContainer,
   Tooltip,
   XAxis,
@@ -44,16 +44,16 @@ export function SeriesChart({
 
   if (series.length < 2) {
     return (
-      <p className="rounded-md border border-dashed border-line bg-surface p-6 text-center text-sm text-ink-muted">
+      <p className="rounded-xl border border-dashed border-line bg-surface p-6 text-center text-sm text-ink-muted">
         Not enough history yet — the daily job accumulates it from here.
       </p>
     );
   }
 
   return (
-    <div className="rounded-md border border-line bg-surface p-3">
+    <div className="rounded-xl border border-line bg-surface p-3">
       <div className="mb-2 flex items-center justify-between">
-        <span className="text-[11px] tracking-wide text-ink-muted uppercase">
+        <span className="text-[12px] tracking-wide text-ink-muted uppercase">
           {label}
         </span>
         <div className="flex gap-1">
@@ -62,7 +62,7 @@ export function SeriesChart({
               key={r.key}
               type="button"
               onClick={() => setRange(r.key)}
-              className={`rounded-sm px-1.5 py-0.5 text-[11px] transition ${
+              className={`rounded-sm px-1.5 py-0.5 text-[12px] transition ${
                 range === r.key
                   ? "bg-brand-soft text-brand"
                   : "text-ink-muted hover:text-ink"
@@ -73,33 +73,53 @@ export function SeriesChart({
           ))}
         </div>
       </div>
-      <div className="h-52">
+      <div className="h-60">
         <ResponsiveContainer width="100%" height="100%">
-          <LineChart
+          <AreaChart
             data={data}
             margin={{ top: 4, right: 4, bottom: 0, left: 4 }}
           >
+            {/* The one place a gradient carries information: the fill fades
+                out so the line stays the thing you read. */}
+            <defs>
+              <linearGradient id="seriesFill" x1="0" y1="0" x2="0" y2="1">
+                <stop
+                  offset="0%"
+                  stopColor="var(--chart-1)"
+                  stopOpacity={0.35}
+                />
+                <stop
+                  offset="100%"
+                  stopColor="var(--chart-2)"
+                  stopOpacity={0}
+                />
+              </linearGradient>
+              <linearGradient id="seriesStroke" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stopColor="var(--chart-1)" />
+                <stop offset="100%" stopColor="var(--chart-2)" />
+              </linearGradient>
+            </defs>
             <CartesianGrid stroke="var(--border)" vertical={false} />
             <XAxis
               dataKey="date"
-              tick={{ fontSize: 10, fill: "var(--muted-foreground)" }}
+              tick={{ fontSize: 12, fill: "var(--muted-foreground)" }}
               axisLine={false}
               tickLine={false}
               minTickGap={60}
             />
             <YAxis
               domain={["auto", "auto"]}
-              tick={{ fontSize: 10, fill: "var(--muted-foreground)" }}
+              tick={{ fontSize: 12, fill: "var(--muted-foreground)" }}
               axisLine={false}
               tickLine={false}
-              width={56}
+              width={64}
             />
             <Tooltip
               contentStyle={{
                 background: "var(--popover)",
                 border: "1px solid var(--border)",
-                borderRadius: 6,
-                fontSize: 11,
+                borderRadius: 10,
+                fontSize: 13,
                 color: "var(--foreground)",
               }}
               formatter={(v) => [
@@ -107,15 +127,16 @@ export function SeriesChart({
                 "",
               ]}
             />
-            <Line
+            <Area
               dataKey="value"
-              stroke="var(--chart-2)"
-              strokeWidth={1.5}
+              stroke="url(#seriesStroke)"
+              strokeWidth={2}
+              fill="url(#seriesFill)"
               dot={false}
               isAnimationActive={false}
               connectNulls={false}
             />
-          </LineChart>
+          </AreaChart>
         </ResponsiveContainer>
       </div>
     </div>

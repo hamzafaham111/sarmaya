@@ -63,19 +63,22 @@ export function RangeBand({
         {/* the estimate band (or single-model tick) */}
         {single ? (
           <div
-            className="absolute top-1/2 h-full w-0.5 -translate-x-1/2 -translate-y-1/2 bg-brand"
+            className="bg-grad-brand absolute top-1/2 h-full w-1 -translate-x-1/2 -translate-y-1/2 rounded-full"
             style={{ left: `${pct(lo)}%` }}
           />
         ) : (
+          // The signature: the user's estimate range wears the brand
+          // gradient, so their own thinking is the most colourful thing on
+          // the screen.
           <div
-            className="absolute top-1/2 h-2/3 -translate-y-1/2 rounded-[2px] bg-brand/30 ring-1 ring-brand/50 ring-inset"
+            className="bg-grad-brand absolute top-1/2 h-2/3 -translate-y-1/2 rounded-full opacity-80 ring-1 ring-brand/40 ring-inset"
             style={{ left: `${pct(lo)}%`, width: `${pct(hi) - pct(lo)}%` }}
           />
         )}
         {/* current price marker */}
         {marker !== null ? (
           <div
-            className="absolute top-0 bottom-0 w-0.5 -translate-x-1/2 bg-ink"
+            className="absolute top-0 bottom-0 w-0.5 -translate-x-1/2 rounded-full bg-ink"
             style={{ left: `${pct(marker)}%` }}
           />
         ) : null}

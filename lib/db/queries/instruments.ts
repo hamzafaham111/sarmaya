@@ -1,4 +1,4 @@
-import { and, desc, eq } from "drizzle-orm";
+import { and, desc, eq, inArray } from "drizzle-orm";
 
 import { db } from "../index";
 import {
@@ -89,6 +89,26 @@ export async function insertSnapshotIfAbsent(
     .onConflictDoNothing();
 }
 
+/** Ownership + provenance check without loading the snapshot — the caller
+ *  only needs to know "does this user track it, and is it hand-kept". */
+export async function getOwnedInstrument(
+  userId: string,
+  instrumentId: string,
+): Promise<Instrument | null> {
+  const rows = await db()
+    .select({ instrument: instruments })
+    .from(userInstruments)
+    .innerJoin(instruments, eq(userInstruments.instrumentId, instruments.id))
+    .where(
+      and(
+        eq(userInstruments.userId, userId),
+        eq(userInstruments.instrumentId, instrumentId),
+      ),
+    )
+    .limit(1);
+  return rows[0]?.instrument ?? null;
+}
+
 /** A hand-entered price for a manual instrument. Writes the same snapshot +
  *  price_history shape the jobs write, so every downstream reader (charts,
  *  day change, valuation, portfolio) works without a special case. */
@@ -99,20 +119,24 @@ export async function setManualPrice(
   currency: string,
 ): Promise<void> {
   const data = { price, currency };
-  await db()
-    .insert(snapshots)
-    .values({ instrumentId, asOf, data, source: "manual" })
-    .onConflictDoUpdate({
-      target: [snapshots.instrumentId, snapshots.asOf],
-      set: { data, source: "manual", fetchedAt: new Date() },
-    });
-  await db()
-    .insert(priceHistory)
-    .values({ instrumentId, priceDate: asOf, close: String(price) })
-    .onConflictDoUpdate({
-      target: [priceHistory.instrumentId, priceHistory.priceDate],
-      set: { close: String(price) },
-    });
+  // Both writes at once — they are independent, and each round trip to the
+  // pooler is ~400ms of the user staring at a spinner.
+  await Promise.all([
+    db()
+      .insert(snapshots)
+      .values({ instrumentId, asOf, data, source: "manual" })
+      .onConflictDoUpdate({
+        target: [snapshots.instrumentId, snapshots.asOf],
+        set: { data, source: "manual", fetchedAt: new Date() },
+      }),
+    db()
+      .insert(priceHistory)
+      .values({ instrumentId, priceDate: asOf, close: String(price) })
+      .onConflictDoUpdate({
+        target: [priceHistory.instrumentId, priceHistory.priceDate],
+        set: { close: String(price) },
+      }),
+  ]);
 }
 
 export async function latestSnapshotFor(
@@ -125,6 +149,30 @@ export async function latestSnapshotFor(
     .orderBy(desc(snapshots.asOf))
     .limit(1);
   return rows[0] ?? null;
+}
+
+/**
+ * The newest snapshot for many instruments in ONE round trip.
+ *
+ * This matters more than it looks: a round trip to the pooler costs ~400ms,
+ * so calling latestSnapshotFor in a loop turned every list page into
+ * N × 400ms of dead time. DISTINCT ON is the Postgres-native "latest row per
+ * group" and needs no window function.
+ */
+export async function latestSnapshotsFor(
+  instrumentIds: string[],
+): Promise<Map<string, Snapshot>> {
+  const byInstrument = new Map<string, Snapshot>();
+  if (instrumentIds.length === 0) return byInstrument;
+
+  const rows = await db()
+    .selectDistinctOn([snapshots.instrumentId])
+    .from(snapshots)
+    .where(inArray(snapshots.instrumentId, instrumentIds))
+    .orderBy(snapshots.instrumentId, desc(snapshots.asOf));
+
+  for (const row of rows) byInstrument.set(row.instrumentId, row);
+  return byInstrument;
 }
 
 export interface TrackedInstrument {
@@ -142,14 +190,12 @@ export async function listUserInstruments(
     .where(eq(userInstruments.userId, userId))
     .orderBy(instruments.symbol);
 
-  const result: TrackedInstrument[] = [];
-  for (const row of rows) {
-    result.push({
-      instrument: row.instruments,
-      latestSnapshot: await latestSnapshotFor(row.instruments.id),
-    });
-  }
-  return result;
+  // Two round trips total, not one per instrument.
+  const latest = await latestSnapshotsFor(rows.map((r) => r.instruments.id));
+  return rows.map((row) => ({
+    instrument: row.instruments,
+    latestSnapshot: latest.get(row.instruments.id) ?? null,
+  }));
 }
 
 export interface InstrumentPage {

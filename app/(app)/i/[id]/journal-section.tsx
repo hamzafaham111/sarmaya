@@ -1,3 +1,4 @@
+import { SubmitButton } from "@/components/base/submit-button";
 import { computeHoldings } from "@/lib/analysis/holdings";
 import type { JournalEntry } from "@/lib/db/queries/journal";
 import { formatMoney, type Currency } from "@/lib/format";
@@ -59,7 +60,7 @@ export function JournalSection({
       ) : null}
 
       <details
-        className="mb-4 rounded-md border border-line bg-surface px-4 py-3"
+        className="mb-4 rounded-xl border border-line bg-surface px-5 py-3.5"
         open={entries.length === 0}
       >
         <summary className="cursor-pointer text-sm font-medium text-ink-muted transition hover:text-ink">
@@ -108,12 +109,7 @@ export function JournalSection({
             placeholder="Why? (at least 10 characters — future you will read this)"
             className="w-full rounded-sm border border-line bg-background p-2 text-sm text-ink placeholder:text-ink-muted focus:border-brand focus:outline-none"
           />
-          <button
-            type="submit"
-            className="rounded-sm bg-brand px-3 py-1 text-sm text-on-brand"
-          >
-            Record
-          </button>
+          <SubmitButton pendingLabel="Recording…">Record</SubmitButton>
         </form>
       </details>
 
@@ -121,11 +117,11 @@ export function JournalSection({
         {entries.map((entry) => (
           <li
             key={entry.id}
-            className="rounded-md border border-line bg-surface p-3 text-sm"
+            className="rounded-xl border border-line bg-surface p-3 text-sm"
           >
             <div className="mb-1 flex items-center gap-2.5">
               <span
-                className={`rounded-sm px-1.5 py-0.5 text-[11px] ${KIND_TONE[entry.kind] ?? ""}`}
+                className={`rounded-sm px-1.5 py-0.5 text-[12px] ${KIND_TONE[entry.kind] ?? ""}`}
               >
                 {entry.kind}
               </span>
@@ -141,12 +137,13 @@ export function JournalSection({
                 action={deleteJournalEntry.bind(null, instrumentId, entry.id)}
                 className="ml-auto"
               >
-                <button
-                  type="submit"
-                  className="text-xs text-neg underline underline-offset-4"
+                <SubmitButton
+                  variant="danger"
+                  size="sm"
+                  pendingLabel="Deleting…"
                 >
                   Delete
-                </button>
+                </SubmitButton>
               </form>
             </div>
             <p className="whitespace-pre-wrap text-ink-muted">

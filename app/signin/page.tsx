@@ -20,7 +20,7 @@ export default async function SignInPage({
 
   return (
     <main className="flex flex-1 flex-col items-center justify-center px-6 py-16">
-      <div className="w-full max-w-sm rounded-md border border-line bg-surface p-8">
+      <div className="w-full max-w-sm rounded-xl border border-line bg-surface p-8">
         <h1 className="font-display text-2xl font-medium text-ink">
           Sign in to Sarmaya
         </h1>
@@ -29,7 +29,7 @@ export default async function SignInPage({
         </p>
 
         {sent ? (
-          <p className="rounded-sm bg-brand-soft px-3 py-2 text-sm text-brand">
+          <p className="rounded-sm bg-brand-soft px-4 py-3 text-sm text-brand">
             Check your email — we sent you a sign-in link. You can close this
             tab.
           </p>
@@ -45,7 +45,7 @@ export default async function SignInPage({
               required
               autoComplete="email"
               placeholder="you@example.com"
-              className="rounded-sm border border-line bg-background px-3 py-2 text-sm text-ink placeholder:text-ink-muted focus:border-brand focus:ring-2 focus:ring-brand/30 focus:outline-none"
+              className="rounded-sm border border-line bg-background px-4 py-3 text-sm text-ink placeholder:text-ink-muted focus:border-brand focus:ring-2 focus:ring-brand/30 focus:outline-none"
             />
             <Button type="submit">Email me a sign-in link</Button>
             {error ? (

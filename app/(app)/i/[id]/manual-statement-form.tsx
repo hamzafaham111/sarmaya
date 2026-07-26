@@ -2,6 +2,8 @@
 
 import { useMemo, useState, useTransition } from "react";
 
+import { buttonClass } from "@/components/base/button-styles";
+import { Spinner } from "@/components/base/submit-button";
 import type { StatementYearData } from "@/lib/analysis/ratios";
 import {
   LINE_ITEM_VOCABULARY,
@@ -130,7 +132,7 @@ export function ManualStatementForm({
         <button
           type="button"
           onClick={() => setOpen(true)}
-          className="rounded-sm border border-line px-2.5 py-1 text-xs text-ink-muted transition hover:border-brand hover:text-brand"
+          className="pressable rounded-lg border border-gold/40 px-3 py-1.5 text-xs font-medium text-gold hover:bg-gold-soft"
         >
           + Add figures by hand
         </button>
@@ -139,9 +141,9 @@ export function ManualStatementForm({
   }
 
   return (
-    <div className="mt-3 rounded-md border border-brand/40 bg-surface p-4">
+    <div className="bg-grad-surface mt-3 rounded-xl border border-gold/40 p-5">
       <div className="mb-3 flex items-baseline justify-between gap-3">
-        <h3 className="text-sm text-ink">Your own figures</h3>
+        <h3 className="text-sm font-medium text-gold">Your own figures</h3>
         <button
           type="button"
           onClick={() => {
@@ -184,9 +186,9 @@ export function ManualStatementForm({
                   setKind(k);
                   reset();
                 }}
-                className={`rounded-sm px-2 py-1 text-xs transition ${
+                className={`pressable rounded-lg px-2.5 py-1 text-xs ${
                   kind === k
-                    ? "bg-brand-soft text-brand"
+                    ? "bg-gold-soft font-medium text-gold"
                     : "text-ink-muted hover:text-ink"
                 }`}
               >
@@ -220,7 +222,7 @@ export function ManualStatementForm({
                 className="font-numeric w-full rounded-sm border border-line bg-background px-2 py-1 text-sm text-ink tabular-nums focus:border-brand focus:outline-none"
               />
               {typeof provider === "number" ? (
-                <span className="mt-0.5 block text-[11px] text-ink-muted">
+                <span className="mt-0.5 block text-[12px] text-ink-muted">
                   source: {formatMoney(provider, currency, "compact")}
                 </span>
               ) : null}
@@ -236,9 +238,10 @@ export function ManualStatementForm({
           type="button"
           onClick={submit}
           disabled={pending || !yearIsValid}
-          className="rounded-sm bg-brand px-3 py-1 text-xs text-on-brand disabled:opacity-50"
+          className={buttonClass("gold", "sm")}
         >
-          {saved && !touched ? "Saved" : "Save figures"}
+          {pending ? <Spinner /> : null}
+          {pending ? "Saving…" : saved && !touched ? "Saved" : "Save figures"}
         </button>
         {Object.keys(mine).length > 0 ? (
           <button

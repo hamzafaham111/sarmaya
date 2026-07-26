@@ -4,6 +4,8 @@ import { ThemeToggle } from "@/components/base/theme-toggle";
 import { NavLinks } from "@/components/shell/nav-links";
 
 // The terminal chrome: fixed sidebar on desktop, top nav on mobile.
+// v3: the shell carries a gradient so the content surfaces read as raised
+// panels sitting on it.
 export function AppShell({
   children,
   userEmail,
@@ -16,18 +18,25 @@ export function AppShell({
   return (
     <div className="flex min-h-screen w-full">
       {/* sidebar (desktop) */}
-      <aside className="sticky top-0 hidden h-screen w-52 shrink-0 flex-col border-r border-line bg-surface md:flex">
-        <div className="px-4 py-4">
-          <Link href="/" className="font-display text-lg font-medium text-ink">
-            Sarmaya
+      <aside className="bg-grad-shell sticky top-0 hidden h-screen w-56 shrink-0 flex-col border-r border-line md:flex">
+        <div className="px-5 py-5">
+          <Link
+            href="/"
+            className="pressable font-display inline-flex items-center gap-2 text-xl font-semibold"
+          >
+            <span
+              aria-hidden
+              className="bg-grad-brand inline-block size-6 rounded-lg"
+            />
+            <span className="text-grad-brand">Sarmaya</span>
           </Link>
-          <p className="mt-0.5 text-[11px] text-ink-muted">research terminal</p>
+          <p className="mt-1 text-[12px] text-ink-muted">research terminal</p>
         </div>
         <NavLinks orientation="side" />
-        <div className="space-y-2 border-t border-line px-4 py-3">
+        <div className="space-y-2.5 border-t border-line px-5 py-4">
           {userEmail ? (
             <p
-              className="truncate text-[11px] text-ink-muted"
+              className="truncate text-[12px] text-ink-muted"
               title={userEmail}
             >
               {userEmail}
@@ -39,7 +48,7 @@ export function AppShell({
               <form action={signOut}>
                 <button
                   type="submit"
-                  className="text-xs text-ink-muted underline underline-offset-4 transition hover:text-ink"
+                  className="pressable rounded-lg border border-line px-2.5 py-1 text-xs text-ink-muted hover:border-neg/50 hover:text-neg"
                 >
                   Sign out
                 </button>
@@ -51,9 +60,12 @@ export function AppShell({
 
       {/* main column */}
       <div className="flex min-w-0 flex-1 flex-col">
-        <header className="sticky top-0 z-10 flex items-center gap-4 border-b border-line bg-surface/95 px-4 py-2.5 backdrop-blur md:hidden">
-          <Link href="/" className="font-display shrink-0 text-base text-ink">
-            Sarmaya
+        <header className="bg-grad-shell sticky top-0 z-10 flex items-center gap-4 border-b border-line px-4 py-3 backdrop-blur md:hidden">
+          <Link
+            href="/"
+            className="pressable font-display shrink-0 text-base font-semibold"
+          >
+            <span className="text-grad-brand">Sarmaya</span>
           </Link>
           <NavLinks orientation="top" />
           <span className="ml-auto flex shrink-0 items-center gap-2">
@@ -62,7 +74,7 @@ export function AppShell({
               <form action={signOut}>
                 <button
                   type="submit"
-                  className="text-xs text-ink-muted underline underline-offset-4"
+                  className="pressable rounded-lg border border-line px-2 py-1 text-xs text-ink-muted"
                 >
                   Sign out
                 </button>

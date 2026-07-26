@@ -28,7 +28,7 @@ export function KeyFiguresSection({
     return (
       <section className="mt-6">
         <h2 className="font-display mb-2 text-lg text-ink">Key figures</h2>
-        <p className="rounded-md border border-dashed border-line bg-surface p-6 text-center text-sm text-ink-muted">
+        <p className="rounded-xl border border-dashed border-line bg-surface p-6 text-center text-sm text-ink-muted">
           {isManual
             ? "No figures yet — this instrument is yours to fill in. Add statement years below and the ratios compute from them."
             : "No figures beyond price from this source yet — the daily job adds them when the provider supplies them."}
@@ -51,9 +51,9 @@ export function KeyFiguresSection({
         </span>
       </div>
 
-      <div className="rounded-md border border-line bg-surface">
-        <div className="border-b border-line px-4 py-3">
-          <p className="mb-2 text-[11px] tracking-wide text-ink-muted uppercase">
+      <div className="rounded-xl border border-line bg-surface">
+        <div className="border-b border-line px-5 py-3.5">
+          <p className="mb-2 text-[12px] tracking-wide text-ink-muted uppercase">
             What the market pays
           </p>
           <div className="grid grid-cols-2 gap-x-6 gap-y-3 sm:grid-cols-3 lg:grid-cols-6">
@@ -66,8 +66,8 @@ export function KeyFiguresSection({
           </div>
         </div>
 
-        <div className="px-4 py-3">
-          <p className="mb-2 text-[11px] tracking-wide text-ink-muted uppercase">
+        <div className="px-5 py-3.5">
+          <p className="mb-2 text-[12px] tracking-wide text-ink-muted uppercase">
             The business behind it
           </p>
           <div className="grid grid-cols-2 gap-x-6 gap-y-3 sm:grid-cols-3 lg:grid-cols-6">

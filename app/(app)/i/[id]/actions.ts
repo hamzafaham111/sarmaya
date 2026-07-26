@@ -10,7 +10,7 @@ import {
   type StatementKind,
 } from "@/lib/analysis/statements";
 import {
-  getInstrumentPage,
+  getOwnedInstrument,
   setManualPrice,
 } from "@/lib/db/queries/instruments";
 import {
@@ -140,14 +140,14 @@ export async function saveManualPrice(input: {
   const parsed = manualPriceSchema.safeParse(input);
   if (!parsed.success) return { ok: false as const };
 
-  const page = await getInstrumentPage(userId, parsed.data.instrumentId);
-  if (!page || !page.instrument.isManual) return { ok: false as const };
+  const instrument = await getOwnedInstrument(userId, parsed.data.instrumentId);
+  if (!instrument || !instrument.isManual) return { ok: false as const };
 
   await setManualPrice(
     parsed.data.instrumentId,
     parsed.data.asOf ?? new Date().toISOString().slice(0, 10),
     parsed.data.price,
-    page.instrument.currency,
+    instrument.currency,
   );
   revalidatePath(`/i/${parsed.data.instrumentId}`);
   return { ok: true as const };

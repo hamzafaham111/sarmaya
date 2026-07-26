@@ -66,20 +66,20 @@ export function RatiosSection({
         Computed from the statements above at read time — nothing fetched,
         nothing stored. A dash means the source did not provide the inputs.
       </p>
-      <div className="overflow-x-auto rounded-md border border-line bg-surface">
-        <table className="w-full min-w-max text-[13px] leading-[1.4]">
+      <div className="overflow-x-auto rounded-xl border border-line bg-surface">
+        <table className="w-full min-w-max text-[14px] leading-[1.4]">
           <thead>
             <tr className="border-b border-line">
-              <th className="sticky left-0 bg-surface px-3 py-1.5 text-left font-medium text-ink-muted" />
+              <th className="sticky left-0 bg-surface px-4 py-2.5 text-left font-medium text-ink-muted" />
               {ratios.map((r) => (
                 <th
                   key={r.fiscalYear}
-                  className="px-3 py-1.5 text-right font-medium text-ink-muted"
+                  className="px-4 py-2.5 text-right font-medium text-ink-muted"
                 >
                   FY{r.fiscalYear}
                 </th>
               ))}
-              <th className="px-3 py-1.5 text-right font-medium text-ink-muted">
+              <th className="px-4 py-2.5 text-right font-medium text-ink-muted">
                 trend
               </th>
             </tr>
@@ -93,25 +93,25 @@ export function RatiosSection({
                     <tr className="border-b border-line bg-surface-2">
                       <td
                         colSpan={ratios.length + 2}
-                        className="sticky left-0 px-3 py-1 text-[11px] tracking-wide text-ink-muted uppercase"
+                        className="sticky left-0 px-4 py-2 text-[12px] tracking-wide text-ink-muted uppercase"
                       >
                         {row.group}
                       </td>
                     </tr>
                   ) : null}
                   <tr className="border-b border-line last:border-0 hover:bg-surface-2">
-                    <td className="sticky left-0 bg-surface px-3 py-1.5 text-ink-muted">
+                    <td className="sticky left-0 bg-surface px-4 py-2.5 text-ink-muted">
                       {row.label}
                     </td>
                     {values.map((v, i) => (
                       <td
                         key={ratios[i].fiscalYear}
-                        className="font-numeric px-3 py-1.5 text-right text-ink tabular-nums"
+                        className="font-numeric px-4 py-2.5 text-right text-ink tabular-nums"
                       >
                         {display(v, row.format)}
                       </td>
                     ))}
-                    <td className="px-3 py-1">
+                    <td className="px-4 py-2">
                       <Sparkline values={values} width={72} height={20} />
                     </td>
                   </tr>

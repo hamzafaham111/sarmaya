@@ -2,6 +2,8 @@
 
 import { useState, useTransition } from "react";
 
+import { buttonClass } from "@/components/base/button-styles";
+import { Spinner } from "@/components/base/submit-button";
 import { formatMoney, type Currency } from "@/lib/format";
 
 import { saveManualPrice } from "./actions";
@@ -49,10 +51,10 @@ export function ManualPriceForm({
   }
 
   return (
-    <section className="mt-6 rounded-md border border-brand/40 bg-surface p-4">
+    <section className="bg-grad-surface mt-6 rounded-xl border border-gold/40 p-5">
       <div className="flex flex-wrap items-end gap-4">
         <div>
-          <h2 className="font-display text-sm text-ink">
+          <h2 className="font-display text-sm font-medium text-gold">
             Hand-kept instrument
           </h2>
           <p className="mt-0.5 text-xs text-ink-muted">
@@ -91,9 +93,10 @@ export function ManualPriceForm({
           type="button"
           onClick={submit}
           disabled={pending || !price.trim()}
-          className="rounded-sm bg-brand px-3 py-1 text-xs text-on-brand disabled:opacity-50"
+          className={buttonClass("gold", "sm")}
         >
-          {saved ? "Price saved" : "Save price"}
+          {pending ? <Spinner /> : null}
+          {pending ? "Saving…" : saved ? "Price saved" : "Save price"}
         </button>
       </div>
       {error ? <p className="mt-2 text-xs text-neg">{error}</p> : null}

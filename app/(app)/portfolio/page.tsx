@@ -13,22 +13,19 @@ import {
   type Currency,
   DASH,
 } from "@/lib/format";
-import { createClient } from "@/lib/supabase/server";
+import { getCurrentUser } from "@/lib/supabase/current-user";
 
 // Journal-derived, currency-bucketed. No cross-currency totals anywhere
 // (CLAUDE.md #5) — each bucket is its own little world.
 export default async function PortfolioPage() {
-  const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  const user = await getCurrentUser();
   if (!user) redirect("/signin");
 
   const buckets = buildPortfolio(await getPortfolioInputs(user.id));
 
   return (
     <main className="mx-auto w-full max-w-5xl px-6 py-6">
-      <h1 className="font-display mb-6 text-2xl font-medium text-ink">
+      <h1 className="font-display text-grad-brand mb-6 text-2xl font-semibold">
         Portfolio
       </h1>
 
@@ -48,7 +45,7 @@ export default async function PortfolioPage() {
 
               {bucket.breachedValuePct !== null &&
               bucket.breachedValuePct > 0 ? (
-                <p className="mb-3 rounded-sm bg-warn-soft px-3 py-2 text-sm text-warn">
+                <p className="mb-3 rounded-sm bg-warn-soft px-4 py-3 text-sm text-warn">
                   {formatPercent(bucket.breachedValuePct, 0)} of your{" "}
                   {bucket.currency} stock value is in companies with a breached
                   thesis.
@@ -87,35 +84,35 @@ export default async function PortfolioPage() {
                 />
               </div>
 
-              <div className="overflow-x-auto rounded-md border border-line bg-surface">
-                <table className="w-full min-w-max text-[13px] leading-[1.4]">
+              <div className="overflow-x-auto rounded-xl border border-line bg-surface">
+                <table className="w-full min-w-max text-[14px] leading-[1.4]">
                   <thead>
                     <tr className="border-b border-line text-ink-muted">
-                      <th className="px-3 py-1.5 text-left font-medium">
+                      <th className="px-4 py-2.5 text-left font-medium">
                         Instrument
                       </th>
-                      <th className="px-3 py-1.5 text-right font-medium">
+                      <th className="px-4 py-2.5 text-right font-medium">
                         Qty
                       </th>
-                      <th className="px-3 py-1.5 text-right font-medium">
+                      <th className="px-4 py-2.5 text-right font-medium">
                         Avg cost
                       </th>
-                      <th className="px-3 py-1.5 text-right font-medium">
+                      <th className="px-4 py-2.5 text-right font-medium">
                         Price/NAV
                       </th>
-                      <th className="px-3 py-1.5 text-right font-medium">
+                      <th className="px-4 py-2.5 text-right font-medium">
                         Value
                       </th>
-                      <th className="px-3 py-1.5 text-right font-medium">
+                      <th className="px-4 py-2.5 text-right font-medium">
                         P/L
                       </th>
-                      <th className="px-3 py-1.5 text-right font-medium">
+                      <th className="px-4 py-2.5 text-right font-medium">
                         Weight
                       </th>
-                      <th className="px-3 py-1.5 text-left font-medium">
+                      <th className="px-4 py-2.5 text-left font-medium">
                         Your range
                       </th>
-                      <th className="px-3 py-1.5 text-left font-medium">
+                      <th className="px-4 py-2.5 text-left font-medium">
                         Thesis
                       </th>
                     </tr>
@@ -126,7 +123,7 @@ export default async function PortfolioPage() {
                         key={row.instrumentId}
                         className="border-b border-line last:border-0 hover:bg-surface-2"
                       >
-                        <td className="px-3 py-1.5">
+                        <td className="px-4 py-2.5">
                           <Link
                             href={`/i/${row.instrumentId}`}
                             className="font-numeric font-medium text-ink hover:text-brand"
@@ -137,18 +134,18 @@ export default async function PortfolioPage() {
                             {row.kind}
                           </span>
                         </td>
-                        <td className="font-numeric px-3 py-1.5 text-right tabular-nums">
+                        <td className="font-numeric px-4 py-2.5 text-right tabular-nums">
                           {formatNumber(row.netQuantity)}
                         </td>
-                        <td className="font-numeric px-3 py-1.5 text-right tabular-nums">
+                        <td className="font-numeric px-4 py-2.5 text-right tabular-nums">
                           {row.averageCost === null
                             ? DASH
                             : formatMoney(Number(row.averageCost), c)}
                         </td>
-                        <td className="font-numeric px-3 py-1.5 text-right tabular-nums">
+                        <td className="font-numeric px-4 py-2.5 text-right tabular-nums">
                           {formatMoney(row.latestValue, c)}
                         </td>
-                        <td className="font-numeric px-3 py-1.5 text-right tabular-nums">
+                        <td className="font-numeric px-4 py-2.5 text-right tabular-nums">
                           {row.marketValue === null
                             ? DASH
                             : formatMoney(
@@ -158,7 +155,7 @@ export default async function PortfolioPage() {
                               )}
                         </td>
                         <td
-                          className={`font-numeric px-3 py-1.5 text-right tabular-nums ${
+                          className={`font-numeric px-4 py-2.5 text-right tabular-nums ${
                             row.unrealizedPnlPct === null
                               ? "text-ink-muted"
                               : row.unrealizedPnlPct >= 0
@@ -175,10 +172,10 @@ export default async function PortfolioPage() {
                                   : ""
                               }${formatPercent(row.unrealizedPnlPct)})`}
                         </td>
-                        <td className="font-numeric px-3 py-1.5 text-right tabular-nums">
+                        <td className="font-numeric px-4 py-2.5 text-right tabular-nums">
                           {formatPercent(row.weightPct, 1)}
                         </td>
-                        <td className="px-3 py-1.5">
+                        <td className="px-4 py-2.5">
                           {row.estimateLow !== null &&
                           row.estimateHigh !== null ? (
                             <RangeBand
@@ -193,7 +190,7 @@ export default async function PortfolioPage() {
                             </span>
                           )}
                         </td>
-                        <td className="px-3 py-1.5 text-xs">
+                        <td className="px-4 py-2.5 text-xs">
                           {row.thesisHealth === "none" ? (
                             <span className="text-ink-muted">no thesis</span>
                           ) : row.thesisHealth === "intact" ? (
@@ -220,8 +217,8 @@ export default async function PortfolioPage() {
               {bucket.weighted.pe !== null ||
               bucket.weighted.roe !== null ||
               bucket.weighted.debtToEquity !== null ? (
-                <div className="mt-4 rounded-md border border-line bg-surface p-4">
-                  <h3 className="mb-2 text-[11px] font-medium tracking-wide text-ink-muted uppercase">
+                <div className="mt-4 rounded-xl border border-line bg-surface p-4">
+                  <h3 className="mb-2 text-[12px] font-medium tracking-wide text-ink-muted uppercase">
                     Your {bucket.currency} stocks as one business
                     (value-weighted)
                   </h3>

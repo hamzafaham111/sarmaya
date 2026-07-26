@@ -9,7 +9,7 @@ import { isApplicable } from "@/lib/valuation/types";
 
 import { db } from "../index";
 import { instruments, journalEntries, theses, valuations } from "../schema";
-import { latestSnapshotFor } from "./instruments";
+import { latestSnapshotsFor } from "./instruments";
 
 /** The user's estimate range from their SAVED assumptions — computed with
  *  the same pure models the valuation panel uses (one implementation). */
@@ -74,9 +74,12 @@ export async function getPortfolioInputs(
     byInstrument.set(key, group);
   }
 
-  const [userTheses, userValuations] = await Promise.all([
+  // Three round trips in parallel, then no per-instrument queries at all —
+  // the pooler is ~400ms away, so a loop of them is the whole page's latency.
+  const [userTheses, userValuations, latestSnapshots] = await Promise.all([
     db().select().from(theses).where(eq(theses.userId, userId)),
     db().select().from(valuations).where(eq(valuations.userId, userId)),
+    latestSnapshotsFor([...byInstrument.keys()]),
   ]);
 
   const inputs: PortfolioInput[] = [];
@@ -90,7 +93,7 @@ export async function getPortfolioInputs(
       })),
     );
 
-    const snapshot = await latestSnapshotFor(instrument.id);
+    const snapshot = latestSnapshots.get(instrument.id) ?? null;
     const data = (snapshot?.data ?? {}) as Record<string, unknown>;
     const latestValue =
       instrument.kind === "fund"

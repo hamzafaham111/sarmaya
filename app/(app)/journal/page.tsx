@@ -3,7 +3,7 @@ import { redirect } from "next/navigation";
 
 import { EmptyState } from "@/components/base/empty-state";
 import { listAllEntries } from "@/lib/db/queries/journal";
-import { createClient } from "@/lib/supabase/server";
+import { getCurrentUser } from "@/lib/supabase/current-user";
 
 const KIND_TONE: Record<string, string> = {
   buy: "bg-brand-soft text-pos",
@@ -14,17 +14,14 @@ const KIND_TONE: Record<string, string> = {
 
 // The global decision journal: every buy/sell/SIP/note, newest first.
 export default async function JournalPage() {
-  const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  const user = await getCurrentUser();
   if (!user) redirect("/signin");
 
   const items = await listAllEntries(user.id);
 
   return (
     <main className="mx-auto w-full max-w-4xl px-6 py-6">
-      <h1 className="font-display mb-1 text-2xl font-medium text-ink">
+      <h1 className="font-display text-grad-brand mb-1 text-2xl font-semibold">
         Journal
       </h1>
       <p className="mb-6 text-sm text-ink-muted">
@@ -42,7 +39,7 @@ export default async function JournalPage() {
           {items.map(({ entry, symbol, instrumentId }) => (
             <li
               key={entry.id}
-              className="rounded-md border border-line bg-surface p-3 text-sm"
+              className="rounded-xl border border-line bg-surface p-3 text-sm"
             >
               <div className="mb-1 flex items-center gap-2.5">
                 <Link
@@ -52,7 +49,7 @@ export default async function JournalPage() {
                   {symbol}
                 </Link>
                 <span
-                  className={`rounded-sm px-1.5 py-0.5 text-[11px] ${KIND_TONE[entry.kind] ?? ""}`}
+                  className={`rounded-sm px-1.5 py-0.5 text-[12px] ${KIND_TONE[entry.kind] ?? ""}`}
                 >
                   {entry.kind}
                 </span>

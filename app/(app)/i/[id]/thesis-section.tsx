@@ -127,7 +127,7 @@ export function ThesisSection({
           return (
             <li
               key={thesis.id}
-              className={`rounded-md border border-line bg-surface p-3 ${thesis.status === "archived" ? "opacity-60" : ""}`}
+              className={`rounded-xl border border-line bg-surface p-3 ${thesis.status === "archived" ? "opacity-60" : ""}`}
             >
               <div className="flex items-start justify-between gap-3">
                 <div>
@@ -142,7 +142,7 @@ export function ThesisSection({
                 </div>
                 {status ? (
                   <span
-                    className={`shrink-0 rounded-sm px-1.5 py-0.5 text-[11px] ${BADGE[status]}`}
+                    className={`shrink-0 rounded-sm px-1.5 py-0.5 text-[12px] ${BADGE[status]}`}
                   >
                     {status === "unverifiable-today"
                       ? "unverifiable today"
@@ -219,7 +219,7 @@ export function ThesisSection({
 
       {active.length < MAX_STATEMENTS ? (
         <details
-          className="mt-3 rounded-md border border-line bg-surface px-4 py-3"
+          className="mt-3 rounded-xl border border-line bg-surface px-5 py-3.5"
           open={active.length === 0}
         >
           <summary className="cursor-pointer text-sm font-medium text-ink-muted transition hover:text-ink">
@@ -240,7 +240,7 @@ export function ThesisSection({
             <RuleFields rule={null} hasEstimate={hasEstimate} />
             <button
               type="submit"
-              className="rounded-sm bg-brand px-3 py-1 text-sm text-on-brand"
+              className="rounded-sm bg-brand px-4 py-2 text-sm text-on-brand"
             >
               Add statement
             </button>

@@ -106,7 +106,7 @@ export const behaviour: Section = {
           text: "The reliable defences are structural rather than mental: decide position size before buying, write the thesis before the price moves, rebalance on a calendar rather than on a feeling, automate contributions, and reread what you wrote before acting. Each of these removes a decision from the moment when you are least equipped to make it.",
         },
       ],
-      next: ["when-to-sell", "reviewing"],
+      next: ["munger", "when-to-sell"],
     },
     {
       slug: "when-to-sell",

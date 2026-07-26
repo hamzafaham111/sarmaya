@@ -18,6 +18,7 @@ export type Block =
   | { t: "table"; head: string[]; rows: string[][]; caption?: string }
   | { t: "note"; kind: "key" | "watch" | "example"; title?: string; text: string } // prettier-ignore
   | { t: "formula"; expr: string; note?: string }
+  | { t: "quote"; text: string; who: string; where?: string }
   | { t: "terms"; items: { term: string; def: string }[] };
 
 export interface Article {

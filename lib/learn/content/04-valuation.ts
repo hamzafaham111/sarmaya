@@ -41,8 +41,18 @@ export const valuation: Section = {
           t: "p",
           text: "The traditional response to all this uncertainty is to require a gap between price and your estimate before committing — a buffer for being wrong. The size of the buffer is a judgement about how confident you are, and confidence should be lowest exactly where the business is hardest to forecast.",
         },
+        {
+          t: "quote",
+          text: "Confronted with a challenge to distill the secret of sound investment into three words, we venture the motto, margin of safety.",
+          who: "Benjamin Graham",
+          where: "The Intelligent Investor, chapter 20",
+        },
+        {
+          t: "p",
+          text: "The idea is nearly a century old and remains the intellectual foundation of everything on this page — the Graham article in the Masters section traces where it came from and what it survived.",
+        },
       ],
-      next: ["dcf", "reverse-dcf"],
+      next: ["dcf", "graham"],
     },
     {
       slug: "dcf",
@@ -91,6 +101,20 @@ export const valuation: Section = {
           kind: "watch",
           title: "The honest weakness",
           text: "A DCF is extremely sensitive to the growth rate, the discount rate and the terminal assumption — three numbers nobody knows. Small changes produce very different answers, so it is entirely possible to justify almost any conclusion by nudging inputs that all look reasonable. Treat it as a way to make your assumptions explicit, not as a measurement of the company.",
+        },
+        { t: "h", text: "What exactly is being discounted: owner earnings" },
+        {
+          t: "p",
+          text: "The intellectual ancestor of the FCF a DCF discounts is Warren Buffett's 'owner earnings', defined in the appendix to his 1986 shareholder letter:",
+        },
+        {
+          t: "formula",
+          expr: "owner earnings = reported earnings\n               + depreciation, amortisation and other non-cash charges\n               − maintenance capex",
+          note: "Maintenance capex — the spending needed just to hold position and volume — must be estimated; it appears in no statement.",
+        },
+        {
+          t: "p",
+          text: "Free cash flow is the computable stand-in: it subtracts all capex, including growth spending, so for a company investing heavily it understates what the owner could take out — a conservative bias worth knowing you have. For a business whose capex is mostly maintenance, the two are nearly the same figure. When a DCF looks wrong for a heavy investor, this line is usually why, and the honest fix is judgement about how much of the capex builds versus maintains — not a bigger growth rate.",
         },
         { t: "h", text: "When it does not apply" },
         {
@@ -148,8 +172,29 @@ export const valuation: Section = {
           kind: "key",
           text: "'Normalised' operating income means a figure representative of a typical year, not a peak or a trough. For a cyclical business, using the top of the cycle produces a badly inflated answer.",
         },
+        {
+          t: "p",
+          text: "EPV as a formal method was systematised by Bruce Greenwald at Columbia, deliberately extending Graham: pay for the assets and the demonstrated earning power; treat growth as a separate question you answer with evidence about the moat, not with a spreadsheet cell.",
+        },
+        {
+          t: "h",
+          text: "A period piece worth knowing: Graham's growth formula",
+        },
+        {
+          t: "p",
+          text: "The Intelligent Investor also contains a quick growth heuristic, quoted everywhere and worth knowing mostly so you are not impressed by it:",
+        },
+        {
+          t: "formula",
+          expr: "value = EPS × (8.5 + 2g)",
+          note: "g is the expected annual growth rate over 7–10 years, as a whole number — g = 10 means 10%.",
+        },
+        {
+          t: "p",
+          text: "It says a no-growth business deserves about 8.5× earnings and each point of long-run growth adds two multiples. Graham himself attached warnings to it, and later editions add more: it has no margin of safety in it, and it prices decade-long growth — the least knowable input in investing — at a flat rate. Its one genuinely useful mode is run backwards: implied g = (P/E − 8.5) ÷ 2. A stock at 45× earnings implies roughly 18% annual growth for a decade under this formula — a claim you can compare against the company's actual record, which is precisely the reverse-DCF habit with older arithmetic.",
+        },
       ],
-      next: ["reverse-dcf", "no-single-value"],
+      next: ["reverse-dcf", "graham"],
     },
     {
       slug: "reverse-dcf",
@@ -185,8 +230,12 @@ export const valuation: Section = {
           t: "p",
           text: "It inherits every weakness of the forward DCF — the discount rate and terminal assumption are still yours, and still arbitrary. It simply moves the uncertainty somewhere you can see it.",
         },
+        {
+          t: "p",
+          text: "The habit of mind behind this tool is inversion — solving the problem backwards — which Charlie Munger spent a career advocating; his article in the Masters section covers where it came from and what else it is good for.",
+        },
       ],
-      next: ["no-single-value", "position-sizing"],
+      next: ["munger", "position-sizing"],
     },
   ],
 };

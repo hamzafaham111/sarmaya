@@ -2,10 +2,11 @@ import { startHere } from "./content/01-start-here";
 import { instruments } from "./content/02-instruments";
 import { readingABusiness } from "./content/03-reading-a-business";
 import { valuation } from "./content/04-valuation";
-import { portfolio } from "./content/05-portfolio";
-import { behaviour } from "./content/06-behaviour";
-import { mechanics } from "./content/07-mechanics";
-import { glossary } from "./content/08-glossary";
+import { masters } from "./content/05-masters";
+import { portfolio } from "./content/06-portfolio";
+import { behaviour } from "./content/07-behaviour";
+import { mechanics } from "./content/08-mechanics";
+import { glossary } from "./content/09-glossary";
 import type { Article, Section } from "./types";
 
 export type { Article, Block, Section } from "./types";
@@ -17,6 +18,7 @@ export const SECTIONS: Section[] = [
   instruments,
   readingABusiness,
   valuation,
+  masters,
   portfolio,
   behaviour,
   mechanics,

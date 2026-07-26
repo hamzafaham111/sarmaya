@@ -201,14 +201,23 @@ Every decision across all instruments, newest first, with the reasoning.
 ### Learn (`/learn`) — new
 
 A documentation-style course, **public** (no sign-in needed) since it holds no
-user data. Eight sections, ~26 articles, ~2.5 hours of reading: start here,
-what you can own, reading a business, valuation, building a portfolio,
-behaviour and process, how the market works, and an A–Z glossary. Sidebar with
-instant filter, prev/next navigation, "read next" links.
+user data. Nine sections, ~39 articles, ~5.5 hours of reading: start here,
+what you can own, studying a business (income statement line by line, margins
+and pricing power, quality of earnings, a repeatable study process), valuation,
+the investors worth studying (Graham, Fisher, Buffett, Munger), building a
+portfolio, behaviour and process, how the market works, and an A–Z glossary.
+Sidebar with instant filter, prev/next navigation, "read next" links.
+
+The deep-dive articles are built on **real, primary-source figures**, verified
+against the documents: Infosys FY2025 audited results (both Ind-AS ₹-crore and
+IFRS USD presentations, from the SEC-filed exchange release), See's Candies
+economics from the Berkshire 2007 letter, Coca-Cola/AmEx from the 2022 letter,
+the Satyam fraud figures from Raju's 2009 confession letter (SEC exhibit), and
+HUL/Tata Steel decade margins from consolidated filings.
 
 Content is **data, not markup** — `lib/learn/content/*.ts` with a typed block
-union (paragraph, heading, list, table, note, formula, term list). Adding an
-article means writing an object; no component changes.
+union (paragraph, heading, list, table, note, formula, quote, term list).
+Adding an article means writing an object; no component changes.
 
 ### Email
 

@@ -5,7 +5,7 @@ import { allArticles, SECTIONS, TOTAL_MINUTES } from "@/lib/learn";
 export const metadata = {
   title: "Learn — Sarmaya",
   description:
-    "A course in investing fundamentals: instruments, reading a business, valuation, portfolio construction and behaviour.",
+    "A course in investing fundamentals: instruments, studying a business statement by statement, valuation, the investors worth studying, portfolio construction and behaviour.",
 };
 
 export default function LearnIndex() {
@@ -19,9 +19,11 @@ export default function LearnIndex() {
         </h1>
         <p className="mt-2 max-w-[68ch] text-[15px] leading-[1.75] text-ink-muted">
           Everything a first-time investor needs, in the order it makes sense to
-          learn it — what the instruments are, how to read a business, how
-          valuation works and why it is always a range, how to build a
-          portfolio, and the behaviour that decides most outcomes.
+          learn it — what the instruments are, how to study a business statement
+          by statement (with real audited accounts as the worked examples), how
+          valuation works and why it is always a range, the investors whose
+          ideas these tools come from, how to build a portfolio, and the
+          behaviour that decides most outcomes.
         </p>
         <p className="font-numeric mt-3 text-xs text-ink-muted">
           {SECTIONS.length} sections · {articleCount} articles · about{" "}

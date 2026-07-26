@@ -29,7 +29,7 @@ test("learn is readable signed-out, dark-first, and light on toggle", async ({
 
   // Section and article navigation both render.
   await expect(
-    page.getByRole("heading", { name: "Reading a business" }).first(),
+    page.getByRole("heading", { name: "Studying a business" }).first(),
   ).toBeVisible();
   await page
     .getByRole("link", { name: /The three financial statements/ })

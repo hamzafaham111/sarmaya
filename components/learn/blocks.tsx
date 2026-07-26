@@ -141,6 +141,21 @@ function BlockView({ block }: { block: Block }) {
         </div>
       );
 
+    case "quote":
+      return (
+        <blockquote className="max-w-[68ch] border-l-2 border-l-violet pl-5">
+          <p className="font-display text-[17px] leading-[1.65] text-ink">
+            &ldquo;{block.text}&rdquo;
+          </p>
+          <footer className="mt-2 text-[13px] text-ink-muted">
+            — {block.who}
+            {block.where ? (
+              <span className="italic">, {block.where}</span>
+            ) : null}
+          </footer>
+        </blockquote>
+      );
+
     case "terms":
       return (
         <dl className="max-w-[72ch] divide-y divide-line overflow-hidden rounded-xl border border-line bg-surface">

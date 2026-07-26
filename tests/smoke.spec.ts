@@ -110,6 +110,29 @@ test("magic-link auth reaches the authed shell", async ({ page }) => {
     // No NaN anywhere in the rendered page (automated criterion).
     expect(await page.locator("main").innerText()).not.toContain("NaN");
 
+    // Phase 4: the valuation panel renders with auto-seeded models and the
+    // signature RangeBand shows "your estimate range".
+    await expect(
+      page.getByRole("heading", { name: "Valuation — your models" }),
+    ).toBeVisible();
+    await expect(page.getByText(/your estimate range · models:/)).toBeVisible();
+    // Editing an assumption recomputes live and persists.
+    const growthInput = page
+      .locator("label", { hasText: "Growth %/yr" })
+      .locator("input");
+    await growthInput.fill("7");
+    await page
+      .getByRole("button", { name: "Save", exact: true })
+      .first()
+      .click();
+    await expect(
+      page.getByRole("button", { name: "Saved", exact: true }).first(),
+    ).toBeVisible({ timeout: 10_000 });
+    await page.reload();
+    await expect(
+      page.locator("label", { hasText: "Growth %/yr" }).locator("input"),
+    ).toHaveValue("7", { timeout: 15_000 });
+
     // Annotation on a statement cell persists across reload.
     await page
       .getByRole("cell", { name: "Revenue" })
@@ -127,10 +150,13 @@ test("magic-link auth reaches the authed shell", async ({ page }) => {
     ).toBeVisible({ timeout: 15_000 });
 
     // Notes autosave survives reload.
-    await page
+    const notesSection = page.locator("section").filter({
+      has: page.getByPlaceholder("Your research notes (markdown)…"),
+    });
+    await notesSection
       .getByPlaceholder("Your research notes (markdown)…")
       .fill("smoke note: studying reliance");
-    await expect(page.getByText("Saved", { exact: true })).toBeVisible({
+    await expect(notesSection.getByText("Saved", { exact: true })).toBeVisible({
       timeout: 10_000,
     });
     await page.reload();

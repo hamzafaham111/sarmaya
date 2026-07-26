@@ -10,6 +10,8 @@ import {
   getDayChange,
   getStatementRows,
 } from "@/lib/db/queries/study";
+import { getValuations } from "@/lib/db/queries/valuations";
+import { buildSeeds } from "@/lib/valuation/seed";
 import { formatMoney, type Currency } from "@/lib/format";
 import { createClient } from "@/lib/supabase/server";
 
@@ -18,6 +20,7 @@ import { NotesEditor } from "./notes-editor";
 import { RatiosSection } from "./ratios-section";
 import { StatementsSection } from "./statements-section";
 import { TrendsSection } from "./trends-section";
+import { ValuationSection } from "./valuation-section";
 
 function isStale(fetchedAt: Date | null): boolean {
   if (!fetchedAt) return true;
@@ -48,11 +51,13 @@ export default async function InstrumentPage({
   const data = latestSnapshot?.data as { price?: number | null } | null;
   const isStock = instrument.kind === "stock";
 
-  const [statementRows, annotations, dayChange] = await Promise.all([
-    isStock ? getStatementRows(instrument.id) : Promise.resolve([]),
-    isStock ? getAnnotations(user.id, instrument.id) : Promise.resolve([]),
-    getDayChange(instrument.id),
-  ]);
+  const [statementRows, annotations, dayChange, savedValuations] =
+    await Promise.all([
+      isStock ? getStatementRows(instrument.id) : Promise.resolve([]),
+      isStock ? getAnnotations(user.id, instrument.id) : Promise.resolve([]),
+      getDayChange(instrument.id),
+      isStock ? getValuations(user.id, instrument.id) : Promise.resolve([]),
+    ]);
 
   const years = groupStatementYears(
     statementRows.map((r) => ({
@@ -90,10 +95,23 @@ export default async function InstrumentPage({
         ) : null}
       </header>
 
-      {/* RangeBand placeholder — activates with the valuation engine (P4) */}
-
       {isStock ? (
         <>
+          <ValuationSection
+            instrumentId={instrument.id}
+            seeds={buildSeeds(
+              years,
+              (latestSnapshot?.data as Record<string, number | null>) ?? null,
+            )}
+            saved={Object.fromEntries(
+              savedValuations.map((v) => [
+                v.model,
+                v.assumptions as Record<string, unknown>,
+              ]),
+            )}
+            price={data?.price ?? null}
+            currency={currency}
+          />
           <StatementsSection
             instrumentId={instrument.id}
             years={years}

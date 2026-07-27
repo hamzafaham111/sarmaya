@@ -4,6 +4,16 @@ import type { Block } from "@/lib/learn";
 // characters) because long lines are the main thing that makes
 // documentation tiring to read.
 
+/** Stable anchor id for an in-article heading, shared with the
+ *  "On this page" outline. */
+export function headingId(text: string): string {
+  return text
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, "")
+    .trim()
+    .replace(/\s+/g, "-");
+}
+
 const NOTE_STYLE: Record<
   string,
   { edge: string; label: string; tone: string }
@@ -15,7 +25,7 @@ const NOTE_STYLE: Record<
 
 export function Blocks({ blocks }: { blocks: Block[] }) {
   return (
-    <div className="space-y-5">
+    <div className="space-y-6">
       {blocks.map((block, i) => (
         <BlockView key={i} block={block} />
       ))}
@@ -27,14 +37,17 @@ function BlockView({ block }: { block: Block }) {
   switch (block.t) {
     case "p":
       return (
-        <p className="max-w-[68ch] text-[15px] leading-[1.75] text-ink">
+        <p className="max-w-[68ch] text-[15px] leading-[1.8] text-ink">
           {block.text}
         </p>
       );
 
     case "h":
       return (
-        <h2 className="font-display mt-9 flex items-center gap-3 text-lg font-semibold text-ink">
+        <h2
+          id={headingId(block.text)}
+          className="font-display mt-10 flex scroll-mt-24 items-center gap-3 text-xl font-semibold text-ink"
+        >
           {block.text}
           <span aria-hidden className="rule-grad h-px flex-1 opacity-40" />
         </h2>

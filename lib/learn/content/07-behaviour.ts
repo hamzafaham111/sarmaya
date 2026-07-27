@@ -61,7 +61,13 @@ export const behaviour: Section = {
       body: [
         {
           t: "p",
-          text: "These are well-documented patterns in how people decide under uncertainty. Reading about them does not make you immune — the research is fairly clear that awareness alone changes little. What helps is having a written process that does not require you to be rational in the moment.",
+          text: "These are well-documented patterns in how people decide under uncertainty. Reading about them does not make you immune — the research is fairly clear that awareness alone changes little. What helps is having a written process that does not require you to be rational in the moment. (Charlie Munger's fuller catalogue, and the framework behind it, has its own article in the Masters section.)",
+        },
+        {
+          t: "quote",
+          text: "We simply attempt to be fearful when others are greedy and to be greedy only when others are fearful.",
+          who: "Warren Buffett",
+          where: "1986 Berkshire Hathaway letter",
         },
         {
           t: "terms",
@@ -130,6 +136,13 @@ export const behaviour: Section = {
             "You need the money for the purpose it was always intended for. This is a success, not a failure.",
           ],
         },
+        {
+          t: "quote",
+          text: "Selling your winners and holding your losers is like cutting the flowers and watering the weeds.",
+          who: "Peter Lynch",
+          where:
+            "One Up on Wall Street — Buffett liked it enough to quote it in his 1988 letter",
+        },
         { t: "h", text: "Reasons that tend not to survive scrutiny" },
         {
           t: "ul",
@@ -186,6 +199,82 @@ export const behaviour: Section = {
         },
       ],
       next: ["biases", "corporate-actions"],
+    },
+    {
+      slug: "market-history",
+      title: "A short history of manias and crashes",
+      summary:
+        "1929, the Nifty Fifty, Harshad Mehta, the dot-com bust, 2008, COVID — what repeats, what it costs, and what survived every one of them.",
+      minutes: 11,
+      body: [
+        {
+          t: "p",
+          text: "Nothing inoculates an investor like history, because every mania feels unprecedented from inside and looks identical from outside: a genuine story, cheap money, prices that make everyone who owns feel clever and everyone who abstains feel stupid — then the turn, arriving without announcement. These episodes are worth knowing as specifically as possible, figures included, because 'markets crash sometimes' is an abstraction, and abstractions do not hold your behaviour together at the bottom.",
+        },
+        {
+          t: "quote",
+          text: "The four most dangerous words in investing are: 'this time it's different.'",
+          who: "Sir John Templeton",
+          where: "Forbes, 1993",
+        },
+        { t: "h", text: "1929 and after: the worst case on record" },
+        {
+          t: "p",
+          text: "The American crash of 1929 remains the calibration point for how bad equity can get: the market fell about 89% from its 1929 peak to the 1932 bottom, and the peak was not regained until 1954 — a quarter century. It is the crash that ruined Graham's clients, forged the margin of safety, and produced Security Analysis. Two of its lessons have never expired: leverage converts a drawdown into a wipeout (the 1929 market ran on 10% margin), and 'the market always comes back' is true of markets on decade timescales while being false, permanently, for many individual companies inside them.",
+        },
+        { t: "h", text: "The Nifty Fifty, 1972: quality at any price" },
+        {
+          t: "p",
+          text: "By 1972, America's institutional consensus held that a list of great companies — Xerox, Polaroid, Avon, Disney, McDonald's — were 'one-decision' stocks: buy and never sell, price irrelevant. Several traded between 60 and 90 times earnings. The businesses were mostly as good as claimed; the prices were not, and in the 1973–74 break the group fell far harder than the market — Polaroid, at over 90× earnings at the peak, lost roughly 90% and never truly returned. The permanent lesson sits at the heart of this course's valuation section: a wonderful business and a wonderful investment are different claims, separated by the price paid.",
+        },
+        { t: "h", text: "1992: Harshad Mehta and the market India rebuilt" },
+        {
+          t: "p",
+          text: "India's formative scandal. Through 1991–92, broker Harshad Mehta diverted an estimated ₹4,000–5,000 crore from the banking system — using fake and misused bank receipts in the ready-forward market — into a handful of stocks. The Sensex roughly quadrupled in about eighteen months to its April 1992 peak of around 4,467, with favourite counters multiplying far more, and 'the Big Bull' on magazine covers explaining why old valuation rules no longer applied. When a journalist exposed the funding chain, the index roughly halved within a year, and the favoured stocks fell much further.",
+        },
+        {
+          t: "p",
+          text: "What makes 1992 more than a crime story is what it built. The scandal gave SEBI statutory teeth (the SEBI Act, 1992), accelerated the founding of the NSE with screen-based trading, and set off the reforms that led to dematerialised shares and shorter settlement — the clean plumbing described in the mechanics section exists because this happened. A decade later the smaller Ketan Parekh episode (2001) — circular trading in ten favoured technology stocks with diverted bank funds — repeated the pattern and tightened the system again. The Indian retail investor's rulebook was written in these two fires.",
+        },
+        { t: "h", text: "2000: the dot-com bust" },
+        {
+          t: "p",
+          text: "The internet was real — that is the uncomfortable part. The technology changed the world exactly as promised, and the NASDAQ still fell 78% from its March 2000 peak of 5,048 to the 2002 trough, taking fifteen years to regain the high. Companies with no revenue had been priced on 'eyeballs'; profitable survivors like Cisco fell 80%+ from prices that had assumed decades of perfection. India's parallel ran through the same months: the software favourites of 1999–2000 fell as hard, and Infosys itself — the same excellent business whose statements anchor this course — took years to grow back into its 2000 price. A true story does not make a price right; the reverse-DCF question ('what does this price assume?') is the vaccine this episode teaches.",
+        },
+        { t: "h", text: "2008: the credit crisis" },
+        {
+          t: "p",
+          text: "A leverage crisis in American housing finance became, through interconnected balance sheets, everyone's crisis. The Sensex fell about 61% from its January 2008 peak near 21,000 to the March 2009 bottom near 8,200 — and then regained the peak by late 2010, faster than almost anyone at the bottom believed possible. 2008's lessons are about balance sheets and behaviour in equal measure: companies with debt maturing into a frozen credit market died regardless of their operations (the interest-cover and maturity checks in this course are 2008 lessons), and investors who held cash reserves and written theses bought the decade's best prices from investors who had neither.",
+        },
+        { t: "h", text: "2020: the fastest crash in history" },
+        {
+          t: "p",
+          text: "COVID took the Sensex down roughly 38% in six weeks to its 23 March 2020 low — with daily moves hitting circuit breakers — and the recovery was equally unprecedented: the loss was regained within the same year while the pandemic still raged, as rates fell to historic lows and markets priced the recovery before the newspapers described the disaster. 2020 is the cleanest modern proof that markets are not mirrors of the present but auctions on the future, and that an investor who waits for the news to improve before acting waits until the prices already have.",
+        },
+        { t: "h", text: "Pakistan's own cycle" },
+        {
+          t: "p",
+          text: "The KSE-100 compressed the whole pattern into one recent decade: a euphoric run to about 53,000 by May 2017 (MSCI emerging-market inclusion, CPEC optimism), a grinding 45%-plus decline over the following two years as the currency and macro cracked, long stagnation — and then, from 2023, one of the world's strongest bull markets, crossing 100,000 in late 2024. An investor who entered at the 2017 top and one who entered in the 2019 despair hold identical instruments with opposite experiences: the entry price, set by the crowd's mood, decided everything.",
+        },
+        { t: "h", text: "What actually repeats" },
+        {
+          t: "ul",
+          items: [
+            "Every mania has a true story at its core — electricity, the internet, reform, liquidity. The story being true is what makes the price being wrong so hard to see.",
+            "The peak is unannounced and feels like the middle. The bottom is unannounced and feels like the end of the world. Nobody rings bells.",
+            "Leverage is the difference between a bad year and a permanent exit. Every wipeout in this article ran through borrowed money somewhere.",
+            "Indices recovered every single time; many individual favourites did not. Diversification and quality are what make 'wait for recovery' a plan rather than a hope.",
+            "The rewards went to prepared temperament: cash to deploy, theses already written, and rules made in calm weather. The behaviour section is this article's toolkit.",
+          ],
+        },
+        {
+          t: "note",
+          kind: "watch",
+          title: "History rhymes; it does not schedule",
+          text: "None of this predicts the next crash's date, cause or depth — no one has ever done that reliably, and this course will not pretend to. The claim is smaller and more useful: there will be one, it will feel different, and the balance sheet and behaviour that survived the last six will be what survives it.",
+        },
+      ],
+      next: ["risk-and-volatility", "why-write-a-thesis"],
     },
   ],
 };

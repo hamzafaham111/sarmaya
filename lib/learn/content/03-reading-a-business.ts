@@ -24,6 +24,12 @@ export const readingABusiness: Section = {
           t: "p",
           text: "Every listed company publishes three statements. They answer three different questions, and any one of them alone can mislead you. Sarmaya shows all three, years across the columns, so you read them as a trend rather than a snapshot.",
         },
+        {
+          t: "quote",
+          text: "You have to know accounting. It's the language of practical business life.",
+          who: "Charlie Munger",
+          where: "USC Business School talk, 1994",
+        },
         { t: "h", text: "The income statement — did it make a profit?" },
         {
           t: "p",
@@ -737,6 +743,65 @@ export const readingABusiness: Section = {
         },
       ],
       next: ["studying-a-company", "why-write-a-thesis"],
+    },
+    {
+      slug: "finding-ideas",
+      title: "Where ideas come from",
+      summary:
+        "Before anything can be studied it has to be noticed. The honest sources of ideas — and the dishonest ones.",
+      minutes: 8,
+      body: [
+        {
+          t: "p",
+          text: "Every study begins with a name on a list, and where that name came from matters more than it seems. An idea sourced from your own observation arrives with real information attached; an idea sourced from someone else's excitement arrives with their incentives attached. This article is about building the first kind of pipeline.",
+        },
+        { t: "h", text: "Start where you already have an edge" },
+        {
+          t: "quote",
+          text: "Know what you own, and know why you own it.",
+          who: "Peter Lynch",
+        },
+        {
+          t: "p",
+          text: "Peter Lynch — who ran Fidelity's Magellan fund to a 29% annual return over thirteen years — argued that ordinary people meet outstanding companies constantly, years before analysts do: at work, in shops, in what their children ask for. His point is routinely misquoted as 'buy what you know'. What he actually taught is that familiarity is where research starts, never where it ends — noticing that a paint brand is on every scaffold in your city is a reason to open its annual report, not a reason to own it. The store visit gives you the question; the statements give you the answer.",
+        },
+        {
+          t: "ul",
+          items: [
+            "Your profession — you can judge companies in your own industry better than most professionals outside it. That is a genuine, durable edge.",
+            "Your consumption — products you and people around you repurchase without thinking are pricing-power candidates worth a look.",
+            "Your city — what is being built, which shopfronts multiply, which dealerships are empty. South Asia's listed universe is unusually visible on its own streets.",
+          ],
+        },
+        { t: "h", text: "Systematic sources" },
+        {
+          t: "ul",
+          items: [
+            "The supplier chain — study one good company and its annual report names customers, suppliers and competitors: each is a candidate. One study seeds three.",
+            "Simple screens — filters like 'ROIC above 15% for five years, debt below equity' shrink four thousand listed companies to a readable list. A screen's output is a reading list, not a verdict; every number in it is one accounting change away from wrong.",
+            "Boredom and neglect — companies too small, too dull or too tangled for institutions are where mispricing survives longest. Joel Greenblatt built a career on spin-offs and special situations nobody covered.",
+            "The index constituents themselves — working through NIFTY 50 companies one by one is unglamorous and builds exactly the mental library that makes future ideas quick to judge.",
+          ],
+        },
+        { t: "h", text: "The sources that cost people money" },
+        {
+          t: "p",
+          text: "Tips, trending lists, and anything arriving with urgency. The incentive test from the Munger article applies in full: a broker's idea generates brokerage whether it works or not; a Telegram channel's idea often exits into the buying it creates; a relative's idea costs them nothing to be wrong about. And by the time an idea is everywhere, its price already contains the story — what remains is the risk. None of this means such ideas are always wrong; it means they arrive owing you the entire study, with extra suspicion about why you are hearing them now.",
+        },
+        {
+          t: "note",
+          kind: "key",
+          title: "Keep an idea journal",
+          text: "Most good ideas are found at the wrong price. Write the name down anyway, with one line on why it interested you, and study it at leisure — the watchlist is exactly this. A prepared mind plus a market panic is where the best purchases of a decade come from, and preparation cannot start during the panic.",
+        },
+        {
+          t: "note",
+          kind: "example",
+          title: "In Sarmaya",
+          text: "The watchlist with a thesis attached is the idea journal: add the instrument, write the one-line reason in a thesis, set a price rule, and let the alert do the waiting.",
+        },
+      ],
+      next: ["studying-a-company", "biases"],
     },
     {
       slug: "studying-a-company",

@@ -7,6 +7,90 @@ export const startHere: Section = {
     "What investing actually is, what has to be true before you begin, and the one force that does most of the work.",
   articles: [
     {
+      slug: "roadmap",
+      title: "The roadmap: how to use this course",
+      summary:
+        "Seven stages from zero to a working process, with a checkpoint for each — so you always know what to read next and when to move on.",
+      minutes: 7,
+      body: [
+        {
+          t: "p",
+          text: "This course is a path, not a pile. The sections are ordered so that each stage uses only what earlier stages built, and each stage below ends with a checkpoint — a plain test of whether it has done its job. Read at whatever pace suits you; the checkpoints, not the clock, decide when you move on. Skipping ahead is allowed and normal. Skipping checkpoints is how people end up with opinions about DCF terminal values before they can read a balance sheet.",
+        },
+        {
+          t: "table",
+          caption:
+            "The seven stages. Total reading is a few evenings; the practice alongside it is what actually teaches.",
+          head: ["Stage", "Sections", "You can move on when…"],
+          rows: [
+            [
+              "1. Foundations",
+              "Start here",
+              "You can explain to someone else why volatility is not risk, and what has to be true about your own money before any of it goes to markets.",
+            ],
+            [
+              "2. The instruments",
+              "What you can own",
+              "You can say what a share, a fund, an index fund and a bond each actually are, and which costs each one carries.",
+            ],
+            [
+              "3. Reading a business",
+              "Studying a business",
+              "Given a real annual report, you can find the three statements, compute the margins yourself, and say whether profit became cash that year.",
+            ],
+            [
+              "4. Valuation",
+              "Valuation",
+              "You can produce a range for one company with your own inputs, and state what growth its current price implies.",
+            ],
+            [
+              "5. The tradition",
+              "The investors worth studying",
+              "You know whose method you are borrowing when you demand a margin of safety, check pricing power, or invert a question.",
+            ],
+            [
+              "6. The portfolio",
+              "Building a portfolio",
+              "You have written rules for position sizes and for adding money, decided before looking at any particular stock.",
+            ],
+            [
+              "7. The long game",
+              "Behaviour and process · How the market works",
+              "Every holding has a written thesis with kill criteria, and you know the tax and cost consequences of your own habits.",
+            ],
+          ],
+        },
+        { t: "h", text: "Practice that goes with each stage" },
+        {
+          t: "p",
+          text: "Reading alone does not build the skill — each stage has a natural exercise, and none of them requires committing money. Stage 3 is the one that changes people: pick any company you already know as a customer, download its annual report, and walk it with the line-by-line article open beside you. Do that for three companies and financial statements stop being a foreign language. Stage 4's exercise is to value one of those companies badly — the point of the first valuation is to discover how much the answer moves when your assumptions do.",
+        },
+        {
+          t: "ul",
+          items: [
+            "Stage 1–2: list your own money by horizon — what is needed within a year, within five, beyond. No products, just buckets.",
+            "Stage 3: three annual reports, read with the course's ten-step process. Sarmaya's statements view and annotations are built for exactly this.",
+            "Stage 4: one full valuation range, all four models, saved with your assumptions visible.",
+            "Stage 5: read one primary source end to end — a single Berkshire letter is an evening.",
+            "Stage 6–7: write your rules down before they are tested. A thesis per holding, sizing rules, and what would make you sell — all on paper first.",
+          ],
+        },
+        {
+          t: "note",
+          kind: "key",
+          title: "The order is the method",
+          text: "Business first, price second, behaviour throughout. Most expensive mistakes are stage-skipping: valuing a company whose statements you have not read, or sizing a position with no written reason to own it at all.",
+        },
+        {
+          t: "note",
+          kind: "watch",
+          title: "What this course will never do",
+          text: "Nothing here tells you what to buy or sell, and nothing in the app ever will. The course teaches the craft; the decisions — and the reasons for them, written down — are yours.",
+        },
+      ],
+      next: ["what-investing-is", "before-you-invest"],
+    },
+    {
       slug: "what-investing-is",
       title: "What investing is (and what it isn't)",
       summary:
@@ -26,6 +110,13 @@ export const startHere: Section = {
           kind: "key",
           title: "The distinction that matters",
           text: "An investor asks: will this business be worth more in ten years? A speculator asks: will someone pay me more next month? Neither question is wrong, but confusing the two is how people lose money — they buy with an investor's reasoning and sell with a speculator's nerves.",
+        },
+        {
+          t: "quote",
+          text: "Investment is most intelligent when it is most businesslike.",
+          who: "Benjamin Graham",
+          where:
+            "The Intelligent Investor — the nine words Warren Buffett calls the most important ever written about investing",
         },
         { t: "h", text: "Where returns actually come from" },
         {
@@ -130,6 +221,12 @@ export const startHere: Section = {
           t: "p",
           text: "Look at the last column rather than the middle one. In the first five years, most of what you have is what you put in. By year thirty, almost everything you have is growth. The curve does very little for a long time and then does almost all of its work at the end — which is precisely why the most expensive mistake is interrupting it.",
         },
+        {
+          t: "quote",
+          text: "Time is the friend of the wonderful business, the enemy of the mediocre.",
+          who: "Warren Buffett",
+          where: "1989 Berkshire Hathaway letter",
+        },
         { t: "h", text: "The cost of a late start" },
         {
           t: "p",
@@ -178,6 +275,12 @@ export const startHere: Section = {
           ],
         },
         {
+          t: "quote",
+          text: "You only find out who is swimming naked when the tide goes out.",
+          who: "Warren Buffett",
+          where: "2001 Berkshire Hathaway letter — on leverage and falls",
+        },
+        {
           t: "note",
           kind: "watch",
           title: "Falls are normal, not exceptional",
@@ -197,6 +300,69 @@ export const startHere: Section = {
         },
       ],
       next: ["why-write-a-thesis", "diversification"],
+    },
+    {
+      slug: "inflation-rates-currency",
+      title: "Inflation, interest rates and the rupee",
+      summary:
+        "The three background forces every South Asian portfolio lives inside — and how much macro an investor actually needs.",
+      minutes: 9,
+      body: [
+        {
+          t: "p",
+          text: "You do not need to predict the economy to invest well — nobody reliably can, including the people paid to. But three background forces set the terms for every rupee you invest, and understanding what they do (as opposed to guessing what they will do next) is foundational.",
+        },
+        { t: "h", text: "Inflation: the hurdle every return must clear" },
+        {
+          t: "p",
+          text: "Inflation is the rate at which money loses purchasing power. Indian consumer inflation has averaged roughly 5–6% a year over recent decades; Pakistan's has been higher and far more volatile, with episodes above 20%. That average is the hurdle: a return below it is a loss wearing a plus sign.",
+        },
+        {
+          t: "formula",
+          expr: "real return ≈ nominal return − inflation",
+          note: "The exact form is (1 + nominal) ÷ (1 + inflation) − 1, but the subtraction is close enough to think with.",
+        },
+        {
+          t: "p",
+          text: "This single line reorders the safety of things. A fixed deposit paying 7% during 6% inflation preserves almost nothing after tax — the interest is taxed at your slab rate, so the real, after-tax return is frequently negative. Equity is the opposite case: volatile over any given year, but a claim on businesses that can raise their prices as money cheapens. 'Safe' and 'stable' are not the same word — the deposit has a stable nominal value and an unstable real one, and over twenty years the difference compounds into the largest financial fact of most households.",
+        },
+        { t: "h", text: "Interest rates: gravity for every price" },
+        {
+          t: "p",
+          text: "The central bank's policy rate — the RBI's repo rate, the State Bank of Pakistan's policy rate — is the price of money, and it acts on markets the way gravity acts on objects. When the risk-free rate rises, every other asset must offer more to compete, which mechanically means lower prices for the same cash flows. You have already met this force in the valuation section: it is the discount rate. A stock at 40× earnings offers a 2.5% earnings yield; whether that is acceptable depends entirely on what a government bond pays for doing nothing.",
+        },
+        {
+          t: "ul",
+          items: [
+            "Rates up → future profits worth less today → valuations compress, hitting the longest-duration promises (high-growth, no-profit companies) hardest.",
+            "Rates up → borrowing costs rise → leveraged companies' interest cover shrinks. The ratios article's interest-cover check is a rate-cycle stress test.",
+            "Rates down → the reverse — and also the environment in which bubbles inflate, because cheap money makes every story affordable.",
+          ],
+        },
+        { t: "h", text: "The rupee: the quiet third force" },
+        {
+          t: "p",
+          text: "The Indian rupee has depreciated against the US dollar by roughly 3–4% a year on average over the long run; the Pakistani rupee faster and more erratically. This is the mechanism connecting inflation differentials between countries, and it touches a portfolio in specific places: it flatters exporters (an IT company earns in dollars and pays salaries in rupees), burdens importers and anyone with dollar debt, and silently adds to the return of any US holding measured in local currency. It is also why Sarmaya never merges your INR, PKR and USD totals — a merged number would hide exactly this force.",
+        },
+        {
+          t: "quote",
+          text: "If you spend more than 13 minutes analyzing economic and market forecasts, you've wasted 10 minutes.",
+          who: "Peter Lynch",
+          where: "One Up on Wall Street",
+        },
+        { t: "h", text: "How much macro is enough" },
+        {
+          t: "p",
+          text: "Lynch's line is not a joke about ignorance — it is a claim about where the edge is. Forecasting next year's inflation or the next rate decision is a game with no persistent winners. What an investor actually needs is much smaller: know the current hurdle rate your returns must beat, know which of your companies are helped or hurt by rates and the currency (it is in their interest costs and their revenue mix), and know that both cycles turn without announcement. Prepare for the range; skip the prediction.",
+        },
+        {
+          t: "note",
+          kind: "key",
+          title: "The lakh-crore trap",
+          text: "Inflation is also why long-run return stories mislead. 'The index turned one lakh into a crore' across three decades sounds miraculous until you deflate it — a crore then buys what a fraction of it bought at the start. Always ask for real returns when someone quotes long-period magic.",
+        },
+      ],
+      next: ["compounding", "taxes-and-costs"],
     },
   ],
 };

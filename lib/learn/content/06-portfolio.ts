@@ -25,7 +25,13 @@ export const portfolio: Section = {
         { t: "h", text: "Where it stops helping" },
         {
           t: "p",
-          text: "The reduction in company-specific risk diminishes quickly with each additional holding. The move from one holding to five removes a great deal of risk; from twenty to forty removes very little. Meanwhile the cost of holding more is real: your attention. Thirty businesses cannot be genuinely understood and reviewed by one person with a job.",
+          text: "The reduction in company-specific risk diminishes quickly with each additional holding. The move from one holding to five removes a great deal of risk; from twenty to forty removes very little. Meanwhile the cost of holding more is real: your attention. Thirty businesses cannot be genuinely understood and reviewed by one person with a job. Peter Lynch coined the word for the failure mode — 'diworsification': adding names until the portfolio guarantees mediocrity while feeling responsible.",
+        },
+        {
+          t: "quote",
+          text: "Owning stocks is like having children — don't get involved with more than you can handle.",
+          who: "Peter Lynch",
+          where: "One Up on Wall Street",
         },
         {
           t: "note",
@@ -73,6 +79,10 @@ export const portfolio: Section = {
         {
           t: "p",
           text: "Whichever you choose, the useful discipline is deciding the size before you buy, while you are calm, and writing down why. Sizing decided in the moment tends to track excitement rather than analysis.",
+        },
+        {
+          t: "p",
+          text: "Buffett's famous teaching device makes the same point from the other side: imagine a punch card with just twenty slots, one for every investment decision of your lifetime. Under that constraint nobody buys casually or sizes a position they barely believe in — each punch has to matter. The card is imaginary; the discipline it produces is not.",
         },
         { t: "h", text: "Drift" },
         {
@@ -162,6 +172,12 @@ export const portfolio: Section = {
         {
           t: "p",
           text: "You cannot control what the market returns. You can control almost every cost you pay, and each one compounds against you exactly as returns compound for you.",
+        },
+        {
+          t: "quote",
+          text: "In investing, you get what you don't pay for.",
+          who: "John Bogle",
+          where: "founder of Vanguard, inventor of the public index fund",
         },
         { t: "h", text: "What you actually pay" },
         {

@@ -130,6 +130,13 @@ export const instruments: Section = {
           t: "p",
           text: "An index fund is a product that mechanically holds the index. No manager decides what to buy, so the cost is low. An ETF is an index fund that trades on an exchange like a share, which means you need a demat account and you pay the market price, which can drift slightly from NAV.",
         },
+        {
+          t: "quote",
+          text: "Don't look for the needle in the haystack. Just buy the haystack!",
+          who: "John Bogle",
+          where:
+            "The Little Book of Common Sense Investing — Bogle launched the first public index fund in 1976",
+        },
         { t: "h", text: "The argument for" },
         {
           t: "ul",

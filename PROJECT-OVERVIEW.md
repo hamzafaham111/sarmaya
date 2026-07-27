@@ -201,12 +201,18 @@ Every decision across all instruments, newest first, with the reasoning.
 ### Learn (`/learn`) — new
 
 A documentation-style course, **public** (no sign-in needed) since it holds no
-user data. Nine sections, ~39 articles, ~5.5 hours of reading: start here,
-what you can own, studying a business (income statement line by line, margins
-and pricing power, quality of earnings, a repeatable study process), valuation,
-the investors worth studying (Graham, Fisher, Buffett, Munger), building a
-portfolio, behaviour and process, how the market works, and an A–Z glossary.
-Sidebar with instant filter, prev/next navigation, "read next" links.
+user data. Nine sections, ~45 articles, ~6.5 hours of reading: a staged
+roadmap with checkpoints, what you can own, studying a business (income
+statement line by line, margins and pricing power, quality of earnings,
+finding ideas, a repeatable study process), valuation, the investors worth
+studying (Graham, Fisher, Buffett, Munger, plus Lynch/Bogle/Templeton/Marks
+and the Indian lineage), building a portfolio, behaviour and process
+(including a market-history article: 1929, Nifty Fifty, Harshad Mehta,
+dot-com, 2008, COVID, KSE-100 cycle), market mechanics with an India+Pakistan
+tax primer, and an A–Z glossary. Sidebar with numbered sections and instant
+filter, an "On this page" outline on wide screens, prev/next navigation,
+"read next" links, and primary-source quotes from the masters woven through
+the articles.
 
 The deep-dive articles are built on **real, primary-source figures**, verified
 against the documents: Infosys FY2025 audited results (both Ind-AS ₹-crore and
@@ -355,7 +361,7 @@ stuck on "Saving…" while the write had actually succeeded.
 
 ## 11. Repository map
 
-```
+```text
 app/
   (app)/            authenticated routes — overview, instruments, i/[id],
                     portfolio, journal; server actions live beside their pages

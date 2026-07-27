@@ -230,5 +230,79 @@ export const mechanics: Section = {
       ],
       next: ["glossary", "why-write-a-thesis"],
     },
+    {
+      slug: "taxes-and-costs",
+      title: "Taxes: the rules of the game",
+      summary:
+        "How equity gains, fund gains and dividends are taxed in India and Pakistan — structurally, since the rates change with every budget.",
+      minutes: 10,
+      body: [
+        {
+          t: "p",
+          text: "Taxes are the one market force with a rulebook, and the rulebook has a consistent shape even though the numbers in it change almost every budget. This article teaches the shape. The specific rates quoted were current as of early 2026 — treat every one of them as 'verify against this year's Finance Act', and treat anything involving your personal situation as a question for a professional, not an app.",
+        },
+        { t: "h", text: "The one structural idea: holding period" },
+        {
+          t: "p",
+          text: "Both countries' systems, like most in the world, distinguish short-term from long-term capital gains and tax the short kind harder. The boundary for listed Indian equity is twelve months: sell at a gain before it and the gain is short-term; after it, long-term. This single cliff is the tax system's opinion about your behaviour, expressed as money — churning is billed, holding is discounted. Everything else is detail on top of it.",
+        },
+        {
+          t: "table",
+          caption:
+            "India, listed equity and equity funds — as of early 2026; rates change with budgets, so verify before acting on them.",
+          head: ["Event", "Treatment"],
+          rows: [
+            [
+              "Gain, held ≤ 12 months (STCG)",
+              "Taxed at a flat rate — 20% as of the 2024 budget",
+            ],
+            [
+              "Gain, held > 12 months (LTCG)",
+              "12.5% on gains above an annual exemption (₹1.25 lakh) — small investors' long-term gains are often untaxed in practice",
+            ],
+            [
+              "Dividends",
+              "Added to your income, taxed at your slab rate; TDS deducted above a threshold",
+            ],
+            [
+              "Every trade, both directions",
+              "Securities transaction tax plus brokerage, exchange charges and stamp duty — small percentages that compound with churn",
+            ],
+          ],
+        },
+        {
+          t: "p",
+          text: "Three structural notes behind that table. First, equity mutual funds inherit equity treatment, but the growth option compounds untaxed until you redeem, while dividend (IDCW) payouts are taxed at slab every year — a structural argument for growth options that survives any rate change. Second, non-equity funds lost their favourable treatment in 2023: debt-fund gains are now simply slab income, which removed most of their tax advantage over deposits. Third, a SIP is not one purchase for tax: every monthly instalment has its own twelve-month clock, so 'held over a year' applies instalment by instalment.",
+        },
+        { t: "h", text: "Pakistan: the filer's market" },
+        {
+          t: "p",
+          text: "Pakistan taxes capital gains on listed securities at a flat rate (15% for tax filers in recent years) with the decisive variable being filer status: appearing on the Active Taxpayer List roughly halves the withholding on dividends and much else, making non-filer investing structurally expensive. Dividends carry withholding at source. The broker and NCCPL handle most computation and deduction, but the filer/non-filer gap is the single largest controllable tax fact for a Pakistani investor.",
+        },
+        { t: "h", text: "What this means for behaviour, not products" },
+        {
+          t: "ul",
+          items: [
+            "Churn is taxed three times: the short-term rate, the transaction taxes, and the interrupted compounding. A strategy that trades monthly must beat a buy-and-hold by several percentage points a year just to stand still.",
+            "Unrealised gains are an interest-free loan from the tax office — tax is due on selling, not on holding, so deferral itself compounds. This is a real, quantifiable part of why the masters' 'holding period: decades' works.",
+            "Realised losses have value: both systems allow setting losses against gains under specific rules — records matter.",
+            "Tax should shape how you do things, not what you own. Selling a deteriorating business slowly 'for tax reasons' replaces a small certain cost with a large uncertain one.",
+          ],
+        },
+        {
+          t: "note",
+          kind: "watch",
+          title: "Verify, always",
+          text: "Rates, exemption limits, holding periods and surcharges here WILL go stale — India alone changed the equity STCG and LTCG rates in a single 2024 budget. The structure (holding-period cliffs, slab-taxed dividends, filer status, churn friction) is durable; the numbers are not. Check the current year's rules or ask a professional before any decision that hinges on them.",
+        },
+        {
+          t: "note",
+          kind: "example",
+          title: "In Sarmaya",
+          text: "The journal records every buy and sell with dates — which is exactly the record a holding-period tax system requires at filing time. Sarmaya does not compute taxes; it preserves the facts your accountant needs.",
+        },
+      ],
+      next: ["costs-and-fees", "orders-and-settlement"],
+    },
   ],
 };

@@ -396,5 +396,106 @@ export const masters: Section = {
       ],
       next: ["biases", "reverse-dcf"],
     },
+    {
+      slug: "wider-tradition",
+      title: "The wider tradition, including ours",
+      summary:
+        "Lynch, Bogle, Templeton, Marks, Klarman — and the Indian investors who proved the craft transfers: Parikh, Jhunjhunwala, Agrawal, Prasad.",
+      minutes: 11,
+      body: [
+        {
+          t: "p",
+          text: "The four portraits before this are the trunk of the tree; these are branches worth knowing, each for one distinct idea you can actually use. None of them contradicts the others on what matters — business first, price discipline, temperament over intellect — which is itself the strongest evidence the craft is real.",
+        },
+        { t: "h", text: "Peter Lynch: the amateur's edge" },
+        {
+          t: "p",
+          text: "Lynch ran Fidelity's Magellan fund from 1977 to 1990 at about 29% a year, and then wrote two books — One Up on Wall Street and Beating the Street — arguing that ordinary people can beat professionals precisely because they meet products and companies in real life years before Wall Street's spreadsheets do. He also coined the most useful pejorative in portfolio construction, 'diworsification' — adding holdings until the portfolio guarantees mediocrity — and his one-line discipline appears throughout this course: know what you own, and know why you own it. His sharpest warning is behavioural: more money is lost preparing for corrections, and jumping in and out to dodge them, than in the corrections themselves.",
+        },
+        { t: "h", text: "John Bogle: the case against costs" },
+        {
+          t: "p",
+          text: "Bogle founded Vanguard and, in 1976, launched the first index fund available to the public — mocked at the time as 'Bogle's folly', now the largest ownership structure in world markets. His argument is arithmetic, not opinion: investors as a group earn the market's return minus what they pay in fees and trading, so the cheapest broad exposure must beat the average participant over time. Every article in this course that mentions expense ratios or churn is downstream of Bogle. His maxim survives translation into every market: you get what you don't pay for.",
+        },
+        {
+          t: "h",
+          text: "John Templeton: buy at the point of maximum pessimism",
+        },
+        {
+          t: "p",
+          text: "Templeton's founding act is the cleanest margin-of-safety story on record: in 1939, with war beginning and pessimism absolute, he bought every US-listed stock trading under a dollar — about a hundred companies, many in bankruptcy — and multiplied his money several times over the following years. He then spent decades applying the same reflex globally, buying Japan in the 1960s before the world noticed it. Two of his rules frame this course's history article: the time of maximum pessimism is the best time to buy, and 'this time it's different' are the four most expensive words in investing.",
+        },
+        { t: "h", text: "Howard Marks and Seth Klarman: risk, restated" },
+        {
+          t: "p",
+          text: "Marks (Oaktree Capital) writes the most-read memos in professional investing — Buffett says he opens them first. His two exportable ideas: second-level thinking (the question is never 'is this a good company' but 'is it better than the price already says'), and cycle awareness — you cannot predict the cycle, but you can know roughly where you stand in it and lean accordingly. Klarman's out-of-print Margin of Safety restates Graham for modern markets in one sentence worth keeping: risk is not volatility; it is the probability of permanent capital loss, and it is highest exactly when things feel safest.",
+        },
+        { t: "h", text: "The Indian lineage" },
+        {
+          t: "p",
+          text: "The craft transferred to South Asia intact, with local proof at every scale.",
+        },
+        {
+          t: "ul",
+          items: [
+            "Parag Parikh — India's first serious writer on behavioural value investing (Value Investing and Behavioural Finance, 2007), and founder of the fund house that still bears the approach. His core claim: in a market as sentiment-driven as India's, temperament is the edge, because analysis is increasingly common and calm is not.",
+            "Rakesh Jhunjhunwala — India's most famous individual investor, who ran a few thousand rupees in 1985 into a multi-billion-dollar estate by his death in 2022. Behind the folklore, his method was orthodox: a handful of conviction positions (most famously Titan, held through crashes for nearly two decades), leverage used knowingly and separately from the core portfolio, and the repeated insistence that his mistakes taught him more than his wins.",
+            "Raamdeo Agrawal — co-founder of Motilal Oswal, whose annual Wealth Creation Studies are the closest thing India has to the Berkshire letters: free, data-heavy autopsies of which listed businesses compounded and why. His QGLP checklist — quality, growth, longevity, price — is the four filters in an Indian accent.",
+            "Pulak Prasad — Nalanda Capital's founder, whose What I Learned About Investing from Darwin (2023) is the best recent book in the tradition: buy exceptional, conservatively financed businesses rarely, sell almost never, and treat avoiding ruin — not finding winners — as the investor's actual job.",
+          ],
+        },
+        { t: "h", text: "A reading order" },
+        {
+          t: "table",
+          caption:
+            "If the course leaves you wanting the sources — one sensible sequence.",
+          head: ["Start", "Book / source", "For"],
+          rows: [
+            [
+              "1",
+              "One Up on Wall Street — Lynch",
+              "The gentlest serious start; ideas and temperament",
+            ],
+            [
+              "2",
+              "The Intelligent Investor — Graham (ch. 8 and 20 first)",
+              "Mr. Market and margin of safety, from the source",
+            ],
+            [
+              "3",
+              "Berkshire letters — Buffett (free online)",
+              "Business analysis as literature; start with 1983–1996",
+            ],
+            [
+              "4",
+              "Common Stocks and Uncommon Profits — Fisher",
+              "Scuttlebutt and the fifteen points",
+            ],
+            [
+              "5",
+              "Poor Charlie's Almanack — Munger",
+              "The thinking tools around everything else",
+            ],
+            [
+              "6",
+              "Value Investing and Behavioural Finance — Parikh",
+              "The whole tradition, in the Indian market's own terms",
+            ],
+            [
+              "7",
+              "The Most Important Thing — Marks",
+              "Risk and cycles, once the basics are set",
+            ],
+          ],
+        },
+        {
+          t: "note",
+          kind: "key",
+          title: "What the whole tradition agrees on",
+          text: "Across seventy years, two continents and wildly different personalities: the stock is a business, the market is a servant, the price paid decides the return, costs and churn are the silent killers, and temperament — not intelligence — is the scarce input. Everything else is implementation detail.",
+        },
+      ],
+      next: ["market-history", "why-write-a-thesis"],
+    },
   ],
 };

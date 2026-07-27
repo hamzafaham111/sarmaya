@@ -131,6 +131,14 @@ export const glossary: Section = {
               def: "Cash paid to shareholders out of profits.",
             },
             {
+              term: "Diworsification",
+              def: "Peter Lynch's word for adding holdings until the portfolio guarantees mediocrity — more names, less understanding, no added protection.",
+            },
+            {
+              term: "Filer / non-filer (Pakistan)",
+              def: "Whether you appear on the FBR's Active Taxpayer List. Filers face roughly half the withholding on dividends and much else; the largest controllable tax fact for a Pakistani investor.",
+            },
+            {
               term: "Dividend payout",
               def: "Dividends ÷ net income. The share of profit distributed rather than reinvested.",
             },
@@ -270,6 +278,10 @@ export const glossary: Section = {
               def: "South Asian term for the controlling founder or family. Their stake, pledging and related-party dealings are standing disclosures worth reading.",
             },
             {
+              term: "Real return",
+              def: "Return after inflation — roughly nominal return minus the inflation rate. The only kind that buys anything.",
+            },
+            {
               term: "Rebalancing",
               def: "Returning a portfolio to its intended allocation after drift.",
             },
@@ -331,6 +343,10 @@ export const glossary: Section = {
             {
               term: "SIP",
               def: "Systematic Investment Plan. A fixed amount invested on a fixed schedule.",
+            },
+            {
+              term: "STCG / LTCG",
+              def: "Short- and long-term capital gains, split by holding period (12 months for listed Indian equity). The short kind is taxed harder — the tax system's fee on churn.",
             },
             {
               term: "Stock split",

@@ -22,7 +22,9 @@ export default async function LearnLayout({
     >
       <div className="mx-auto w-full max-w-6xl px-6 py-8">
         <div className="grid gap-10 lg:grid-cols-[16rem_minmax(0,1fr)]">
-          <aside className="lg:h-fit">
+          {/* Must stretch to row height: the sticky nav inside can only
+              travel within this cell, so h-fit would pin it to the top. */}
+          <aside>
             <LearnNav sections={SECTIONS} />
           </aside>
           <div className="min-w-0">{children}</div>
